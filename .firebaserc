@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "appexert-platform-staging"
+  },
+  "targets": {
+    "appexert-platform-staging": {
+      "hosting": {
+        "appexert-platform-staging": [
+          "appexert-platform-staging"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

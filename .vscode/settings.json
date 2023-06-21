@@ -1,0 +1,27 @@
+{
+  "[go]": {
+    "editor.insertSpaces": false,
+    "editor.autoClosingBrackets": "never"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.autoClosingBrackets": "always"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.autoClosingBrackets": "always"
+  },
+  "[jsx]": {
+    "editor.autoClosingBrackets": "always"
+  },
+  "prettier.jsxSingleQuote": true,
+  "[javascriptreact]": {
+    "togglequotes.chars": ["\"", "'", "`"],
+    "editor.autoClosingBrackets": "always"
+  },
+  "[typescriptreact]": {
+    "togglequotes.chars": ["\"", "'", "`"],
+    "editor.autoClosingBrackets": "always"
+  },
+  "terminal.integrated.defaultProfile.windows": "Git Bash"
+}

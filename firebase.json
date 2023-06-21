@@ -1,0 +1,30 @@
+{
+  "hosting": {
+    "target": "appexert-platform-staging",
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "function": "nextServer"
+      }
+    ]
+  },
+  "functions": {
+    "source": ".",
+    "runtime": "nodejs14",
+    "ignore": [
+      "**/src/**",
+      "**/.vscode/**",
+      ".firebase/**",
+      ".firebaserc",
+      "firebase.json",
+      "**/public/**",
+      "**/.next/cache/**"
+    ]
+  }
+}
