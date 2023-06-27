@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useLayout } from "@hooks/useLayout";
 
 const Footer = () => {
+  const devRegister = `${process.env.NEXT_PUBLIC_HIRE_APP}/register?developers`;
   const currentYear = new Date().getFullYear();
   const { state } = useLayout();
   const { footer, footerCopyright } = state;
@@ -80,7 +81,7 @@ const Footer = () => {
                   <div className='mt-6 sm:mt-6 md:mt-2 w-1/2 md:w-2/5 md:mr-4'>
                     <p className='font-bold text-gray-300'>Company</p>
                     <div className='text-sm mt-1 flex flex-col'>
-                      <Link href='/register?developers'>
+                      <Link href={devRegister}>
                         <a className='hover:underline mb-1'>Careers</a>
                       </Link>
                       <Link href='/contact'>
