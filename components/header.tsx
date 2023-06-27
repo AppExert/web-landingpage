@@ -14,6 +14,20 @@ function Header() {
   const { state } = useLayout();
   const router = useRouter();
   const { navMenu } = state;
+  // login cta
+  const login = `${
+    router.pathname.includes("companies") ||
+    router.pathname.includes("startups")
+      ? `${process.env.NEXT_PUBLIC_HIRE_APP}/login?companies`
+      : `${process.env.NEXT_PUBLIC_HIRE_APP}/login?developers`
+  }`;
+  // register cta
+  const register = `${
+    router.pathname.includes("companies") ||
+    router.pathname.includes("startups")
+      ? `${process.env.NEXT_PUBLIC_HIRE_APP}/register?companies`
+      : `${process.env.NEXT_PUBLIC_HIRE_APP}/register?developers`
+  }`;
   const [loaderVisible, setLoaderVisible] = useState(false);
   const loadingButton = (link: any) => {
     if (link.label === "Sign in" || link.label === "My Account") {
@@ -159,7 +173,7 @@ function Header() {
                   );
                 })}
 
-                <Link key='signin' href='/' className='border-none'>
+                <Link key='signin' href={login} className='border-none'>
                   <Button
                     loading={loadingButton("Sign in")}
                     onClick={() => {
@@ -174,7 +188,11 @@ function Header() {
                     <div className=''></div>
                   </Button>
                 </Link>
-                <Link key='createAccount' href='/' className='border-none'>
+                <Link
+                  key='createAccount'
+                  href={register}
+                  className='border-none'
+                >
                   <Button
                     loading={loadingButton("Create account")}
                     onClick={() => {

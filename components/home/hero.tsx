@@ -12,6 +12,8 @@ const DEV_IMAGES = [
 ];
 
 const Hero = () => {
+  const startHire = `${process.env.NEXT_PUBLIC_HIRE_APP}/companies/start-hiring?step=1`;
+  const devRegister = `${process.env.NEXT_PUBLIC_HIRE_APP}/register?developers`;
   const [currentImageIdx, setCurrentImageIdx] = useState(0);
   const [text, setText] = useState("");
 
@@ -77,13 +79,13 @@ const Hero = () => {
             </p>
 
             <div className='flex gap-4 items-center'>
-              <Link href='/'>
+              <Link href={startHire}>
                 <Button type='primary' className='btn-brand px-8 ' size='large'>
                   Hire Developers
                 </Button>
               </Link>
 
-              <Link href='/register?developers'>
+              <Link href={devRegister}>
                 <a>
                   <Button
                     type='link'

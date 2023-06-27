@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const StartupContent = () => {
+  const startHire = `${process.env.NEXT_PUBLIC_HIRE_APP}/companies/start-hiring?step=1`;
   return (
     <>
       <section className='bg-light-gray '>
@@ -31,7 +32,7 @@ const StartupContent = () => {
                 }
               </p>
               <div className='flex gap-4 font-semibold pt-8 text-center justify-center md:justify-start'>
-                <Link href='/'>
+                <Link href={startHire}>
                   <a className='flex  text-brand-700 hover:text-brand-500 '>
                     Lets talk about extending your runway
                     <ArrowRightOutlined
@@ -136,7 +137,7 @@ const StartupContent = () => {
                 Security Engineer.
               </p>
               <div className='flex gap-4 font-semibold pt-8 text-center justify-center md:justify-start'>
-                <Link href='/'>
+                <Link href={startHire}>
                   <a className='flex  text-brand-700 hover:text-brand-500 '>
                     Learn more
                     <ArrowRightOutlined

@@ -3,6 +3,7 @@ import { Button } from "antd";
 import Link from "next/link";
 
 const GetStartedBanner = () => {
+  const startHire = `${process.env.NEXT_PUBLIC_HIRE_APP}/companies/start-hiring?step=1`;
   return (
     <section className='start-hiring py-8 '>
       <Container>
@@ -13,7 +14,7 @@ const GetStartedBanner = () => {
             </p>
           </div>
           <div className='flex justify-center items-center'>
-            <Link href='/'>
+            <Link href={startHire}>
               <Button
                 type='primary'
                 className='btn-brand mt-4 px-8'

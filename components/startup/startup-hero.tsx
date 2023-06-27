@@ -3,6 +3,7 @@ import { Button } from "antd";
 import Link from "next/link";
 
 const StartupHero = () => {
+  const startHire = `${process.env.NEXT_PUBLIC_HIRE_APP}/companies/start-hiring?step=1`;
   return (
     <section className='pt-28 '>
       <Container>
@@ -19,7 +20,7 @@ const StartupHero = () => {
           </p>
         </div>
         <div className='text-center pb-8 flex justify-center items-center'>
-          <Link href='/'>
+          <Link href={startHire}>
             <Button type='primary' className='btn-brand px-8 ' size='large'>
               Hire Developers
             </Button>
