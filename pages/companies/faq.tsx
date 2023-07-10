@@ -149,16 +149,10 @@ const FrequentlyAskedQuestion = (props: any) => {
 
   return (
     <section
-      className={cn("start-hiring py-8 bg-light-gray  " + props.className)}
+      className={cn(" py-8 " + props.className)}
     >
       <Container>
         <div className='flex-row  items-center justify-center md:mx-[10%] '>
-          <div className=' text-center mt-4 pt-3 '>
-            <p className='section-preheading pb-2 text-center '>{"Got a question? We're here to answer!"}</p>
-            <div className='section-heading inline relative text-center'>
-              Frequently asked questions
-            </div>
-          </div>
           <div className='pt-4 pb-8'>
             {localCuratedList.map(
               (
@@ -168,19 +162,21 @@ const FrequentlyAskedQuestion = (props: any) => {
                 },
                 id: number
               ) => (
-                <div className=' ' key={id}>
+                <div className='text-white md:p-[24px] p-0' key={id}>
                   <Collapse
                     destroyInactivePanel
+                    expandIconPosition="end"
                     ghost
-                    collapsible='header'
-                    className='hover:text-blue-light'
+                    collapsible='header'                    
+                    className="text-white "
+                    defaultActiveKey={1}
                   >
                     <Panel
                       header={faq.question}
                       key='1'
-                      className='font-semibold hover:text-blue-light'
+                      className='font-semibold text-white  text-[16px] md:text-[20px]'
                     >
-                      <p className='px-6 -my-3 font-normal cursor-pointer '>
+                      <p className='-my-3 font-normal text-[14px] md:text-[16px] cursor-pointer text-[#908E9F]'>
                         {faq.answer}
                       </p>
                     </Panel>

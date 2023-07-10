@@ -4,10 +4,8 @@ import HowItWorks from "@components/home/how-it-works";
 import GetStartedBanner from "@components/home/get-started-banner";
 import ComparePlatforms from "@components/home/compare-platforms";
 import BrandShowcase from "@components/home/brand-showcase";
-import ChooseToUncomplicate from "@components/home/choose-to-uncomplicate";
 import WhyChooseAppExert from "@components/home/why-choose-appexert";
 import TestimonialsClients from "@components/home/testimonials-clients";
-import TestimonialsDevs from "@components/home/testimonials-devs";
 
 export default function IndexPage() {
   return (
@@ -55,14 +53,10 @@ export default function IndexPage() {
 
       <Hero />
       <BrandShowcase />
-      <HowItWorks />
-      <ChooseToUncomplicate />
-
-      <WhyChooseAppExert />
       <ComparePlatforms />
+      <HowItWorks />      
       <TestimonialsClients />
-      <TestimonialsDevs />
-
+      <WhyChooseAppExert />
       <GetStartedBanner />
     </>
   );

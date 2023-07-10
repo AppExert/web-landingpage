@@ -169,3 +169,11 @@ textarea {
   border-left: 1px solid #f0f0f0 !important;
   border-right: 1px solid #f0f0f0 !important;
 }
+
+.hideTab.ant-tabs > .ant-tabs-nav{
+  display: none !important;
+}
+
+.landingPage .ant-collapse > .ant-collapse-item > .ant-collapse-header {
+color: #FFF !important;
+}

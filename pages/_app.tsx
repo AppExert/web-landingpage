@@ -7,6 +7,8 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import { LiveChatWidget } from "@livechat/widget-react";
 import { getAppSettings, getSkillsConfig } from "@services/admin.service";
 
+import "typeface-inter";
+
 const isDevelopmentMode = process.env.NODE_ENV === "development";
 
 function MyApp({ Component, pageProps }: AppProps) {

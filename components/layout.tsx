@@ -11,11 +11,11 @@ const Layout: React.FC<Props> = ({ children }) => {
   return (
     <>
       <Meta />
-      <>
+      <div className="bg-[#020013] "  style={{ backgroundImage: "url('/images/home/shape.png')", backgroundRepeat: "no-repeat",  backgroundPosition: "top center"  }}    >
         <Header />
-        <main style={{ minHeight: "calc(100vh - 62px)" }}>{children}</main>
-      </>
-      <Footer />
+        <main style={{ minHeight: "calc(100vh - 62px)" }} >{children}</main>
+        <Footer />
+      </div>
     </>
   );
 };

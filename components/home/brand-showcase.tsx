@@ -1,69 +1,60 @@
 import Container from "@components/container";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 const logos: { name: string; path: string; className?: string }[] = [
   {
-    name: "amazon",
-    path: "/images/home/brand-icons/amazon.svg",
-    className: "pt-[2px] pl-[20px]",
-  },
-  {
-    name: "google",
-    path: "/images/home/brand-icons/google.svg",
-    className: "md:px-[12px]",
-  },
-  {
-    name: "meta",
-    path: "/images/home/brand-icons/meta.svg",
-    className: "md:px-[10px]",
-  },
-  {
-    name: "microsoft",
-    path: "/images/home/brand-icons/microsoft.svg",
-    className: "md:px-[1px]",
+    name: "walmart",
+    path: "/images/home/brand-icons/logo_walmart.svg",
   },
   {
     name: "spotify",
-    path: "/images/home/brand-icons/spotify.svg",
-    className: "md:px-[1px]",
-  },
-  {
-    name: "autodesk",
-    path: "/images/home/brand-icons/autodesk.svg",
-    className: "mt-[1px]",
+    path: "/images/home/brand-icons/logo_spotify.svg",
   },
   {
     name: "intuit",
-    path: "/images/home/brand-icons/intuit.svg",
-    className: "px-3",
+    path: "/images/home/brand-icons/logo_intuit.svg",
   },
   {
-    name: "morgan-stanley",
-    path: "/images/home/brand-icons/morgan-stanley.svg",
-    className: "mt-[1px]",
+    name: "atlassian",
+    path: "/images/home/brand-icons/logo_atlassian.svg",
   },
+  {
+    name: "microsoft",
+    path: "/images/home/brand-icons/logo_microsoft.svg",
+  },
+  {
+    name: "google",
+    path: "/images/home/brand-icons/logo_google.svg",
+  },
+
+
 ];
 const BrandShowcase = () => {
   return (
-    <section className=''>
-      <Container className='flex flex-col lg:flex-row gap-4 justify-center items-center py-4'>
-        <p className='section-preheading md:-mt-2'>Backed by engineering leaders from</p>
-        <div className='grid grid-cols-4 gap-4 sm:grid-cols-8 md:mt-0 '>
+    <section className=' md:pb-[100px] pt-[72px] pb-[56px]'>
+      <Container className='flex flex-col  items-center text-center py-4'>
+        <p className='section-preheading text-gray-400 w-[186px] md:w-max'>Backed by engineering leaders from</p>
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1 }}
+          className='grid grid-cols-3 md:grid-cols-6 md:grid-cols-flow  place-item-center md:gap-[48px] gap-[10px] mt-[32px] md:mt-[24px] md:px-[98px] pl-2 '>
           {logos.map((logo, idx) => (
             <div
               key={idx}
-              className='w-20 md:h-8 flex flex-col justify-center items-center'
+              className="flex justify-center items-center mt-5 md:mt-0"
             >
               <Image
-                className={logo.className}
                 src={logo.path}
                 alt={logo.name}
-                width='80'
-                height='20'
+                width={logo.name === "atlassian" ?"165px" : "120px"}
+                height='40'
               />
             </div>
           ))}
-        </div>
+        </motion.div>
       </Container>
     </section>
   );

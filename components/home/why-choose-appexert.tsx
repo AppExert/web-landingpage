@@ -1,129 +1,91 @@
-import { ArrowRightOutlined } from "@ant-design/icons";
 import Container from "@components/container";
+import { motion } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
+import { useState } from "react";
+
+const REASONS: {
+  title: string;
+  content: string;
+  image: string;
+}[] = [
+  {
+    title: "Hire 5x faster with AI powered interviews",
+    content: "Get ahead of the competition with our AI-powered hiring process, enabling you to identify and onboard top talent in a fraction of the time.",
+    image: "/images/home/reason/reason1.svg",
+  },
+  {
+    title: "Discover 100% flexibility with our remote EOR model",
+    content: "Simplify hiring and reduce administrative burdens with our innovative EOR model, ensuring compliance and peace of mind and enjoy 100% ownership",
+    image: "/images/home/reason/reason2.svg",
+  },
+  {
+    title: "Maximize interview-to-hire ratio by at-least 3x",
+    content: "Boost up your Interview-to-Hire ratio at the same time achieve minimal candidate dropouts with our optimised process.",
+    image: "/images/home/reason/reason3.svg",
+  },
+  {
+    title: "No more gambling on freelance platforms",
+    content: "Eliminate the risks associated with hiring freelancers by hiring dedicated qualified professionals in AppExert to ensure reliability and stability",
+    image: "/images/home/reason/reason4.svg",
+  },
+  {
+    title: "Take advantage of our fair price guarantee",
+    content: "Get the best value for your investment. Direct connection with talent, and  100% transparency throughout the hiring processes that ensure your fulfilment.",
+    image: "/images/home/reason/reason5.svg",
+  },
+  {
+    title: "Lead the remote work best practices like a champ",
+    content: "Stay ahead of the curve and tap into our expertise in remote work, leveraging our industry-leading best practices for seamless collaboration and productivity.",
+    image: "/images/home/reason/reason6.svg",
+  },
+
+];
 
 const WhyChooseAppExert = () => {
+  const [hoveredIndex, setHoveredIndex] = useState(-1);
+
   return (
-    <section className='md:py-16 py-8 bg-light-gray'>
+    <section className="md:py-[100px] py-[48px]">
       <Container>
-        <div className='text-center pt-'>
-          <p className='section-preheading pb-2'>
-          Why top performing start-ups and SMEs are choosing AppExert
-          </p>
-          <div className='relative inline'>
-            <h2 className='section-heading inline '>
-            Convenience Meets Performance
-            </h2>
-            <span className='w-40 border-b-4 border-brand-500 block mt-2 absolute left-0 md:block hidden'></span>
+        <div>
+          <div className="flex flex-col justify-center items-center md:pb-[72px] pb-[40px]">
+            <p className="green-label">WHY APPEXERT</p>
+            <h1 className="heading pt-2 md:w-[700px] text-center">
+              More reasons to choose us to help you gain unmatched hiring capabilities</h1>
           </div>
-        </div>
-       
-        <div className='flex flex-col flex-col-reverse md:flex-row gap-8 mt-16'>
-          <div className='md:w-1/3  text-center '>
-            <div className=''>
-              <Image
-                layout='intrinsic'
-                src='/images/home/why-choose-appexert.svg'
-                width={"300"}
-                height={"300"}
-                alt='Why the top-performing Startups and SMEs are choosing AppExert'
-              />
-            </div>
+          <div
+            className="grid md:grid-cols-3 grid-cols-1 gap-[48px] ">
+            {REASONS.map((reason, index) => (
+              <motion.div
+                key={index}
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(-1)}
+                initial={{ backgroundColor: "#09071B" }}
+                animate={{
+                  backgroundColor: hoveredIndex === index ? "rgb(5 2 38)" : "#09071B",
+                  cursor: "pointer"
+                }}
+                transition={{ duration: 0.3 }}
+                className="p-[24px] rounded-[8px]"
+              >
+                <div className="w-[160px] h-[160px]  -my-12 -ml-12">
+                  <Image
+                    width={160}
+                    height={160}
+                    src={reason.image}
+                    alt={reason.title}
+                  />
+                </div>
 
-            <div className='flex gap-4 items-center justify-center mt-4 font-semibold'>
-              <Link href='/companies'>
-                <a >Want to Know More
-                  <ArrowRightOutlined className='pl-4 mt-[2px]'
-                    style={{ fontSize: "1.2rem" ,  verticalAlign: "top" }}/>
-                </a>
-              </Link>
-            </div>
+                <h3 className="text-white mt-[24px] mb-[16px] text-[18px] md:text-[22px]  font-semibold cursor-pointer">
+                  {reason.title}
+                </h3>
+                <p className="text-gray-400 text-[16px] md:text-[18px] cursor-pointer">
+                  {reason.content}
+                </p>
+              </motion.div>
+            ))}
           </div>
-          <div className='grid grid-cols-1 gap-4 lg:gap-0 md:grid-cols-2 md:w-2/3'>
-            <div className='flex items-center gap-8'>
-              <div>
-                <Image
-                  src='/images/home/hire-me-icon.svg'
-                  alt='hire me icon'
-                  layout='fixed'
-                  width={50}
-                  height={50}
-                />
-              </div>
-              <div className='md:w-1/2'>
-                <p className='text-xl font-semibold'>Hire Fast, Grow Faster </p>
-
-                <p>
-                  Within 21 days, a talented team of remote developers will be
-                  working on your project.
-                </p>
-              </div>
-            </div>
-
-            <div className='flex items-center gap-8'>
-              <div>
-                <Image
-                  src='/images/home/talent-management-icon.svg'
-                  alt='hire me icon'
-                  layout='fixed'
-                  width={50}
-                  height={50}
-                />
-              </div>
-              <div className='md:w-1/2'>
-                <p className='text-xl font-semibold'>
-                  Top Talent, at One Third Cost
-                </p>
-
-                <p>
-                  Prices starting at just 18$ per hour, making it a go-to choice
-                  for startups.
-                </p>
-              </div>
-            </div>
-            <div className='flex items-center gap-8'>
-              <div>
-                <Image
-                  src='/images/home/account-manager-icon.svg'
-                  alt='hire me icon'
-                  layout='fixed'
-                  width={50}
-                  height={50}
-                />
-              </div>
-              <div className='md:w-1/2'>
-                <p className='text-xl font-semibold'>
-                  Dedicated Account Manager
-                </p>
-
-                <p>
-                  Account manager to take care of all the operational needs.
-                </p>
-              </div>
-            </div>
-            <div className='flex items-center gap-8'>
-              <div>
-                <Image
-                  src='/images/home/free-board-icon.svg'
-                  alt='hire me icon'
-                  layout='fixed'
-                  width={50}
-                  height={50}
-                />
-              </div>
-              <div className='md:w-1/2'>
-                <p className='text-xl font-semibold'>15-day Free Trial </p>
-
-                <p>
-                  100% risk-free trial to assess if we are the right fit for
-                  you. What if it doesn’t work out? No charges. No question
-                  asked.
-                </p>
-              </div>
-            </div>
-          </div>
-          
         </div>
       </Container>
     </section>

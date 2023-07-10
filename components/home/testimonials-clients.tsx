@@ -1,118 +1,146 @@
-import Container from "@components/container";
 import Image from "next/image";
+import Container from "@components/container";
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 const TESTIMONIALS: {
   name: string;
   company: string;
   content: string;
   image: string;
+  width: string;
 }[] = [
   {
-    name: "Founders",
-    company: "Bamboo Labs Inc., California ",
-    content: "AppExert proactively guided us to adding developers adhoc with the right expertise at the right time and more importantly, the right amount of time. This flexibility allowed us to get some of the best talent for important roles without needing to spend the overhead for a full time hire. The developers we’ve been working with at AppExert are some of the best, but more importantly, are extremely comfortable with products that are closer to ideation stage.",
-    image: "/images/bamboo.png",
+    name: "Kunsheng Zhao - Co-Founder",
+    company: "gomaterials ",
+    content: "When building our tech team and software application, we often have trouble hiring techtalents and are in shortage of resources during certain periods. AppExert did great in bothmanaging the remote development team to finish tasks and finding qualified tech talents as a remote hiring platform. We really enjoyed their quick and professional service!",
+    image: "/images/home/brand-icons/logo_gomaterial.svg",
+    width: "153px",
   },
   {
-    name: "Co-Founder | CTO",
-    company: "GoMaterials",
-    content: "When building our tech team and software application, we often have trouble hiring tech talents and are in shortage of resources during certain periods. AppExert helped us a lot in these situations. We used different ways to work together, AppExert did great in both managing the remote development team to finish tasks and finding qualified tech talents as a remote hiring platform. We are really enjoyed their quick and professional service!",
-    image: "/images/go-material.png",
+    name: "Tony Nero -VP, Information Technology, Sekure ",
+    company: "sekure",
+    content: "In my experience, I have tried various offshore & freelance models in the past but most ofthe times it was a pain. I am happy to say we finally hired Senior Remote Developers fromAppExert and they’ve worked closely with us throughout the process, staying on task, ontarget, and on budget. It’s certainly feel like having our own distributed team. I am really impressed!",
+    image: "/images/home/brand-icons/logo_sekure.svg",
+    width: "118px",
   },
   {
     name: "Vice President",
-    company: "Sekure Merchant Solutions",
-    content: "In my experience, I have tried various offshore & freelance models in the past but most of the times it was a pain. I am happy to say we finally hired Senior Remote Developers from AppExert and they’ve worked closely with us throughout the process, staying on task, on target, and on budget. We have dedicated developers working hand-in-hand with the rest of the teams. It’s certainly feel like having our own distributed team. I am really impressed!",
-    image: "/images/sekure.png",
+    company: "oproma",
+    content: "AppExert is a primary reason that litmus exists today and is able to create interactive learning experiences for thousands of students. AppExert proactively guided us to adding developers adhoc with the right expertise at the right time and more importantly, the right amount of time. This flexibility allowed us to get some of the best talent for important roles without needing to spend the overhead for a full-time hire",
+    image: "/images/home/brand-icons/logo_oproma.svg",
+    width: "134px",
+  },
+  {
+    name: "Vice President",
+    company: "litmus",
+    content: "AppExert is a primary reason that litmus exists today and is able to create interactive learning experiences for thousands of students. AppExert proactively guided us to adding developers adhoc with the right expertise at the right time and more importantly, the right amount of time. This flexibility allowed us to get some of the best talent for important roles without needing to spend the overhead for a full-time hire",
+    image: "/images/home/brand-icons/logo_litmus.svg",
+    width: "133px",
+  },
+  {
+    name: "Vice President",
+    company: "wandrian",
+    content: "AppExert is a primary reason that litmus exists today and is able to create interactive learning experiences for thousands of students. AppExert proactively guided us to adding developers adhoc with the right expertise at the right time and more importantly, the right amount of time. This flexibility allowed us to get some of the best talent for important roles without needing to spend the overhead for a full-time hire",
+    image: "/images/home/brand-icons/logo_wandrian.svg",
+    width: "140px",
   },
 ];
-
 const TestimonialsClients = () => {
-  const [activeTestimonialIdx, setActiveTestimonialIdx] = useState(0);
-  const [isTestimonialActive, setIsTestimonialActive] = useState(true);
+  const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
+
   useEffect(() => {
-    setIsTestimonialActive(true);
     const interval = setInterval(() => {
-      setIsTestimonialActive(true);
-      setActiveTestimonialIdx((activeTestimonialIdx + 1) % TESTIMONIALS.length);
-      setTimeout(() => setIsTestimonialActive(false), 9700); // wait for fade-out animation to finish before resetting
-    }, 10000);
+      if (!isHovered) {
+        setCurrentTestimonialIndex((prevIndex) => (prevIndex + 1) % TESTIMONIALS.length);
+      }
+    }, 3000);
 
-    return () => clearInterval(interval);
-  }, [activeTestimonialIdx]);
+    const container = document.getElementById("testimonials-container");
 
-  const next = () => {
-    setIsTestimonialActive(true);
-    setActiveTestimonialIdx((activeTestimonialIdx + 1) % TESTIMONIALS.length);
-  };
-  const prev = () => {
-    setIsTestimonialActive(true);
-    setActiveTestimonialIdx(
-      (activeTestimonialIdx - 1 + TESTIMONIALS.length) % TESTIMONIALS.length
-    );
+    const handleMouseEnter = () => {
+      setIsHovered(true);
+      clearInterval(interval);
+    };
+
+    const handleMouseLeave = () => {
+      setIsHovered(false);
+    };
+
+    container?.addEventListener("mouseenter", handleMouseEnter);
+    container?.addEventListener("mouseleave", handleMouseLeave);
+
+    return () => {
+      clearInterval(interval);
+      container?.removeEventListener("mouseenter", handleMouseEnter);
+      container?.removeEventListener("mouseleave", handleMouseLeave);
+    };
+  }, [TESTIMONIALS.length, isHovered]);
+
+  const currentTestimonial = TESTIMONIALS[currentTestimonialIndex];
+
+  const handleImageClick = (index: number) => {
+    setCurrentTestimonialIndex(index);
   };
 
   return (
-    <section className='py-16 bg-light-gray'>
-      <Container>
-        <div className='text-center pb-6'>
-          <p className='section-preheading pb-2 '>
-            {"Our team of remote developers is trusted by companies of all sizes"}
-          </p>
-          <div className='section-heading inline relative'>
-            Customers Story
-            <span className='w-40 border-b-4 border-brand-500 block mt-2 absolute left-0 md:block'></span>
-          </div>
+    <section className="md:pb-[100px] pb-[48px]">
+      <Container className="flex flex-col justify-center items-center text-center">
+        <div className="mb-[24px] ">
+          <Image width={46} height={32} src={"/images/home/quote.svg"} alt="Check icon" />
         </div>
-        <div className='flex justify-between items-center'>
-          <div className='flex justify-center cursor-pointer' onClick={prev}>
-            <Image
-              width={50}
-              height={50}
-              src='/images/home/gif/arrow-left.gif'
-              alt='left'
-            />
+
+        <div className="flex flex-col justify-center md:max-w-[810px] overflow-hidden "  >
+          <div id="testimonials-container"  className="h-[60vh] md:h-[420px]">
+            <motion.div
+              initial={{ opacity: 0, x: -200 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              className="pb-[68px] "
+              key={currentTestimonialIndex}
+            >
+              <motion.p
+                className="text-text-gray pb-[24px] md:text-[26px] text-[22px] font-medium "
+              >
+                “{currentTestimonial.content}”
+              </motion.p>
+              <motion.p
+                className="text-white text-[18px]"
+              >
+                {currentTestimonial.name}
+              </motion.p>
+            </motion.div>
           </div>
 
-          <div
-            className={`md:mx-40 mx-3 w-full testimonial-wrapper ${
-              isTestimonialActive ? "" : "fade-out"
-            }`}
-          >
-            <div className='relative'>
-              <p className='section-preheading h-[280px] md:h-[200px] lg:h-[100px] md:mb-4'>
-                {TESTIMONIALS[activeTestimonialIdx].content}
-              </p>
-            </div>
 
-            <div className='flex gap-4 items-center mt-8 md:mt-0 justify-center'>
-              <div className='w-[4rem] h-[4rem] relative rounded-full '>
-                <Image
-                  src={TESTIMONIALS[activeTestimonialIdx].image}
-                  layout='fill'
-                  alt='developer image'
-                  objectFit='cover'
-                  unoptimized={true}
-                  objectPosition={"top"}
-                  className='shadow-md rounded-full'
-                />
+          <div className="flex flex-col  md:flex-row justify-center items-center mt-[10px]">
+            {TESTIMONIALS.map((testimonial, index) => (
+              <div key={index}
+                className={`flex cursor-pointer px-[12px] w-max ${testimonial.company === currentTestimonial.company ? "md:border-t-[2px] block " : "md:block hidden md:border-t-[1px] border-[#26252C]"}`}
+              >
+
+                <motion.div
+                  className="mt-2"
+                  onClick={() => handleImageClick(index)}
+                  initial={{ scale: 1 }}
+                  animate={{
+                    // scale: testimonial.company === currentTestimonial.company ? 1.2 : 1 ,
+                    filter: testimonial.company === currentTestimonial.company ? "brightness(0) invert(1)" : ""
+                  }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <Image
+                    src={testimonial.image}
+                    alt={testimonial.company}
+                    width={testimonial.width}
+                    height="48"
+                  />
+                </motion.div>
               </div>
-              <div className='w-[50%] lg:w-[25%]'>
-                <p className='font-semibold'>
-                  {TESTIMONIALS[activeTestimonialIdx].name}
-                </p>
-                <p>{TESTIMONIALS[activeTestimonialIdx].company}</p>
-              </div>
-            </div>
-          </div>
-          <div className='flex justify-center cursor-pointer' onClick={next}>
-            <Image
-              width={50}
-              height={50}
-              src='/images/home/gif/arrow-right.gif'
-              alt='right'
-            />
+
+            ))}
           </div>
         </div>
       </Container>
@@ -121,3 +149,4 @@ const TestimonialsClients = () => {
 };
 
 export default TestimonialsClients;
+
