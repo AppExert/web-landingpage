@@ -162,19 +162,19 @@ const FrequentlyAskedQuestion = (props: any) => {
                 },
                 id: number
               ) => (
-                <div className='text-white md:p-[24px] p-0' key={id}>
+                <div className='text-white md:p-[24px] p-0 ' key={id}>
                   <Collapse
                     destroyInactivePanel
                     expandIconPosition="end"
                     ghost
                     collapsible='header'                    
-                    className="text-white "
+                    className="text-white bg-[#09071B]"
                     defaultActiveKey={1}
                   >
                     <Panel
                       header={faq.question}
                       key='1'
-                      className='font-semibold text-white  text-[16px] md:text-[20px]'
+                      className='font-semibold text-white  text-[16px] md:text-[20px] '
                     >
                       <p className='-my-3 font-normal text-[14px] md:text-[16px] cursor-pointer text-[#908E9F]'>
                         {faq.answer}
