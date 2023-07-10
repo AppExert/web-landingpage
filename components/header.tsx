@@ -72,12 +72,12 @@ function Header() {
           "sticky top-0 z-50 backdrop-blur-3xl min-h-[64px] flex py-2 md:py-0 "
         )}
       >
-        <Container className=' md:flex justify-between  py-2 '>
+        <Container className=' md:flex  justify-between  py-2 '>
           <div
             className={cn(
               { "justify-center md:justify-between": !navMenu },
               { "justify-between ": navMenu },
-              "flex  flex-row-reverse md:flex-row items-center md:w-max "
+              "flex  flex-row items-center md:w-max "
             )}
           >
             <div className='w-max mr-5'>

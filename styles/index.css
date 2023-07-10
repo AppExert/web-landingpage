@@ -62,7 +62,7 @@
   }
 
   .heading {
-    @apply text-2xl leading-tight sm:text-4xl font-semibold text-gradient cursor-default !important;
+    @apply text-[32px] leading-tight md:text-[36px] font-semibold text-gradient cursor-default !important;
   }
   
   .sub-heading {
@@ -80,8 +80,22 @@
     hover:bg-brand-600 transition duration-300 cursor-pointer  !important;
   }
 
+  .page-btn-secondary {
+    @apply flex items-center justify-center bg-[#665EFF14] text-white w-full md:w-max
+    rounded-[6px] mt-1 md:text-[18px]  px-[16px] py-[24px] 
+    border-none font-medium text-[16px] leading-6
+    hover:bg-[#665EFF14] transition duration-300 cursor-pointer  !important;
+  }
+
+  .page-btn-white {
+    @apply flex items-center justify-center bg-[#FFF] text-[#000000] w-full md:w-max
+    rounded-[6px] mt-1 md:text-[18px]  px-[16px] py-[24px] 
+    border-none font-medium text-[16px] leading-6
+    hover:bg-[#665EFF14] hover:text-white transition duration-300 cursor-pointer  !important;
+  }
+
   .landing-para {
-    @apply text-[16px] sm:text-[14px] text-[#908E9F] !important;
+    @apply md:text-[16px] text-[14px] text-[#908E9F] !important;
   }
 
   .green-label {
@@ -89,7 +103,7 @@
   }
 
   .btn-brand {
-    @apply flex items-center justify-center bg-brand-500 text-white px-[10px]  py-[12px]
+    @apply flex items-center justify-center bg-brand-600 text-white px-[10px]  py-[12px]
     border-none font-medium text-sm leading-6
     rounded hover:bg-brand-600 transition duration-300 cursor-pointer  !important;
   }
@@ -161,7 +175,7 @@
   }
 
   .sub-heading {
-    @apply text-sm text-gray-600 cursor-default;
+    @apply text-sm text-gray-600 cursor-default text-[#FFFFFF];
   }
 
   .label {
