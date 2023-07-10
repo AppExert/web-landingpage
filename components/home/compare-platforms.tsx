@@ -73,7 +73,7 @@ const ComparePlatforms = () => {
           />
         </div>
         {" "}
-        without Appexert
+        Without AppExert
       </div>
     },
     {
@@ -87,7 +87,7 @@ const ComparePlatforms = () => {
           />
         </div>
         {" "}
-        with Appexert
+        With AppExert
       </div>
     }
   ]
