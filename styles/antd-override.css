@@ -882,3 +882,8 @@ color: #1A1A1A;
   color: #1A1A1A;
   
 }
+
+.ant-comment-actions > li > span {
+color: #1A1A1A;
+font-weight: 500;
+}

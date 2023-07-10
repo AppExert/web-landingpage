@@ -16,9 +16,13 @@ const PrivacyPolicy = () => {
           content='learn our privacy policy, appexert policy, appexert'
         />
       </Head>
-      <section className='hero bg-gray-100 min-h-screen pt-10'>
-        <h2 className='section-heading text-center pb-10'>Privacy Policy</h2>
+      <section className="md:py-[100px] py-[48px] " >
         <Container>
+          <div className='flex  justify-center items-center pb-[32px] md:pb-[38px]'>
+            <h1 className='heading pt-2 md:w-[651px] text-center'>
+            We care about your privacy
+            </h1>
+          </div>
           <Privacy />
         </Container>
       </section>

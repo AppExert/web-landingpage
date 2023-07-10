@@ -3,26 +3,10 @@ import { Button } from "antd";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
-
-const DEV_IMAGES = [
-  "/images/home/hero-image1.png",
-  "/images/home/hero-image2.png",
-  "/images/home/hero-image3.png",
-  "/images/home/hero-image4.png",
-];
+import { motion } from "framer-motion"
 
 const Hero = () => {
-  const startHire = `${process.env.NEXT_PUBLIC_HIRE_APP}/companies/start-hiring?step=1`;
-  const devRegister = `${process.env.NEXT_PUBLIC_HIRE_APP}/register?developers`;
-  const [currentImageIdx, setCurrentImageIdx] = useState(0);
   const [text, setText] = useState("");
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIdx((currentImageIdx + 1) % DEV_IMAGES.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [currentImageIdx]);
 
   useEffect(() => {
     const words = ["startups and SMBs"];
@@ -44,9 +28,9 @@ const Hero = () => {
       } else {
         const currentChar = words[wordIndex][letterIndex];
         if (currentChar === " ") {
-          setText((prevText) => prevText + "\u00A0");
+          setText(prevText => prevText + "\u00A0");
         } else {
-          setText((prevText) => prevText + currentChar);
+          setText(prevText => prevText + currentChar);
         }
         letterIndex++;
       }
@@ -56,61 +40,97 @@ const Hero = () => {
   }, []);
 
   return (
-    <>
-      <section className='bg-fixed font-normal!important '>
-        <Container className='px-8 md:py-8 md:flex md:justify-between v4 items-center'>
-          <div className='pt-16 md:py-0 md:w-1/2'>
-            <h1 className='hero-heading '>
-              {"Global hiring, simplified"}
-              <br />
-              for{" "}
-              <span className='typing-effect'>
-                {text}{" "}
-                <span className='blink text-brand-300 text-2xl sm:text-3xl font-light'>
-                  |
-                </span>
-              </span>
-            </h1>
+    <section  >
+      <Container className='px-8 md:py-[100px] md:flex md:justify-between items-center overflow-x-hidden'>
+        <div className='pt-16 md:py-0 md:w-[60%]'>
+          <p className="green-label">HIRE GREAT DEVELOPERS</p>
+          <h1 className='hero-heading pt-2'>
+            Global hiring, simplified {" "}
+            <br className="hidden md:block"/>
+             for  <br className="md:hidden block"/> 
+            <span className="typing-effect">{text} 
+              <span className="blink text-brand-300 text-3xl sm:text-5xl font-light">|</span>
+            </span>
+          </h1>
 
-            <p className='section-paragraph'>
-              We help startups and growing medium sized companies to attract,
-              hire and manage qualified remote developers with unmatched speed
-              and flexibility.
-            </p>
+          <p className='section-paragraph text-[#908E9F] py-[10px] pb-[20px]'>
+            We help you attract, hire and manage qualified remote developers with unmatched convenience.
+          </p>
 
-            <div className='flex gap-4 items-center'>
-              <Link href={startHire}>
-                <Button type='primary' className='btn-brand px-8 ' size='large'>
-                  Hire Developers
-                </Button>
-              </Link>
-
-              <Link href={devRegister}>
-                <a>
-                  <Button
-                    type='link'
-                    className='btn-brand-outline md:ml-3'
-                    size='large'
-                  >
-                    Join as Developer
-                  </Button>
-                </a>
-              </Link>
-            </div>
+          <div className='flex gap-4 items-center'>
+            <Link href='/companies/start-hiring?step=1'>
+              <Button
+                type='primary'
+                className='page-btn'
+              >
+                Get started for free
+              </Button>
+            </Link>
           </div>
-          <div className='md:w-1/2'>
-            <div className='relative' style={{ height: 400 }}>
-              <Image
-                src={"/images/home/hero.svg"}
-                alt='appexert group illustration'
-                layout='fill'
-                objectFit='contain'
-              />
+
+          <div className='flex flex-col md:flex-row gap-4 text-gray-400 pt-[48px] md:pt-[80px]'>
+
+            <div className="flex items-start gap-2 ">
+              <div className="flex w-[18px] h-[18px] flex-shrink-0">
+                <Image
+                  width={18}
+                  height={18}
+                  src={"/images/home/tic-icon.svg"}
+                  alt="Check icon"
+                />
+              </div>
+              <p className="-mt-1">
+                Save hours with our pre-screened talent pool
+              </p>
             </div>
+            <div className="flex items-start gap-2 ">
+              <div className="flex w-[18px] h-[18px] flex-shrink-0">
+                <Image
+                  width={18}
+                  height={18}
+                  src={"/images/home/tic-icon.svg"}
+                  alt="Check icon"
+                />
+              </div>
+              <p className="-mt-1">
+                No middleman. Fair pricing with 3x runway boost.
+              </p>
+            </div>
+            <div className="flex items-start gap-2 ">
+              <div className="flex w-[18px] h-[18px] flex-shrink-0">
+                <Image
+                  width={18}
+                  height={18}
+                  src={"/images/home/tic-icon.svg"}
+                  alt="Check icon"
+                />
+              </div>
+              <p className="-mt-1">
+                Hire and pay compliantly around the world
+              </p>
+            </div>
+
           </div>
-        </Container>
-      </section>
-    </>
+        </div>
+        <div className='md:w-[40%] md:flex hidden justify-end  '>
+          <motion.div className='w-[400px] h-[400px] flex-shrink-0' style={{ height: 400 }}  
+            initial={{ opacity: 0, scale: 0  }}
+            whileInView={{ opacity: 1,   scale: [ 2, 2, 1, 1] ,
+              x: [300 , 300 , 0, 0] ,
+              y: [-300 , -300 , 0 , 0 ] }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <Image
+              width={400}
+              height={400}
+              src={"/images/home/designrip.png"}
+              alt='appexert group illustration'
+            />
+          </motion.div>
+        </div>
+      </Container>
+    </section>
   );
 };
 

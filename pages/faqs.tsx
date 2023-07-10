@@ -1,7 +1,21 @@
-import ComingSoon from "@components/coming-soon";
+import Container from "@components/container";
+import { LayoutGroup, motion } from "framer-motion";
 import Head from "next/head";
+import { useState } from "react";
+import FrequentlyAskedQuestion from "./companies/faq";
 
 const FAQs = () => {
+
+  const [activeItem, setActiveitem] = useState(0);
+
+  const items = [
+    {
+      title: "Developers"
+    },
+    {
+      title: "Companies"
+    }
+  ]
   return (
     <>
       <Head>
@@ -17,7 +31,53 @@ const FAQs = () => {
           content='appexert faq, frequently asked questions appexert, hire developers'
         />
       </Head>
-      <ComingSoon />
+      <section className="md:py-[100px] py-[48px] " >
+        <Container>
+          <div className='flex flex-col justify-center items-center pb-[32px] md:pb-[38px]'>
+            <p className='green-label'>HAVE QUESTIONS? WE’RE HERE TO HELP</p>
+            <h1 className='heading pt-2 md:w-[651px] text-center'>
+          Frequently asked questions
+            </h1>
+          </div>        
+
+          <div className='flex justify-center pt-[32px] md:pb-[56px] pb-[32px]'>
+            <LayoutGroup>
+              <div className="flex justify-center bg-[#1B182A] rounded-[32px] p-[6px] text-[16px] text-white font-medium">
+                {items.map((item, i) => {
+                  const isActive = i === activeItem;                 
+
+                  return (
+                    <motion.div
+                      whileTap={isActive ? { scale: 0.95 } : { opacity: 0.6 }}
+                      key={i}
+                    >
+                      <button
+                        onClick={ ()=>setActiveitem(i) }
+                        type="button"
+                        disabled={i === activeItem}
+                        className="relative m-0 p-[12px] pr-[18px] bg-transparent border-none outline-none cursor-pointer"
+                      >
+                        {isActive && (
+                          <motion.div
+                            layoutId="SegmentedControlActive"
+                            className="border-[#715EF91A]  absolute inset-0 z-1 border-[1px] drop-shadow-[0_1px_1px_rgba(16, 24, 40, 0.06)] bg-[#475EF919] rounded-[40px] shadow-md"
+                          />
+                        )}
+                        <div className="relative z-2 md:text-[16px] text-[12px] font-medium">{item.title}</div>
+                      </button>
+
+                    </motion.div>
+                  );
+                })}
+              </div>
+            </LayoutGroup>
+
+          </div>
+       
+          <FrequentlyAskedQuestion feature={activeItem === 0 ? "developer": "company"} className="landingPage" />
+           
+        </Container>
+      </section>
     </>
   );
 };

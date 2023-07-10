@@ -49,12 +49,12 @@ function Header() {
     button?: boolean;
     classes?: string;
   }[] = [
-    { href: "/developers", label: "Developers" },
-    { href: "/companies", label: "Companies" },
+    { href: "/developers", label: "For Developers" },
     { href: "/startups", label: "Startups" },
-    { href: "/community", label: "Community" },
     { href: "/talent-pool", label: "Talent Pool" },
+    { href: "/community", label: "Community" },
   ];
+
 
   return (
     <ClickAwayListener onClickAway={handleClickAway}>
@@ -69,7 +69,7 @@ function Header() {
               router.pathname === "/developers/resetPassword" ||
               router.asPath.startsWith("/c?id="),
           },
-          "sticky top-0 z-50 backdrop-blur"
+          "sticky top-0 z-50 backdrop-blur-3xl min-h-[64px] flex py-2 md:py-0 "
         )}
       >
         <Container className=' md:flex justify-between  py-2 '>
@@ -80,17 +80,22 @@ function Header() {
               "flex  flex-row-reverse md:flex-row items-center md:w-max "
             )}
           >
-            {/* empty div for alignment sake for mobile device */}
-            <div className='md:hidden'></div>
             <div className='w-max mr-5'>
               <Link href='/'>
-                <a className='block '>
+                <a className='flex '>
                   <Image
-                    src='/images/black_logo.png'
+                    src={                      
+                      router.pathname === "/login" ||
+                            router.pathname === "/register" ||
+                            router.pathname === "/developers/forgotPassword" ||
+                            router.pathname === "/companies/forgotPassword" ||
+                            router.pathname === "/developers/resetPassword" ||
+                            router.asPath.startsWith("/c?id=") ? "/images/black_logo.png" : "/images/AppExert_logo_white.svg"
+                    }
                     alt='appexert logo'
-                    className='h-6 cursor-pointer'
-                    width='150'
-                    height='40'
+                    className=' cursor-pointer'
+                    width='123'
+                    height='32'
                     onClick={() => setOpen(false)}
                   />
                 </a>
@@ -145,67 +150,66 @@ function Header() {
               )}
             >
               <>
-                {links.map((link, idx) => {
-                  return (
-                    <Link key={idx} href={link.href}>
-                      <a
-                        onClick={() => setOpen(!open)}
-                        className={
-                          router.pathname === link.href
-                            ? "font-semibold border-brand-500 border-b-2 text-brand-500 md:mx-2 transition duration-700"
-                            : "" +
+                <div className="md:flex  justify-center md:w-full md:gap-x-[40px] ">
+                  {links.map((link, idx) => {
+                    return (
+                      <Link key={idx} href={link.href}>
+                        <a
+                          onClick={() => setOpen(!open)}
+                          className={
+                            router.pathname === link.href
+                              ? "border-brand-500 border-b-2 text-white md:mx-2 transition duration-700"
+                              : "" +
                               cn(
                                 {
-                                  [`${link.classes}  btn-brand inline-block px-3 py-0 mt-1`]:
+                                  [`${link.classes}  flex`]:
                                     link.button,
                                 },
                                 {
-                                  "pt-2 sm:p-0 sm:px-2 block text-gray-700 hover:text-brand-500 border-b-2 border-transparent font-semibold":
+                                  "pt-2 sm:p-0 sm:px-2 block text-gray-400 hover:text-white border-b-2 border-transparent font-medium ":
                                     !link.button,
                                 }
                               )
-                        }
-                      >
-                        {link.label}
-                        {!link.button && <div className=''></div>}
-                      </a>
-                    </Link>
-                  );
-                })}
-
-                <Link key='signin' href={login} className='border-none'>
-                  <Button
-                    loading={loadingButton("Sign in")}
-                    onClick={() => {
-                      setLoaderVisible(true);
-                      setOpen(!open);
-                    }}
-                    className={
-                      "ant-btn ant-btn-default btn-brand-outline ml-auto  btn-brand inline-block px-3 py-0 mt-1"
-                    }
-                  >
+                          }
+                        >
+                          {link.label}
+                          {!link.button && <div className=''></div>}
+                        </a>
+                      </Link>
+                    );
+                  })}
+                </div>
+                <div className="flex justify-end gap-x-[20px]  mt-4  md:mt-0 pt-4 md:pt-0 border-t-[1px] border-[#26252C]  md:border-0 ">
+                  <Link key='signin' href={login} className='border-none'>
+                    <Button
+                      className="border-none text-[#D4D3DF] text-[14px] font-medium"
+                      type="text"
+                      loading={loadingButton("Sign in")}
+                      onClick={() => {
+                        setLoaderVisible(true);
+                        setOpen(!open);
+                      }}                     
+                    >
                     Sign in
-                    <div className=''></div>
-                  </Button>
-                </Link>
-                <Link
-                  key='createAccount'
-                  href={register}
-                  className='border-none'
-                >
-                  <Button
-                    loading={loadingButton("Create account")}
-                    onClick={() => {
-                      setLoaderVisible(true);
-                      setOpen(!open);
-                    }}
-                    className={
-                      "ant-btn ant-btn-default btn-brand ml-4 md:ml-0 btn-brand inline-block px-3 py-0 mt-1"
-                    }
+                    </Button>
+                  </Link>
+                  <Link
+                    key='createAccount'
+                    href={register}
+                    className='border-none'
                   >
+                    <Button className="btn-brand "
+                      loading={loadingButton("Create account")}
+                      onClick={() => {
+                        setLoaderVisible(true);
+                        setOpen(!open);
+                      }}
+                    >
                     Create account
-                  </Button>
-                </Link>
+                    </Button>
+                  </Link>
+                </div>
+
               </>
             </nav>
           )}

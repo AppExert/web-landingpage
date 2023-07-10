@@ -1,8 +1,6 @@
 @import "antd/dist/antd.css";
 @import "./custome-antd-override.css";
 @import "./antd-override.css";
-@import "./fonts/Inter/inter.css";
-
 
 @tailwind base;
 @tailwind components;
@@ -22,7 +20,7 @@
     --gray-100: #F2F2F2;
     --gray-200: #D9D9D9;
     --gray-300: #ADADAD;    
-    --gray-400: #9b9a9a; 
+    --gray-400: #908E9F; 
     --gray-500: #777474; 
     --gray-600: #797474; 
     --gray-700: #6E6E6E; 
@@ -40,29 +38,64 @@
     --green-dark: #59d090;
     --text-blue: #0597F2;
     --text-black: #1a1a1a;
-    --text-gray: #6e6e6e;
+    --text-gray: #C3C2CB;
     --text-gray-dark:#344054;
     --button-text:#473F7D;
     --dark-fill:#4D5677;
     --input-box:#F3F3F7;
+    --dark-mode:#020013;
   }
 
   /* TODO add other theme variants */
 }
 
 @layer components {
+
+  .text-gradient {
+    background: linear-gradient(to right, #FFFFFF, #C7C7C7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
   .hero-heading {
-    @apply text-2xl leading-tight sm:text-4xl xl:text-4xl font-bold text-text-black font-header cursor-default;
+    @apply text-[38px] text-gradient leading-tight sm:text-[56px] font-semibold  cursor-default !important;
+  }
+
+  .heading {
+    @apply text-2xl leading-tight sm:text-4xl font-semibold text-gradient cursor-default !important;
+  }
+  
+  .sub-heading {
+    @apply text-[18px] md:text-[22px]  font-semibold text-[#E4E4E4] !important;
+  }
+
+  .min-heading {
+    @apply text-[16px] md:text-[18px]  font-medium text-[#E4E4E4] !important;
+  }
+
+  .page-btn {
+    @apply flex items-center justify-center bg-brand-500 text-white w-full md:w-max
+    rounded-[6px] mt-1 md:text-[18px]  px-[16px] py-[24px] 
+    border-none font-medium text-[16px] leading-6
+    hover:bg-brand-600 transition duration-300 cursor-pointer  !important;
+  }
+
+  .landing-para {
+    @apply text-[16px] sm:text-[14px] text-[#908E9F] !important;
+  }
+
+  .green-label {
+    @apply text-sm sm:text-[16px] font-normal text-[#0FAC98] font-mono	;
   }
 
   .btn-brand {
-    @apply flex items-center justify-center bg-brand-500 text-white p-[18px] 
+    @apply flex items-center justify-center bg-brand-500 text-white px-[10px]  py-[12px]
     border-none font-medium text-sm leading-6
     rounded hover:bg-brand-600 transition duration-300 cursor-pointer  !important;
   }
 
   .btn-brand-outline {
-    @apply flex items-center justify-center bg-brand-200 text-button-text p-[18px]
+    @apply flex items-center justify-center bg-brand-200 text-button-text px-[10px]  py-[12px]
     border-none font-medium text-sm leading-6
     rounded hover:bg-brand-300 transition duration-300 cursor-pointer  !important;
   }  
@@ -116,11 +149,11 @@
   }
 
   .section-preheading {
-    @apply font-text text-text-black cursor-default;
+    @apply text-[14px] md:text-[16px] text-gray-400 cursor-default;
   }
 
   .section-paragraph {
-    @apply my-4 font-text cursor-default;
+    @apply my-4  text-[18px] cursor-default;
   }
 
   .section-tagline {
@@ -147,8 +180,18 @@
   background-color: var(--blue-dark);
 }
 
+/* Hide the scrollbar track */
+::-webkit-scrollbar{
+  background: transparent !important;
+  width: 0px !important;
+}
+
 body {
   font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: normal;
+  font-style: normal;
 }
 
 h1,
@@ -209,7 +252,7 @@ input[type="password"]:hover {
   box-shadow: none !important;
 }
 
-@media screen and (min-width: 980px), screen and (max-width: 1980px) {
+/* @media screen and (min-width: 980px), screen and (max-width: 1980px) {
   html body::-webkit-scrollbar,
   .overflow-y-auto::-webkit-scrollbar {
     width: 3px;
@@ -230,7 +273,8 @@ input[type="password"]:hover {
     overflow-y: scroll;
     overflow-y: overlay;
   }
-}
+} */
+
 .checkbox {
   margin-top: -13px !important;
 }

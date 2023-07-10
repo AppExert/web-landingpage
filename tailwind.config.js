@@ -54,6 +54,7 @@ module.exports = {
         "button-text": generateColorClass("button-text"),
         "dark-fill": generateColorClass("dark-fill"),
         "input-box": generateColorClass("input-box"),
+        "dark-mode": generateColorClass("dark-mode"),
       },
       scale: {
         "-1": "-1",
