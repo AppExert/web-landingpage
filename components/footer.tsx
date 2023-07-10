@@ -53,7 +53,7 @@ const Footer = () => {
                 <Link href='/contact'>
                   <a className=' hover:underline '>Apply for jobs</a>
                 </Link>
-                <Link href='/register?developers'>
+                <Link href='/benefits'>
                   <a className='hover:underline '>Benefits</a>
                 </Link>
                 <Link href='/posts'>
