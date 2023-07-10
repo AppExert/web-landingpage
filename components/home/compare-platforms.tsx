@@ -150,7 +150,7 @@ const ComparePlatforms = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 1.5 }}
-            className='flex flex-col md:flex-row justify-between items-center md:my-6 text-[#E4E4E4] md:text-[22px] text-[14px] font-medium'
+            className='flex flex-col md:flex-row justify-between md:items-center pl-7 md:pl-0 md:my-6 text-[#E4E4E4] md:text-[22px] text-[14px] font-medium'
           >
             <div className='md:w-[400px]'>
               <AnimatePresence>
@@ -196,7 +196,9 @@ const ComparePlatforms = () => {
                         />
                       </div>
                       <p className='text-[#E4E4E4]'>
-                        Tired of freelance platforms
+                        Tired of freelance {" "}
+                        <br className="md:block hidden"/>
+                         platforms
                       </p>
                     </div>
                   </motion.div>
@@ -229,7 +231,7 @@ const ComparePlatforms = () => {
                         />
                       </div>
                       <span className='text-[#E4E4E4]'>
-                        Engage as one team, with full ownership
+                      Access qualified developers in few clicks
                       </span>
                     </div>
                     <div className='flex items-center md:gap-2'>
@@ -242,7 +244,7 @@ const ComparePlatforms = () => {
                         />
                       </div>
                       <p className='text-[#E4E4E4]'>
-                        Tired of freelance platforms
+                      Engage as one team, with full ownership
                       </p>
                     </div>
                   </motion.div>
@@ -260,7 +262,7 @@ const ComparePlatforms = () => {
                 handleClick(),
                 setActiveitem(activeItem === 1 ? 0 : 1)
               }}
-              className="md:w-[300px] md:h-[300px] -my-10 md:my-0 w-[200px] h-[200px] cursor-pointer"
+              className="md:w-[300px] md:h-[300px] -my-10 md:my-0 w-[200px] h-[200px] cursor-pointer hidden md:block"
             >
 
               <Image
