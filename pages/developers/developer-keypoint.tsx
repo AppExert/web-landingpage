@@ -129,7 +129,7 @@ const DEVELOPER_KEYPOINTS: { label: string; icon: JSX.Element; para: string ; he
       
     },
     { 
-      label: "Grow with like-minded developers",
+      label: "GROW WITH LIKE-MINDED DEVELOPERS",
       heading: "Team that lifts you up",
       para: "At AppExert, you work with like-minded developers and get amazing learning opportunities that make your skills globally competent. Our 1-1 mentorship from engineering leaders and top devs help you achieve your career goals faster.",
       icon: ( <svg width="450" height="450" viewBox="0 0 450 450" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -157,7 +157,7 @@ const DEVELOPER_KEYPOINTS: { label: string; icon: JSX.Element; para: string ; he
       
     },
     { 
-      label: "Let your voice be heard",
+      label: "LET YOUR VOICE BE HEARD",
       heading: "Sense of inclusion is everything",
       para: "Tired of the locked up structure of freelance platforms & IT service companies ? Where you are only a vendor, contractor, outsider, freelancer? Our Full-Time engagement model is designed to give value to your voice. You work as a team on projects and experience a true sense of belongingness",
       icon: ( <svg width="450" height="450" viewBox="0 0 450 450" fill="none" xmlns="http://www.w3.org/2000/svg">

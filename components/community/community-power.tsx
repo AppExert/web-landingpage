@@ -1,68 +1,101 @@
-import Container from "@components/container";
+import Image from "next/image";
 
 const CommunityPower = () => {
   return (
 
-    <section className='py-8 md:py-16 lg:px-10 text-center  bg-shaped '
+    <section className='md:pb-[100px] pb-[32px] md:px-10 text-center '
     >
-      <Container >
-        <div className=' pb-6'>
-
-          <div className='section-heading inline relative text-white'>
+      <div className='flex flex-col justify-center items-center pb-[72px]'>
+        <div className='heading mb-[16px]'>
                         More Power To You
-          </div>
-          <p className='section-preheading pt-2 text-white'>
+        </div>
+        <p className='landing-para md:text-[18px] max-w-[606px]'>
                         When you join our community, you not only expand your professional network but also get access to special resources to alleviate your career                    </p>
+      </div>
+      <div className="flex justify-center items-center">
+        <div className='grid-cols-1 grid lg:grid-cols-3 md:gap-x-[56px] gap-y-[24px] text-gray-400 gap-4 justify-items-start  '>
+          <div className="flex items-start gap-2 w-[200px] ">
+            <div className="flex w-[18px] h-[18px] flex-shrink-0">
+              <Image
+                width={18}
+                height={18}
+                src={"/images/home/tic-icon.svg"}
+                alt="Check icon"
+              />
+            </div>
+            <p className="mt-[-2px]">
+          3 Step Selection
+            </p>
+          </div>
+          <div className="flex items-start gap-2 w-[200px]">
+            <div className="flex w-[18px] h-[18px] flex-shrink-0">
+              <Image
+                width={18}
+                height={18}
+                src={"/images/home/tic-icon.svg"}
+                alt="Check icon"
+              />
+            </div>
+            <p className="mt-[-2px]">
+          AI-Driven Matchmaking
+            </p>
+          </div>
+          <div className="flex items-start gap-2 w-[200px]">
+            <div className="flex w-[18px] h-[18px] flex-shrink-0">
+              <Image
+                width={18}
+                height={18}
+                src={"/images/home/tic-icon.svg"}
+                alt="Check icon"
+              />
+            </div>
+            <p className="mt-[-2px]">
+          Industry Experience
+            </p>
+          </div>
+          <div className="flex items-start gap-2 w-[200px]">
+            <div className="flex w-[18px] h-[18px] flex-shrink-0">
+              <Image
+                width={18}
+                height={18}
+                src={"/images/home/tic-icon.svg"}
+                alt="Check icon"
+              />
+            </div>
+            <p className="mt-[-2px]">
+          Top Talent
+            </p>
+          </div>
+          <div className="flex items-start gap-2 w-[200px]">
+            <div className="flex w-[18px] h-[18px] flex-shrink-0">
+              <Image
+                width={18}
+                height={18}
+                src={"/images/home/tic-icon.svg"}
+                alt="Check icon"
+              />
+            </div>
+            <p className="mt-[-2px]">
+          Test Before You Invest
+            </p>
+          </div>
+          <div className="flex items-start gap-2 w-[200px]">
+            <div className="flex w-[18px] h-[18px] flex-shrink-0">
+              <Image
+                width={18}
+                height={18}
+                src={"/images/home/tic-icon.svg"}
+                alt="Check icon"
+              />
+            </div>
+            <p className="mt-[-2px]">
+          Hub of Skills
+            </p>
+          </div>
+
         </div>
-        <div className='grid-cols-1 grid lg:grid-cols-3 md:gap-1 gap-4 justify-items-start  md:justify-items-center'>
-          <div className='pb-2'>
-            <p className='section-preheading font-semibold text-blue-light  flex '>
-              <svg className='mr-2' data-name="Group 1767" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 24 24"><defs><clipPath><rect data-name="Rectangle 659" width="24" height="24" fill="#034f57" stroke="#55dfc6" strokeWidth="1"></rect></clipPath></defs><g data-name="Group 1766" clipPath="url(#clipPath)"><circle data-name="Ellipse 316" cx="10.5" cy="10.5" r="10.5" transform="translate(1.5 1.5)" fill="#55dfc6" stroke="#55dfc6" strokeMiterlimit="10" strokeWidth="2" opacity="0.25"></circle><circle data-name="Ellipse 315" cx="10.5" cy="10.5" r="10.5" transform="translate(1.5 1.5)" fill="none" stroke="#55dfc6" strokeMiterlimit="10" strokeWidth="2"></circle><path d="M8.614,1.482l-4.7,4.8a.958.958,0,0,1-.595.252H2.91a.96.96,0,0,1-.594-.252L.1,4.018a.362.362,0,0,1,0-.5l.872-.888a.345.345,0,0,1,.493,0L2.882,4.065a.345.345,0,0,0,.493,0L7.252.1a.346.346,0,0,1,.493,0L8.613.98a.361.361,0,0,1,0,.5Z" transform="translate(8 8.732)" fill="#55dfc6"></path></g></svg>
-              {"Get updates on job openings"}
-            </p>
-
-          </div>
-          <div className='pb-2'>
-            <p className='section-preheading font-semibold text-blue-light  flex '>
-              <svg className='mr-2' data-name="Group 1767" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 24 24"><defs><clipPath><rect data-name="Rectangle 659" width="24" height="24" fill="#034f57" stroke="#55dfc6" strokeWidth="1"></rect></clipPath></defs><g data-name="Group 1766" clipPath="url(#clipPath)"><circle data-name="Ellipse 316" cx="10.5" cy="10.5" r="10.5" transform="translate(1.5 1.5)" fill="#55dfc6" stroke="#55dfc6" strokeMiterlimit="10" strokeWidth="2" opacity="0.25"></circle><circle data-name="Ellipse 315" cx="10.5" cy="10.5" r="10.5" transform="translate(1.5 1.5)" fill="none" stroke="#55dfc6" strokeMiterlimit="10" strokeWidth="2"></circle><path d="M8.614,1.482l-4.7,4.8a.958.958,0,0,1-.595.252H2.91a.96.96,0,0,1-.594-.252L.1,4.018a.362.362,0,0,1,0-.5l.872-.888a.345.345,0,0,1,.493,0L2.882,4.065a.345.345,0,0,0,.493,0L7.252.1a.346.346,0,0,1,.493,0L8.613.98a.361.361,0,0,1,0,.5Z" transform="translate(8 8.732)" fill="#55dfc6"></path></g></svg>
-              {"Access to content curated by developers"}
-            </p>
-
-          </div>
-          <div className='pb-2'>
-            <p className='section-preheading font-semibold text-blue-light  flex '>
-              <svg className='mr-2' data-name="Group 1767" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 24 24"><defs><clipPath><rect data-name="Rectangle 659" width="24" height="24" fill="#034f57" stroke="#55dfc6" strokeWidth="1"></rect></clipPath></defs><g data-name="Group 1766" clipPath="url(#clipPath)"><circle data-name="Ellipse 316" cx="10.5" cy="10.5" r="10.5" transform="translate(1.5 1.5)" fill="#55dfc6" stroke="#55dfc6" strokeMiterlimit="10" strokeWidth="2" opacity="0.25"></circle><circle data-name="Ellipse 315" cx="10.5" cy="10.5" r="10.5" transform="translate(1.5 1.5)" fill="none" stroke="#55dfc6" strokeMiterlimit="10" strokeWidth="2"></circle><path d="M8.614,1.482l-4.7,4.8a.958.958,0,0,1-.595.252H2.91a.96.96,0,0,1-.594-.252L.1,4.018a.362.362,0,0,1,0-.5l.872-.888a.345.345,0,0,1,.493,0L2.882,4.065a.345.345,0,0,0,.493,0L7.252.1a.346.346,0,0,1,.493,0L8.613.98a.361.361,0,0,1,0,.5Z" transform="translate(8 8.732)" fill="#55dfc6"></path></g></svg>
-              {"Opportunity to share & present your work"}
-            </p>
-
-          </div>
-
-
-          <div className=' pb-2 '>
-            <p className='section-preheading font-semibold text-blue-light flex '>
-              <svg className='mr-2' data-name="Group 1767" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 24 24"><defs><clipPath><rect data-name="Rectangle 659" width="24" height="24" fill="#034f57" stroke="#55dfc6" strokeWidth="1"></rect></clipPath></defs><g data-name="Group 1766" clipPath="url(#clipPath)"><circle data-name="Ellipse 316" cx="10.5" cy="10.5" r="10.5" transform="translate(1.5 1.5)" fill="#55dfc6" stroke="#55dfc6" strokeMiterlimit="10" strokeWidth="2" opacity="0.25"></circle><circle data-name="Ellipse 315" cx="10.5" cy="10.5" r="10.5" transform="translate(1.5 1.5)" fill="none" stroke="#55dfc6" strokeMiterlimit="10" strokeWidth="2"></circle><path d="M8.614,1.482l-4.7,4.8a.958.958,0,0,1-.595.252H2.91a.96.96,0,0,1-.594-.252L.1,4.018a.362.362,0,0,1,0-.5l.872-.888a.345.345,0,0,1,.493,0L2.882,4.065a.345.345,0,0,0,.493,0L7.252.1a.346.346,0,0,1,.493,0L8.613.98a.361.361,0,0,1,0,.5Z" transform="translate(8 8.732)" fill="#55dfc6"></path></g></svg>
-              {"Invite to tech events "}
-            </p>
-
-          </div>
-          <div className='pb-2'>
-            <p className='section-preheading font-semibold text-blue-light flex '>
-              <svg className='mr-2' data-name="Group 1767" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 24 24"><defs><clipPath><rect data-name="Rectangle 659" width="24" height="24" fill="#034f57" stroke="#55dfc6" strokeWidth="1"></rect></clipPath></defs><g data-name="Group 1766" clipPath="url(#clipPath)"><circle data-name="Ellipse 316" cx="10.5" cy="10.5" r="10.5" transform="translate(1.5 1.5)" fill="#55dfc6" stroke="#55dfc6" strokeMiterlimit="10" strokeWidth="2" opacity="0.25"></circle><circle data-name="Ellipse 315" cx="10.5" cy="10.5" r="10.5" transform="translate(1.5 1.5)" fill="none" stroke="#55dfc6" strokeMiterlimit="10" strokeWidth="2"></circle><path d="M8.614,1.482l-4.7,4.8a.958.958,0,0,1-.595.252H2.91a.96.96,0,0,1-.594-.252L.1,4.018a.362.362,0,0,1,0-.5l.872-.888a.345.345,0,0,1,.493,0L2.882,4.065a.345.345,0,0,0,.493,0L7.252.1a.346.346,0,0,1,.493,0L8.613.98a.361.361,0,0,1,0,.5Z" transform="translate(8 8.732)" fill="#55dfc6"></path></g></svg>
-              {"Mentorship Programs"}
-            </p>
-
-          </div>
-          <div className='pb-2'>
-            <p className='section-preheading font-semibold text-blue-light flex '>
-              <svg className='mr-2' data-name="Group 1767" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 24 24"><defs><clipPath><rect data-name="Rectangle 659" width="24" height="24" fill="#034f57" stroke="#55dfc6" strokeWidth="1"></rect></clipPath></defs><g data-name="Group 1766" clipPath="url(#clipPath)"><circle data-name="Ellipse 316" cx="10.5" cy="10.5" r="10.5" transform="translate(1.5 1.5)" fill="#55dfc6" stroke="#55dfc6" strokeMiterlimit="10" strokeWidth="2" opacity="0.25"></circle><circle data-name="Ellipse 315" cx="10.5" cy="10.5" r="10.5" transform="translate(1.5 1.5)" fill="none" stroke="#55dfc6" strokeMiterlimit="10" strokeWidth="2"></circle><path d="M8.614,1.482l-4.7,4.8a.958.958,0,0,1-.595.252H2.91a.96.96,0,0,1-.594-.252L.1,4.018a.362.362,0,0,1,0-.5l.872-.888a.345.345,0,0,1,.493,0L2.882,4.065a.345.345,0,0,0,.493,0L7.252.1a.346.346,0,0,1,.493,0L8.613.98a.361.361,0,0,1,0,.5Z" transform="translate(8 8.732)" fill="#55dfc6"></path></g></svg>
-              {"career development workshops"}
-            </p>
-
-          </div>
-
-
-        </div>
-      </Container>
+      </div>
+     
     </section>
   );
 };

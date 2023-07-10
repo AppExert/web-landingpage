@@ -2441,7 +2441,7 @@ const DeveloperBenefits = () => {
   };
   return (
     <>
-      <section className='cursor-default pb-[100px]'>
+      <section className='cursor-default pb-[100px] '>
         <div className='flex justify-center text-center pb-[72px]'>
           <h1 className='heading pt-2 w-[800px]'>
             Get hired to one of our teams and you’ll unlock an AppExert+
