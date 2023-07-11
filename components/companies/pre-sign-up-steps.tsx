@@ -36,7 +36,7 @@ const initialFormValues: CompanyPreSignupFormData = {
   skills: [],
   name: "",
   companyId: undefined,
-  companyName: "",
+  companyName: "Startupfest",
   email: "",
   phone: "",
   website: "",
@@ -159,7 +159,7 @@ const PreSignUpSteps = () => {
               formRef.current.setFieldValue("companyId", response.data.id);
           },
           onError: (error) => {
-          
+            console.log("error",error );
             setLoading(false);
           },
         });
