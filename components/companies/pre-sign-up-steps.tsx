@@ -63,7 +63,6 @@ const PreSignUpSteps = () => {
   const router = useRouter();
   const formRef = useRef<FormikProps<FormikValues>>(null);
   const { mutate, isLoading, status } = useMutation(() => {
-    console.log("formref", formRef.current?.values);
     return submitContactInfo(
       convertFormDataAsContact(
         formRef.current?.values as CompanyPreSignupFormData
@@ -81,7 +80,7 @@ const PreSignUpSteps = () => {
       content: <SelectSkills />,
     },
     {
-      title: "Tell us about your company?",
+      title: "Tell us about your company",
       subTitle: "Get started by providing just the essential details",
       content: <CompanyInfo />,
     },

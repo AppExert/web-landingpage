@@ -8,7 +8,6 @@ module.exports = (phase, { defaultConfig }) => {
     images: {
       domains: ["cdn.sanity.io", "avatars.dicebear.com", "firebasestorage.googleapis.com"],
     },
-    productionBrowserSourceMaps: true,
     async redirects() {
       return [{
         source: "/publicCollection",
