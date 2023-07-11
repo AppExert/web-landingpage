@@ -1,6 +1,7 @@
 import { DownCircleOutlined, UpCircleOutlined } from "@ant-design/icons";
 import Container from "@components/container";
 import { Button } from "antd";
+import Link from "next/link";
 import { useState, useRef } from "react";
 
 const DEVELOPER_BENEFITS: { name: string; icon: JSX.Element; text: string }[] =
@@ -2466,21 +2467,14 @@ const DeveloperBenefits = () => {
           ))}
         </div>
         <div className='flex justify-center mt-16 '>
-          <Button
-            type='primary'
-            className='page-btn'
-            onClick={handleClick}
-          >
-            {expanded ? (
-              <>
-                View less 
-              </>
-            ) : (
-              <>
+          <Link href="/benefits">
+            <Button
+              type='primary'
+              className='page-btn'
+            >
                 View all 25+ benefits 
-              </>
-            )}
-          </Button>
+            </Button>
+          </Link>
         </div>
       </section>
     </>

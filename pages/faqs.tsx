@@ -74,7 +74,7 @@ const FAQs = () => {
 
           </div>
        
-          <FrequentlyAskedQuestion feature={activeItem === 0 ? "developer": "company"} className="landingPage" />
+          <FrequentlyAskedQuestion feature={activeItem === 0 ? "developer": "company"} className="landingPage" expand={true} />
            
         </Container>
       </section>
