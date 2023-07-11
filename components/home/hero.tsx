@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import Container from "@components/container";
 import { Button } from "antd";
 import Image from "next/image";

@@ -26,7 +26,7 @@ const Footer = () => {
 
 
           </div>
-          <div className='md:w-2/3 flex flex-row flex-wrap md:gap-x-[90px] justify-between md:justify-start px-2 md:px-0'>
+          <div className='md:w-2/3 grid grid-cols-2 md:flex flex-row flex-wrap md:gap-x-[90px] justify-between md:justify-start px-2 md:px-0'>
             <div >
               <p className='font-normal font-mono text-white pb-[15px]'>Employers</p>
               <div className='text-[14px] text-gray-400 flex flex-col gap-y-[14px]'>
@@ -104,8 +104,8 @@ const Footer = () => {
               </a>
             </Link>
           </div>
-          <div className='flex md:justify-center  text-center  gap-[16px]'>
-            <Link href='/privacy' >
+          <div className='flex md:justify-center  text-center  gap-[16px] cursor-pointer'>
+            <Link href='https://in.linkedin.com/company/appexert' >
               <div className="w-[20px] h-[20px]">
                 <Image
                   width={"100%"}
@@ -116,7 +116,7 @@ const Footer = () => {
               </div>
 
             </Link>
-            <Link href='/privacy'>
+            <Link href='https://twitter.com/appexert?lang=en'>
               <div className="w-[20px] h-[20px]">
                 <Image
                   width={"100%"}
@@ -127,7 +127,7 @@ const Footer = () => {
 
               </div>
             </Link>
-            <Link href='/privacy'>
+            <Link href='https://www.instagram.com/appexert/?hl=en'>
               <div className="w-[20px] h-[20px]">
                 <Image
                   width={"100%"}
@@ -138,7 +138,7 @@ const Footer = () => {
                 />
               </div>
             </Link>
-            <Link href='/privacy'>
+            <Link href='https://www.facebook.com/appexert/'>
               <div className="w-[20px] h-[20px]">
                 <Image
                   width={"100%"}
@@ -149,6 +149,9 @@ const Footer = () => {
               </div>
             </Link>
           </div>
+          <p className="md:hidden" >
+                  Made by AppExert tribe 🌍
+          </p>
         </Container>
       )}
     </footer>
