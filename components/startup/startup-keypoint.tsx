@@ -10,7 +10,14 @@ const STARTUP_KEYPOINTS: {
   {
     label: "LONGER LIFELINE",
     heading: "Extend your startup runway 3x",
-    para: <p className=" landing-para text-[18px] ">Most great startups don't fail, you just end up running out of capital before becoming great. By building a capital efficient remote team on AppExert, our clients have extended their runway by over 3x getting them further much further on their road to Product-Market-Fit.</p>,
+    para: (
+      <p className=" landing-para text-[18px] ">
+        Most great startups don&apos;t fail, you just end up running out of capital
+        before becoming great. By building a capital efficient remote team on
+        AppExert, our clients have extended their runway by over 3x getting them
+        further much further on their road to Product-Market-Fit.
+      </p>
+    ),
     icon: (
       <svg
         width="450"
@@ -26,7 +33,7 @@ const STARTUP_KEYPOINTS: {
         <path
           d="M242.394 142.273H290.879C292.165 142.273 293.398 142.784 294.307 143.693C295.216 144.602 295.727 145.835 295.727 147.121V195.606C295.727 196.892 295.216 198.125 294.307 199.034C293.398 199.944 292.165 200.455 290.879 200.455H242.394C241.108 200.455 239.875 199.944 238.966 199.034C238.056 198.125 237.545 196.892 237.545 195.606V147.121C237.545 145.835 238.056 144.602 238.966 143.693C239.875 142.784 241.108 142.273 242.394 142.273ZM152.697 236.818H201.182C202.468 236.818 203.701 237.329 204.61 238.238C205.519 239.148 206.03 240.381 206.03 241.667V290.152C206.03 291.437 205.519 292.671 204.61 293.58C203.701 294.489 202.468 295 201.182 295H152.697C151.411 295 150.178 294.489 149.269 293.58C148.359 292.671 147.848 291.437 147.848 290.152V241.667C147.848 240.381 148.359 239.148 149.269 238.238C150.178 237.329 151.411 236.818 152.697 236.818ZM273.25 229.526L307.189 287.708C309.073 290.942 306.743 295 303 295H235.121C231.378 295 229.048 290.942 230.932 287.708L264.871 229.526C266.743 226.319 271.378 226.319 273.25 229.526ZM179.364 135C199.446 135 215.727 151.281 215.727 171.364C215.727 191.446 199.446 207.727 179.364 207.727C159.281 207.727 143 191.446 143 171.364C143 151.281 159.281 135 179.364 135Z"
           fill="url(#paint0_linear_3127_101491)"
-          fill-opacity="0.7"
+          fillOpacity="0.7"
         />
         <defs>
           <filter
@@ -36,9 +43,9 @@ const STARTUP_KEYPOINTS: {
             width="450"
             height="450"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feBlend
               mode="normal"
               in="SourceGraphic"
@@ -58,8 +65,8 @@ const STARTUP_KEYPOINTS: {
             y2="306.287"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#A7B5FF" />
-            <stop offset="1" stop-color="#F3ACFF" />
+            <stop stopColor="#A7B5FF" />
+            <stop offset="1" stopColor="#F3ACFF" />
           </linearGradient>
         </defs>
       </svg>
@@ -68,7 +75,14 @@ const STARTUP_KEYPOINTS: {
   {
     label: "IMAGINE ROUND THE CLOCK PRs & DEVELOPMENTS",
     heading: "Round the clock productivity",
-    para: <p className=" landing-para text-[18px] ">You can partner with AppExert exclusively or in collaboration with your in-house team. Both ways, you get the benefits of our tailored uniquely for startups. As a result, you give your startup an increased run rate/increased runway time.</p>,
+    para: (
+      <p className=" landing-para text-[18px] ">
+        You can partner with AppExert exclusively or in collaboration with your
+        in-house team. Both ways, you get the benefits of our tailored uniquely
+        for startups. As a result, you give your startup an increased run
+        rate/increased runway time.
+      </p>
+    ),
     icon: (
       <svg
         width="450"
@@ -80,10 +94,10 @@ const STARTUP_KEYPOINTS: {
         <g filter="url(#filter0_f_3127_101519)">
           <circle cx="225" cy="225.5" r="75" fill="#0C006F" />
         </g>
-        <g opacity="0.7" clip-path="url(#clip0_3127_101519)">
+        <g opacity="0.7" clipPath="url(#clip0_3127_101519)">
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M225 305C269.182 305 305 269.182 305 225C305 180.818 269.182 145 225 145C180.818 145 145 180.818 145 225C145 269.182 180.818 305 225 305ZM225 260C244.33 260 260 244.33 260 225C260 205.67 244.33 190 225 190C205.67 190 190 205.67 190 225C190 244.33 205.67 260 225 260Z"
             fill="url(#paint0_linear_3127_101519)"
           />
@@ -96,9 +110,9 @@ const STARTUP_KEYPOINTS: {
             width="450"
             height="450"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feBlend
               mode="normal"
               in="SourceGraphic"
@@ -118,8 +132,8 @@ const STARTUP_KEYPOINTS: {
             y2="315.5"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#A7B5FF" />
-            <stop offset="1" stop-color="#F3ACFF" />
+            <stop stopColor="#A7B5FF" />
+            <stop offset="1" stopColor="#F3ACFF" />
           </linearGradient>
           <clipPath id="clip0_3127_101519">
             <rect
@@ -139,10 +153,10 @@ const STARTUP_KEYPOINTS: {
     heading: "Escape from freelance gambling",
     para: (
       <>
-      <p className=" landing-para text-[18px] ">
+        <p className=" landing-para text-[18px] ">
           Opting for freelance platforms might appear as a convenient option,
           but once you start scaling the problems with such platform surfaces
-          </p>
+        </p>
         <ul className="list-disc mt-2 ml-4 text-left landing-para text-[18px] ">
           <li>Hard to onboard folks for long term</li>
           <li>Finding the right fit is time consuming</li>
@@ -166,7 +180,7 @@ const STARTUP_KEYPOINTS: {
         <g filter="url(#filter0_f_3127_101525)">
           <circle cx="225" cy="225.5" r="75" fill="#0C006F" />
         </g>
-        <g clip-path="url(#clip0_3127_101525)">
+        <g clipPath="url(#clip0_3127_101525)">
           <mask
             id="mask0_3127_101525"
             maskUnits="userSpaceOnUse"
@@ -181,7 +195,7 @@ const STARTUP_KEYPOINTS: {
             <path
               d="M275.458 264.542L235.914 225L275.458 185.458L315 225L275.458 264.542ZM174.542 264.542L135 225L174.542 185.458L214.086 225L174.542 264.542ZM225 315L185.458 275.458L225 235.914L264.542 275.458L225 315ZM225 214.086L185.458 174.542L225 135L264.542 174.542L225 214.086Z"
               fill="url(#paint0_linear_3127_101525)"
-              fill-opacity="0.7"
+              fillOpacity="0.7"
             />
           </g>
         </g>
@@ -193,9 +207,9 @@ const STARTUP_KEYPOINTS: {
             width="450"
             height="450"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feBlend
               mode="normal"
               in="SourceGraphic"
@@ -215,8 +229,8 @@ const STARTUP_KEYPOINTS: {
             y2="326.812"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#A7B5FF" />
-            <stop offset="1" stop-color="#F3ACFF" />
+            <stop stopColor="#A7B5FF" />
+            <stop offset="1" stopColor="#F3ACFF" />
           </linearGradient>
           <clipPath id="clip0_3127_101525">
             <rect
@@ -233,7 +247,15 @@ const STARTUP_KEYPOINTS: {
   {
     label: "PAY ONLY FOR THE OUTPUT & SAVE OVERHEAD COSTS",
     heading: "Scale it up or down",
-    para: <p className=" landing-para text-[18px] ">How often do you find yourself wasting hours figuring out how to setup a complex AWS task or learning information security to protect your data. With AppExert, you can scale up or down on talent on demand bringing in the right people to help with complex tasks without having to hire a full time DevOps or Security Engineer</p>,
+    para: (
+      <p className=" landing-para text-[18px] ">
+        How often do you find yourself wasting hours figuring out how to setup a
+        complex AWS task or learning information security to protect your data.
+        With AppExert, you can scale up or down on talent on demand bringing in
+        the right people to help with complex tasks without having to hire a
+        full time DevOps or Security Engineer
+      </p>
+    ),
     icon: (
       <svg
         width="450"
@@ -246,11 +268,11 @@ const STARTUP_KEYPOINTS: {
           <circle cx="225" cy="225" r="75" fill="#0C006F" />
           <circle cx="225" cy="225" r="74.5" stroke="#D0CAFF" />
         </g>
-        <g clip-path="url(#clip0_3127_101557)">
+        <g clipPath="url(#clip0_3127_101557)">
           <path
             opacity="0.7"
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M241 145H209V186.373L179.745 157.118L157.118 179.745L186.373 209H145V241H186.373L157.118 270.254L179.746 292.882L209 263.627V305H241V263.627L270.255 292.882L292.882 270.255L263.627 241H305V209H263.627L292.882 179.745L270.255 157.118L241 186.373V145Z"
             fill="url(#paint0_linear_3127_101557)"
           />
@@ -263,9 +285,9 @@ const STARTUP_KEYPOINTS: {
             width="450"
             height="450"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feBlend
               mode="normal"
               in="SourceGraphic"
@@ -285,8 +307,8 @@ const STARTUP_KEYPOINTS: {
             y2="315.5"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#A7B5FF" />
-            <stop offset="1" stop-color="#F3ACFF" />
+            <stop stopColor="#A7B5FF" />
+            <stop offset="1" stopColor="#F3ACFF" />
           </linearGradient>
           <clipPath id="clip0_3127_101557">
             <rect
@@ -306,8 +328,8 @@ const STARTUP_KEYPOINTS: {
     para: (
       <>
         <p className=" landing-para text-[18px] ">
-            We identified these gaps in freelance & hiring platforms and designed
-            AppExert in a way that it brings maximum convenience to founders.
+          We identified these gaps in freelance & hiring platforms and designed
+          AppExert in a way that it brings maximum convenience to founders.
         </p>
         <ul className="list-disc mt-2 ml-4 text-left landing-para text-[18px] ">
           <li>Dedicated account managers</li>
@@ -332,7 +354,7 @@ const STARTUP_KEYPOINTS: {
         <path
           d="M235.449 135L156.139 231.934C152.723 236.109 151.016 238.196 151 239.956C150.987 241.486 151.675 242.939 152.868 243.897C154.24 245 156.937 245 162.331 245H225.449L215.449 315L294.759 218.066C298.174 213.891 299.882 211.804 299.897 210.044C299.911 208.514 299.223 207.061 298.03 206.103C296.658 205 293.961 205 288.567 205H225.449L235.449 135Z"
           fill="url(#paint0_linear_3127_101563)"
-          fill-opacity="0.7"
+          fillOpacity="0.7"
         />
         <defs>
           <filter
@@ -342,9 +364,9 @@ const STARTUP_KEYPOINTS: {
             width="450"
             height="450"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feBlend
               mode="normal"
               in="SourceGraphic"
@@ -364,8 +386,8 @@ const STARTUP_KEYPOINTS: {
             y2="320.238"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#A7B5FF" />
-            <stop offset="1" stop-color="#F3ACFF" />
+            <stop stopColor="#A7B5FF" />
+            <stop offset="1" stopColor="#F3ACFF" />
           </linearGradient>
         </defs>
       </svg>
