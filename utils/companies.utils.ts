@@ -17,7 +17,7 @@ export const convertFormDataAsContact = (
     website,
   } = formData;
   return {
-    companyName : name,
+    companyName,
     contactName: name,
     contactPhone: Number(phone),
     email,
