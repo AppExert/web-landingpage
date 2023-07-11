@@ -1,6 +1,13 @@
 import { UploadFile } from "antd";
 import { ISkillsOptions } from "@models/misc.model";
 
+export interface RegisterCompanyPayload {
+  email: string;
+  companyName: string;
+  location: string;
+  password: string;
+}
+
 export interface Company {
   companyLogo?: string;
   companyName: string;

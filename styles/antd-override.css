@@ -39,8 +39,8 @@
 /* ant radio button styles */
 .companyPreSignup
   .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
-  color: var(--brand-color);
-  border-color: var(--brand-color);
+  color: white;
+  border-color: #715EF9;
   border-radius: 50px;
 }
 .companyPreSignup
@@ -53,6 +53,9 @@
 .companyPreSignup .ant-radio-button-wrapper{
   border-radius: 50px;
   border-width: 1px !important;
+  background: #715ef91a;
+  border: 1px solid #252234;
+  color: #908E9F;
 }
 .companyPreSignup .ant-radio-group-large .ant-radio-button-wrapper {
   border-radius: 50px;
@@ -60,6 +63,7 @@
 }
 .companyPreSignup .ant-radio-button-wrapper:not(:first-child)::before {
   display: none;
+  border-color: #252234;
 }
 .companyPreSignup
   .ant-radio-button-wrapper-checked:not(
@@ -82,7 +86,7 @@
   border-color: var(--brand-color);
 }
 .companyPreSignup .ant-radio-button-wrapper:hover {
-  color: var(--brand-500);
+  color: #908E9F;
   border-color: var(--brand-500);
 }
 

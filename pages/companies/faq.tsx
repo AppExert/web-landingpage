@@ -154,7 +154,7 @@ const FrequentlyAskedQuestion = (props: any) => {
       <Container>
         <div className='flex-row  items-center justify-center md:mx-[10%] '>
           <div className='pt-4 pb-8'>
-            {localCuratedList.map(
+            {  localCuratedList.slice(0, !props.expand ? 5 : undefined).map(
               (
                 faq: {
                   question: string;
@@ -169,10 +169,10 @@ const FrequentlyAskedQuestion = (props: any) => {
                     ghost
                     collapsible='header'                    
                     className="text-white bg-[#09071B]"
-                    defaultActiveKey={1}
+                    defaultActiveKey={props.expand ? 1 : 0 }
                   >
                     <Panel
-                      header={faq.question}
+                      header={ faq.question}
                       key='1'
                       className='font-semibold text-white  text-[16px] md:text-[20px] '
                     >

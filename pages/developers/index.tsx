@@ -101,7 +101,7 @@ const Developers = () => {
                 <DeveloperKeypoint />
                 <DeveloperBenefits />
                 <h1 className="heading pt-2 text-center">Frequently asked questions</h1>
-                <FrequentlyAskedQuestion feature="developer" className="landingPage" />
+                <FrequentlyAskedQuestion feature="developer" className="landingPage" expand={false} />
               </div>
             </div>
           </div>
