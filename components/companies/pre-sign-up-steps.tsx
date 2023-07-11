@@ -3,10 +3,9 @@ import React, { useEffect, useRef } from "react";
 import { useRouter } from "next/router";
 
 import { Button, notification } from "antd";
-import SelectSkills from "./select-skills";
 import ScheduleCall from "./schedule-call";
 import CompanyInfo from "./company-info";
-
+import SelectSkills from "./select-skills";
 import cn from "classnames";
 import Container from "@components/container";
 import Head from "next/head";
@@ -64,6 +63,7 @@ const PreSignUpSteps = () => {
   const router = useRouter();
   const formRef = useRef<FormikProps<FormikValues>>(null);
   const { mutate, isLoading, status } = useMutation(() => {
+    console.log("formref", formRef.current?.values);
     return submitContactInfo(
       convertFormDataAsContact(
         formRef.current?.values as CompanyPreSignupFormData
@@ -160,10 +160,7 @@ const PreSignUpSteps = () => {
               formRef.current.setFieldValue("companyId", response.data.id);
           },
           onError: (error) => {
-            notification.error({
-              message: "An error occurred while processing company info",
-              duration: 2,
-            });
+          
             setLoading(false);
           },
         });
