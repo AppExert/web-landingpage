@@ -205,7 +205,7 @@ function Header() {
                         setOpen(!open);
                       }}
                     >
-                    Create account
+                    Get started
                     </Button>
                   </Link>
                 </div>

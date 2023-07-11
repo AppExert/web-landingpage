@@ -62,7 +62,7 @@
   }
 
   .heading {
-    @apply text-[32px] leading-tight md:text-[36px] font-semibold text-gradient cursor-default !important;
+    @apply  leading-tight text-[36px] font-semibold text-gradient cursor-default !important;
   }
   
   .sub-heading {
@@ -95,7 +95,7 @@
   }
 
   .landing-para {
-    @apply md:text-[16px] text-[14px] text-[#908E9F] !important;
+    @apply text-[16px] text-[#908E9F] !important;
   }
 
   .green-label {
@@ -175,7 +175,7 @@
   }
 
   .sub-heading {
-    @apply md:text-[22px] text-[20px]  cursor-default text-[#FFFFFF] !important;
+    @apply md:text-[22px] text-[16px]  cursor-default text-[#FFFFFF] !important;
   }
 
   .label {

@@ -92,7 +92,7 @@ const TestimonialsClients = () => {
         </div>
 
         <div className="flex flex-col justify-center md:max-w-[810px] overflow-hidden "  >
-          <div id="testimonials-container"  className="h-[65vh] md:h-[420px]">
+          <div id="testimonials-container"  className=" md:h-[420px]">
             <motion.div
               initial={{ opacity: 0, x: -200 }}
               whileInView={{ opacity: 1, x: 0 }}
