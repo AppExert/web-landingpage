@@ -26,7 +26,7 @@ const firebaseConfig = {
 };
 
 // check that window is in scope for the analytics module
-console.log(firebase && firebase.apps.length, "firebaseapp", firebaseConfig)
+//console.log(firebase && firebase.apps.length, "firebaseapp", firebaseConfig)
 if (typeof window !== "undefined" && !firebase.apps.length) {
   // Initialize Firebase
   if (firebaseConfig["projectId"]) {
