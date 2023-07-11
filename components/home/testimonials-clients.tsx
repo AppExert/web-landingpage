@@ -127,7 +127,6 @@ const TestimonialsClients = () => {
                   initial={{ scale: 1 }}
                   animate={{
                     // scale: testimonial.company === currentTestimonial.company ? 1.2 : 1 ,
-                    filter: testimonial.company === currentTestimonial.company ? "brightness(0) invert(1)" : ""
                   }}
                   transition={{ duration: 0.5 }}
                 >
