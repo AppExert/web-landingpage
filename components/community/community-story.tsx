@@ -7,7 +7,7 @@ const CommunityStorie = () => {
   return (
     <section className='py-6  w-full overflow-visible rounded-md mb-4'>
       <div className='flex flex-col justify-center items-center text-center pb-[72px]'>
-        <h1 className='heading pt-2 w-[800px]'>What our members feel</h1>
+        <h1 className='heading pt-2 md:w-[800px]'>What our members feel</h1>
         <p className='landing-para md:text-[18px] pt-[16px]'>
           We work with some interesting startups backed by leading VCs &
           accelerators
