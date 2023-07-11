@@ -10,8 +10,8 @@ module.exports = (phase, { defaultConfig }) => {
     },
     async redirects() {
       return [{
-        source: '/publicCollection',
-        destination: '/c',
+        source: "/publicCollection",
+        destination: "/c",
         permanent: true,
       }]
     }
