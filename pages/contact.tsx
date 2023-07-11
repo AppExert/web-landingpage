@@ -8,17 +8,16 @@ import { Button } from "antd";
 import Fieldset from "@components/fieldset";
 import { Form, Formik, FormikProps, FormikValues } from "formik";
 import * as Yup from "yup";
-import TextArea from "antd/lib/input/TextArea";
 import Link from "next/link";
 
 const validationSchema = Yup.object({
   name: Yup.string().required("Please provide your name"),
   phoneNumber: Yup.string()
-  .required("Please provide your phone number")
-  .matches(
-    /^(?:(?:\+|00)\d{1,3})?[ -]?\(?(?:\d{1,4}\)?[ -]?\d{1,4})[ -]?\d{1,9}$/,
-    "Can only contain + - ( ) signs and digits"
-  ),
+    .required("Please provide your phone number")
+    .matches(
+      /^(?:(?:\+|00)\d{1,3})?[ -]?\(?(?:\d{1,4}\)?[ -]?\d{1,4})[ -]?\d{1,9}$/,
+      "Can only contain + - ( ) signs and digits"
+    ),
   email: Yup.string()
     .email("Invalid email address")
     .required("Please provide your work email"),
@@ -68,7 +67,7 @@ const Contact = () => {
       contact({
         contactName: name,
         contactNumber: phoneNumber,
-        companyName: 'Startupfest',
+        companyName: "Startupfest",
         message,
         email,
       }).then((result) => {
@@ -194,7 +193,7 @@ const Contact = () => {
                         <p className='text-gray-400 text-[14px] mb-[32px]'>
                           visit our office HQ
                         </p>
-                        <Link href={`https://goo.gl/maps/GYbNx8SWVBL33yxV8`}>
+                        <Link href={"https://goo.gl/maps/GYbNx8SWVBL33yxV8"}>
                           <a target='_blank' className='text-white md:text-[16px] text-[14px] underline hover:text-blue-500'>
                             View on google maps
                           </a>
