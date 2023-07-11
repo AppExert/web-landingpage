@@ -108,7 +108,7 @@ const Fieldset: React.FC<Props> = ({
               {...props}
               id={name}
               name={name}
-              className={cn(classProps, "w-full" + customLabelFont && "my-2.5")}
+              className={cn(classProps, "w-full" + customLabelFont && "border-solid border-2 border-[#1B1929] bg-[#09071B] text-white rounded-lg my-2.5")}
             />
           ) : isRichTextArea ? (
             <ReactQuill
@@ -171,7 +171,8 @@ const Fieldset: React.FC<Props> = ({
                     : [null, null]}
                 className={cn(classProps, "w-full" + customLabelFont && "my-2.5 ")}
               />
-            ) : (
+            ) : 
+            (
               <Input
                 {...field}
                 {...props}
@@ -182,7 +183,7 @@ const Fieldset: React.FC<Props> = ({
                 addonAfter={addonAfter}
                 addonBefore={addonBefore}
                 // size='large'
-                className={cn(classProps, "w-full" + customLabelFont && "my-2.5")}
+                className={cn(classProps, "w-full" + customLabelFont && "border-solid border-2 border-[#1B1929] text-white  rounded-lg bg-[#09071B] my-2.5 placeholder-placeholder-gray")}
               />
             )}
         </>
