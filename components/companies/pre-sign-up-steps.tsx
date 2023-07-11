@@ -36,7 +36,7 @@ const initialFormValues: CompanyPreSignupFormData = {
   skills: [],
   name: "",
   companyId: undefined,
-  companyName: "Startupfest",
+  companyName: "",
   email: "",
   phone: "",
   website: "",
