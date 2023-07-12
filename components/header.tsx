@@ -143,7 +143,7 @@ function Header() {
           {navMenu && (
             <nav
               className={cn(
-                { "h-0 py-0 md:h-auto ": !open },
+                { "h-0 py-0 md:h-auto pt-0": !open },
                 {
                   "h-54 opacity-100  transition-all duration-200 ": open,
                 },
