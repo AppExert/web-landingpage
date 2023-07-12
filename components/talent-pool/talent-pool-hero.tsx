@@ -56,7 +56,7 @@ const TalentPoolHero = () => {
           <h1 className="heading pt-2 text-center md:max-w-[775px] text-[48px]">
             Hire qualified developers in record time
           </h1>
-          <p className='section-paragraph text-[#908E9F]  md:max-w-[672px]  py-[10px] pb-[20px]  '>
+          <p className='section-paragraph text-[#908E9F] md:max-w-[672px]  py-[10px] pb-[20px]  '>
             Get instant insights with our in-depth developer profiles & build your team from untapped & quality talents.
           </p>
         </div>
@@ -76,7 +76,7 @@ const TalentPoolHero = () => {
               }}
             />
 
-            <p className='pt-4 text-[#908E9F] text-[14px]'>
+            <p className='pt-4 text-[#908E9F] text-[14px] z-'>
                 Popular categories:
               <span
                 className='px-[12px] py-1 m-2 font-semibold cursor-pointer rounded-[4px] border-[1px] border-[#252234] hover:border-[#716999]'
@@ -144,8 +144,8 @@ const TalentPoolHero = () => {
           }}
         ></div>
         <div className="bg-[#020013] z-40 relative">
-          <div className="relative mt-[100px]" style={{ zIndex: "2" }}>
-            <div className="py-[100px]">
+          <div className="relative md:mt-[50px]" style={{ zIndex: "2" }}>
+            <div className="py-[50px]">
               {isLoading && (
                 <div className='site-card-wrapper h-screen '>
                   <Row className='gap-6 mx-10'>
