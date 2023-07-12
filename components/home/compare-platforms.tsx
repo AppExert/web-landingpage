@@ -131,10 +131,10 @@ const ComparePlatforms = () => {
                         {isActive && (
                           <motion.div
                             layoutId="SegmentedControlActive"
-                            className={i === 0 ? "border-[#FF5C5C] drop-shadow-[0_32px_50px_rgba(255,92,92,0.08)] absolute inset-0 z-1 border-[0.5px] drop-shadow-[0_32px_50px_rgba(15,172,152,0.08)] bg-[#FFF5F51A] rounded-[24px] shadow-md" : "border-[#5cff92] absolute inset-0 z-1 border-[0.5px] bg-[#FFF5F51A] rounded-[24px] shadow-md"}
+                            className={i === 0 ? "border-[#FF5C5C] drop-shadow-[0_32px_50px_rgba(255,92,92,0.08)] absolute inset-0 z-10 border-[0.5px] drop-shadow-[0_32px_50px_rgba(15,172,152,0.08)] bg-[#FFF5F51A] rounded-[24px] shadow-md" : "border-[#5cff92] absolute inset-0 z-10 border-[0.5px] bg-[#FFF5F51A] rounded-[24px] shadow-md"}
                           />
                         )}
-                        <div className="relative z-2 md:text-[16px] text-[12px] font-medium">{item.title}</div>
+                        <div className="relative z-20 md:text-[16px] text-[12px] font-medium">{item.title}</div>
                       </button>
 
                     </motion.div>

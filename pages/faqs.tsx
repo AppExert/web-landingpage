@@ -60,10 +60,10 @@ const FAQs = () => {
                         {isActive && (
                           <motion.div
                             layoutId="SegmentedControlActive"
-                            className="border-[#715EF91A]  absolute inset-0 z-1 border-[1px] drop-shadow-[0_1px_1px_rgba(16, 24, 40, 0.06)] bg-[#475EF919] rounded-[40px] shadow-md"
+                            className="border-[#715EF91A]  absolute inset-0 z-10 border-[1px] drop-shadow-[0_1px_1px_rgba(16, 24, 40, 0.06)] bg-[#475EF919] rounded-[40px] shadow-md"
                           />
                         )}
-                        <div className="relative z-2 md:text-[16px] text-[12px] font-medium">{item.title}</div>
+                        <div className="relative z-20 md:text-[16px] text-[12px] font-medium">{item.title}</div>
                       </button>
 
                     </motion.div>
