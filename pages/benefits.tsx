@@ -81,7 +81,7 @@ const Benefits = () => {
                         <div className='w-full flex justify-center fill-current max-h-max'>
                           {benefits.icon}
                         </div>
-                        <h3 className='font-medium text-[#E4E4E4] text-[18px] pt-[20px]'>
+                        <h3 className='font-medium text-[#E4E4E4] text-[18px] mt-[-20px]'>
                           {benefits.name}
                         </h3>
                         <p className=' text-[#908E9F] text-[14px]'>{benefits.text}</p>
@@ -101,7 +101,7 @@ const Benefits = () => {
               backdropFilter: "blur(12px)"
             }}
           >
-            <h1 className="heading pt-2 pb-4 md:pb-0md:w-[560px]">Join our community of (100+) remote developers</h1>
+            <h1 className="heading  pt-2 pb-4 md:pb-0 md:w-[560px]">Join our community of (100+) remote developers</h1>
             <Link href='https://jobs.appexert.com/'>
               <Button
                 type='primary'

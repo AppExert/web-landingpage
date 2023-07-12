@@ -64,7 +64,7 @@
   }
 
   .heading {
-    @apply  leading-tight text-[36px] font-semibold text-gradient cursor-default !important;
+    @apply  leading-tight md:text-[36px] text-[24px] font-semibold text-gradient cursor-default !important;
   }
   
   .sub-heading {
