@@ -185,7 +185,7 @@
   }
 
   .lander-tag {
-    @apply flex border-[#252234] rounded-[4px] px-[12px] py-1 text-[#908E9F] text-[12px] items-center text-xs mt-1 ;
+    @apply flex border-[#252234] rounded-[4px] px-[12px] py-1 text-[#908E9F] text-[12px] items-center text-xs mt-1 !important;
   }
 }
 

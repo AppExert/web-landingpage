@@ -98,7 +98,7 @@ const TalentPoolList = (props: any) => {
               your team from untapped & quality talents.
             </p>
           </div>
-          <div className='md:w-[480px] '>
+          <div className='md:w-[480px] py-[48px]'>
             <div
               className=' p-[40px]'
               style={{
@@ -118,11 +118,14 @@ const TalentPoolList = (props: any) => {
               >
                 <Form>
                   <Fieldset
+                    customLabelFont='text-gray-400'
+                    label='Email'
+                    size='large'
+                    classProps='text-white'
                     type='email'
                     placeholder='Enter your email to get access'
                     name='email'
                     id='email'
-                    className='py-[9px] placeholder-gray-400 text-gray-700  bg-light-gray rounded-l-md  '
                     required
                   />
                   <div className='flex justify-center'>
@@ -149,7 +152,7 @@ const TalentPoolList = (props: any) => {
                 </div> }
             </div>
           </div>
-          <div className='flex flex-col md:flex-row gap-4 text-gray-400 pt-[48px] md:pt-[80px] justify-center items-center'>
+          <div className='flex flex-col md:flex-row gap-4 text-gray-400  justify-center items-center'>
             <div className="flex items-start gap-2  ">
               <div className="flex w-[18px] h-[18px] flex-shrink-0">
                 <Image
@@ -378,17 +381,8 @@ const TalentPoolList = (props: any) => {
                           <div className='flex flex-wrap cursor-pointer  '>
                             {devCard?.profileSkills &&
                               devCard?.profileSkills.length == 0 &&
-                              [
-                                "React",
-                                "Java",
-                                "Next JS",
-                                "Javascript",
-                                "Node",
-                              ].map((devCardTopSkill: any) => (
-                                <Tag
-                                  key={devCardTopSkill}
-                                  className='lander-tag'
-                                >
+                              devCard?.topSkills.map((devCardTopSkill: any) => (
+                                <Tag key={devCardTopSkill} className='lander-tag '>
                                   {devCardTopSkill}
                                 </Tag>
                               ))}
