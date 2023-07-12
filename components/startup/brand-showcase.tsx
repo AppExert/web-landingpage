@@ -24,7 +24,7 @@ const logos: { name: string; path: string, width:string, height:string }[] = [
 ];
 const BrandShowcase = () => {
   return (
-    <section className='pt-8'>
+    <section className='pt-[100px]'>
       <Container className='flex flex-col gap-4 justify-center items-center py-4'>
         <p className='section-preheading text-center'>Trusted by start-up founders backed by top VCs & accelerators like </p>
         <div className='grid grid-cols-3 gap-[48px]  md:mt-0 text-center item-center '>
