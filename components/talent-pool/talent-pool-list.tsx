@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 /* eslint-disable @typescript-eslint/no-empty-function */
 import { Avatar, Button, Card, Col, message, Modal, Tag } from "antd";
 import cn from "classnames";
@@ -11,29 +12,48 @@ import { leadInvite } from "@services/lead.service";
 import router from "next/router";
 import SkillsImage from "@components/skill-image";
 
+const Salery = ({ amount }: { amount: number }) => {
+  let lowerRange = "";
+  let upperRange = "";
+
+  if (amount >= 1000) {
+    lowerRange = Math.floor(amount / 1000) + "K";
+    upperRange = Math.floor(amount / 1000 + 10) + "K";
+  } else {
+    lowerRange = amount.toString();
+    upperRange = (amount + 1000).toString();
+  }
+
+  const salaryRange = `${lowerRange} - ${upperRange}`;
+  return <p>{salaryRange}</p>;
+};
+
 const TalentPoolList = (props: any) => {
   const devCard = props.devCard;
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+
 
   const handleSubmit = async (event: any) => {
     const emailValidated =
       /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
-        event.email
+        event.email,
       );
 
-    if (!event.agree) {
-      message.destroy();
-      message.error("Please agree to our terms and privacy policy");
-    }
+    // if (!event.agree) {
+    //   message.destroy();
+    //   message.error("Please agree to our terms and privacy policy");
+    // }
 
-    if (emailValidated && event.agree) {
+    if (emailValidated) {
       const response = await leadInvite(event.email);
       const { data } = response;
 
       if (data.status === "success") {
         message.destroy();
-        router.push("/talent-pool/confirmation");
-        setIsModalOpen(false);
+        setIsSuccess(true)
+        // router.push("/talent-pool/confirmation");
+        // setIsModalOpen(false);
       } else if (data.status === "error") {
         message.destroy();
         message.error(data.message);
@@ -47,304 +67,295 @@ const TalentPoolList = (props: any) => {
   return (
     <>
       <Modal
-        className='w-max'
+        className='w-max '
         visible={isModalOpen}
         onCancel={() => setIsModalOpen(false)}
         footer={false}
+        closeIcon={
+          <svg
+            width='32'
+            height='32'
+            viewBox='0 0 32 32'
+            fill='none'
+            xmlns='http://www.w3.org/2000/svg'
+          >
+            <path
+              d='M12 12L20 20M20 12L12 20M28 16C28 22.6274 22.6274 28 16 28C9.37258 28 4 22.6274 4 16C4 9.37258 9.37258 4 16 4C22.6274 4 28 9.37258 28 16Z'
+              stroke='#908E9F'
+              strokeWidth='1.4'
+              strokeLinecap='round'
+              strokeLinejoin='round'
+            />
+          </svg>
+        }
       >
         {" "}
-        <div className='flex justify-between gap-4  p-4'>
-          <div className='grid-cols-1 lg:grid  gap-4 hidden'>
-            <div className='pb-2'>
-              <p className='section-preheading font-semibold text-blue-light  flex '>
-                <svg
-                  className='mr-2'
-                  data-name='Group 1767'
-                  xmlns='http://www.w3.org/2000/svg'
-                  xmlnsXlink='http://www.w3.org/1999/xlink'
-                  width='20'
-                  height='20'
-                  viewBox='0 0 24 24'
-                >
-                  <defs>
-                    <clipPath>
-                      <rect
-                        data-name='Rectangle 659'
-                        width='24'
-                        height='24'
-                        fill='#034f57'
-                        stroke='#55dfc6'
-                        strokeWidth='1'
-                      ></rect>
-                    </clipPath>
-                  </defs>
-                  <g data-name='Group 1766' clipPath='url(#clipPath)'>
-                    <circle
-                      data-name='Ellipse 316'
-                      cx='10.5'
-                      cy='10.5'
-                      r='10.5'
-                      transform='translate(1.5 1.5)'
-                      fill='#55dfc6'
-                      stroke='#55dfc6'
-                      strokeMiterlimit='10'
-                      strokeWidth='2'
-                      opacity='0.25'
-                    ></circle>
-                    <circle
-                      data-name='Ellipse 315'
-                      cx='10.5'
-                      cy='10.5'
-                      r='10.5'
-                      transform='translate(1.5 1.5)'
-                      fill='none'
-                      stroke='#55dfc6'
-                      strokeMiterlimit='10'
-                      strokeWidth='2'
-                    ></circle>
-                    <path
-                      d='M8.614,1.482l-4.7,4.8a.958.958,0,0,1-.595.252H2.91a.96.96,0,0,1-.594-.252L.1,4.018a.362.362,0,0,1,0-.5l.872-.888a.345.345,0,0,1,.493,0L2.882,4.065a.345.345,0,0,0,.493,0L7.252.1a.346.346,0,0,1,.493,0L8.613.98a.361.361,0,0,1,0,.5Z'
-                      transform='translate(8 8.732)'
-                      fill='#55dfc6'
-                    ></path>
-                  </g>
-                </svg>
-                {"Access to a collection of diversified developers"}
-              </p>
-            </div>
-            <div className='pb-2'>
-              <p className='section-preheading font-semibold text-blue-light  flex '>
-                <svg
-                  className='mr-2'
-                  data-name='Group 1767'
-                  xmlns='http://www.w3.org/2000/svg'
-                  xmlnsXlink='http://www.w3.org/1999/xlink'
-                  width='20'
-                  height='20'
-                  viewBox='0 0 24 24'
-                >
-                  <defs>
-                    <clipPath>
-                      <rect
-                        data-name='Rectangle 659'
-                        width='24'
-                        height='24'
-                        fill='#034f57'
-                        stroke='#55dfc6'
-                        strokeWidth='1'
-                      ></rect>
-                    </clipPath>
-                  </defs>
-                  <g data-name='Group 1766' clipPath='url(#clipPath)'>
-                    <circle
-                      data-name='Ellipse 316'
-                      cx='10.5'
-                      cy='10.5'
-                      r='10.5'
-                      transform='translate(1.5 1.5)'
-                      fill='#55dfc6'
-                      stroke='#55dfc6'
-                      strokeMiterlimit='10'
-                      strokeWidth='2'
-                      opacity='0.25'
-                    ></circle>
-                    <circle
-                      data-name='Ellipse 315'
-                      cx='10.5'
-                      cy='10.5'
-                      r='10.5'
-                      transform='translate(1.5 1.5)'
-                      fill='none'
-                      stroke='#55dfc6'
-                      strokeMiterlimit='10'
-                      strokeWidth='2'
-                    ></circle>
-                    <path
-                      d='M8.614,1.482l-4.7,4.8a.958.958,0,0,1-.595.252H2.91a.96.96,0,0,1-.594-.252L.1,4.018a.362.362,0,0,1,0-.5l.872-.888a.345.345,0,0,1,.493,0L2.882,4.065a.345.345,0,0,0,.493,0L7.252.1a.346.346,0,0,1,.493,0L8.613.98a.361.361,0,0,1,0,.5Z'
-                      transform='translate(8 8.732)'
-                      fill='#55dfc6'
-                    ></path>
-                  </g>
-                </svg>
-                {"Convenient & swift hiring process"}
-              </p>
-            </div>
-            <div className='pb-2'>
-              <p className='section-preheading font-semibold text-blue-light  flex '>
-                <svg
-                  className='mr-2'
-                  data-name='Group 1767'
-                  xmlns='http://www.w3.org/2000/svg'
-                  xmlnsXlink='http://www.w3.org/1999/xlink'
-                  width='20'
-                  height='20'
-                  viewBox='0 0 24 24'
-                >
-                  <defs>
-                    <clipPath>
-                      <rect
-                        data-name='Rectangle 659'
-                        width='24'
-                        height='24'
-                        fill='#034f57'
-                        stroke='#55dfc6'
-                        strokeWidth='1'
-                      ></rect>
-                    </clipPath>
-                  </defs>
-                  <g data-name='Group 1766' clipPath='url(#clipPath)'>
-                    <circle
-                      data-name='Ellipse 316'
-                      cx='10.5'
-                      cy='10.5'
-                      r='10.5'
-                      transform='translate(1.5 1.5)'
-                      fill='#55dfc6'
-                      stroke='#55dfc6'
-                      strokeMiterlimit='10'
-                      strokeWidth='2'
-                      opacity='0.25'
-                    ></circle>
-                    <circle
-                      data-name='Ellipse 315'
-                      cx='10.5'
-                      cy='10.5'
-                      r='10.5'
-                      transform='translate(1.5 1.5)'
-                      fill='none'
-                      stroke='#55dfc6'
-                      strokeMiterlimit='10'
-                      strokeWidth='2'
-                    ></circle>
-                    <path
-                      d='M8.614,1.482l-4.7,4.8a.958.958,0,0,1-.595.252H2.91a.96.96,0,0,1-.594-.252L.1,4.018a.362.362,0,0,1,0-.5l.872-.888a.345.345,0,0,1,.493,0L2.882,4.065a.345.345,0,0,0,.493,0L7.252.1a.346.346,0,0,1,.493,0L8.613.98a.361.361,0,0,1,0,.5Z'
-                      transform='translate(8 8.732)'
-                      fill='#55dfc6'
-                    ></path>
-                  </g>
-                </svg>
-                {"Highly talented developers at a cost-effective budget"}
-              </p>
+        <div className='flex flex-col justify-between gap-4  p-4 items-center'>
+          <div className='flex flex-col place-items-center text-center'>
+            <p className='mt-2 sub-heading  '>Hire Developers you want</p>
+            <p className='mt-2 landing-para text-[18px] md:max-w-[672px] '>
+              Get instant insights with our in-depth developer profiles & build
+              your team from untapped & quality talents.
+            </p>
+          </div>
+          <div className='md:w-[480px] '>
+            <div
+              className=' p-[40px]'
+              style={{
+                borderRadius: "12px",
+                border: "1px solid #43424D",
+                background:
+                  "radial-gradient(188.94% 181.55% at 50.00% 46.35%, rgba(255, 255, 255, 0.07) 0%, rgba(246, 246, 246, 0.00) 100%)",
+                backdropFilter: "blur(12px)",
+              }}
+            >
+              { !isSuccess ?   <Formik
+                initialValues={{
+                  email: "",
+                  agree: false,
+                }}
+                onSubmit={handleSubmit}
+              >
+                <Form>
+                  <Fieldset
+                    type='email'
+                    placeholder='Enter your email to get access'
+                    name='email'
+                    id='email'
+                    className='py-[9px] placeholder-gray-400 text-gray-700  bg-light-gray rounded-l-md  '
+                    required
+                  />
+                  <div className='flex justify-center'>
+                    <Button
+                      type='primary'
+                      className='btn-brand mt-3 w-full'
+                      size='large'
+                      htmlType='submit'
+                    >
+                      Get access to talent pool
+                    </Button>
+                  </div>
+                </Form>
+              </Formik> :
+                <div className='flex flex-col gap-4 ustify-center items-center sub-heading text-center'>
+                  <Image
+                    width={56}
+                    height={56}
+                    src={"/images/companies/party.svg"}
+                    alt='Check icon'
+                  />
+
+                  <p>You’ve updated your profile and details </p>
+                </div> }
             </div>
           </div>
-          <div>
-            <Formik
-              initialValues={{
-                email: "",
-                agree: false,
-              }}
-              onSubmit={handleSubmit}
-            >
-              <Form>
-                <Fieldset
-                  type='email'
-                  placeholder='Enter your email to get access'
-                  name='email'
-                  id='email'
-                  className='py-[9px] placeholder-gray-400 text-gray-700  bg-light-gray rounded-l-md  '
-                  required
+          <div className='flex flex-col md:flex-row gap-4 text-gray-400 pt-[48px] md:pt-[80px] justify-center items-center'>
+            <div className="flex items-start gap-2  ">
+              <div className="flex w-[18px] h-[18px] flex-shrink-0">
+                <Image
+                  width={18}
+                  height={18}
+                  src={"/images/home/tic-icon.svg"}
+                  alt="Check icon"
                 />
-                <div className='flex  items-center'>
-                  <Field className='mr-2 ' type='checkbox' name='agree' />
-                  <p>
-                    By clicking , you agree to our{" "}
-                    <span className='text-blue-700'>
-                      <Link
-                        href='/terms/company'
-                        target={"_blank"}
-                        className='text-brand-700 hover:text-brand-800 '
-                      >
-                        Terms
-                      </Link>
-                    </span>{" "}
-                    and{" "}
-                    <span className='text-blue-700'>
-                      <Link
-                        href='/privacy'
-                        className='text-brand-700 hover:text-brand-800 px-1'
-                        target={"_blank"}
-                      >
-                        Privacy Policy
-                      </Link>
-                    </span>
-                  </p>
-                </div>
+              </div>
+              <p className="-mt-1 max-w-[180px]">
+          Access to a collection of diversified developers
+              </p>
+            </div>
+            <div className="flex items-start gap-2 ">
+              <div className="flex w-[18px] h-[18px] flex-shrink-0">
+                <Image
+                  width={18}
+                  height={18}
+                  src={"/images/home/tic-icon.svg"}
+                  alt="Check icon"
+                />
+              </div>
+              <p className="-mt-1 max-w-[180px]">
+          Convenient & swift hiring process
+              </p>
+            </div>
+            <div className="flex items-start gap-2 ">
+              <div className="flex w-[18px] h-[18px] flex-shrink-0">
+                <Image
+                  width={18}
+                  height={18}
+                  src={"/images/home/tic-icon.svg"}
+                  alt="Check icon"
+                />
+              </div>
+              <p className="-mt-1 max-w-[180px]">
+          Highly talented developers at a cost-effective budget
+              </p>
+            </div>
 
-                <div className='flex justify-center'>
-                  <Button
-                    type='primary'
-                    className='btn-brand mt-3 w-full'
-                    size='large'
-                    htmlType='submit'
-                  >
-                    Get access to talent pool
-                  </Button>
-                </div>
-              </Form>
-            </Formik>
           </div>
         </div>
       </Modal>
       <section className='hero mx-auto py-2 '>
-        <Col key={devCard?.id} onClick={() => {}}>
+        <Col key={devCard?.id} onClick={() => { }}>
           <>
             <Card
-              className='min-h-[15.5rem]  p-2 cursor-pointer lg:w-[55rem] '
+              className='min-h-[15.5rem]  p-2 cursor-pointer lg:w-[55rem] bg-transparent	border-[#252234] hover:border-[#767383] '
               onClick={() => setIsModalOpen(true)}
               hoverable
               cover={
                 <>
                   <div className='flex p-4 gap-6 '>
-                    <div className=' cursor-pointer  flex '>
-                      {!devCard?.profileImage && devCard?.fullName && (
-                        <Avatar
-                          className=' cursor-pointer rounded-lg w-24 h-24 flex items-center '
-                          shape='square'
-                          style={{
-                            color: "var(--brand-500)",
-                            backgroundColor: "var(--brand-100)",
-                            fontSize: "40px",
-                          }}
-                        >
-                          <p className=' cursor-pointer'>
-                            {devCard?.fullName[0]?.toUpperCase()}
-                            {devCard?.fullName[1]
-                              ? devCard?.fullName[1]?.toUpperCase()
-                              : ""}
+                    <div className='flex flex-col'>
+                      <div className=' cursor-pointer  flex gap-x-[20px]'>
+                        {!devCard?.profileImage && devCard?.fullName && (
+                          <Avatar
+                            className=' cursor-pointer rounded-lg w-24 h-24 flex items-center flex-shrink-0 '
+                            shape='square'
+                            style={{
+                              color: "var(--brand-500)",
+                              backgroundColor: "var(--brand-200)",
+                              fontSize: "40px",
+                            }}
+                          >
+                            <p className=' cursor-pointer'>
+                              {devCard?.fullName[0]?.toUpperCase()}
+                              {devCard?.fullName[1]
+                                ? devCard?.fullName[1]?.toUpperCase()
+                                : ""}
+                            </p>
+                          </Avatar>
+                        )}
+
+                        {devCard?.profileImage && (
+                          <div className=' cursor-pointer rounded-lg w-24 h-24 flex items-center '>
+                            <Image
+                              width='200'
+                              height='200'
+                              className=' cursor-pointer rounded-lg '
+                              src={
+                                devCard?.profileImage
+                                  ? devCard?.profileImage
+                                  : ""
+                              }
+                              alt='profile image'
+                            />
+                          </div>
+                        )}
+
+                        <div className=''>
+                          <h4 className=' cursor-pointer text-white text-[18px] font-semibold break-all '>
+                            {devCard?.fullName}
+                          </h4>
+                          <p className=' cursor-pointer page-para  text-white text-[16px] '>
+                            {devCard?.currentRole || "Fullstack Developer"}
+                            <span className='text-[#908E9F] pl-2 md:inline-block  hidden'>
+                              •{" "}
+                              {devCard?.experienceInYears
+                                ? devCard?.experienceInYears
+                                : 0}{" "}
+                              years of experience
+                            </span>
                           </p>
-                        </Avatar>
-                      )}
+                          <p className='text-[#908E9F]  flex  md:hidden'>
+                            {devCard?.experienceInYears
+                              ? devCard?.experienceInYears
+                              : 0}{" "}
+                            years of experience
+                          </p>
+                          <section className='my-2 mb-3 md:flex flex-wrap gap-5 hidden '>
+                            <div className='flex'>
+                              <div>
+                                <p className='page-label cursor-pointer text-[#908E9F] '>
+                                  AVAILABILITY
+                                </p>
 
-                      {devCard?.profileImage && (
-                        <div className=' cursor-pointer rounded-lg w-24 h-24 flex items-center '>
-                          <Image
-                            width='200'
-                            height='200'
-                            className=' cursor-pointer rounded-lg '
-                            src={
-                              devCard?.profileImage ? devCard?.profileImage : ""
-                            }
-                            alt='profile image'
-                          />
+                                {devCard?.availability?.availableIn && (
+                                  <div>
+                                    <span
+                                      className={cn(
+                                        "cursor-pointer  font-medium  text-[#0FAC98]",
+                                      )}
+                                    >
+                                      {devCard?.availability?.availableIn
+                                        ? devCard?.availability?.availableIn
+                                        : "Unavailable"}
+                                    </span>
+                                  </div>
+                                )}
+                              </div>
+                            </div>
+
+                            <div className='flex gap-1 border-l-[1px] border-gray-100'>
+                              <div className='pl-5'>
+                                <p className='cursor-pointer page-label  text-[#908E9F] '>
+                                  &nbsp;EXPECTED SALARY {"("}
+                                  {devCard?.rateCard?.currency ===
+                                    "Indian Rupee"
+                                    ? "INR"
+                                    : devCard?.rateCard?.currency ===
+                                      "U.S.Dollar"
+                                      ? "USD"
+                                      : devCard?.rateCard?.currency === "Euro"
+                                        ? "Euro"
+                                        : devCard?.rateCard?.currency ===
+                                          "Canadian Dollar"
+                                          ? "CAD"
+                                          : "USD"}
+                                  {")"}
+                                </p>
+                                <p className=' text-white cursor-pointer page-para font-medium '>
+                                  {devCard?.rate ? devCard?.rate : "35,000$"}
+                                </p>
+                              </div>
+                            </div>
+                          </section>
                         </div>
-                      )}
-                    </div>
-                    <div className='lg:w-[100%]'>
-                      <h4 className=' cursor-pointer text-base font-bold break-all '>
-                        {devCard?.fullName}
-                      </h4>
-                      <p className=' cursor-pointer page-para'>
-                        {devCard?.currentRole || "Fullstack Developer"}
-                      </p>
-                      <p className=' cursor-pointer page-para'>
-                        {devCard?.experienceInYears
-                          ? devCard?.experienceInYears
-                          : 0}{" "}
-                        years of experience
-                      </p>
-
+                      </div>
                       <div className='grid gap-2 mt-2'>
-                        <div className=' cursor-pointer  text-sm min-w-0'>
+                        <section className='my-2 mb-3 flex flex-wrap gap-5 md:hidden '>
+                          <div className='flex'>
+                            <div>
+                              <p className='page-label cursor-pointer text-[#908E9F] '>
+                                AVAILABILITY
+                              </p>
+
+                              {devCard?.availability?.availableIn && (
+                                <div>
+                                  <span
+                                    className={cn(
+                                      "cursor-pointer  font-medium  text-[#0FAC98]",
+                                    )}
+                                  >
+                                    {devCard?.availability?.availableIn
+                                      ? devCard?.availability?.availableIn
+                                      : "Unavailable"}
+                                  </span>
+                                </div>
+                              )}
+                            </div>
+                          </div>
+
+                          <div className='flex gap-1 border-l-[1px] border-gray-100'>
+                            <div className='pl-5'>
+                              <p className='cursor-pointer page-label  text-[#908E9F] '>
+                                &nbsp;EXPECTED SALARY {"("}
+                                {devCard?.rateCard?.currency === "Indian Rupee"
+                                  ? "INR"
+                                  : devCard?.rateCard?.currency === "U.S.Dollar"
+                                    ? "USD"
+                                    : devCard?.rateCard?.currency === "Euro"
+                                      ? "Euro"
+                                      : devCard?.rateCard?.currency ===
+                                        "Canadian Dollar"
+                                        ? "CAD"
+                                        : "USD"}
+                                {")"}
+                              </p>
+                              <p className=' text-white cursor-pointer page-para font-medium '>
+                                {devCard?.rate ? devCard?.rate : "35,000$"}
+                              </p>
+                            </div>
+                          </div>
+                        </section>
+                        <div className=' cursor-pointer  text-sm '>
                           <div
                             className=' cursor-pointer page-para   h-12 text-editor break-words text-ellipsis overflow-hidden'
                             style={{ lineBreak: "anywhere" }}
@@ -364,27 +375,7 @@ const TalentPoolList = (props: any) => {
                           </div>
                         </div>
                         <div className='text-sm'>
-                          <div className='flex flex-wrap cursor-pointer h-6 overflow-hidden'>
-                            {/* {devCard?.profileSkills &&
-                              devCard?.profileSkills.length &&
-                              devCard?.profileSkills.map(
-                                (devCardTopSkill: any, index: any) => (
-                                  <Tag
-                                    key={devCardTopSkill}
-                                    className='skill-tag mb-2 '
-                                  >
-                                    <div className='w-[12.25px] h-[12.25px] mr-2 text-gray-900'>
-                                      <SkillsImage
-                                        width='42'
-                                        height='42'
-                                        src='/images/issuerLogo/defaultskills.svg'
-                                        id={index}
-                                      />
-                                    </div>
-                                    {devCardTopSkill.name}
-                                  </Tag>
-                                )
-                              )} */}
+                          <div className='flex flex-wrap cursor-pointer  '>
                             {devCard?.profileSkills &&
                               devCard?.profileSkills.length == 0 &&
                               [
@@ -396,74 +387,37 @@ const TalentPoolList = (props: any) => {
                               ].map((devCardTopSkill: any) => (
                                 <Tag
                                   key={devCardTopSkill}
-                                  className='skill-tag'
+                                  className='lander-tag'
                                 >
-                                  <div className='w-[12.25px] h-[12.25px] mr-2 text-gray-900'>
-                                    <SkillsImage
-                                      width='42'
-                                      height='42'
-                                      src='/images/issuerLogo/defaultskills.svg'
-                                      id={devCardTopSkill}
-                                    />
-                                  </div>
                                   {devCardTopSkill}
                                 </Tag>
                               ))}
                           </div>
                         </div>
-                        <div className='lg:flex justify-between mt-2'>
-                          <p className=' cursor-pointer  text-gray-400 pr-2 '>
-                            Exp. Annual Salary:{" "}
-                            <span className=' cursor-pointer text-gray-700'>
-                              {devCard?.rate ? devCard?.rate : "35,000$"}
-                            </span>
-                          </p>
-                          <p className=' cursor-pointer  text-gray-400 pr-2 '>
-                            Availability:{" "}
-                            <span
-                              className={cn(
-                                "text-xs cursor-pointer p-0.5",
-                                {
-                                  "bg-green-100  rounded px-2 text-green-600 ":
-                                    devCard?.availability?.available === 0 ||
-                                    devCard?.availability?.available === 1,
-                                },
-                                {
-                                  "bg-yellow-100 text-yellow-600   rounded px-2 ":
-                                    devCard?.availability?.available === 2 ||
-                                    devCard?.availability?.available === 3,
-                                },
-                                {
-                                  "bg-gray-100  test-gray-600  rounded px-2 ":
-                                    devCard?.availability?.available === 4 ||
-                                    devCard?.availability?.availableIn ===
-                                      undefined,
-                                }
-                              )}
-                            >
-                              {devCard?.availability?.availableIn
-                                ? devCard?.availability?.availableIn?.toUpperCase()
-                                : "Unavailable"}
-                            </span>
-                          </p>
-                          <p className=' flex cursor-pointer  text-gray-700 '>
-                            <Image
-                              width='24'
-                              height='24'
-                              className=' cursor-pointer  '
-                              src='/images/companies/verified.svg'
-                              alt='profile image'
-                            />
-                            Pre screened by us
-                          </p>
-                        </div>
                       </div>
                     </div>
-                    <div className='md:flex items-center hidden'>
+                    <div className='md:flex flex-col items-center justify-between hidden w-[150px] flex-shrink-0'>
+                      <p className=' flex cursor-pointer  text-[#0FAC98]  items-center text-[10px] bg-[#3C80481A] p-1 rounded-[16px]'>
+                        <svg
+                          width='18'
+                          height='18'
+                          viewBox='0 0 18 18'
+                          fill='none'
+                          xmlns='http://www.w3.org/2000/svg'
+                        >
+                          <path
+                            fillRule='evenodd'
+                            clipRule='evenodd'
+                            d='M9.387 1.62694C9.28251 1.52788 9.144 1.47266 9.00001 1.47266C8.85601 1.47266 8.7175 1.52788 8.61301 1.62694C7.02096 3.13885 4.9006 3.96794 2.70526 3.93694C2.58566 3.93539 2.46867 3.972 2.3713 4.04146C2.27392 4.11091 2.20122 4.2096 2.16375 4.32319C1.84723 5.28782 1.68647 6.29672 1.6875 7.31194C1.6875 11.7684 4.7355 15.5117 8.85975 16.5729C8.95175 16.5967 9.04826 16.5967 9.14026 16.5729C13.2645 15.5117 16.3125 11.7684 16.3125 7.31194C16.3125 6.26944 16.1453 5.26444 15.8363 4.32319C15.7989 4.20946 15.7263 4.11061 15.6289 4.04101C15.5315 3.97141 15.4144 3.93469 15.2948 3.93619L15.1875 3.93694C12.9405 3.93694 10.8998 3.05944 9.387 1.62694ZM11.7075 7.63894C11.7525 7.57898 11.7851 7.51063 11.8033 7.43791C11.8215 7.36518 11.825 7.28955 11.8135 7.21546C11.8021 7.14137 11.7759 7.07031 11.7366 7.00647C11.6974 6.94262 11.6457 6.88728 11.5847 6.84368C11.5237 6.80009 11.4546 6.76913 11.3815 6.75262C11.3084 6.7361 11.2327 6.73438 11.1589 6.74754C11.0851 6.7607 11.0146 6.78848 10.9517 6.82925C10.8888 6.87002 10.8347 6.92296 10.7925 6.98494L8.36551 10.3824L7.1475 9.16444C7.04087 9.06508 6.89984 9.01099 6.75411 9.01356C6.60839 9.01613 6.46935 9.07517 6.36629 9.17823C6.26323 9.28129 6.20419 9.42033 6.20162 9.56605C6.19905 9.71178 6.25315 9.85281 6.35251 9.95944L8.04001 11.6469C8.09775 11.7046 8.16736 11.7491 8.244 11.7772C8.32064 11.8053 8.40247 11.8164 8.48383 11.8096C8.56518 11.8029 8.6441 11.7786 8.7151 11.7383C8.78611 11.6981 8.84749 11.6428 8.895 11.5764L11.7075 7.63894Z'
+                            fill='#0FAC98'
+                          />
+                        </svg>
+
+                        <span className='pl-2'> Pre screened by us</span>
+                      </p>
+
                       <Button
-                        className='btn-default rounded-md px-8'
-                        size='middle'
-                        type='default'
+                        className='btn-brand '
                         onClick={() => setIsModalOpen(true)}
                       >
                         View profile

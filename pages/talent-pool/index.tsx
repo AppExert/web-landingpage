@@ -31,8 +31,8 @@ export default function IndexPage() {
       </Head>
 
       <TalentPoolHero />
-      <HireService />
-      <FrequentlyAskedQuestion feature='company' className='bg-white' />
+      <h1 className="heading pt-2 text-center">Frequently asked questions</h1>
+      <FrequentlyAskedQuestion feature='company' className="landingPage" expand={false} />
     </>
   );
 }
