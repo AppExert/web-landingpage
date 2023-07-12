@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import Date from "./date";
-import Avatar from "./avatar";
 
 type Props = {
   title: string;
@@ -15,7 +14,6 @@ const PostHeader: React.FC<Props> = ({
   title,
   date,
   estimatedReadingTime,
-  author,
 }) => {
   return (
     <>
@@ -24,19 +22,24 @@ const PostHeader: React.FC<Props> = ({
           <CoverImage slug={slug} title={title} image={coverImage} />
         )}
       </div> */}
-      <div className='mt-4 text-3xl section-heading text-gray-700 font-semibold'>
-        {title}
-      </div>
-      <div className='mt-2 flex flex-col md:flex-row md:gap-4 justify-center md:justify-start'>
-        {author && <Avatar name={author.name} picture={author.image} />}
-        <div className='flex items-center pl-10 md:pl-0 gap-4 text-xs md:text-sm'>
-          <Date dateString={date} />
+      <div className='md:py-[100px] py-[20px]'>
+        <div className='green-label text-center'>
+
           {estimatedReadingTime && (
-            <div className='pl-2 text-gray-600'>
+            <div className='uppercase flex pl-2 justify-center'>
               {estimatedReadingTime} min read
+              {" -"}
+              <Date dateString={date} />
             </div>
           )}
         </div>
+        <h1 className='hero-heading md:text-[48px] text-[32px] pt-2 text-center'>
+          {title}
+        </h1>
+        <p className='text-gray-400 text-[20px] pt-2 md:max-w-3xl mx-auto text-center'>
+          Subscribe to learn about new product features, the latest in
+          technology, solutions, and updates..
+        </p>
       </div>
     </>
   );

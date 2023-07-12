@@ -8,7 +8,7 @@ import PostCard from "@components/blog/post-card";
 import Head from "next/head";
 
 const Posts = (props: any) => {
-  const { allPosts, preview } = props;
+  const { allPosts } = props;
 
   return (
     <>
@@ -25,9 +25,16 @@ const Posts = (props: any) => {
           content='blogs, remote jobs, work from anywhere, appexert blogs, appexert posts'
         />
       </Head>
-      <Container className='mt-6'>
-        <div className='section-heading pb-4'>Recent Blog Posts</div>
-        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'>
+      <Container className='px-8 md:py-[100px] py-[20px]'>
+        <p className='green-label text-center'>OUR BLOG</p>
+        <h1 className='hero-heading md:text-[48px] text-[32px] pt-2 text-center'>
+          Stories and interviews
+        </h1>
+        <p className='text-gray-400 text-[20px] pt-2 pb-[100px] md:max-w-3xl mx-auto text-center'>
+          Subscribe to learn about new product features, the latest in
+          technology, solutions, and updates..
+        </p>
+        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[32px]'>
           {allPosts &&
             allPosts.length > 0 &&
             allPosts.map((post: any) => (

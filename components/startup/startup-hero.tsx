@@ -3,7 +3,6 @@ import { Button } from "antd";
 import Link from "next/link";
 
 const StartupHero = () => {
-  const startHire = `${process.env.NEXT_PUBLIC_HIRE_APP}/companies/start-hiring?step=1`;
   return (
     <div className="text-center flex flex-col justify-center items-center ">
       <p className="green-label">START. SCALE. SUCCEED</p>
@@ -14,7 +13,7 @@ const StartupHero = () => {
         Whether you are taking your first step or looking to scale your team,we are ready with our team of rockstar remote engineers to help your startup grow and elevate it to the next level.
       </p>
       <div className='flex gap-4 items-center'>
-        <Link href={startHire}>
+        <Link href="/companies/start-hiring?step=1">
           <Button
             type='primary'
             className='page-btn'

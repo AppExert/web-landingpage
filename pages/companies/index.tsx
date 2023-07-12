@@ -7,7 +7,6 @@ import { useEffect } from "react";
 import FrequentlyAskedQuestion from "./faq";
 
 const ForCompanies = () => {
-  const startHire = `${process.env.NEXT_PUBLIC_HIRE_APP}/companies/start-hiring?step=1`;
   // eslint-disable-next-line @typescript-eslint/no-empty-function
   useEffect(() => {}, []);
   return (
@@ -56,7 +55,7 @@ const ForCompanies = () => {
                 pool of global tech talent
               </p>
               <div className='flex items-center justify-center'>
-                <Link href={startHire}>
+                <Link href="/companies/start-hiring?step=1">
                   <Button
                     type='primary'
                     className='btn-brand px-8'
@@ -320,7 +319,7 @@ const ForCompanies = () => {
             <p className='text-center md:text-left section-paragraph text-xl md:w-3/4'>
               We help you build successful products, faster and leaner
             </p>
-            <Link href={startHire}>
+            <Link href="/companies/start-hiring?step=1">
               <a>
                 <Button type='primary' className='btn-brand px-8' size='large'>
                   Hire Developers

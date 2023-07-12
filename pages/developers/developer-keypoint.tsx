@@ -159,7 +159,7 @@ const DEVELOPER_KEYPOINTS: { label: string; icon: JSX.Element; para: string ; he
     { 
       label: "LET YOUR VOICE BE HEARD",
       heading: "Sense of inclusion is everything",
-      para: "Tired of the locked up structure of freelance platforms & IT service companies ? Where you are only a vendor, contractor, outsider, freelancer? Our Full-Time engagement model is designed to give value to your voice. You work as a team on projects and experience a true sense of belongingness",
+      para: "Tired of the locked up structure of freelance platforms & IT service companies? Where you are only a vendor, contractor, outsider, freelancer? Our Full-Time engagement model is designed to give value to your voice. You work as a team on projects and experience a true sense of belongingness",
       icon: ( <svg width="450" height="450" viewBox="0 0 450 450" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g filter="url(#filter0_f_3127_108589)">
           <circle cx="225" cy="225" r="75" fill="#0C006F"/>
@@ -212,7 +212,7 @@ const DeveloperKeypoint = () => {
               {item.para}          </p>
 
             <div className='flex gap-4 items-center pt-[40px]'>
-              <Link href='/companies/start-hiring?step=1'>
+              <Link href={`${process.env.NEXT_PUBLIC_HIRE_APP}/register?developers`}>
                 <Button
                   type='primary'
                   className='page-btn-secondary'

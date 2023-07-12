@@ -1,14 +1,40 @@
+import { ArrowRightOutlined } from "@ant-design/icons";
 import CommunityContent from "@components/community/community-content";
-import Head from "next/head";
 import CommunityPower from "@components/community/community-power";
 import CommunityStorie from "@components/community/community-story";
-import Container from "@components/container";
-import { Button } from "antd";
-import Link from "next/link";
 import GetStartedBanner from "@components/community/get-started-banner";
+import Container from "@components/container";
+import Fieldset from "@components/fieldset";
+import { registerInvite } from "@services/community.service";
+import { message, Button, Input } from "antd";
+import { Form, Formik } from "formik";
+import Head from "next/head";
 
+const handleSubmit = async (event: any) => {
 
-export default function IndexPage() {
+  const emailValidated = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(event.email);
+
+  if (emailValidated) {
+
+    const response = await registerInvite(event.email);
+    const { data } = response;
+
+    if (data.status === "success") {
+      message.destroy();
+      message.success("Thanks you! We will email you the next steps.");
+    } else if (data.status === "error") {
+      message.destroy();
+      message.error(data.message);
+    } else {
+      message.destroy();
+      message.error("Internal Server Error");
+    }
+
+  }
+}
+
+export default function IndexPage() { 
+
   return (
     <>
       <Head>
@@ -41,15 +67,38 @@ export default function IndexPage() {
             <p className='section-paragraph text-[#908E9F] py-[10px] pb-[20px] md:w-[850px] '>
               Upskill, get peer reviews, share your experiences, build exciting projects with top developers around the world.
             </p>
-            <div className='flex gap-4 items-center'>
-              <Link href='/companies/start-hiring?step=1'>
-                <Button
-                  type='primary'
-                  className='page-btn'
-                >
-                  Hire Developers
-                </Button>
-              </Link>
+            <div className='text-center pt-10 '>
+              <Formik
+                initialValues={{
+                  email: "",
+                }}
+                onSubmit={handleSubmit}
+              >
+                <Form>
+                  <Input.Group compact className="flex justify-center items-center ">
+                    <Fieldset
+                      type='email'
+                      placeholder='Add your email to get early access'
+                      name='email'
+                      id='email'
+                      className='py-[9px] placeholder-gray-400 text-gray-700  bg-light-gray rounded-l-md mr-16 '
+                      required
+                    />
+
+                    <Button
+                      type='primary'
+                      className='btn-brand rounded-l-none inline-block p-0 px-4 -mt-4 -ml-3 z-40'
+                      size='large'
+                      htmlType='submit'
+                    >
+                      <ArrowRightOutlined
+                        className=''
+                        style={{ fontSize: "1.2rem", verticalAlign: "top" }}
+                      />
+                    </Button>
+                  </Input.Group>
+                </Form>
+              </Formik>
             </div>
           </div>
 
@@ -82,7 +131,7 @@ export default function IndexPage() {
                 top: "auto",
               }}
             ></div>
-            <div className="bg-[#020013] z-50 relative">
+            <div className="bg-[#020013] z-40 relative">
               {/* Content of the div */}
               <div className="relative my-[100px]" style={{ zIndex: "2" }}>
                 <CommunityContent />

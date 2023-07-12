@@ -64,7 +64,7 @@
   }
 
   .heading {
-    @apply  leading-tight text-[36px] font-semibold text-gradient cursor-default !important;
+    @apply  leading-tight md:text-[36px] text-[24px] font-semibold text-gradient cursor-default !important;
   }
   
   .sub-heading {
@@ -184,8 +184,8 @@
     @apply font-bold text-sm w-full cursor-default;
   }
 
-  .skill-tag {
-    @apply flex px-[13px] rounded-[4px] border-[0.5px] border-gray-200 items-center py-[5px] text-xs text-gray-900 mb-1 ;
+  .lander-tag {
+    @apply flex border-[#252234] rounded-[4px] px-[12px] py-1 text-[#908E9F] text-[12px] items-center text-xs mt-1 !important;
   }
 }
 
@@ -382,6 +382,11 @@ ol {
 .testimonial-wrapper.fade-out {
   opacity: 0;
 }
+
+.markdown-styles_markdown__xilLR strong {
+  color: white;
+}
+
 @keyframes fade-out {
   from {
     opacity: 1;

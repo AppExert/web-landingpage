@@ -11,16 +11,16 @@ const TESTIMONIALS: {
   width: string;
 }[] = [
   {
-    name: "Kunsheng Zhao - Co-Founder",
+    name: "Co-founder & CTO",
     company: "gomaterials ",
-    content: "When building our tech team and software application, we often have trouble hiring techtalents and are in shortage of resources during certain periods. AppExert did great in bothmanaging the remote development team to finish tasks and finding qualified tech talents as a remote hiring platform. We really enjoyed their quick and professional service!",
+    content: "When building our tech team and software application, we often have trouble hiring tech talents and are in shortage of resources during certain periods. AppExert did great in both managing the remote development team to finish tasks and finding qualified tech talents as a remote hiring platform. We really enjoyed their quick and professional service!",
     image: "/images/home/brand-icons/logo_gomaterial.svg",
     width: "153px",
   },
   {
-    name: "Tony Nero -VP, Information Technology, Sekure ",
+    name: "VP, IT & Engineering",
     company: "sekure",
-    content: "In my experience, I have tried various offshore & freelance models in the past but most ofthe times it was a pain. I am happy to say we finally hired Senior Remote Developers fromAppExert and they’ve worked closely with us throughout the process, staying on task, ontarget, and on budget. It’s certainly feel like having our own distributed team. I am really impressed!",
+    content: "In my experience, I have tried various offshore & freelance models in the past but most of the times it was a pain. I am happy to say we finally hired Senior Remote Developers from AppExert and they’ve worked closely with us throughout the process, staying on task, on target, and on budget. It’s certainly feel like having our own distributed team. I am really impressed!",
     image: "/images/home/brand-icons/logo_sekure.svg",
     width: "118px",
   },
@@ -32,7 +32,7 @@ const TESTIMONIALS: {
   //   width: "134px",
   // },
   {
-    name: "Vice President",
+    name: "Founder & CEO",
     company: "litmus",
     content: "AppExert is a primary reason that litmus exists today and is able to create interactive learning experiences for thousands of students. AppExert proactively guided us to adding developers adhoc with the right expertise at the right time and more importantly, the right amount of time. This flexibility allowed us to get some of the best talent for important roles without needing to spend the overhead for a full-time hire",
     image: "/images/home/brand-icons/logo_litmus.svg",
@@ -92,7 +92,7 @@ const TestimonialsClients = () => {
         </div>
 
         <div className="flex flex-col justify-center md:max-w-[810px] overflow-hidden "  >
-          <div id="testimonials-container"  className=" md:h-[420px]">
+          <div id="testimonials-container"  className=" md:h-[350px]">
             <motion.div
               initial={{ opacity: 0, x: -200 }}
               whileInView={{ opacity: 1, x: 0 }}

@@ -69,7 +69,8 @@ function Header() {
               router.pathname === "/developers/resetPassword" ||
               router.asPath.startsWith("/c?id="),
           },
-          "sticky top-0 z-50 backdrop-blur-3xl min-h-[64px] flex py-2 md:py-0 "
+          { "bg-[#020013]": router.pathname.includes("companies/start-hiring") },
+          "sticky top-0 z-50 backdrop-blur-3xl min-h-[64px] flex py-2 md:py-0 border-b border-[#26252C]"
         )}
       >
         <Container className=' md:flex  justify-between  py-2 '>
@@ -142,11 +143,11 @@ function Header() {
           {navMenu && (
             <nav
               className={cn(
-                { "h-0 py-0 md:h-auto ": !open },
+                { "h-0 py-0 md:h-auto pt-0": !open },
                 {
                   "h-54 opacity-100  transition-all duration-200 ": open,
                 },
-                "md:flex  w-full py-4 md:py-1 lg:gap-4 md:items-center  md:h-auto overflow-hidden"
+                "md:flex  w-full pt-4 md:py-1 lg:gap-4 md:items-center  md:h-auto overflow-hidden"
               )}
             >
               <>

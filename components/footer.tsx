@@ -26,20 +26,23 @@ const Footer = () => {
 
 
           </div>
-          <div className='md:w-2/3 grid grid-cols-2 md:flex flex-row flex-wrap md:gap-x-[90px] justify-between md:justify-start px-2 md:px-0'>
+          <div className='md:w-2/3 grid grid-cols-2 md:flex flex-row flex-wrap md:gap-[90px] gap-[40px] justify-between md:justify-start px-2 md:px-0'>
             <div >
-              <p className='font-normal font-mono text-white pb-[15px]'>Employers</p>
+              <p className='font-normal font-mono text-white pb-[15px]'>Companies</p>
               <div className='text-[14px] text-gray-400 flex flex-col gap-y-[14px]'>
-                <Link href='/contact'>
-                  <a className=' hover:underline'>Features</a>
+                <Link href='/companies/start-hiring?step=1'>
+                  <a className=' hover:underline'>How to hire</a>
                 </Link>
-                <Link href='/register?developers'>
-                  <a className='hover:underline'>Resources</a>
+                <Link href={`${process.env.NEXT_PUBLIC_HIRE_APP}/register?companies`}>
+                  <a className='hover:underline'>Why us</a>
                 </Link>
-                <Link href='/posts'>
-                  <a className=' hover:underline'>Pricing</a>
+                <Link href={`${process.env.NEXT_PUBLIC_HIRE_APP}/register?companies`}>
+                  <a className=' hover:underline'>Hire developers</a>
                 </Link>
-                <Link href='/faqs'>
+                <Link href={`${process.env.NEXT_PUBLIC_HIRE_APP}/register?companies`}>
+                  <a className=' hover:underline'>Resources</a>
+                </Link>
+                <Link href='/companies/start-hiring?step=1'>
                   <a className='hover:underline'>Book a demo</a>
                 </Link>
               </div>
@@ -50,20 +53,14 @@ const Footer = () => {
             <div >
               <p className='font-normal font-mono text-white pb-[15px]'>Developers</p>
               <div className='text-[14px] text-gray-400 flex flex-col gap-y-[14px]'>
-                <Link href='/contact'>
+                <Link href={`${process.env.NEXT_PUBLIC_HIRE_APP}/register?developers`}>
                   <a className=' hover:underline '>Apply for jobs</a>
                 </Link>
                 <Link href='/benefits'>
                   <a className='hover:underline '>Benefits</a>
-                </Link>
-                <Link href='/posts'>
-                  <a className=' hover:underline'>Perks & benefits</a>
-                </Link>
-                <Link href='/faqs'>
-                  <a className='hover:underline mb-1'>How to register</a>
-                </Link>
-                <Link href='/faqs'>
-                  <a className='hover:underline mb-1'>Why us</a>
+                </Link>                
+                <Link href={`${process.env.NEXT_PUBLIC_HIRE_APP}/register?developers`}>
+                  <a className='hover:underline mb-1'>Resources</a>
                 </Link>
               </div>
             </div>
@@ -71,14 +68,14 @@ const Footer = () => {
             <div >
               <p className='font-normal font-mono text-white pb-[15px]'>Company</p>
               <div className='text-[14px] text-gray-400 flex flex-col gap-y-[14px]'>
-                <Link href='/contact'>
+                <Link href='/about'>
                   <a className=' hover:underline mb-1'>About us</a>
                 </Link>
-                <Link href='/register?developers'>
+                <Link href={`${process.env.NEXT_PUBLIC_HIRE_APP}/register?developers`}>
                   <a className='hover:underline mb-1'>Careers</a>
                 </Link>
                 <Link href='/posts'>
-                  <a className=' hover:underline mb-1'>Blog</a>
+                  <a className=' hover:underline mb-1'>Blogs</a>
                 </Link>
                 <Link href='/faqs'>
                   <a className='hover:underline mb-1'>FAQs</a>
@@ -94,7 +91,7 @@ const Footer = () => {
                   Made by AppExert tribe 🌍
           </p>
           <div className='flex md:justify-center text-center gap-x-[40px] '>
-            <p> © {currentYear} AppExert Labs </p>
+            <p className="pr-4 md:pr-0"> © {currentYear} AppExert Labs </p>
             <Link href='/privacy'>
               <a className=' hover:underline mb-1'>Privacy</a>
             </Link>
@@ -105,6 +102,9 @@ const Footer = () => {
             </Link>
           </div>
           <div className='flex md:justify-center  text-center  gap-[16px] cursor-pointer'>
+            <p className="md:hidden pr-4" >
+                  Made by AppExert tribe 🌍
+            </p>
             <Link href='https://in.linkedin.com/company/appexert' >
               <div className="w-[20px] h-[20px]">
                 <Image
@@ -149,9 +149,7 @@ const Footer = () => {
               </div>
             </Link>
           </div>
-          <p className="md:hidden" >
-                  Made by AppExert tribe 🌍
-          </p>
+        
         </Container>
       )}
     </footer>

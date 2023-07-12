@@ -12,12 +12,12 @@ const handleSubmit = async (event: any) => {
       event.email
     );
 
-  if (!event.agree) {
-    message.destroy();
-    message.error("Please agree to our terms and privacy policy");
-  }
+  // if (!event.agree) {
+  //   message.destroy();
+  //   message.error("Please agree to our terms and privacy policy");
+  // }
 
-  if (emailValidated && event.agree) {
+  if (emailValidated ) {
     const response = await leadInvite(event.email);
     const { data } = response;
 
@@ -36,22 +36,19 @@ const handleSubmit = async (event: any) => {
 
 const GetStartedBanner = (props: any) => {
   return (
-    <section className='start-hiring py-8 bg-white '>
-      <Container>
-        {props.developerData &&
+    <section className=' md:mt-[100px] mt-[36px] '>
+      {props.developerData &&
           props.developerData.length !== 0 &&
           !props.isLoading && (
-          <div className='flex flex-col place-items-center'>
-            <p className='mt-2 font-semibold text-lg'>
-                Presently 593 active developers are in search of a Job.{" "}
-            </p>
-            <p className='mt-2 '>
-                Request AppExert for access and they are ready to be hired!{" "}
-            </p>
-          </div>
-        )}
-
-        <div className='flex justify-center pt-10'>
+        <><div className='flex flex-col place-items-center text-center'>
+          <p className='mt-2 sub-heading  md:max-w-[623px]'>
+            Currently, 593 talented developers are actively seeking new opportunities.{" "}
+          </p>
+          <p className='mt-2 landing-para text-[18px] max-w-[427px] '>
+            Request AppExert for access and they are ready to be hired!{" "}
+          </p>
+        </div>
+        {/* <div className='flex justify-center pt-6'>
           <div>
             <Formik
               initialValues={{
@@ -67,30 +64,9 @@ const GetStartedBanner = (props: any) => {
                   name='email'
                   id='email'
                   className='py-[9px] placeholder-gray-400 text-gray-700  bg-light-gray rounded-l-md  '
-                  required
-                />
+                  required />
 
-                <div className='flex  items-center'>
-                  <Field className='mr-2 ' type='checkbox' name='agree' />
-                  <p className='text-gray-500'>
-                    By clicking , you agree to our{" "}
-                    <span className='text-blue-700'>
-                      <Link href='/terms/company' target={"_blank"}>
-                        Terms
-                      </Link>
-                    </span>{" "}
-                    and{" "}
-                    <span className='text-blue-700'>
-                      <Link
-                        href='/privacy'
-                        className='text-brand-700 hover:text-brand-800 px-1'
-                        target={"_blank"}
-                      >
-                        Privacy policy
-                      </Link>
-                    </span>
-                  </p>
-                </div>
+
                 <div className='flex justify-center'>
                   <Button
                     type='primary'
@@ -98,14 +74,21 @@ const GetStartedBanner = (props: any) => {
                     size='large'
                     htmlType='submit'
                   >
-                    Get access to talent pool
+                      Get access to talent pool
                   </Button>
                 </div>
               </Form>
             </Formik>
           </div>
-        </div>
-      </Container>
+        </div> */}
+        <div className='flex gap-4 items-center justify-center mt-10'>
+          <Link href='/companies/start-hiring?step=1'>
+            <Button type='primary' className='page-btn' size='large'>
+                Get started for free
+            </Button>
+          </Link>
+        </div></>
+      )}
     </section>
   );
 };

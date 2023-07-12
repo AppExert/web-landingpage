@@ -58,7 +58,7 @@ const GetStartedBanner = () => {
 
               <Button
                 type='primary'
-                className='btn-brand  rounded-l-none  p-0 px-4 mt-[-16px] ml-[-15px]'
+                className='btn-brand  rounded-l-none  p-0 px-4 mt-[-16px] -ml-3 z-40'
                 size='large'
                 htmlType='submit'
               >
