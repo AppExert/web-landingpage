@@ -10,10 +10,24 @@ module.exports = (phase, { defaultConfig }) => {
     },
     async redirects() {
       return [{
-        source: "/publicCollection",
-        destination: "/c",
+        source: '/publicCollection',
+        destination: '/c',
         permanent: true,
-      }]
+      },
+      {
+        source: 'https://appexert.com/c',
+        destination: 'https://hire.appexert.com/c',
+        basePath: false,
+        permanent: false,
+      },
+      ,
+      {
+        source: 'https://lab.appexert.com/c',
+        destination: 'https://hirelab.appexert.com//c',
+        basePath: false,
+        permanent: false,
+      }
+    ]
     }
   };
 };
