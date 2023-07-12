@@ -1,7 +1,5 @@
 import Head from "next/head";
 import Container from "@components/container";
-import { useRouter } from "next/router";
-import { devLandingPageBenefits } from "global/constants";
 import Link from "next/link";
 import { Button } from "antd";
 
@@ -43,8 +41,6 @@ const ABOUT_PARA: {
 ];
 
 const About = () => {
-  const router = useRouter();
-  const DEVELOPER_BENEFITS_PAGE = devLandingPageBenefits;
   return (
     <>
       <Head>
@@ -85,11 +81,10 @@ const About = () => {
           <div
             className='px-8 md:py-[100px] text-center overflow-x-hidden max'
             style={{
-                backgroundImage: "url('/images/about-us/bg-map.png')",
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "50% 150px", // Replace the values with the desired pixel positions
-              }}
-              
+              backgroundImage: "url('/images/about-us/bg-map.png')",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "50% 150px",
+            }}
           >
             <div className='pt-16 md:py-0' />
             <p className='green-label'>ABOUT US</p>
@@ -148,7 +143,7 @@ const About = () => {
                       Our story
                     </h2>
                     {ABOUT_PARA.map((para, index) => (
-                      <p className='text-[#908E9F] text-[20px] mb-[32px] md:max-w-3xl mx-auto text-left'>
+                      <p key={index} className='text-[#908E9F] text-[20px] mb-[32px] md:max-w-3xl mx-auto text-left'>
                         {para.content}
                       </p>
                     ))}
