@@ -147,7 +147,7 @@ function Header() {
                 {
                   "h-54 opacity-100  transition-all duration-200 ": open,
                 },
-                "md:flex  w-full py-4 md:py-1 lg:gap-4 md:items-center  md:h-auto overflow-hidden"
+                "md:flex  w-full pt-4 md:py-1 lg:gap-4 md:items-center  md:h-auto overflow-hidden"
               )}
             >
               <>
