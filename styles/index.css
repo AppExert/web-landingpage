@@ -382,6 +382,11 @@ ol {
 .testimonial-wrapper.fade-out {
   opacity: 0;
 }
+
+.markdown-styles_markdown__xilLR strong {
+  color: white;
+}
+
 @keyframes fade-out {
   from {
     opacity: 1;
