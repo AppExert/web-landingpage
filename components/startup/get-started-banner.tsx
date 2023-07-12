@@ -14,7 +14,7 @@ const GetStartedBanner = () => {
       }}
     >
       <h1 className="heading pt-2 pb-4 md:pb-0md:w-[560px]">
-        Join our community of (100+) remote developers
+        Let's build you an awesome team of remote engineers.
       </h1>
       <Link href="/companies/start-hiring?step=1">
         <Button type="primary" className="page-btn-white">
