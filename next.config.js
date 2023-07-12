@@ -15,17 +15,10 @@ module.exports = (phase, { defaultConfig }) => {
         permanent: true,
       },
       {
-        source: 'https://appexert.com/c',
-        destination: 'https://hire.appexert.com/c',
-        basePath: false,
+        source: '/c',
+        destination: process.env.NEXT_COLLECTION_REDIRECT_URL,
         permanent: false,
-      },
-      ,
-      {
-        source: 'https://lab.appexert.com/c',
-        destination: 'https://hirelab.appexert.com//c',
         basePath: false,
-        permanent: false,
       }
     ]
     }
