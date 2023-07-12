@@ -27,12 +27,14 @@
     --gray-800: #5c5c5c; 
     --gray-900: #404040;
     --light-gray: #F7F8FA;
+    --placeholder-gray: #605E6E;
     --more-gray: #ededed;
     --footer-gray-light: #1f2937;
     --footer-gray-dark: #111827;
     --blue-dark: #0f172f;
     --blue-light: #66a7fd;
     --blue-mid: #e8f0fe;
+    --blue-magnata: #252234;
     --yellow-dark: #fec246;
     --green-light: #E4F6EC;
     --green-dark: #59d090;
@@ -62,7 +64,7 @@
   }
 
   .heading {
-    @apply text-2xl leading-tight sm:text-4xl font-semibold text-gradient cursor-default !important;
+    @apply  leading-tight md:text-[36px] text-[24px] font-semibold text-gradient cursor-default !important;
   }
   
   .sub-heading {
@@ -80,8 +82,22 @@
     hover:bg-brand-600 transition duration-300 cursor-pointer  !important;
   }
 
+  .page-btn-secondary {
+    @apply flex items-center justify-center bg-[#665EFF14] text-white w-full md:w-max
+    rounded-[6px] mt-1 md:text-[18px]  px-[16px] py-[24px] 
+    border-none font-medium text-[16px] leading-6
+    hover:bg-[#665EFF14] transition duration-300 cursor-pointer  !important;
+  }
+
+  .page-btn-white {
+    @apply flex items-center justify-center bg-[#FFF] text-[#000000] w-full md:w-max
+    rounded-[6px] mt-1 md:text-[18px]  px-[16px] py-[24px] 
+    border-none font-medium text-[16px] leading-6
+    hover:bg-[#665EFF14] hover:text-white transition duration-300 cursor-pointer  !important;
+  }
+
   .landing-para {
-    @apply text-[16px] sm:text-[14px] text-[#908E9F] !important;
+    @apply text-[16px] text-[#908E9F] !important;
   }
 
   .green-label {
@@ -89,7 +105,7 @@
   }
 
   .btn-brand {
-    @apply flex items-center justify-center bg-brand-500 text-white px-[10px]  py-[12px]
+    @apply flex items-center justify-center bg-brand-600 text-white px-[10px]  py-[12px]
     border-none font-medium text-sm leading-6
     rounded hover:bg-brand-600 transition duration-300 cursor-pointer  !important;
   }
@@ -101,7 +117,7 @@
   }  
 
   .page-title {
-    @apply text-2xl md:text-3xl font-semibold text-text-black ;
+    @apply text-2xl md:text-3xl font-semibold text-text-black !important;
   }
 
   .page-heading1 {
@@ -133,11 +149,11 @@
   }
 
  .page-para {
-    @apply text-sm text-text-gray leading-6 cursor-default;
+    @apply text-sm text-text-gray leading-6 cursor-default !important;
   }
 
   .page-content {
-    @apply  text-xs text-gray-900 font-medium;
+    @apply  text-xs text-gray-900 font-medium !important;
   }
 
   .page-label {
@@ -145,7 +161,7 @@
   }
 
   .section-heading {
-    @apply font-header text-2xl text-text-black leading-tight cursor-default;
+    @apply font-header text-2xl text-text-black leading-tight cursor-default !important;
   }
 
   .section-preheading {
@@ -161,7 +177,7 @@
   }
 
   .sub-heading {
-    @apply text-sm text-gray-600 cursor-default;
+    @apply md:text-[22px] text-[16px]  cursor-default text-[#FFFFFF] !important;
   }
 
   .label {

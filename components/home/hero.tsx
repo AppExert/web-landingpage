@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import Container from "@components/container";
 import { Button } from "antd";
 import Image from "next/image";
@@ -45,12 +46,12 @@ const Hero = () => {
         <div className='pt-16 md:py-0 md:w-[60%]'>
           <p className="green-label">HIRE GREAT DEVELOPERS</p>
           <h1 className='hero-heading pt-2'>
-            Global hiring, simplified {" "}
-            <br className="hidden md:block"/>
-             for  <br className="md:hidden block"/> 
+            Global hiring, simplified for  startups and SMBs
+            {/* <br className="hidden md:block"/>
+             for  startups and SMBs <br className="md:hidden block"/> 
             <span className="typing-effect">{text} 
               <span className="blink text-brand-300 text-3xl sm:text-5xl font-light">|</span>
-            </span>
+            </span> */}
           </h1>
 
           <p className='section-paragraph text-[#908E9F] py-[10px] pb-[20px]'>

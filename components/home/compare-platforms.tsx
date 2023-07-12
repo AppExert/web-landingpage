@@ -73,7 +73,7 @@ const ComparePlatforms = () => {
           />
         </div>
         {" "}
-        without Appexert
+        Without AppExert
       </div>
     },
     {
@@ -87,7 +87,7 @@ const ComparePlatforms = () => {
           />
         </div>
         {" "}
-        with Appexert
+        With AppExert
       </div>
     }
   ]
@@ -131,10 +131,10 @@ const ComparePlatforms = () => {
                         {isActive && (
                           <motion.div
                             layoutId="SegmentedControlActive"
-                            className={i === 0 ? "border-[#FF5C5C] drop-shadow-[0_32px_50px_rgba(255,92,92,0.08)] absolute inset-0 z-1 border-[0.5px] drop-shadow-[0_32px_50px_rgba(15,172,152,0.08)] bg-[#FFF5F51A] rounded-[24px] shadow-md" : "border-[#5cff92] absolute inset-0 z-1 border-[0.5px] bg-[#FFF5F51A] rounded-[24px] shadow-md"}
+                            className={i === 0 ? "border-[#FF5C5C] drop-shadow-[0_32px_50px_rgba(255,92,92,0.08)] absolute inset-0 z-10 border-[0.5px] drop-shadow-[0_32px_50px_rgba(15,172,152,0.08)] bg-[#FFF5F51A] rounded-[24px] shadow-md" : "border-[#5cff92] absolute inset-0 z-10 border-[0.5px] bg-[#FFF5F51A] rounded-[24px] shadow-md"}
                           />
                         )}
-                        <div className="relative z-2 md:text-[16px] text-[12px] font-medium">{item.title}</div>
+                        <div className="relative z-20 md:text-[16px] text-[12px] font-medium">{item.title}</div>
                       </button>
 
                     </motion.div>
@@ -150,7 +150,7 @@ const ComparePlatforms = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 1.5 }}
-            className='flex flex-col md:flex-row justify-between items-center md:my-6 text-[#E4E4E4] md:text-[22px] text-[14px] font-medium'
+            className='flex flex-col md:flex-row justify-between md:items-center pl-7 md:pl-0 md:my-6 text-[#E4E4E4] md:text-[22px] text-[14px] font-medium'
           >
             <div className='md:w-[400px]'>
               <AnimatePresence>
@@ -196,7 +196,9 @@ const ComparePlatforms = () => {
                         />
                       </div>
                       <p className='text-[#E4E4E4]'>
-                        Tired of freelance platforms
+                        Tired of freelance {" "}
+                        <br className="md:block hidden"/>
+                         platforms
                       </p>
                     </div>
                   </motion.div>
@@ -229,7 +231,7 @@ const ComparePlatforms = () => {
                         />
                       </div>
                       <span className='text-[#E4E4E4]'>
-                        Engage as one team, with full ownership
+                      Access qualified developers in few clicks
                       </span>
                     </div>
                     <div className='flex items-center md:gap-2'>
@@ -242,7 +244,7 @@ const ComparePlatforms = () => {
                         />
                       </div>
                       <p className='text-[#E4E4E4]'>
-                        Tired of freelance platforms
+                      Engage as one team, with full ownership
                       </p>
                     </div>
                   </motion.div>
@@ -260,7 +262,7 @@ const ComparePlatforms = () => {
                 handleClick(),
                 setActiveitem(activeItem === 1 ? 0 : 1)
               }}
-              className="md:w-[300px] md:h-[300px] -my-10 md:my-0 w-[200px] h-[200px] cursor-pointer"
+              className="md:w-[300px] md:h-[300px] -my-10 md:my-0 w-[200px] h-[200px] cursor-pointer hidden md:block"
             >
 
               <Image

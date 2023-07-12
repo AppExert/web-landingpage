@@ -24,13 +24,13 @@ const TESTIMONIALS: {
     image: "/images/home/brand-icons/logo_sekure.svg",
     width: "118px",
   },
-  {
-    name: "Vice President",
-    company: "oproma",
-    content: "AppExert is a primary reason that litmus exists today and is able to create interactive learning experiences for thousands of students. AppExert proactively guided us to adding developers adhoc with the right expertise at the right time and more importantly, the right amount of time. This flexibility allowed us to get some of the best talent for important roles without needing to spend the overhead for a full-time hire",
-    image: "/images/home/brand-icons/logo_oproma.svg",
-    width: "134px",
-  },
+  // {
+  //   name: "Vice President",
+  //   company: "oproma",
+  //   content: "AppExert is a primary reason that litmus exists today and is able to create interactive learning experiences for thousands of students. AppExert proactively guided us to adding developers adhoc with the right expertise at the right time and more importantly, the right amount of time. This flexibility allowed us to get some of the best talent for important roles without needing to spend the overhead for a full-time hire",
+  //   image: "/images/home/brand-icons/logo_oproma.svg",
+  //   width: "134px",
+  // },
   {
     name: "Vice President",
     company: "litmus",
@@ -38,13 +38,13 @@ const TESTIMONIALS: {
     image: "/images/home/brand-icons/logo_litmus.svg",
     width: "133px",
   },
-  {
-    name: "Vice President",
-    company: "wandrian",
-    content: "AppExert is a primary reason that litmus exists today and is able to create interactive learning experiences for thousands of students. AppExert proactively guided us to adding developers adhoc with the right expertise at the right time and more importantly, the right amount of time. This flexibility allowed us to get some of the best talent for important roles without needing to spend the overhead for a full-time hire",
-    image: "/images/home/brand-icons/logo_wandrian.svg",
-    width: "140px",
-  },
+  // {
+  //   name: "Vice President",
+  //   company: "wandrian",
+  //   content: "AppExert is a primary reason that litmus exists today and is able to create interactive learning experiences for thousands of students. AppExert proactively guided us to adding developers adhoc with the right expertise at the right time and more importantly, the right amount of time. This flexibility allowed us to get some of the best talent for important roles without needing to spend the overhead for a full-time hire",
+  //   image: "/images/home/brand-icons/logo_wandrian.svg",
+  //   width: "140px",
+  // },
 ];
 const TestimonialsClients = () => {
   const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0);
@@ -92,7 +92,7 @@ const TestimonialsClients = () => {
         </div>
 
         <div className="flex flex-col justify-center md:max-w-[810px] overflow-hidden "  >
-          <div id="testimonials-container"  className="h-[60vh] md:h-[420px]">
+          <div id="testimonials-container"  className=" md:h-[420px]">
             <motion.div
               initial={{ opacity: 0, x: -200 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -127,7 +127,6 @@ const TestimonialsClients = () => {
                   initial={{ scale: 1 }}
                   animate={{
                     // scale: testimonial.company === currentTestimonial.company ? 1.2 : 1 ,
-                    filter: testimonial.company === currentTestimonial.company ? "brightness(0) invert(1)" : ""
                   }}
                   transition={{ duration: 0.5 }}
                 >

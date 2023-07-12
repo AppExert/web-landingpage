@@ -3,6 +3,8 @@ import Image from "next/image";
 import { animate, motion, useMotionValue, useTransform, Variants } from "framer-motion";
 import Container from "@components/container";
 import { useEffect, useState } from "react";
+import cn from "classnames";
+
 
 function LoadImage({
   refItem,
@@ -13,9 +15,11 @@ function LoadImage({
   index: number;
   length: number;
 }) {
+  const [activeIndex, setActiveIndex] = useState(0);
+
   const cardVariants: Variants = {
     offscreen: {
-      opacity: 0,
+      opacity: index === 0  ? 1 : 0,
       y: 0,
     },
     onscreen: {
@@ -28,6 +32,24 @@ function LoadImage({
       },
     },
   };
+  
+
+  const handleScroll = () => {
+    const scrollPosition = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const threshold = windowHeight / 2; // Adjust the threshold as needed
+  
+    if (scrollPosition > threshold) {
+      setActiveIndex(activeIndex + 1);
+    }
+  };
+  
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [activeIndex]);
 
   return (
     <>
@@ -35,7 +57,7 @@ function LoadImage({
         className='md:sticky top-12 md:top-[20vh] md:h-[100vh] h-[50vh]'
         initial='offscreen'
         whileInView='onscreen'
-        viewport={{ once: false, amount: 0.8, margin: "0% 0px -0% 0px" }}
+        viewport={{ once: false, amount: 0.8, margin: "0% 0px 0% 0px" }}
       >
         <div className=' flex justify-center items-center '>
           <motion.div className=' bg-[#09071B] ' variants={cardVariants}>
@@ -51,7 +73,8 @@ function LoadImage({
       </motion.div>
       <div>
         <div>
-          <div className=' h-[40vh] md:h-[100vh] flex justify-center md:items-end px-5 md:px-12 '>
+          <div 
+            className={cn( "h-[100vh] flex justify-center items-end  px-5 md:px-12")}>
             <div className='bg-[#020013] text-white '>
               <div className='flex flex-col gap-4 text-[#908E9F]'>
                 <h2 className='text-white pb-4 text-[18px] md:text-[22px] font-medium  md:font-semibold '>

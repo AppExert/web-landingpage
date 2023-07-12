@@ -9,7 +9,7 @@ const StartupContent = () => {
     <>
       <section className='bg-light-gray '>
         <Container className='py-8 md:py-16'>
-          <div className='flex flex-col flex-col-reverse md:flex-row gap-10 '>
+          <div className='flex flex-col md:flex-row gap-10 '>
             <div className='md:w-1/3'>
               <div className='w-full h-full flex items-center justify-center'>
                 <Image
@@ -79,7 +79,7 @@ const StartupContent = () => {
       </section>
       <section className='bg-light-gray'>
         <Container className='py-8 md:py-16'>
-          <div className='flex flex-col flex-col-reverse md:flex-row md:gap-10 '>
+          <div className='flex flex-col md:flex-row md:gap-10 '>
             <div className='md:w-1/3'>
               <div className='w-full h-full flex items-center justify-center'>
                 <Image
@@ -164,7 +164,7 @@ const StartupContent = () => {
       </section>
       <section className='bg-light-gray'>
         <Container className='py-8 md:py-16'>
-          <div className='flex flex-col flex-col-reverse md:flex-row md:gap-10 '>
+          <div className='flex flex-col md:flex-row md:gap-10 '>
             <div className='md:w-1/3'>
               <div className='w-full h-full flex items-center justify-center'>
                 <Image

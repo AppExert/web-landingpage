@@ -30,53 +30,51 @@ const handleSubmit = async (event: any) => {
 
 const GetStartedBanner = () => {
   return (
-    <section className='start-hiring py-8 bg-light-gray '>
-      <Container>
-        <div className='text-center items-center md:flex-row justify-center'>
-          <div>
+    <div className="flex  flex-col md:gap-[20px] justify-between p-[30px] md:py-[72px] md:px-[100px] border-[1px] border-[#43424D] rounded-[12px] items-center"
+      style={{
+        background:
+        "linear-gradient(135deg, rgba(250, 250, 250, 0.20) 0%, rgba(246, 246, 246, 0.00) 100%)",
+        backdropFilter: "blur(12px)"
+      }}
+    >
+      <h1 className="heading text-center  pt-2 pb-4 md:pb-0 md:max-w-[800px]">Excited to be part of our thriving remote developer community?</h1>
+    
+      <div className='flex text-center '>
+        <Formik
+          initialValues={{
+            email: "",
+          }}
+          onSubmit={handleSubmit}
+        >
+          <Form>
+            <Input.Group compact  className="flex justify-center  items-center">
+              <Fieldset
+                type='email'
+                placeholder='Add your email to get early access'
+                name='email'
+                id='email'
+                className=' py-[9px] placeholder-gray-400 text-gray-700  bg-light-gray rounded-l-md mr-16 '
+                required />
 
-            <p className='mt-2 font-semibold text-lg'>
-              Excited to be part of our thriving remote developer community?
-            </p>
-          </div>
+              <Button
+                type='primary'
+                className='btn-brand  rounded-l-none  p-0 px-4 mt-[-16px] -ml-3 z-40'
+                size='large'
+                htmlType='submit'
+              >
+                <ArrowRightOutlined
+                  className=''
+                  style={{ fontSize: "1.2rem", }}
+                />
+              </Button>
+            </Input.Group>
+          </Form>
+        </Formik>
+      </div>
 
-          <div className='text-center pt-10'>
-            <Formik
-              initialValues={{
-                email: "",
-              }}
-              onSubmit={handleSubmit}
-            >
-              <Form>
-                <Input.Group compact >
-                  <Fieldset
-                    type='email'
-                    placeholder='Add your email to get early access'
-                    name='email'
-                    id='email'
-                    className='py-[9px] placeholder-gray-400 text-gray-700  bg-light-gray rounded-l-md mr-16 '
-                    required />
+    </div>
 
-                  <Button
-                    type='primary'
-                    className='btn-brand  rounded-l-none  inline-block  p-0 px-4'
-                    size='large'
-                    htmlType='submit'
-                  >
-                    <ArrowRightOutlined
-                      className='mt-[2px]'
-                      style={{ fontSize: "1.2rem", verticalAlign: "top" }}
-                    />
-                  </Button>
-                </Input.Group>
-              </Form>
-            </Formik>
-          </div>
-
-        </div>
-
-      </Container>
-    </section>
+     
   );
 };
 

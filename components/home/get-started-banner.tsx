@@ -95,7 +95,7 @@ const GetStartedBanner = () => {
         {/* mobile device */}
         <div className=' md:hidden flex  justify-center my-[35px] mb-[72px] px-20'>
           <div className="flex  flex-col gap-[125px]">
-            <svg height={100} width={1} className='relative top-[170px] left-[100px] '>
+            <svg height={100} width={1} className='relative top-[190px] left-[100px] '>
               <line
                 x1='50%'
                 y1='15'
@@ -105,7 +105,7 @@ const GetStartedBanner = () => {
                 strokeDasharray='3,3'
               />
             </svg>
-            <svg height={100} width={1} className='relative top-[170px] left-[100px] '>
+            <svg height={100} width={1} className='relative top-[230px] left-[100px] '>
               <line
                 x1='50%'
                 y1='15'
@@ -127,8 +127,10 @@ const GetStartedBanner = () => {
                     alt='step1'
                   />
                 </div>
-
-                <h4 className='text-white text-[22px] font-semibold -mt-6'>
+                <p className='text-[#848195] text-[18px] font-medium -mt-6 pb-1'>
+                  STEP 1
+                </p>
+                <h4 className='text-white text-[22px] font-semibold '>
                   Sign up for free now
                 </h4>
               </div>
@@ -142,7 +144,10 @@ const GetStartedBanner = () => {
 
                   />
                 </div>
-                <h4 className='text-white text-[22px] -mt-6 font-semibold'>
+                <p className='text-[#848195] text-[18px] -mt-6 font-medium pb-1'>
+                  STEP 2
+                </p>
+                <h4 className='text-white text-[22px]  font-semibold'>
                   Shortlist from our talent pool
                 </h4>
               </div>
@@ -156,7 +161,10 @@ const GetStartedBanner = () => {
 
                   />
                 </div>
-                <h4 className='text-white text-[22px] -mt-6 font-semibold'>
+                <p className='text-[#848195] text-[18px] -mt-6  font-medium pb-1'>
+                  STEP 3
+                </p>
+                <h4 className='text-white text-[22px] font-semibold'>
                   Hire and manage with confidence
                 </h4>
               </div>
