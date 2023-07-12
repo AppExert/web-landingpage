@@ -68,7 +68,7 @@ const Footer = () => {
             <div >
               <p className='font-normal font-mono text-white pb-[15px]'>Company</p>
               <div className='text-[14px] text-gray-400 flex flex-col gap-y-[14px]'>
-                <Link href='/contact'>
+                <Link href='/about'>
                   <a className=' hover:underline mb-1'>About us</a>
                 </Link>
                 <Link href={`${process.env.NEXT_PUBLIC_HIRE_APP}/register?developers`}>

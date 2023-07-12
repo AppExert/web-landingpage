@@ -13,7 +13,19 @@ module.exports = (phase, { defaultConfig }) => {
         source: "/publicCollection",
         destination: "/c",
         permanent: true,
-      }]
+      },
+      {
+        source: "/c",
+        has: [
+          {
+            type: "query",
+            key: "id",
+          },
+        ],
+        destination: "https://hire.appexert.com/c?id=:id",
+        permanent: false,
+      }
+      ]
     }
   };
 };
