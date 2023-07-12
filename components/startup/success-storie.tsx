@@ -27,7 +27,7 @@ const TESTIMONIALS: {
     name: "Kunsheng Zhao",
     role: "Co-Founder",
     company: "GoMaterials",
-    content: "“I just simply love tools that make my life easier! I have everything that I need in one place, and that allows our team to be more organized and user-oriented.”",
+    content: "“When building our tech team and software application, we often have trouble hiring techtalents and are in shortage of resources during certain periods. AppExert did great in bothmanaging the remote development team to finish tasks and finding qualified tech talents as a remote hiring platform. We really enjoyed their quick and professional service!”",
     image: "/images/startup/GoMaterials.svg",
     width: "153px",
   },
@@ -35,7 +35,7 @@ const TESTIMONIALS: {
     name: "Jenny WilsonTony Nero",
     role: "Vice President",
     company: "Information Technology, Sekure",
-    content: "“I really like that I can have all in one place: I can send emails and text messages, I can have live chat, show pop-ups and push notifications on my website.”",
+    content: "“In my experience, I have tried various offshore & freelance models in the past but most ofthe times it was a pain. I am happy to say we finally hired Senior Remote Developers fromAppExert and they’ve worked closely with us throughout the process, staying on task, ontarget, and on budget. It’s certainly feel like having our own distributed team. I am really impressed!”",
     image: "/images/startup/sekure.svg",
     width: "118px",
   },
@@ -43,7 +43,7 @@ const TESTIMONIALS: {
     name: "Litmus - VP",
     role: "Vice President",
     company: "litmus",
-    content: "“Working with AppExert has been a fantastic experience, it is an opportunity for me to grow professionally and personally. Everyday is a new experience”",
+    content: "“AppExert is a primary reason that litmus exists today and is able to create interactive learning experiences for thousands of students. AppExert proactively guided us to adding developers adhoc with the right expertise at the right time and more importantly, the right amount of time. This flexibility allowed us to get some of the best talent for important roles without needing to spend the overhead for a full-time hire.”",
     image: "/images/startup/litmus.svg",
     width: "133px",
   },
@@ -72,7 +72,7 @@ const SuccessStorie = () => {
   return (
     <section className='py-6  w-full overflow-visible rounded-md mb-4'>
       <div className='flex flex-col justify-center items-center text-center pb-[72px]'>
-        <h1 className='heading pt-2 md:w-[800px]'>What our members feel</h1>
+        <h1 className='heading pt-2 md:w-[800px]'>Startup Success Stories</h1>
         <p className='landing-para md:text-[18px] pt-[16px]'>
           We work with some interesting startups backed by leading VCs &
           accelerators
