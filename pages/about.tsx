@@ -81,7 +81,7 @@ const About = () => {
           <div
             className='px-8 md:py-[100px] text-center overflow-x-hidden max'
             style={{
-              backgroundImage: "url('/images/about-us/bg-map.png')",
+              backgroundImage: "url('/images/about-us/map.png')",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "50% 150px",
             }}

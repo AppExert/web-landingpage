@@ -70,7 +70,7 @@ function Header() {
               router.asPath.startsWith("/c?id="),
           },
           { "bg-[#020013]": router.pathname.includes("companies/start-hiring") },
-          "sticky top-0 z-50 backdrop-blur-3xl min-h-[64px] flex py-2 md:py-0   "
+          "sticky top-0 z-50 backdrop-blur-3xl min-h-[64px] flex py-2 md:py-0 border-b border-[#26252C]"
         )}
       >
         <Container className=' md:flex  justify-between  py-2 '>
