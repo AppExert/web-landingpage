@@ -4,18 +4,24 @@ import { Post } from "@models/post.model";
 import Image from "next/image";
 import cn from "classnames";
 import Link from "next/link";
+import Avatar from "./avatar";
+import Date from "./date";
 
 type Props = {
   post: Post;
 };
 
+
 const PostCard: React.FC<Props> = ({ post }) => {
+
+  console.log("post", post);
+
   return (
     <Link href={`/posts/${post.slug}`}>
       <a>
         <div
-          className='rounded-md shadow-md hover:shadow-lg border-gray-200 hover:border-gray-400 transition duration-200 cursor-pointer'
-          style={{ height: "350px" }}
+          className='bg-[#09071B] rounded-md border-solid border-1 border-[#18171C] cursor-pointer'
+          style={{ height: "420px" }}
         >
           <Image
             width={400}
@@ -28,20 +34,19 @@ const PostCard: React.FC<Props> = ({ post }) => {
               "hover:shadow-medium transition-shadow duration-200": post.slug,
             })}
           />
-          <div className='p-4'>
-            <h3 className='text-lg font-semibold text-gray-600'>
+          <div className='flex flex-col items-stretch h-[50%] justify-between p-4'>
+            <p className='text-[#0FAC98] mt-2 text-[14px]'>
+              <span>{post.estimatedReadingTime}</span> min read
+            </p>
+            <h3 className='text-[22px] font-semibold text-white'>
               {post.title}
             </h3>
-            <p className='mt-2'>
-              by{" "}
-              <span className='font-semibold'>
+            <p className='flex mt-2'>
+              {<Avatar name={""} picture={post.author.image} />}
+              <p className='text-white text-[] font-semibold'>
                 {post?.author?.name || "N.A"}
-              </span>
-            </p>
-
-            <p className="mt-2">
-              <span>{post.estimatedReadingTime}</span>{" "}
-              min read
+                <Date dateString={post.slug} />
+              </p>
             </p>
           </div>
         </div>

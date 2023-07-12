@@ -49,7 +49,7 @@ const TalentPoolHero = () => {
   }, []);
 
   return (
-    <Container className="md:py-[100px]  overflow-hidden">
+    <Container className="md:py-[100px] py-[48px] overflow-hidden">
 
       <section >
         <div className="text-center flex flex-col justify-center items-center ">
