@@ -2450,11 +2450,11 @@ const DeveloperBenefits = () => {
           </h1>
         </div>
 
-        <div className='grid grid-cols-1 lg:grid-cols-3 md:gap-6 gap-4  py-[48px] px-[32px] bg-[#09071B] rounded-[8px]'>
+        <div className='grid grid-cols-2 md:grid-cols-3 md:gap-6 gap-4  p-[20px] md:py-[48px] md:px-[32px] bg-[#09071B] rounded-[8px]'>
           {dataForDisplay.map((benefits: any) => (
             <div
               key={benefits.name}
-              className='w-full h-full grid gap-2 text-center md:p-4 p-2  '
+              className='w-full h-full grid gap-2 text-center md:p-4 p-1 '
             >
               <div className='w-full flex justify-center fill-current max-h-max'>
                 {benefits.icon}
@@ -2462,7 +2462,7 @@ const DeveloperBenefits = () => {
               <h3 className='font-medium text-[#E4E4E4] text-[18px] pt-[20px]'>
                 {benefits.name}
               </h3>
-              <p className=' text-[#908E9F] text-[14px]'>{benefits.text}</p>
+              <p className=' text-[#908E9F] text-[14px] md:block hidden'>{benefits.text}</p>
             </div>
           ))}
         </div>
