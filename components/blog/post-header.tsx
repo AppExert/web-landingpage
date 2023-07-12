@@ -25,10 +25,10 @@ const PostHeader: React.FC<Props> = ({
       <div className='md:py-[100px] py-[20px]'>
         <div className='green-label text-center'>
 
-        {estimatedReadingTime && (
+          {estimatedReadingTime && (
             <div className='uppercase flex pl-2 justify-center'>
               {estimatedReadingTime} min read
-              {' -'}
+              {" -"}
               <Date dateString={date} />
             </div>
           )}
