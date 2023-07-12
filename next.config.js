@@ -6,6 +6,7 @@ module.exports = (phase, { defaultConfig }) => {
     /* config options here */
     reactStrictMode: true,
     images: {
+      dangerouslyAllowSVG: true,
       domains: ["cdn.sanity.io", "avatars.dicebear.com", "firebasestorage.googleapis.com"],
     },
     async redirects() {

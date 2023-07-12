@@ -143,7 +143,7 @@ const About = () => {
                       Our story
                     </h2>
                     {ABOUT_PARA.map((para, index) => (
-                      <p key={index} className='text-[#908E9F] text-[20px] mb-[32px] md:max-w-3xl mx-auto text-left'>
+                      <p key={index} className='text-[#908E9F] text-[20px] pb-[32px] md:max-w-3xl mx-auto text-left'>
                         {para.content}
                       </p>
                     ))}
@@ -151,7 +151,7 @@ const About = () => {
                 </div>
               </div>
               <div
-                className='flex md:flex-row flex-col max-w-[1200px] mx-auto justify-between items-center p-[30px] md:py-[72px] md:px-[100px] border-[1px] border-[#43424D] rounded-[12px] '
+                className='flex md:flex-row flex-col max-w-[1200px] mx-auto justify-between items-center p-[30px] md:py-[72px] mb-[72px] md:px-[100px] border-[1px] border-[#43424D] rounded-[12px] '
                 style={{
                   background:
                     "linear-gradient(135deg, rgba(250, 250, 250, 0.20) 0%, rgba(246, 246, 246, 0.00) 100%)",

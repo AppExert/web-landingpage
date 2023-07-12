@@ -1,42 +1,55 @@
 /* eslint-disable react/prop-types */
+import { urlForImage } from "@libs/sanity";
+import { Post } from "@models/post.model";
+import Image from "next/image";
+import cn from "classnames";
 import Link from "next/link";
-import CoverImage from "./cover-image";
-import Date from "./date";
 import Avatar from "./avatar";
 
 type Props = {
-  title: string;
-  coverImage: string;
-  date: string;
-  excerpt: string;
-  author: any;
-  slug: string;
+  post: Post;
 };
 
-const PostPreview: React.FC<Props> = ({
-  title,
-  coverImage,
-  date,
-  excerpt,
-  author,
-  slug,
-}) => {
+
+const PostPreview: React.FC<Props> = ({ post }) => {
+
+  console.log("post", post);
+
   return (
-    <div>
-      <div className='mb-5'>
-        {coverImage && (
-          <CoverImage slug={slug} title={title} image={coverImage} />
-        )}
-      </div>
-      <h3 className='text-3xl mb-3 leading-snug'>
-        <Link href={`/posts/${slug}`}>
-          <a className='hover:underline'>{title}</a>
-        </Link>
-      </h3>
-      <div className='text-lg mb-4'>{date && <Date dateString={date} />}</div>
-      {excerpt && <p className='text-lg leading-relaxed mb-4'>{excerpt}</p>}
-      {author && <Avatar name={author.name} picture={author.image} />}
-    </div>
+    <Link href={`/posts/${post.slug}`}>
+      <a>
+        <div
+          className='bg-[#09071B] rounded-md border-solid border-1 border-[#18171C] cursor-pointer'
+          style={{ height: "420px" }}
+        >
+          <Image
+            width={400}
+            height={200}
+            alt={`Cover Image for ${post.title}`}
+            src={
+              urlForImage(post.mainImage).height(200).width(400).url() as string
+            }
+            className={cn("shadow-small bg-gray-300", {
+              "hover:shadow-medium transition-shadow duration-200": post.slug,
+            })}
+          />
+          <div className='flex flex-col items-stretch h-[50%] justify-between p-4'>
+            <p className='text-[#0FAC98] mt-2 text-[14px]'>
+              <span>{post.estimatedReadingTime}</span> min read
+            </p>
+            <h3 className='text-[22px] font-semibold text-white'>
+              {post.title}
+            </h3>
+            <p className='flex mt-2'>
+              {<Avatar name={""} picture={post.author.image} />}
+              <p className='text-white text-[] font-semibold'>
+                {post?.author?.name || "N.A"}
+              </p>
+            </p>
+          </div>
+        </div>
+      </a>
+    </Link>
   );
 };
 
