@@ -272,7 +272,7 @@ const CommunityContent = () => {
             <p className=' landing-para text-[18px] '>{item.para} </p>
 
             <div className='flex gap-4 items-center pt-[40px]'>
-              <Link href='/companies/start-hiring?step=1'>
+              <Link href={`${process.env.NEXT_PUBLIC_HIRE_APP}/register?developers`}>
                 <Button type='primary' className='page-btn-secondary'>
                   Explore now
                 </Button>

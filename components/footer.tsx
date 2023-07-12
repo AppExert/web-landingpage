@@ -20,13 +20,13 @@ const Footer = () => {
               />
             </div>
 
-            <p className='mt-[20px] text-[18px] text-white font-semibold max-w-xs pb-[48px] '>
-            The Fastest way to build high performing remote dev team
+            <p className='mt-[20px] text-[18px] text-gray-400 max-w-xs pb-[48px] '>
+            Discover, hire and manage qualified  developers. Powered by GPT-4
             </p>
 
 
           </div>
-          <div className='md:w-2/3 grid grid-cols-2 md:flex flex-row flex-wrap md:gap-x-[90px] justify-between md:justify-start px-2 md:px-0'>
+          <div className='md:w-2/3 grid grid-cols-2 md:flex flex-row flex-wrap md:gap-[90px] gap-[40px] justify-between md:justify-start px-2 md:px-0'>
             <div >
               <p className='font-normal font-mono text-white pb-[15px]'>Companies</p>
               <div className='text-[14px] text-gray-400 flex flex-col gap-y-[14px]'>
@@ -91,7 +91,7 @@ const Footer = () => {
                   Made by AppExert tribe 🌍
           </p>
           <div className='flex md:justify-center text-center gap-x-[40px] '>
-            <p> © {currentYear} AppExert Labs </p>
+            <p className="pr-4 md:pr-0"> © {currentYear} AppExert Labs </p>
             <Link href='/privacy'>
               <a className=' hover:underline mb-1'>Privacy</a>
             </Link>
@@ -102,6 +102,9 @@ const Footer = () => {
             </Link>
           </div>
           <div className='flex md:justify-center  text-center  gap-[16px] cursor-pointer'>
+            <p className="md:hidden pr-4" >
+                  Made by AppExert tribe 🌍
+            </p>
             <Link href='https://in.linkedin.com/company/appexert' >
               <div className="w-[20px] h-[20px]">
                 <Image
@@ -146,9 +149,7 @@ const Footer = () => {
               </div>
             </Link>
           </div>
-          <p className="md:hidden" >
-                  Made by AppExert tribe 🌍
-          </p>
+        
         </Container>
       )}
     </footer>

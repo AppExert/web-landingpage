@@ -53,8 +53,8 @@ const Developers = () => {
             </h1>
             <p className='section-paragraph text-[#908E9F] py-[10px] pb-[20px] md:w-[850px] '>
             Join our team of talented developers and work fulltime for exciting companies worldwide. Experience the happiest remote developer community in the country.          </p>
-            <div className='flex gap-4 items-center'>
-              <Link href='/companies/start-hiring?step=1'>
+            <div className='flex gap-4 items-center z-50'>
+              <Link href='https://jobs.appexert.com/'>
                 <Button
                   type='primary'
                   className='page-btn'
@@ -114,7 +114,7 @@ const Developers = () => {
             }}
           >
             <h1 className="heading pt-2 pb-4 md:pb-0md:w-[560px]">Join our community of (100+) remote developers</h1>
-            <Link href='/companies/start-hiring?step=1'>
+            <Link href='https://jobs.appexert.com/'>
               <Button
                 type='primary'
                 className='page-btn-white'

@@ -1,22 +1,21 @@
+import { ArrowRightOutlined } from "@ant-design/icons";
 import CommunityContent from "@components/community/community-content";
-import Head from "next/head";
 import CommunityPower from "@components/community/community-power";
 import CommunityStorie from "@components/community/community-story";
-import Container from "@components/container";
-import { Button, Form, Input, message } from "antd";
 import GetStartedBanner from "@components/community/get-started-banner";
-import { ArrowRightOutlined } from "@ant-design/icons";
+import Container from "@components/container";
 import Fieldset from "@components/fieldset";
-import { Formik } from "formik";
 import { registerInvite } from "@services/community.service";
+import { message, Button, Input } from "antd";
+import { Form, Formik } from "formik";
+import Head from "next/head";
 
 const handleSubmit = async (event: any) => {
-  const emailValidated =
-    /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
-      event.email
-    );
+
+  const emailValidated = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(event.email);
 
   if (emailValidated) {
+
     const response = await registerInvite(event.email);
     const { data } = response;
 
@@ -30,10 +29,12 @@ const handleSubmit = async (event: any) => {
       message.destroy();
       message.error("Internal Server Error");
     }
-  }
-};
 
-export default function IndexPage() {
+  }
+}
+
+export default function IndexPage() { 
+
   return (
     <>
       <Head>

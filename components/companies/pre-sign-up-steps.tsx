@@ -264,8 +264,13 @@ const PreSignUpSteps = () => {
               </div>
 
               <div className="py-6 min-h-[80vh] md:min-h-[68vh] ">{steps[current - 1].content}</div>
-              <div className="flex justify-between pb-20 items-center gap-x-[40px]">
-                <Button
+              <div 
+                className={cn(
+                  current > 1 ? "justify-between" : "justify-end",
+                  "flex  pb-20 items-center gap-x-[40px]"
+                )}
+              >
+                { current > 1 && <Button
                   onClick={() => prev()}
                   className={cn(
                     current > 1 ? "visible" : "invisible",
@@ -276,11 +281,13 @@ const PreSignUpSteps = () => {
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
                       <path fillRule="evenodd" clipRule="evenodd" d="M5.7895 9.39761C5.68417 9.29215 5.625 9.14918 5.625 9.00012C5.625 8.85105 5.68417 8.70808 5.7895 8.60262L11.4145 2.97762C11.466 2.92235 11.5281 2.87802 11.5971 2.84728C11.6661 2.81654 11.7406 2.8 11.8161 2.79867C11.8916 2.79734 11.9667 2.81123 12.0367 2.83952C12.1067 2.86781 12.1704 2.90992 12.2238 2.96334C12.2772 3.01675 12.3193 3.08038 12.3476 3.15042C12.3759 3.22046 12.3898 3.29548 12.3884 3.37101C12.3871 3.44653 12.3706 3.52102 12.3398 3.59002C12.3091 3.65902 12.2648 3.72112 12.2095 3.77262L6.98201 9.00012L12.2095 14.2276C12.2648 14.2791 12.3091 14.3412 12.3398 14.4102C12.3706 14.4792 12.3871 14.5537 12.3884 14.6292C12.3898 14.7048 12.3759 14.7798 12.3476 14.8498C12.3193 14.9199 12.2772 14.9835 12.2238 15.0369C12.1704 15.0903 12.1067 15.1324 12.0367 15.1607C11.9667 15.189 11.8916 15.2029 11.8161 15.2016C11.7406 15.2002 11.6661 15.1837 11.5971 15.153C11.5281 15.1222 11.466 15.0779 11.4145 15.0226L5.7895 9.39761Z" fill="white"/>
                     </svg> <span className="pl-5 md:block hidden"> Previous </span> </span>
-                </Button>
+                </Button> }
 
                 {current < steps.length && (
                   <Button
-                    className="page-btn text-[14px] px-16"
+                    className={cn(
+                      "page-btn text-[14px] px-16"
+                    )}
                     type="text"
                     onClick={() => next()}
                     size="large"

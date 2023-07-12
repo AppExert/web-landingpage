@@ -69,7 +69,8 @@ function Header() {
               router.pathname === "/developers/resetPassword" ||
               router.asPath.startsWith("/c?id="),
           },
-          "sticky top-0 z-50 backdrop-blur-3xl min-h-[64px] flex py-2 md:py-0 "
+          { "bg-[#020013]": router.pathname.includes("companies/start-hiring") },
+          "sticky top-0 z-50 backdrop-blur-3xl min-h-[64px] flex py-2 md:py-0   "
         )}
       >
         <Container className=' md:flex  justify-between  py-2 '>
