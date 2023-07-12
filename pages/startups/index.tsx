@@ -68,7 +68,7 @@ export default function IndexPage() {
               top: "auto",
             }}
           ></div>
-          <div className="bg-[#020013] z-50 relative">
+          <div className="bg-[#020013] z-40 relative">
             <div className="relative my-[100px]" style={{ zIndex: "2" }}>
               <StartupKeyPoint />
               <TrustedDevelopers />

@@ -1908,17 +1908,38 @@ export const  devLandingPageBenefits =
       name: "Wedding gift vouchers",
       icon: (
         <svg width="126" height="126" viewBox="0 0 126 126" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g filter="url(#filter0_f_3647_111690)">
+          <g filter="url(#filter0_f_3189_111066)">
             <circle cx="63" cy="63" r="21" fill="#1B1551"/>
           </g>
+          <g clipPath="url(#clip0_3189_111066)">
+            <path d="M62.25 64.5078H71.2875V61.4953H62.25V64.5078Z" stroke="#D0CAFF" strokeWidth="1.4" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M63 67.5195H70.5312V64.507H63V67.5195Z" stroke="#D0CAFF" strokeWidth="1.4" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+            <mask id="mask0_3189_111066"  style={{ maskType: "luminance" }} maskUnits="userSpaceOnUse" x="51" y="51" width="24" height="24">
+              <path d="M74.2999 74.3V51.7001H51.7V74.3H74.2999Z" fill="white" stroke="white" strokeWidth="1.4"/>
+            </mask>
+            <g mask="url(#mask0_3189_111066)">
+              <path d="M66.7625 61.4922H65.2563C64.4244 61.4922 63.75 60.8178 63.75 59.986C63.75 59.1541 64.4244 58.4797 65.2563 58.4797C66.0881 58.4797 66.7625 59.1541 66.7625 59.986V61.4922Z" stroke="#D0CAFF" strokeWidth="1.4" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M69.7781 59.986C69.7781 60.8178 69.1037 61.4922 68.2719 61.4922H66.7656V59.986C66.7656 59.1541 67.4401 58.4797 68.2719 58.4797C69.1037 58.4797 69.7781 59.1541 69.7781 59.986Z" stroke="#D0CAFF" strokeWidth="1.4" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M66.7656 61.2423V64.5078" stroke="#D0CAFF" strokeWidth="1.4" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M66.7656 64.5062V67.3711" stroke="#D0CAFF" strokeWidth="1.4" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M74.2968 57.7281C74.2968 56.4802 73.2854 55.4688 72.0374 55.4688H53.9625C52.7145 55.4688 51.7031 56.4802 51.7031 57.7281V68.2719C51.7031 69.5198 52.7145 70.5312 53.9625 70.5312H72.0374C73.2854 70.5312 74.2968 69.5198 74.2968 68.2719V57.7281Z" stroke="#D0CAFF" strokeWidth="1.4" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M54.7188 67.5195H56.9781" stroke="#D0CAFF" strokeWidth="1.4" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M54.7188 58.4805H56.9781" stroke="#D0CAFF" strokeWidth="1.4" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M54.7188 64.5078H59.2375" stroke="#D0CAFF" strokeWidth="1.4" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+            </g>
+          </g>
           <defs>
-            <filter id="filter0_f_3647_111690" x="0" y="0" width="126" height="126" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+            <filter id="filter0_f_3189_111066" x="0" y="0" width="126" height="126" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
               <feFlood floodOpacity="0" result="BackgroundImageFix"/>
               <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-              <feGaussianBlur stdDeviation="21" result="effect1_foregroundBlur_3647_111690"/>
+              <feGaussianBlur stdDeviation="21" result="effect1_foregroundBlur_3189_111066"/>
             </filter>
+            <clipPath id="clip0_3189_111066">
+              <rect width="24" height="24" fill="white" transform="translate(51 51)"/>
+            </clipPath>
           </defs>
         </svg>
+
 
       ),
       text: "Celebrate your D-Day with special gift vouchers",

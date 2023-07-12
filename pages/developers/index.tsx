@@ -53,7 +53,7 @@ const Developers = () => {
             </h1>
             <p className='section-paragraph text-[#908E9F] py-[10px] pb-[20px] md:w-[850px] '>
             Join our team of talented developers and work fulltime for exciting companies worldwide. Experience the happiest remote developer community in the country.          </p>
-            <div className='flex gap-4 items-center z-50'>
+            <div className='flex gap-4 items-center z-40'>
               <Link href='https://jobs.appexert.com/'>
                 <Button
                   type='primary'
@@ -94,9 +94,9 @@ const Developers = () => {
                 top: "auto",
               }}
             ></div>
-            <div className="bg-[#020013] z-50 relative">
+            <div className="bg-[#020013] z-40 relative">
               {/* Content of the div */}
-              <div className="relative my-[100px]" style={{ zIndex: "2" }}>
+              <div className="relative my-[100px]" style={{ zIndex: "1" }}>
                 <GetStartedBanner />
                 <DeveloperKeypoint />
                 <DeveloperBenefits />

@@ -87,7 +87,7 @@ export default function IndexPage() {
 
                     <Button
                       type='primary'
-                      className='btn-brand rounded-l-none inline-block p-0 px-4 -mt-4 -ml-3 z-50'
+                      className='btn-brand rounded-l-none inline-block p-0 px-4 -mt-4 -ml-3 z-40'
                       size='large'
                       htmlType='submit'
                     >
@@ -131,7 +131,7 @@ export default function IndexPage() {
                 top: "auto",
               }}
             ></div>
-            <div className="bg-[#020013] z-50 relative">
+            <div className="bg-[#020013] z-40 relative">
               {/* Content of the div */}
               <div className="relative my-[100px]" style={{ zIndex: "2" }}>
                 <CommunityContent />
