@@ -244,7 +244,7 @@ const PreSignUpSteps = () => {
           innerRef={formRef}
         >
           <Form>
-            <div className="md:px-40 pt-8 pb-4 2xl:max-h-[85vh] overflow-x-hidden  ">
+            <div className="md:px-40 pt-8 pb-4  overflow-x-hidden  ">
               <div className="flex justify-between text-lg">
                 <div>
                   <h2 className="heading text-[26px]">{steps[current - 1].title}</h2>
