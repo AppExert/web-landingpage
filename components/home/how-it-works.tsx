@@ -245,7 +245,7 @@ const HowItWorks = () => {
                       item.show ? "" : "hidden"
                     }`}
                   >
-                    <div className=' h-[35vh] '>
+                    <div className=' h-[300px] '>
                       <div className=' text-white '>
                         <div className='flex flex-col gap-4 text-[#908E9F]'>
                           <h2 className='text-white pb-4 text-[18px] md:text-[22px] font-medium  md:font-semibold '>
@@ -275,7 +275,7 @@ const HowItWorks = () => {
                         </div>
                       </div>
                     </div>
-                    <div className='flex justify-center bg-[#09071B] mb-[40px] '>
+                    <div className='flex justify-center mb-[40px] '>
                       <Image
                         className='rounded-lg p-2 '
                         width={302}
