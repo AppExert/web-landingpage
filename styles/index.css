@@ -196,18 +196,13 @@
   background-color: var(--blue-dark);
 }
 
-/* Hide the scrollbar track */
-::-webkit-scrollbar{
-  background: transparent !important;
-  width: 0px !important;
-}
-
 body {
   font-family: "Inter", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: normal;
   font-style: normal;
+  background: #020013 !important;
 }
 
 h1,
@@ -268,7 +263,7 @@ input[type="password"]:hover {
   box-shadow: none !important;
 }
 
-/* @media screen and (min-width: 980px), screen and (max-width: 1980px) {
+@media screen and (min-width: 980px), screen and (max-width: 1980px) {
   html body::-webkit-scrollbar,
   .overflow-y-auto::-webkit-scrollbar {
     width: 3px;
@@ -289,7 +284,7 @@ input[type="password"]:hover {
     overflow-y: scroll;
     overflow-y: overlay;
   }
-} */
+}
 
 .checkbox {
   margin-top: -13px !important;
