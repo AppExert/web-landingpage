@@ -494,6 +494,7 @@ ul.ant-menu.ant-menu-root.ant-menu-inline.ant-menu-dark {
 
 .ant-collapse-header-text {
   flex: auto !important;
+  color: #e4e4e4;
 }
 
 .ant-collapse-header-text:hover {

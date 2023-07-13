@@ -6,7 +6,7 @@ const GetStartedBanner = () => {
     <section className="md:pt-[100px] pt-[72px]">
       <Container>
         <div className='flex flex-col justify-center items-center '>
-          <p className='green-label'>HOW TO JOIN</p>
+          <p className='green-label text-[16px]'>HOW TO JOIN</p>
           <h1 className='heading pt-2 md:w-[651px] text-center text-[24px] md:text-[40px] '>
           Get started today in 4 easy steps
           </h1>
