@@ -92,7 +92,7 @@ const DEVELOPER_KEYPOINTS: {
   },
   {
     label: "ENJOY WORK-LIFE BALANCE",
-    heading: '"Me" time matters',
+    heading: "\"Me\" time matters",
     para: "Working for global clients won’t make you a night owl. Our overlapping hours are pre-defined to ensure a balanced work life. Our engagements are long-term so you naturally get flexibility in your work hours. You can make more time for your family or to just relax more.",
     icon: (
       <svg
