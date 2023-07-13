@@ -2432,7 +2432,7 @@ const DeveloperBenefits = () => {
   const [expanded, setExpanded] = useState(false);
   const dataForDisplay = expanded
     ? DEVELOPER_BENEFITS
-    : DEVELOPER_BENEFITS.slice(0, 9);
+    : DEVELOPER_BENEFITS.slice(0, 12);
 
   const handleClick = () => {
     setExpanded(!expanded);
@@ -2444,13 +2444,13 @@ const DeveloperBenefits = () => {
     <>
       <section className='cursor-default pb-[100px] '>
         <div className='flex justify-center text-center pb-[72px]'>
-          <h1 className='heading pt-2 w-[800px]'>
+          <h1 className='heading pt-2 w-[800px] '>
             Get hired to one of our teams and you’ll unlock an AppExert+
             Benefits
           </h1>
         </div>
 
-        <div className='grid grid-cols-2 md:grid-cols-3 md:gap-6 gap-4  p-[20px] md:py-[48px] md:px-[32px] bg-[#09071B] rounded-[8px]'>
+        <div className='grid grid-cols-2 md:grid-cols-3 md:gap-6 gap-4 p-[20px] md:py-[48px] md:px-[32px] bg-[#09071B] rounded-[8px]'>
           {dataForDisplay.map((benefits: any) => (
             <div
               key={benefits.name}
@@ -2459,7 +2459,7 @@ const DeveloperBenefits = () => {
               <div className='w-full flex justify-center fill-current max-h-max'>
                 {benefits.icon}
               </div>
-              <h3 className='font-medium text-[#E4E4E4] text-[18px] pt-[20px]'>
+              <h3 className='font-medium text-[#E4E4E4] text-[18px] -mt-4'>
                 {benefits.name}
               </h3>
               <p className=' text-[#908E9F] text-[14px] md:block hidden'>{benefits.text}</p>
