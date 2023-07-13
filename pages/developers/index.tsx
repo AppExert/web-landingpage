@@ -48,11 +48,11 @@ const Developers = () => {
         <section>
           <div className='text-center flex flex-col justify-center items-center '>
             <p className='green-label'>START. BUILD. THRIVE</p>
-            <h1 className='heading pt-2 text-center md:w-[850px] text-[48px]'>
+            <h1 className='heading pt-2 text-center md:w-[850px] md:text-[48px] text-[36px]'>
               Global work opportunities, made possible regardless of your
               location
             </h1>
-            <p className='section-paragraph text-[#908E9F] py-[10px] pb-[20px] md:w-[850px] '>
+            <p className='text-[20px] my-4 text-[#908E9F] py-[10px] pb-[20px] md:w-[850px] '>
               Join our team of talented developers and work fulltime for
               exciting companies worldwide. Experience the happiest remote
               developer community in the country.{" "}
