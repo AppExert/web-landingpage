@@ -100,7 +100,7 @@ const About = () => {
               }}
             >
               <p className='green-label'>OUR MISSION</p>
-              <h1 className='heading md:text-[26px] text-[] pt-2'>
+              <h1 className='heading md:text-[26px] text-[#C3C2CB] pt-2'>
                 “Simplifying technical hiring for small and medium-sized
                 companies by fostering a thriving remote work environment for
                 developers to thrive”
@@ -138,8 +138,8 @@ const About = () => {
               ></div>
               <div className='  z-40 relative '>
                 <div className='relative my-[100px] ' style={{ zIndex: "2" }}>
-                  <div className=' bg-[#020013]  md:px-[32px] md:py-[72px] rounded-[8px]'>
-                    <h2 className='text-white text-[36px] mb-[70px]'>
+                  <div className=' bg-[#020013]  md:px-[32px] md:py-[72px] py-[40px] rounded-[8px]'>
+                    <h2 className='text-white text-[36px] md:mb-[70px] mb-[30px]'>
                       Our story
                     </h2>
                     {ABOUT_PARA.map((para, index) => (

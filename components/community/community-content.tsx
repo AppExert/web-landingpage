@@ -271,8 +271,10 @@ const CommunityContent = () => {
             <h1 className='heading pt-2 '>{item.heading}</h1>
             <p className=' landing-para text-[18px] '>{item.para} </p>
 
-            <div className='flex gap-4 items-center pt-[40px]'>
-              <Link href={`${process.env.NEXT_PUBLIC_HIRE_APP}/register?developers`}>
+            <div className='pt-[40px]'>
+              <Link
+                href={`${process.env.NEXT_PUBLIC_HIRE_APP}/register?developers`}
+              >
                 <Button type='primary' className='page-btn-secondary'>
                   Explore now
                 </Button>
