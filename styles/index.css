@@ -84,7 +84,7 @@
 
   .page-btn-secondary {
     @apply flex items-center justify-center bg-[#665EFF14] text-white w-full md:w-max
-    rounded-[6px] mt-1 md:text-[18px]  px-[16px] py-[24px] 
+    rounded-[6px] mt-1 px-[16px] py-[24px] 
     border-none font-medium text-[16px] leading-6
     hover:bg-[#665EFF14] transition duration-300 cursor-pointer  !important;
   }

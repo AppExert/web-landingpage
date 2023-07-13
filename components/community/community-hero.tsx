@@ -3,7 +3,7 @@ import Container from "@components/container";
 import Fieldset from "@components/fieldset";
 import { registerInvite } from "@services/community.service";
 import { message, Button, Input } from "antd";
-import { Formik, Form } from "formik";
+import Link from "next/link";
 
 const handleSubmit = async (event: any) => {
   const emailValidated =
@@ -39,38 +39,14 @@ const CommunityHero = () => {
             projects with top developers around the world.
           </p>
         </div>
-        <div className='text-center pt-10'>
-          <Formik
-            initialValues={{
-              email: "",
-            }}
-            onSubmit={handleSubmit}
+        <div className='flex gap-4 items-center z-40'>
+          <Link
+            href={`${process.env.NEXT_PUBLIC_HIRE_APP}/register?developers`}
           >
-            <Form>
-              <Input.Group compact>
-                <Fieldset
-                  type='email'
-                  placeholder='Add your email to get early access'
-                  name='email'
-                  id='email'
-                  className='py-[9px] placeholder-gray-400 text-gray-700  bg-light-gray rounded-l-md mr-16 '
-                  required
-                />
-
-                <Button
-                  type='primary'
-                  className='btn-brand rounded-l-none inline-block p-0 px-4'
-                  size='large'
-                  htmlType='submit'
-                >
-                  <ArrowRightOutlined
-                    className='mt-[2px]'
-                    style={{ fontSize: "1.2rem", verticalAlign: "top" }}
-                  />
-                </Button>
-              </Input.Group>
-            </Form>
-          </Formik>
+            <Button type='primary' className='page-btn'>
+              View open positions
+            </Button>
+          </Link>
         </div>
       </Container>
     </section>

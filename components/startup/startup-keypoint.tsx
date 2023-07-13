@@ -413,7 +413,7 @@ const StartupKeypoint = () => {
           </div>
           <div className="flex flex-col justify-center items-start ">
             <p className="green-label">{item.label}</p>
-            <h1 className="heading pt-2 ">{item.heading}</h1>
+            <h1 className="heading pt-2 pb-4">{item.heading}</h1>
             {item.para}
             <div className="flex gap-4 items-center pt-[40px]">
               <Link href="/companies/start-hiring?step=1">
