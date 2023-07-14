@@ -80,6 +80,9 @@ const Footer = () => {
                 <Link href='/faqs'>
                   <a className='hover:underline mb-1'>FAQs</a>
                 </Link>
+                <Link href='/contact'>
+                  <a className='hover:underline mb-1'>Contact us</a>
+                </Link>
               </div>
             </div>
           </div>
