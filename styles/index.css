@@ -84,8 +84,8 @@
 
   .page-btn-secondary {
     @apply flex items-center justify-center bg-[#665EFF14] text-white w-full md:w-max
-    rounded-[6px] mt-1 px-[16px] py-[24px] 
-    border-none font-medium text-[18px] leading-6
+    rounded-[3px] mt-1 px-[24px] py-[24px] 
+    border-none font-medium text-[16px]
     hover:bg-[#665EFF14] transition duration-300 cursor-pointer  !important;
   }
 
@@ -169,7 +169,7 @@
   }
 
   .section-paragraph {
-    @apply my-4  text-[18px] cursor-default;
+    @apply my-4  text-[20px] cursor-default;
   }
 
   .section-tagline {
