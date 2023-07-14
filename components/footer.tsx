@@ -28,7 +28,7 @@ const Footer = () => {
           </div>
           <div className='md:w-2/3 grid grid-cols-2 md:flex flex-row flex-wrap md:gap-[90px] gap-[40px] justify-between md:justify-start px-2 md:px-0'>
             <div >
-              <p className='font-normal font-mono text-white pb-[15px]'>Companies</p>
+              <p className='font-normal font-mono text-white pb-[15px]'>Employers</p>
               <div className='text-[14px] text-gray-400 flex flex-col gap-y-[14px]'>
                 <Link href='/companies/start-hiring?step=1'>
                   <a className=' hover:underline'>How to hire</a>
@@ -79,6 +79,9 @@ const Footer = () => {
                 </Link>
                 <Link href='/faqs'>
                   <a className='hover:underline mb-1'>FAQs</a>
+                </Link>
+                <Link href='/contact'>
+                  <a className='hover:underline mb-1'>Contact us</a>
                 </Link>
               </div>
             </div>

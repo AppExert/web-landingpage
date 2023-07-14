@@ -1,5 +1,3 @@
-import { LeftOutlined, RightOutlined } from "@ant-design/icons";
-import Container from "@components/container";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
@@ -30,7 +28,7 @@ const TESTIMONIALS: {
     company: "GoMaterials",
     content: "“When building our tech team and software application, we often have trouble hiring tech talents and are in shortage of resources during certain periods. AppExert did great in both managing the remote development team to finish tasks and finding qualified tech talents as a remote hiring platform. We really enjoyed their quick and professional service!”",
     image: "/images/startup/GoMaterials.svg",
-    width: "153px",
+    width: "115px",
     height: "24px",
   },
   {
@@ -39,7 +37,7 @@ const TESTIMONIALS: {
     company: "Information Technology, Sekure",
     content: "“In my experience, I have tried various offshore & freelance models in the past but most ofthe times it was a pain. I am happy to say we finally hired Senior Remote Developers fromAppExert and they’ve worked closely with us throughout the process, staying on task, ontarget, and on budget. It’s certainly feel like having our own distributed team. I am really impressed!”",
     image: "/images/startup/sekure1.svg",
-    width: "118px",
+    width: "80px",
     height: "36px",
   },
   {
@@ -48,7 +46,7 @@ const TESTIMONIALS: {
     company: "litmus",
     content: "“AppExert is a primary reason that litmus exists today and is able to create interactive learning experiences for thousands of students. AppExert proactively guided us to adding developers adhoc with the right expertise at the right time and more importantly, the right amount of time. This flexibility allowed us to get some of the best talent for important roles without needing to spend the overhead for a full-time hire.”",
     image: "/images/startup/litmus.svg",
-    width: "133px",
+    width: "96px",
     height: "48px",
   },
   
@@ -93,7 +91,7 @@ const SuccessStorie = () => {
             >
               <div className='flex justify-center'>
                 <Image
-                  className="py-[12px]"
+                  className="md:py-[12px]"
                   src={testimonials.image}
                   alt='client image'
                   width={testimonials.width}
@@ -101,7 +99,7 @@ const SuccessStorie = () => {
                 />
               </div>
 
-              <p className='page-para  pt-4 pb-8 text-base font-normal text-gradient'>
+              <p className='pt-4 pb-8 text-base font-normal text-gradient'>
                 {testimonials.content}
               </p>
               <div className=''>
