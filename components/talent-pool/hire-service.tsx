@@ -4,7 +4,7 @@ const HireService = () => {
   return (
     <section className='md:pt-[70px] mt-[36px] lg:px-10 text-center '>
       <div className='flex flex-col place-items-center text-center'>
-        <p className='mt-2 sub-heading  '>
+        <p className='mt-2 heading'>
           Revolutionizing Tech Hiring
         </p>
         <p className='mt-2 landing-para text-[18px] '>

@@ -69,7 +69,7 @@ export default function IndexPage() {
               Upskill, get peer reviews, share your experiences, build exciting
               projects with top developers around the world.
             </p>
-            <div className='flex text-center '>
+            <div className='flex text-center z-40'>
               <Link
                 href={`${process.env.NEXT_PUBLIC_HIRE_APP}/register?developers`}
               >
