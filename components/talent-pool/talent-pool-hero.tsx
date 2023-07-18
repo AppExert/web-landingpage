@@ -62,7 +62,7 @@ const TalentPoolHero = () => {
         </div>
          
         <div className='flex justify-center py-10 text-center lg:text-left'>
-          <div className='flex flex-col items-center '>
+          <div className='flex flex-col items-center'>
             <Search
               className='talentSearch  mr-2 pb-2 md:pb-0 text-[#605E6E]'
               allowClear
@@ -76,7 +76,7 @@ const TalentPoolHero = () => {
               }}
             />
 
-            <p className='pt-4 text-[#908E9F] text-[14px] z-'>
+            <p className='pt-4 text-[#908E9F] text-[14px] z-[45]'>
                 Popular categories:
               <span
                 className='px-[12px] py-1 m-2 font-semibold cursor-pointer rounded-[4px] border-[1px] border-[#252234] hover:border-[#716999]'
@@ -156,7 +156,7 @@ const TalentPoolHero = () => {
                 </div>
               )}
               {developerData && developerData.length !== 0 && !isLoading ? (
-                <div className='site-card-wrapper   z-40'>
+                <div className='site-card-wrapper z-40'>
                   <Row className='p-2 md:p-0'>
                     {developerData.map((dev: Developer, index: number) => {
                       return <TalentPoolList key={index} devCard={dev} />;

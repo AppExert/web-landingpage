@@ -4,18 +4,15 @@ import { Avatar, Button, Card, Col, message, Modal, Tag } from "antd";
 import cn from "classnames";
 
 import Image from "next/image";
-import { Field, Form, Formik } from "formik";
+import { Form, Formik } from "formik";
 import Fieldset from "@components/fieldset";
-import { useState } from "react";
-import Link from "next/link";
+import { useState, useEffect } from "react";
 import { leadInvite } from "@services/lead.service";
-import router from "next/router";
 import SkillsImage from "@components/skill-image";
 
-const Salery = ({ amount }: { amount: number }) => {
+const Salary = ({ amount }: { amount: number }) => {
   let lowerRange = "";
   let upperRange = "";
-
   if (amount >= 1000) {
     lowerRange = Math.floor(amount / 1000) + "K";
     upperRange = Math.floor(amount / 1000 + 10) + "K";
@@ -23,7 +20,6 @@ const Salery = ({ amount }: { amount: number }) => {
     lowerRange = amount.toString();
     upperRange = (amount + 1000).toString();
   }
-
   const salaryRange = `${lowerRange} - ${upperRange}`;
   return <p>{salaryRange}</p>;
 };
@@ -32,12 +28,11 @@ const TalentPoolList = (props: any) => {
   const devCard = props.devCard;
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
-
-
+  const [allTools, setAllTools] = useState<any>();
   const handleSubmit = async (event: any) => {
     const emailValidated =
       /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
-        event.email,
+        event.email
       );
 
     // if (!event.agree) {
@@ -51,7 +46,7 @@ const TalentPoolList = (props: any) => {
 
       if (data.status === "success") {
         message.destroy();
-        setIsSuccess(true)
+        setIsSuccess(true);
         // router.push("/talent-pool/confirmation");
         // setIsModalOpen(false);
       } else if (data.status === "error") {
@@ -109,37 +104,39 @@ const TalentPoolList = (props: any) => {
                 backdropFilter: "blur(12px)",
               }}
             >
-              { !isSuccess ?   <Formik
-                initialValues={{
-                  email: "",
-                  agree: false,
-                }}
-                onSubmit={handleSubmit}
-              >
-                <Form>
-                  <Fieldset
-                    customLabelFont='text-gray-400'
-                    label='Email'
-                    size='large'
-                    classProps='text-white'
-                    type='email'
-                    placeholder='Enter your email to get access'
-                    name='email'
-                    id='email'
-                    required
-                  />
-                  <div className='flex justify-center'>
-                    <Button
-                      type='primary'
-                      className='btn-brand mt-3 w-full'
+              {!isSuccess ? (
+                <Formik
+                  initialValues={{
+                    email: "",
+                    agree: false,
+                  }}
+                  onSubmit={handleSubmit}
+                >
+                  <Form>
+                    <Fieldset
+                      customLabelFont='text-gray-400'
+                      label='Email'
                       size='large'
-                      htmlType='submit'
-                    >
-                      Get access to talent pool
-                    </Button>
-                  </div>
-                </Form>
-              </Formik> :
+                      classProps='text-white'
+                      type='email'
+                      placeholder='Enter your email to get access'
+                      name='email'
+                      id='email'
+                      required
+                    />
+                    <div className='flex justify-center'>
+                      <Button
+                        type='primary'
+                        className='btn-brand mt-3 w-full'
+                        size='large'
+                        htmlType='submit'
+                      >
+                        Get access to talent pool
+                      </Button>
+                    </div>
+                  </Form>
+                </Formik>
+              ) : (
                 <div className='flex flex-col gap-4 ustify-center items-center sub-heading text-center'>
                   <Image
                     width={56}
@@ -149,55 +146,55 @@ const TalentPoolList = (props: any) => {
                   />
 
                   <p>You’ve updated your profile and details </p>
-                </div> }
+                </div>
+              )}
             </div>
           </div>
           <div className='flex flex-col md:flex-row gap-4 text-gray-400  justify-center items-center'>
-            <div className="flex items-start gap-2  ">
-              <div className="flex w-[18px] h-[18px] flex-shrink-0">
+            <div className='flex items-start gap-2  '>
+              <div className='flex w-[18px] h-[18px] flex-shrink-0'>
                 <Image
                   width={18}
                   height={18}
                   src={"/images/home/tic-icon.svg"}
-                  alt="Check icon"
+                  alt='Check icon'
                 />
               </div>
-              <p className="-mt-1 max-w-[180px]">
-          Access to a collection of diversified developers
+              <p className='-mt-1 max-w-[180px]'>
+                Access to a collection of diversified developers
               </p>
             </div>
-            <div className="flex items-start gap-2 ">
-              <div className="flex w-[18px] h-[18px] flex-shrink-0">
+            <div className='flex items-start gap-2 '>
+              <div className='flex w-[18px] h-[18px] flex-shrink-0'>
                 <Image
                   width={18}
                   height={18}
                   src={"/images/home/tic-icon.svg"}
-                  alt="Check icon"
+                  alt='Check icon'
                 />
               </div>
-              <p className="-mt-1 max-w-[180px]">
-          Convenient & swift hiring process
+              <p className='-mt-1 max-w-[180px]'>
+                Convenient & swift hiring process
               </p>
             </div>
-            <div className="flex items-start gap-2 ">
-              <div className="flex w-[18px] h-[18px] flex-shrink-0">
+            <div className='flex items-start gap-2 '>
+              <div className='flex w-[18px] h-[18px] flex-shrink-0'>
                 <Image
                   width={18}
                   height={18}
                   src={"/images/home/tic-icon.svg"}
-                  alt="Check icon"
+                  alt='Check icon'
                 />
               </div>
-              <p className="-mt-1 max-w-[180px]">
-          Highly talented developers at a cost-effective budget
+              <p className='-mt-1 max-w-[180px]'>
+                Highly talented developers at a cost-effective budget
               </p>
             </div>
-
           </div>
         </div>
       </Modal>
       <section className='hero mx-auto py-2 '>
-        <Col key={devCard?.id} onClick={() => { }}>
+        <Col key={devCard?.id} onClick={() => {}}>
           <>
             <Card
               className='min-h-[15.5rem]  p-2 cursor-pointer lg:w-[55rem] bg-transparent	border-[#252234] hover:border-[#767383] '
@@ -274,7 +271,28 @@ const TalentPoolList = (props: any) => {
                                   <div>
                                     <span
                                       className={cn(
-                                        "cursor-pointer  font-medium  text-[#0FAC98]",
+                                        "font-medium ",
+                                        {
+                                          " text-[#0FAC98] ":
+                                            devCard?.availability?.available ===
+                                              0 ||
+                                            devCard?.availability?.available ===
+                                              1,
+                                        },
+                                        {
+                                          " text-[#ffffff]  ":
+                                            devCard?.availability?.available ===
+                                              2 ||
+                                            devCard?.availability?.available ===
+                                              3,
+                                        },
+                                        {
+                                          " test-gray-600  ":
+                                            devCard?.availability?.available ===
+                                              4 ||
+                                            devCard?.availability
+                                              ?.availableIn === undefined,
+                                        }
                                       )}
                                     >
                                       {devCard?.availability?.availableIn
@@ -291,21 +309,25 @@ const TalentPoolList = (props: any) => {
                                 <p className='cursor-pointer page-label  text-[#908E9F] '>
                                   &nbsp;EXPECTED SALARY {"("}
                                   {devCard?.rateCard?.currency ===
-                                    "Indian Rupee"
+                                  "Indian Rupee"
                                     ? "INR"
                                     : devCard?.rateCard?.currency ===
                                       "U.S.Dollar"
-                                      ? "USD"
-                                      : devCard?.rateCard?.currency === "Euro"
-                                        ? "Euro"
-                                        : devCard?.rateCard?.currency ===
-                                          "Canadian Dollar"
-                                          ? "CAD"
-                                          : "USD"}
+                                    ? "USD"
+                                    : devCard?.rateCard?.currency === "Euro"
+                                    ? "Euro"
+                                    : devCard?.rateCard?.currency ===
+                                      "Canadian Dollar"
+                                    ? "CAD"
+                                    : "USD"}
                                   {")"}
                                 </p>
                                 <p className=' text-white cursor-pointer page-para font-medium '>
-                                  {devCard?.rate ? devCard?.rate : "35,000$"}
+                                  <Salary
+                                    amount={parseFloat(
+                                      devCard?.rate.replace(/,|\$/g, "")
+                                    )}
+                                  />
                                 </p>
                               </div>
                             </div>
@@ -343,13 +365,13 @@ const TalentPoolList = (props: any) => {
                                 {devCard?.rateCard?.currency === "Indian Rupee"
                                   ? "INR"
                                   : devCard?.rateCard?.currency === "U.S.Dollar"
-                                    ? "USD"
-                                    : devCard?.rateCard?.currency === "Euro"
-                                      ? "Euro"
-                                      : devCard?.rateCard?.currency ===
-                                        "Canadian Dollar"
-                                        ? "CAD"
-                                        : "USD"}
+                                  ? "USD"
+                                  : devCard?.rateCard?.currency === "Euro"
+                                  ? "Euro"
+                                  : devCard?.rateCard?.currency ===
+                                    "Canadian Dollar"
+                                  ? "CAD"
+                                  : "USD"}
                                 {")"}
                               </p>
                               <p className=' text-white cursor-pointer page-para font-medium '>
@@ -360,7 +382,7 @@ const TalentPoolList = (props: any) => {
                         </section>
                         <div className=' cursor-pointer  text-sm '>
                           <div
-                            className=' cursor-pointer page-para   h-12 text-editor break-words text-ellipsis overflow-hidden'
+                            className=' cursor-pointer page-para text-[#908E9F] h-12 text-editor break-words text-ellipsis overflow-hidden'
                             style={{ lineBreak: "anywhere" }}
                           >
                             <div>
@@ -411,7 +433,7 @@ const TalentPoolList = (props: any) => {
                       </p>
 
                       <Button
-                        className='btn-brand '
+                        className='btn-brand px-[14px] py-[8px]'
                         onClick={() => setIsModalOpen(true)}
                       >
                         View profile
