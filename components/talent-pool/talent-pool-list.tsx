@@ -313,13 +313,13 @@ const TalentPoolList = (props: any) => {
                                     ? "INR"
                                     : devCard?.rateCard?.currency ===
                                       "U.S.Dollar"
-                                    ? "USD"
-                                    : devCard?.rateCard?.currency === "Euro"
-                                    ? "Euro"
-                                    : devCard?.rateCard?.currency ===
+                                      ? "USD"
+                                      : devCard?.rateCard?.currency === "Euro"
+                                        ? "Euro"
+                                        : devCard?.rateCard?.currency ===
                                       "Canadian Dollar"
-                                    ? "CAD"
-                                    : "USD"}
+                                          ? "CAD"
+                                          : "USD"}
                                   {")"}
                                 </p>
                                 <p className=' text-white cursor-pointer page-para font-medium '>
@@ -365,13 +365,13 @@ const TalentPoolList = (props: any) => {
                                 {devCard?.rateCard?.currency === "Indian Rupee"
                                   ? "INR"
                                   : devCard?.rateCard?.currency === "U.S.Dollar"
-                                  ? "USD"
-                                  : devCard?.rateCard?.currency === "Euro"
-                                  ? "Euro"
-                                  : devCard?.rateCard?.currency ===
+                                    ? "USD"
+                                    : devCard?.rateCard?.currency === "Euro"
+                                      ? "Euro"
+                                      : devCard?.rateCard?.currency ===
                                     "Canadian Dollar"
-                                  ? "CAD"
-                                  : "USD"}
+                                        ? "CAD"
+                                        : "USD"}
                                 {")"}
                               </p>
                               <p className=' text-white cursor-pointer page-para font-medium '>
