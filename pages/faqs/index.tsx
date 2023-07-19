@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
-
 // Countries to show developer terms on demand
 const developerClusterCountries = [
   "IN",
@@ -18,7 +17,7 @@ const developerClusterCountries = [
   "RO",
 ];
 
-const TermsOfService = () => {
+const FrequentlyAskedQuestion = () => {
   const router = useRouter();
   const [userInfo, setUserInfo] = useState<any>(null);
   // For more details, https://ipapi.co/
@@ -36,9 +35,9 @@ const TermsOfService = () => {
   useEffect(() => {
     if (userInfo) {
       if (developerClusterCountries.includes(userInfo?.country)) {
-        router.push("/terms/developers");
+        router.push("/faqs/developers");
       } else {
-        router.push("/terms/companies");
+        router.push("/faqs/companies");
       }
     }
   }, [userInfo]);
@@ -61,4 +60,4 @@ const TermsOfService = () => {
   );
 };
 
-export default TermsOfService;
+export default FrequentlyAskedQuestion;

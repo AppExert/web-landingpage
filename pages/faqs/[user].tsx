@@ -1,19 +1,18 @@
-import { useRouter } from "next/router";
-import Head from "next/head";
 import Container from "@components/container";
-import CompanyTerms from "@components/terms/company-terms";
-import DeveloperTerms from "@components/terms/developer-terms";
 import { LayoutGroup, motion } from "framer-motion";
+import Head from "next/head";
 import { useState } from "react";
+import FrequentlyAskedQuestion from "../companies/faq";
+import { useRouter } from "next/router";
 
-const TermsOfService = () => {
+const FAQs = () => {
   const router = useRouter();
   const { user } = router.query;
   const handleChange = (key: any) => {
     if (key == 0) {
-      router.push("/terms/developers");
+      router.push("/faqs/developers");
     } else {
-      router.push("/terms/companies");
+      router.push("/faqs/companies");
     }
   };
 
@@ -27,31 +26,30 @@ const TermsOfService = () => {
       title: "Companies"
     }
   ]
-
   return (
     <>
       <Head>
         <title>
-          AppExert | Learn our Terms of Service to Hire Best Remote Developers
+          AppExert | Learn More About Hiring Your Technical Remote Team
         </title>
         <meta
           name='description'
-          content='Get more information on Terms and Services of our Remote work platform. Build successful products faster, better and cost-effective with AppExert.'
+          content='Want to know how AppExert online platform is different from other Remote Job websites? Read answers to FAQs to help you make a better choice.'
         />
         <meta
           name='keywords'
-          content='terms of service, appexert smart developers, remote developers'
+          content='appexert faq, frequently asked questions appexert, hire developers'
         />
       </Head>
       {user && (
         <section className="md:py-[100px] py-[48px] " >
           <Container>
-            <div className='flex  justify-center items-center pb-[32px] md:pb-[38px]'>
+            <div className='flex flex-col justify-center items-center pb-[32px] md:pb-[38px]'>
+              <p className='green-label'>HAVE QUESTIONS? WE’RE HERE TO HELP</p>
               <h1 className='heading pt-2 md:w-[651px] text-center'>
-              Terms of service
+          Frequently asked questions
               </h1>
-            </div>
-         
+            </div>        
 
             <div className='flex justify-center pt-[32px] md:pb-[56px] pb-[32px]'>
               <LayoutGroup>
@@ -89,17 +87,13 @@ const TermsOfService = () => {
               </LayoutGroup>
 
             </div>
-            { activeItem === 0 ? 
-              <DeveloperTerms />
-              :
-              <CompanyTerms />
-            }
+       
+            <FrequentlyAskedQuestion feature={activeItem === 0 ? "developer": "company"} className="landingPage" expand={true} />
+           
           </Container>
-        </section>
-      )}
+        </section> )}
     </>
   );
 };
 
-export default TermsOfService;
-
+export default FAQs;
