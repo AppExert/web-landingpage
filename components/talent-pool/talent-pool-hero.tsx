@@ -79,7 +79,7 @@ const TalentPoolHero = () => {
             <p className='pt-4 text-[#908E9F] text-[14px] z-[45]'>
                 Popular categories:
               <span
-                className='px-[12px] py-1 m-2 font-semibold text-[12px] cursor-pointer rounded-[4px] border-[1px] border-[#252234] hover:border-[#716999]'
+                className='talentSearchInput'
                 onClick={() => {
                   fetchDevelopers("Fullstack");
                   setSearchInputValue("Fullstack");
@@ -89,7 +89,7 @@ const TalentPoolHero = () => {
                   Fullstack Engineer
               </span>
               <span
-                className='px-[12px] py-1 m-2 font-semibold text-[12px] cursor-pointer rounded-[4px] border-[1px] border-[#252234] hover:border-[#716999]'
+                className='talentSearchInput'
                 onClick={() => {
                   fetchDevelopers("Frontend");
                   setSearchInputValue("Frontend");
@@ -99,7 +99,7 @@ const TalentPoolHero = () => {
                   Frontend Engineer
               </span>
               <span
-                className='px-[12px] py-1 m-2 font-semibold text-[12px] cursor-pointer rounded-[4px] border-[1px] border-[#252234] hover:border-[#716999]'
+                className='talentSearchInput'
                 onClick={() => {
                   fetchDevelopers("Backend");
                   setSearchInputValue("Backend");
