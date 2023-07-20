@@ -57,11 +57,11 @@ const Developers = () => {
               exciting companies worldwide. Experience the happiest remote
               developer community in the country.{" "}
             </p>
-            <div className='flex gap-4 items-center z-40'>
+            <div className='flex gap-4 items-center z-40 md:w-auto w-full'>
               <Link
                 href={`${process.env.NEXT_PUBLIC_HIRE_APP}/register?developers`}
               >
-                <Button type='primary' className='page-btn'>
+                <Button type='primary' className='page-btn md:w-auto w-full'>
                   View open positions
                 </Button>
               </Link>
@@ -116,7 +116,7 @@ const Developers = () => {
           </div>
 
           <div
-            className='flex md:flex-row flex-col   justify-between p-[30px] md:py-[72px] md:px-[100px] border-[1px] border-[#43424D] rounded-[12px] '
+            className='flex md:flex-row flex-col items-center justify-between p-[30px] md:py-[72px] md:px-[100px] border-[1px] border-[#43424D] rounded-[12px] '
             style={{
               background:
                 "linear-gradient(135deg, rgba(250, 250, 250, 0.20) 0%, rgba(246, 246, 246, 0.00) 100%)",

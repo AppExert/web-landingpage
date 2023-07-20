@@ -187,6 +187,10 @@
   .lander-tag {
     @apply flex border-[#252234] rounded-[4px] px-[12px] py-1 text-[#908E9F] text-[12px] items-center text-xs mt-1 !important;
   }
+
+  .talentSearchInput {
+    @apply px-[12px] py-1 m-2 font-semibold text-[12px] cursor-pointer rounded-[4px] border-[1px] border-[#252234] hover:border-[#716999]
+  }
 }
 
 .bg-shaped {
