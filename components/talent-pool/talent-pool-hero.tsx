@@ -64,7 +64,7 @@ const TalentPoolHero = () => {
         <div className='flex justify-center py-10 text-center lg:text-left'>
           <div className='flex flex-col items-center'>
             <Search
-              className='talentSearch  mr-2 pb-2 md:pb-0 text-[#605E6E]'
+              className='talentSearch  mr-2 pb-2 md:pb-0 text-[#000000]'
               allowClear
               value={searchInputValue}
               placeholder='Search by skills & roles'                
@@ -79,7 +79,7 @@ const TalentPoolHero = () => {
             <p className='pt-4 text-[#908E9F] text-[14px] z-[45]'>
                 Popular categories:
               <span
-                className='px-[12px] py-1 m-2 font-semibold cursor-pointer rounded-[4px] border-[1px] border-[#252234] hover:border-[#716999]'
+                className='px-[12px] py-1 m-2 font-semibold text-[12px] cursor-pointer rounded-[4px] border-[1px] border-[#252234] hover:border-[#716999]'
                 onClick={() => {
                   fetchDevelopers("Fullstack");
                   setSearchInputValue("Fullstack");
@@ -89,7 +89,7 @@ const TalentPoolHero = () => {
                   Fullstack Engineer
               </span>
               <span
-                className='px-[12px] py-1 m-2 font-semibold cursor-pointer rounded-[4px] border-[1px] border-[#252234] hover:border-[#716999]'
+                className='px-[12px] py-1 m-2 font-semibold text-[12px] cursor-pointer rounded-[4px] border-[1px] border-[#252234] hover:border-[#716999]'
                 onClick={() => {
                   fetchDevelopers("Frontend");
                   setSearchInputValue("Frontend");
@@ -99,7 +99,7 @@ const TalentPoolHero = () => {
                   Frontend Engineer
               </span>
               <span
-                className='px-[12px] py-1 m-2 font-semibold cursor-pointer rounded-[4px] border-[1px] border-[#252234] hover:border-[#716999]'
+                className='px-[12px] py-1 m-2 font-semibold text-[12px] cursor-pointer rounded-[4px] border-[1px] border-[#252234] hover:border-[#716999]'
                 onClick={() => {
                   fetchDevelopers("Backend");
                   setSearchInputValue("Backend");

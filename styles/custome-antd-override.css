@@ -38,6 +38,10 @@
   background-color: transparent !important;
 }
 
+.talentSearch .ant-input::placeholder{
+  color: #605e6e;
+}
+
 .talentSearch input[type="text"],
 input[type="password"],
 input[type="number"],
