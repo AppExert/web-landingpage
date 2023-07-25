@@ -12,7 +12,6 @@ type Props = {
 };
 
 const PostCard: React.FC<Props> = ({ post }) => {
-
   return (
     <Link href={`/posts/${post.slug}`}>
       <a>
@@ -28,21 +27,22 @@ const PostCard: React.FC<Props> = ({ post }) => {
               urlForImage(post.mainImage).height(200).width(400).url() as string
             }
             className={cn("shadow-small bg-gray-300", {
-              "hover:shadow-medium transition-shadow duration-200 rounded-t-lg": post.slug,
+              "hover:shadow-medium transition-shadow duration-200 rounded-t-lg":
+                post.slug,
             })}
           />
           <div className='flex flex-col items-stretch h-[50%] justify-between p-4'>
             <div className='text-[#0FAC98] mt-2 text-[14px]'>
               <span>{post.estimatedReadingTime}</span> min read
               <h3 className='text-[22px] font-semibold text-white pt-4'>
-              {post.title}
-            </h3>
+                {post.title}
+              </h3>
             </div>
             <div className='flex mt-2'>
               {<Avatar name={""} picture={post.author.image} />}
               <div className='flex flex-col text-white text-[] font-semibold'>
                 {post?.author?.name || "N.A"}
-                <div className="text-[#908E9F] text-[14px] font-normal">
+                <div className='text-[#908E9F] text-[14px] font-normal'>
                   <Date dateString={post.publishedAt} />
                 </div>
               </div>
