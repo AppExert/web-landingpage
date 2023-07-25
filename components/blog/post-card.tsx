@@ -32,12 +32,12 @@ const PostCard: React.FC<Props> = ({ post }) => {
             })}
           />
           <div className='flex flex-col items-stretch h-[50%] justify-between p-4'>
-            <p className='text-[#0FAC98] mt-2 text-[14px]'>
+            <div className='text-[#0FAC98] mt-2 text-[14px]'>
               <span>{post.estimatedReadingTime}</span> min read
-            </p>
-            <h3 className='text-[22px] font-semibold text-white'>
+              <h3 className='text-[22px] font-semibold text-white pt-4'>
               {post.title}
             </h3>
+            </div>
             <div className='flex mt-2'>
               {<Avatar name={""} picture={post.author.image} />}
               <div className='flex flex-col text-white text-[] font-semibold'>

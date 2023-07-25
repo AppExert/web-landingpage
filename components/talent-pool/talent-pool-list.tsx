@@ -271,7 +271,7 @@ const TalentPoolList = (props: any) => {
                                   <div>
                                     <span
                                       className={cn(
-                                        "font-medium ",
+                                        "font-medium uppercase",
                                         {
                                           " text-[#0FAC98] ":
                                             devCard?.availability?.available ===
@@ -306,8 +306,8 @@ const TalentPoolList = (props: any) => {
 
                             <div className='flex gap-1 border-l-[1px] border-gray-100'>
                               <div className='pl-5'>
-                                <p className='cursor-pointer page-label  text-[#908E9F] '>
-                                  &nbsp;EXPECTED SALARY {"("}
+                                <p className='cursor-pointer page-label  text-[#908E9F]'>
+                                  EXPECTED SALARY {"("}
                                   {devCard?.rateCard?.currency ===
                                   "Indian Rupee"
                                     ? "INR"
@@ -335,10 +335,10 @@ const TalentPoolList = (props: any) => {
                         </div>
                       </div>
                       <div className='grid gap-2 mt-2'>
-                        <section className='my-2 mb-3 flex flex-wrap gap-5 md:hidden '>
+                        <section className='my-2 mb-3 flex flex-wrap md:gap-5 gap-2 md:hidden '>
                           <div className='flex'>
                             <div>
-                              <p className='page-label cursor-pointer text-[#908E9F] '>
+                              <p className='page-label cursor-pointer text-[#908E9F] md:text-[12px] text-[10px]'>
                                 AVAILABILITY
                               </p>
 
@@ -346,7 +346,7 @@ const TalentPoolList = (props: any) => {
                                 <div>
                                   <span
                                     className={cn(
-                                      "font-medium ",
+                                      "font-medium uppercase",
                                       {
                                         " text-[#0FAC98] ":
                                           devCard?.availability?.available ===
@@ -380,9 +380,9 @@ const TalentPoolList = (props: any) => {
                           </div>
 
                           <div className='flex gap-1 border-l-[1px] border-gray-100'>
-                            <div className='pl-5'>
-                              <p className='cursor-pointer page-label  text-[#908E9F] '>
-                                &nbsp;EXPECTED SALARY {"("}
+                            <div className='md:pl-5 pl-2'>
+                              <p className='cursor-pointer page-label  text-[#908E9F] md:text-[12px] text-[10px]'>
+                                EXPECTED SALARY {"("}
                                 {devCard?.rateCard?.currency === "Indian Rupee"
                                   ? "INR"
                                   : devCard?.rateCard?.currency === "U.S.Dollar"
