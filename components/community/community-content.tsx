@@ -268,7 +268,7 @@ const CommunityContent = () => {
           </div>
           <div className='flex flex-col justify-center items-start '>
             {/* <p className='green-label'>{item.label}</p> */}
-            <h1 className='heading pt-2 '>{item.heading}</h1>
+            <h1 className='heading pt-2 pb-4'>{item.heading}</h1>
             <p className=' landing-para text-[18px] '>{item.para} </p>
 
             <div className='pt-[40px]'>

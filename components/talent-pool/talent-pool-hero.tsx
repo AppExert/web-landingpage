@@ -77,7 +77,7 @@ const TalentPoolHero = () => {
             />
 
             <p className='pt-4 text-[#908E9F] text-[14px] z-[45]'>
-                Popular categories:
+                Popular categories
               <span
                 className='talentSearchInput'
                 onClick={() => {

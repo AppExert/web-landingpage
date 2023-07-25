@@ -176,7 +176,7 @@ const FrequentlyAskedQuestion = (props: any) => {
                       key='1'
                       className='font-semibold text-white text-[16px] md:text-[20px]'
                     >
-                      <p className='-my-3 font-normal text-[16px] cursor-pointer text-[#908E9F]'>
+                      <p className='font-normal text-[16px] cursor-pointer text-[#908E9F]'>
                         {faq.answer}
                       </p>
                     </Panel>

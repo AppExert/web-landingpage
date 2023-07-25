@@ -466,7 +466,7 @@ const DeveloperKeypoint = () => {
           </div>
           <div className='flex flex-col justify-center items-start '>
             <p className='green-label text-[16px]'>{item.label}</p>
-            <h1 className='heading pt-2 '>{item.heading}</h1>
+            <h1 className='heading pt-2 pb-4'>{item.heading}</h1>
             <p className=' landing-para md:text-[18px] '>{item.para}</p>
 
             <div className='flex gap-4 items-center pt-[40px]'>
