@@ -320,7 +320,7 @@ const TalentPoolList = (props: any) => {
                                       "Canadian Dollar"
                                           ? "CAD"
                                           : "USD"}
-                                  {")"}
+                                  {"/YEAR)"}
                                 </p>
                                 <p className=' text-white cursor-pointer page-para font-medium '>
                                   <Salary
@@ -345,14 +345,35 @@ const TalentPoolList = (props: any) => {
                               {devCard?.availability?.availableIn && (
                                 <div>
                                   <span
-                                    className={cn(
-                                      "cursor-pointer  font-medium  text-[#0FAC98]",
-                                    )}
-                                  >
-                                    {devCard?.availability?.availableIn
-                                      ? devCard?.availability?.availableIn
-                                      : "Unavailable"}
-                                  </span>
+                                      className={cn(
+                                        "font-medium ",
+                                        {
+                                          " text-[#0FAC98] ":
+                                            devCard?.availability?.available ===
+                                              0 ||
+                                            devCard?.availability?.available ===
+                                              1,
+                                        },
+                                        {
+                                          " text-[#ffffff]  ":
+                                            devCard?.availability?.available ===
+                                              2 ||
+                                            devCard?.availability?.available ===
+                                              3,
+                                        },
+                                        {
+                                          " test-gray-600  ":
+                                            devCard?.availability?.available ===
+                                              4 ||
+                                            devCard?.availability
+                                              ?.availableIn === undefined,
+                                        }
+                                      )}
+                                    >
+                                      {devCard?.availability?.availableIn
+                                        ? devCard?.availability?.availableIn
+                                        : "Unavailable"}
+                                    </span>
                                 </div>
                               )}
                             </div>
@@ -372,10 +393,14 @@ const TalentPoolList = (props: any) => {
                                     "Canadian Dollar"
                                         ? "CAD"
                                         : "USD"}
-                                {")"}
+                                {"/YEAR)"}
                               </p>
                               <p className=' text-white cursor-pointer page-para font-medium '>
-                                {devCard?.rate ? devCard?.rate : "35,000$"}
+                              <Salary
+                                    amount={parseFloat(
+                                      devCard?.rate.replace(/,|\$/g, "")
+                                    )}
+                                  />
                               </p>
                             </div>
                           </div>
