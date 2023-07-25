@@ -1,11 +1,7 @@
 import Container from "@components/container";
 import PostHeader from "@components/blog/post-header";
-import SectionSeparator from "@components/section-separator";
 import { postQuery, postSlugsQuery } from "@libs/queries";
-import client, {
-  urlForImage,
-  usePreviewSubscription,
-} from "@libs/sanity";
+import client, { urlForImage, usePreviewSubscription } from "@libs/sanity";
 import { GetStaticProps } from "next";
 import { useRouter } from "next/router";
 import Head from "next/head";
@@ -13,6 +9,7 @@ import ErrorPage from "next/error";
 import PostTitle from "@components/blog/post-title";
 import MoreStories from "@components/blog/more-stories";
 import PostBody from "@components/blog/post-body";
+import PostFooter from "@components/blog/post-footer";
 
 const Post = ({ data = {}, preview }: any) => {
   const router = useRouter();
@@ -66,8 +63,9 @@ const Post = ({ data = {}, preview }: any) => {
               estimatedReadingTime={post.estimatedReadingTime}
             />
             {post.body && <PostBody body={post.body} />}
+            <hr className='border-accent-2 border-[#26252C] mt-[48px] mb-[24px]' />
+            <PostFooter post={post} />
           </article>
-          <SectionSeparator />
           {morePosts.length > 0 && <MoreStories posts={morePosts} />}
         </>
       )}

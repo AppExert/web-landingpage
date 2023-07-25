@@ -382,8 +382,48 @@ ol {
   opacity: 0;
 }
 
-.markdown-styles_markdown__xilLR strong {
-  color: white;
+.markdown-styles_markdown__xilLR p {
+  color: #908E9F;
+  font-size: 18px;
+}
+
+.markdown-styles_markdown__xilLR p strong a{
+  color: #908E9F;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+.markdown-styles_markdown__xilLR p strong {
+  color: #908E9F;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.markdown-styles_markdown__xilLR h3 {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.markdown-styles_markdown__xilLR h4 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.markdown-styles_markdown__xilLR h3 strong{
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.markdown-styles_markdown__xilLR h4 strong{
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 @keyframes fade-out {
