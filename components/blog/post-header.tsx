@@ -17,11 +17,6 @@ const PostHeader: React.FC<Props> = ({
 }) => {
   return (
     <>
-      {/* <div className='my-4 sm:mx-0'>
-        {coverImage && (
-          <CoverImage slug={slug} title={title} image={coverImage} />
-        )}
-      </div> */}
       <div className='md:pt-[100px] py-[20px]'>
         <div className='green-label text-center'>
 
@@ -30,7 +25,7 @@ const PostHeader: React.FC<Props> = ({
               {estimatedReadingTime} min read
               {" • "}
               <div className="pl-2">
-              <Date dateString={date} />
+                <Date dateString={date} />
               </div>
             </div>
           )}

@@ -1,19 +1,17 @@
 import Avatar from "@components/blog/avatar";
-import { Post } from "@models/post.model";
-import { useEffect } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import { Button } from "antd";
 import { useState } from "react";
 
 type Props = {
-  post: Post;
+  post: any;
 };
 
 const PostFooter: React.FC<Props> = ({ post }) => {
   const [buttonText, setButtonText] = useState("Copy Link");
   const router = useRouter();
-  let ShareURL =  "https://appexert.com/posts/" + post.slug
+  const ShareURL =  "https://appexert.com/posts/" + post.slug
   
   const copyToClipBoard = async () => {
     setButtonText("Copied");
@@ -32,7 +30,7 @@ const PostFooter: React.FC<Props> = ({ post }) => {
       <div className='flex mt-2'>
         {<Avatar name={""} picture={post.author.image} />}
         <div className='flex flex-col text-white font-semibold'>
-          {post?.author?.name || "N.A"}
+          {post.author.name || "N.A"}
           <div className='text-[#908E9F] text-[14px] font-normal'>
             Associate software developer
           </div>
@@ -52,7 +50,7 @@ const PostFooter: React.FC<Props> = ({ post }) => {
           />
           {buttonText}
         </Button>
-        <a href={`https://twitter.com/intent/tweet?text=${ShareURL}`} target="_blank">
+        <a href={`https://twitter.com/intent/tweet?text=${ShareURL}`} target="_blank" rel="noreferrer">
           <Button
             type='primary'
             className='page-btn-secondary'
@@ -65,7 +63,7 @@ const PostFooter: React.FC<Props> = ({ post }) => {
             />
           </Button>
         </a>
-        <a href={`https://www.facebook.com/sharer/sharer.php?u=${copyToClipBoard}`} target="_blank">
+        <a href={`https://www.facebook.com/sharer/sharer.php?u=${copyToClipBoard}`} target="_blank" rel="noreferrer">
           <Button
             type='primary'
             className='page-btn-secondary'
@@ -78,7 +76,7 @@ const PostFooter: React.FC<Props> = ({ post }) => {
             />
           </Button>
         </a>
-        <a href={`https://www.linkedin.com/shareArticle?mini=true&url=${post.slug}`} target="_blank">
+        <a href={`https://www.linkedin.com/shareArticle?mini=true&url=${post.slug}`} target="_blank" rel="noreferrer">
           <Button
             type='primary'
             className='page-btn-secondary'

@@ -43,7 +43,7 @@ const PostCard: React.FC<Props> = ({ post }) => {
               <div className='flex flex-col text-white text-[] font-semibold'>
                 {post?.author?.name || "N.A"}
                 <div className="text-[#908E9F] text-[14px] font-normal">
-                <Date dateString={post.publishedAt} />
+                  <Date dateString={post.publishedAt} />
                 </div>
               </div>
             </div>
