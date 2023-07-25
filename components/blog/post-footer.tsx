@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 import Avatar from "@components/blog/avatar";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import { Button } from "antd";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 type Props = {
   post: any;
@@ -11,7 +12,14 @@ type Props = {
 const PostFooter: React.FC<Props> = ({ post }) => {
   const [buttonText, setButtonText] = useState("Copy Link");
   const router = useRouter();
-  const ShareURL =  "https://appexert.com/posts/" + post.slug
+  const [shareURL, setShareURL] = useState("");
+  
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setShareURL(window.location.origin + "/posts/" + post.slug);
+    }
+  }, [post.slug]);
+
   
   const copyToClipBoard = async () => {
     setButtonText("Copied");
@@ -50,7 +58,7 @@ const PostFooter: React.FC<Props> = ({ post }) => {
           />
           {buttonText}
         </Button>
-        <a href={`https://twitter.com/intent/tweet?text=${ShareURL}`} target="_blank" rel="noreferrer">
+        <a href={`https://twitter.com/intent/tweet?text=${shareURL}`} target="_blank" rel="noreferrer">
           <Button
             type='primary'
             className='page-btn-secondary'
@@ -63,7 +71,7 @@ const PostFooter: React.FC<Props> = ({ post }) => {
             />
           </Button>
         </a>
-        <a href={`https://www.facebook.com/sharer/sharer.php?u=${copyToClipBoard}`} target="_blank" rel="noreferrer">
+        <a href={`https://www.facebook.com/sharer/sharer.php?u=${shareURL}`} target="_blank" rel="noreferrer">
           <Button
             type='primary'
             className='page-btn-secondary'
@@ -76,7 +84,7 @@ const PostFooter: React.FC<Props> = ({ post }) => {
             />
           </Button>
         </a>
-        <a href={`https://www.linkedin.com/shareArticle?mini=true&url=${post.slug}`} target="_blank" rel="noreferrer">
+        <a href={`https://www.linkedin.com/shareArticle?mini=true&url=${shareURL}`} target="_blank" rel="noreferrer">
           <Button
             type='primary'
             className='page-btn-secondary'
