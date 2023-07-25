@@ -13,7 +13,7 @@ const Date: React.FC<Props> = ({ dateString }) => {
   } catch (error) {
     formattedDate = "N.A";
   }
-  return <time className="pl-2" dateTime={dateString}>{formattedDate}</time>;
+  return <time dateTime={dateString}>{formattedDate}</time>;
 };
 
 export default Date;

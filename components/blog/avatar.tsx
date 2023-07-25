@@ -10,13 +10,13 @@ type Props = {
 const Avatar: React.FC<Props> = ({ name, picture }) => {
   return (
     <div className='flex items-center'>
-      <div className='w-8 h-8 relative mr-4'>
+      <div className='w-[40px] h-[40px] relative mr-4'>
         {picture && (
           <Image
             src={
               urlForImage(picture)
-                .height(96)
-                .width(96)
+                .height(40)
+                .width(40)
                 .fit("crop")
                 .url() as string
             }

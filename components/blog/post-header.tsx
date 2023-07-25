@@ -22,14 +22,16 @@ const PostHeader: React.FC<Props> = ({
           <CoverImage slug={slug} title={title} image={coverImage} />
         )}
       </div> */}
-      <div className='md:py-[100px] py-[20px]'>
+      <div className='md:pt-[100px] py-[20px]'>
         <div className='green-label text-center'>
 
           {estimatedReadingTime && (
-            <div className='uppercase flex pl-2 justify-center'>
+            <div className='uppercase flex pl-2 justify-center text-[14px]'>
               {estimatedReadingTime} min read
-              {" -"}
+              {" • "}
+              <div className="pl-2">
               <Date dateString={date} />
+              </div>
             </div>
           )}
         </div>
