@@ -159,7 +159,7 @@ function Header() {
                           onClick={() => setOpen(!open)}
                           className={
                             router.pathname === link.href
-                              ? "border-brand-500 border-b-2 text-white md:mx-2 transition duration-700"
+                              ? "text-white font-semibold md:mx-2 transition duration-700"
                               : "" +
                               cn(
                                 {

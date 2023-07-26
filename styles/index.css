@@ -348,6 +348,10 @@ ol {
   padding-left: 30px;
 }
 
+.hover-image:hover {
+  fill: white;
+  transition: all 0.3s;
+}
 .imageModalFooter {
   font-style: normal;
   font-weight: 400;
