@@ -20,7 +20,7 @@ const validationSchema = Yup.object({
     ),
   email: Yup.string()
     .email("Invalid email address")
-    .required("Please provide your work email"),
+    .required("Please provide your email"),
 });
 
 const DETAILS: {
@@ -34,7 +34,7 @@ const DETAILS: {
     title: "Call us",
     content: "Mon-Fri from 8am to 5pm",
     image: "/images/contact-us/phone.svg",
-    linkText: "+91 8778370215",
+    linkText: "+91-877-837-0215",
     type: "tel",
   },
   {
@@ -148,7 +148,7 @@ const Contact = () => {
                   </p>
                 </>
                 <>
-                  <div className="flex flex-col mt-[100px]">
+                  <div className='flex flex-col mt-[100px]'>
                     <div className='grid grid-cols-2'>
                       {DETAILS.map((detail, index) => (
                         <div
@@ -163,21 +163,21 @@ const Contact = () => {
                               alt={detail.title}
                             />
                           </div>
-                          <h3 className='text-white mt-[24px] mb-[16px] text-[18px] font-semibold'>
+                          <h3 className='text-white mt-[24px] mb-[12px] text-[18px] font-semibold'>
                             {detail.title}
                           </h3>
                           <p className='text-gray-400 text-[14px] mb-[32px]'>
                             {detail.content}
                           </p>
                           <a href={`${detail.type}:${detail.linkText}`}>
-                            <a className='text-white md:text-[16px] text-[14px] underline hover:text-blue-500'>
+                            <a className='text-white md:text-[16px] text-[14px] underline hover:text-brand-500'>
                               {detail.linkText}
                             </a>
                           </a>
                         </div>
                       ))}
                     </div>
-                    <div className="border-r-[1px] border-blue-magnata border-solid w-1/2">
+                    <div className='border-r-[1px] border-blue-magnata border-solid w-1/2'>
                       <div className='md:pl-[24px] pl-[12px] pt-[24px]'>
                         <div className='w-[160px] h-[160px] -my-12 -ml-12'>
                           <Image
@@ -187,14 +187,17 @@ const Contact = () => {
                             alt={"Visit us"}
                           />
                         </div>
-                        <h3 className='text-white mt-[24px] mb-[16px] text-[18px] font-semibold'>
+                        <h3 className='text-white mt-[24px] mb-[12px] text-[18px] font-semibold'>
                           Visit us
                         </h3>
                         <p className='text-gray-400 text-[14px] mb-[32px]'>
                           visit our office HQ
                         </p>
                         <Link href={"https://goo.gl/maps/GYbNx8SWVBL33yxV8"}>
-                          <a target='_blank' className='text-white md:text-[16px] text-[14px] underline hover:text-blue-500'>
+                          <a
+                            target='_blank'
+                            className='text-white md:text-[16px] text-[14px] underline hover:text-brand-500'
+                          >
                             View on google maps
                           </a>
                         </Link>
@@ -209,7 +212,7 @@ const Contact = () => {
                 background:
                   "radial-gradient(188.94% 181.55% at 50.00% 46.35%, rgba(255, 255, 255, 0.07) 0%, rgba(246, 246, 246, 0.00) 100%)",
               }}
-              className='border-solid border-2 border-[#1B1929] md:mt-[0px] mt-[32px] rounded-lg md:w-1/2 w-full md:p-[48px] p-[10px]'
+              className='border-solid border-2 border-[#1B1929] md:mt-[0px] mt-[32px] rounded-lg md:w-1/2 w-full md:px-[48px] px-[32px] py-[16px]'
             >
               <div>
                 {alert && (
@@ -260,6 +263,7 @@ const Contact = () => {
                       label='Phone Number'
                       placeholder='Enter your phone number'
                       size='large'
+                      maxLength="24"
                     />
                     <Fieldset
                       isTextArea={true}
@@ -274,7 +278,7 @@ const Contact = () => {
                   </div>
                   <div className='mt-2 justify-center'>
                     <Button
-                      className='btn-brand px-10 w-full'
+                      className='page-btn px-10 w-full'
                       htmlType='submit'
                       type='primary'
                       size='large'
@@ -282,7 +286,7 @@ const Contact = () => {
                     >
                       Submit
                     </Button>
-                    <p className='mt-2 font-medium text-gray-400'>
+                    <p className='mt-2 font-medium text-gray-400 md:mb-[32px] mb-[16px]'>
                       By clicking, you agree to{" "}
                       <Link href='/terms/company'>
                         <a
