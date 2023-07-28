@@ -498,7 +498,8 @@ ul.ant-menu.ant-menu-root.ant-menu-inline.ant-menu-dark {
 }
 
 .ant-collapse-header-text:hover {
-  color: var(--blue-light);
+  color: #908E9F;
+  transition: all 0.3s;
 }
 li {
   margin-left: 2px;
@@ -649,6 +650,16 @@ li {
 .ant-modal-content,
 .ant-modal-header {
   background-color: white !important;
+  border-radius: 12px !important;
+  border: 20px !important;
+  border-color: red !important;
+}
+
+.ant-modal-body {
+  border-radius: 12px !important;
+  border: 0.5px;
+  border-style: solid;
+  border-color: #43424D;
 }
 
 .restrictedNotification {
