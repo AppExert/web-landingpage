@@ -22,7 +22,7 @@ const HireService = () => {
               alt="Check icon"
             />
           </div>
-          <p className="-mt-1">
+          <p className="-mt-1 max-w-[180px] text-left">
           Access to a collection of diversified developers
           </p>
         </div>
@@ -35,7 +35,7 @@ const HireService = () => {
               alt="Check icon"
             />
           </div>
-          <p className="-mt-1">
+          <p className="-mt-1 max-w-[180px] text-left">
           Convenient & swift hiring process
           </p>
         </div>
@@ -48,7 +48,7 @@ const HireService = () => {
               alt="Check icon"
             />
           </div>
-          <p className="-mt-1">
+          <p className="-mt-1 max-w-[180px] text-left">
           Highly talented developers at a cost-effective budget
           </p>
         </div>

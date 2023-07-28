@@ -62,7 +62,7 @@ const TalentPoolList = (props: any) => {
   return (
     <>
       <Modal
-        className='w-max '
+        className='w-[1000px]'
         visible={isModalOpen}
         onCancel={() => setIsModalOpen(false)}
         footer={false}
@@ -85,17 +85,17 @@ const TalentPoolList = (props: any) => {
         }
       >
         {" "}
-        <div className='flex flex-col justify-between gap-4  p-4 items-center'>
+        <div className='flex flex-col justify-between p-4 items-center'>
           <div className='flex flex-col place-items-center text-center'>
             <p className='mt-2 sub-heading  '>Hire Developers you want</p>
-            <p className='mt-2 landing-para text-[18px] md:max-w-[672px] '>
+            <p className='mt-2 landing-para text-[16px] md:max-w-[672px] '>
               Get instant insights with our in-depth developer profiles & build
               your team from untapped & quality talents.
             </p>
           </div>
           <div className='md:w-[480px] py-[48px]'>
             <div
-              className=' p-[40px]'
+              className='px-[40px] pb-[40px]'
               style={{
                 borderRadius: "12px",
                 border: "1px solid #43424D",
@@ -137,7 +137,7 @@ const TalentPoolList = (props: any) => {
                   </Form>
                 </Formik>
               ) : (
-                <div className='flex flex-col gap-4 ustify-center items-center sub-heading text-center'>
+                <div className='flex flex-col pt-[40px] gap-4 ustify-center items-center sub-heading text-center'>
                   <Image
                     width={56}
                     height={56}
@@ -197,7 +197,7 @@ const TalentPoolList = (props: any) => {
         <Col key={devCard?.id} onClick={() => {}}>
           <>
             <Card
-              className='min-h-[15.5rem]  p-2 cursor-pointer lg:w-[55rem] bg-transparent	border-[#252234] hover:border-[#767383] '
+              className='min-h-[15.5rem]  p-2 cursor-pointer lg:w-[55rem] bg-transparent	border-[#252234] hover:border-[#767383] rounded-[8px]'
               onClick={() => setIsModalOpen(true)}
               hoverable
               cover={
@@ -225,7 +225,7 @@ const TalentPoolList = (props: any) => {
                         )}
 
                         {devCard?.profileImage && (
-                          <div className=' cursor-pointer rounded-lg w-24 h-24 flex items-center '>
+                          <div className=' cursor-pointer rounded-xl w-24 h-24 flex items-center '>
                             <Image
                               width='200'
                               height='200'
@@ -260,7 +260,7 @@ const TalentPoolList = (props: any) => {
                               : 0}{" "}
                             years of experience
                           </p>
-                          <section className='my-2 mb-3 md:flex flex-wrap gap-5 hidden '>
+                          <section className='my-3 mb-3 md:flex flex-wrap gap-5 hidden '>
                             <div className='flex'>
                               <div>
                                 <p className='page-label cursor-pointer text-[#908E9F] '>
@@ -304,7 +304,7 @@ const TalentPoolList = (props: any) => {
                               </div>
                             </div>
 
-                            <div className='flex gap-1 border-l-[1px] border-gray-100'>
+                            <div className='flex gap-1 border-l-[1px] border-[#252234]'>
                               <div className='pl-5'>
                                 <p className='cursor-pointer page-label  text-[#908E9F]'>
                                   EXPECTED SALARY {"("}
@@ -379,7 +379,7 @@ const TalentPoolList = (props: any) => {
                             </div>
                           </div>
 
-                          <div className='flex gap-1 border-l-[1px] border-gray-100'>
+                          <div className='flex gap-1 border-l-[1px] border-[#252234]'>
                             <div className='md:pl-5 pl-2'>
                               <p className='cursor-pointer page-label  text-[#908E9F] md:text-[12px] text-[10px]'>
                                 EXPECTED SALARY {"("}
@@ -405,10 +405,9 @@ const TalentPoolList = (props: any) => {
                             </div>
                           </div>
                         </section>
-                        <div className=' cursor-pointer  text-sm '>
+                        <div>
                           <div
-                            className=' cursor-pointer page-para text-[#908E9F] h-12 text-editor break-words text-ellipsis overflow-hidden'
-                            style={{ lineBreak: "anywhere" }}
+                            className=' cursor-pointer page-para text-[#908E9F] h-12 text-editor  text-ellipsis overflow-hidden'
                           >
                             <div>
                               {devCard?.about}
@@ -440,7 +439,7 @@ const TalentPoolList = (props: any) => {
                         </div>
                       </div>
                     </div>
-                    <div className='md:flex flex-col items-center justify-between hidden w-[150px] flex-shrink-0'>
+                    <div className='md:flex flex-col items-end justify-between hidden w-[150px] flex-shrink-0'>
                       <p className=' flex cursor-pointer  text-[#0FAC98]  items-center text-[10px] bg-[#3C80481A] p-1 rounded-[16px]'>
                         <svg
                           width='18'
