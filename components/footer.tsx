@@ -126,10 +126,10 @@ const Footer = () => {
           <div className='flex md:justify-center text-center gap-x-[40px] '>
             <p className="pr-4 md:pr-0"> © {currentYear} AppExert Labs </p>
             <Link href='/privacy'>
-              <a className=' hover:underline mb-1'>Privacy</a>
+              <a className=' hover:underline hover:text-white mb-1'>Privacy</a>
             </Link>
             <Link href='/terms'>
-              <a className=' hover:underline mb-1'>Terms</a>
+              <a className=' hover:underline hover:text-white mb-1'>Terms</a>
             </Link>
           </div>
           <div className='flex md:justify-center  text-center  gap-[16px] cursor-pointer'>

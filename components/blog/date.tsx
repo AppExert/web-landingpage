@@ -9,7 +9,7 @@ const Date: React.FC<Props> = ({ dateString }) => {
   const date = parseISO(dateString);
   let formattedDate = "";
   try {
-    formattedDate = format(date, "LLL d, yyyy");
+    formattedDate = format(date, "d LLL yyyy");
   } catch (error) {
     formattedDate = "N.A";
   }

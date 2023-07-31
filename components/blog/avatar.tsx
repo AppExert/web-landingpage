@@ -4,13 +4,14 @@ import Image from "next/image";
 type Props = {
   name: string;
   picture: string;
+  classname: string;
 };
 
 // eslint-disable-next-line react/prop-types
-const Avatar: React.FC<Props> = ({ name, picture }) => {
+const Avatar: React.FC<Props> = ({ name, picture, classname }) => {
   return (
     <div className='flex items-center'>
-      <div className='w-[40px] h-[40px] relative mr-4'>
+      <div className={`relative mr-4 ${classname}`}>
         {picture && (
           <Image
             src={

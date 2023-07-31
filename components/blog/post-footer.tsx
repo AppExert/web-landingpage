@@ -36,10 +36,13 @@ const PostFooter: React.FC<Props> = ({ post }) => {
   return (
     <div className='flex flex-col md:flex-row justify-between mt-2 mb-[100px]'>
       <div className='flex mt-2'>
-        {<Avatar name={""} picture={post.author.image} />}
-        <div className='flex flex-col text-white font-semibold'>
+        {<div className="">
+          <Avatar name={""} picture={post.author.image} classname='w-[56px] h-[56px]' />
+        </div>
+          }
+        <div className='flex flex-col text-white font-semibold text-[18px]'>
           {post.author.name || "N.A"}
-          <div className='text-[#908E9F] text-[14px] font-normal'>
+          <div className='text-[#908E9F] text-[16px] font-normal'>
             Associate software developer
           </div>
         </div>
@@ -48,11 +51,11 @@ const PostFooter: React.FC<Props> = ({ post }) => {
         <Button
           type='primary'
           onClick={copyToClipBoard}
-          className='page-btn-secondary gap-2 w-max'
+          className='page-btn-copy text-[16px] gap-2 w-max'
         >
           <Image
-            width={18}
-            height={18}
+            width={20}
+            height={20}
             src={"/images/icon/copy.svg"}
             alt='Check icon'
           />
@@ -61,7 +64,7 @@ const PostFooter: React.FC<Props> = ({ post }) => {
         <a href={`https://twitter.com/intent/tweet?text=${shareURL}`} target="_blank" rel="noreferrer">
           <Button
             type='primary'
-            className='page-btn-secondary'
+            className='page-btn-social'
           >
             <Image
               width={20}
@@ -74,7 +77,7 @@ const PostFooter: React.FC<Props> = ({ post }) => {
         <a href={`https://www.facebook.com/sharer/sharer.php?u=${shareURL}`} target="_blank" rel="noreferrer">
           <Button
             type='primary'
-            className='page-btn-secondary'
+            className='page-btn-social'
           >
             <Image
               width={20}
@@ -87,7 +90,7 @@ const PostFooter: React.FC<Props> = ({ post }) => {
         <a href={`https://www.linkedin.com/shareArticle?mini=true&url=${shareURL}`} target="_blank" rel="noreferrer">
           <Button
             type='primary'
-            className='page-btn-secondary'
+            className='page-btn-social'
           >
             <Image
               width={20}
