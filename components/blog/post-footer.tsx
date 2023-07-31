@@ -39,7 +39,7 @@ const PostFooter: React.FC<Props> = ({ post }) => {
         {<div className="">
           <Avatar name={""} picture={post.author.image} classname='w-[56px] h-[56px]' />
         </div>
-          }
+        }
         <div className='flex flex-col text-white font-semibold text-[18px]'>
           {post.author.name || "N.A"}
           <div className='text-[#908E9F] text-[16px] font-normal'>

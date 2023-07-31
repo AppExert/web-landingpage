@@ -18,7 +18,7 @@ const PostPreview: React.FC<Props> = ({ post }) => {
       <a>
         <div
           className='bg-[#09071B] rounded-lg border-solid border-[1px] border-[#18171C] cursor-pointer'
-          style={{ height: "420px" }}
+          style={{ height: "435px" }}
         >
           <Image
             width={400}
