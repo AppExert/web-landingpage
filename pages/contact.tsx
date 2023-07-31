@@ -143,7 +143,7 @@ const Contact = () => {
                   <h1 className='hero-heading md:text-5xl text-3xl'>
                     We would love to help!
                   </h1>
-                  <p className='section-paragraph text-[#908E9F] py-[10px] pb-[20px]'>
+                  <p className='section-paragraph text-[16px] text-[#908E9F] py-[10px] pb-[20px]'>
                     {"Reach out and we’ll get in touch within 24hrs"}
                   </p>
                 </>
@@ -163,7 +163,7 @@ const Contact = () => {
                               alt={detail.title}
                             />
                           </div>
-                          <h3 className='text-white mt-[24px] mb-[12px] text-[18px] font-semibold'>
+                          <h3 className='text-[#E4E4E4] mt-[24px] mb-[12px] text-[18px] font-semibold'>
                             {detail.title}
                           </h3>
                           <p className='text-gray-400 text-[14px] mb-[32px]'>
@@ -187,7 +187,7 @@ const Contact = () => {
                             alt={"Visit us"}
                           />
                         </div>
-                        <h3 className='text-white mt-[24px] mb-[12px] text-[18px] font-semibold'>
+                        <h3 className='text-[#E4E4E4] mt-[24px] mb-[12px] text-[18px] font-semibold'>
                           Visit us
                         </h3>
                         <p className='text-gray-400 text-[14px] mb-[32px]'>
@@ -238,7 +238,7 @@ const Contact = () => {
                 validationSchema={validationSchema}
               >
                 <Form className='flex flex-col'>
-                  <div className='grid font-semibold'>
+                  <div className='grid gap-[22px] md:mt-[32px] mt-[16px]'>
                     <Fieldset
                       type='text'
                       name='name'
@@ -278,7 +278,7 @@ const Contact = () => {
                   </div>
                   <div className='mt-2 justify-center'>
                     <Button
-                      className='page-btn px-10 w-full'
+                      className='page-btn  w-full'
                       htmlType='submit'
                       type='primary'
                       size='large'
@@ -291,7 +291,7 @@ const Contact = () => {
                       <Link href='/terms/company'>
                         <a
                           target='_blank'
-                          className='text-brand-500 hover:text-blue-500 cursor-pointer'
+                          className='text-brand-500 hover:underline cursor-pointer'
                         >
                           Terms
                         </a>
@@ -300,7 +300,7 @@ const Contact = () => {
                       <Link href='/privacy'>
                         <a
                           target='_blank'
-                          className='text-brand-500 hover:text-blue-500 cursor-pointer'
+                          className='text-brand-500 hover:underline cursor-pointer'
                         >
                           Privacy Policy
                         </a>

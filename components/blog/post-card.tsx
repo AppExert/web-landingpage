@@ -16,8 +16,8 @@ const PostCard: React.FC<Props> = ({ post }) => {
     <Link href={`/posts/${post.slug}`}>
       <a>
         <div
-          className='bg-[#09071B] rounded-lg border-solid border-1 border-[#18171C] cursor-pointer'
-          style={{ height: "420px" }}
+          className='bg-[#09071B] rounded-lg border-[1px] border-[#18171C] cursor-pointer'
+          style={{ height: "435px" }}
         >
           <Image
             width={400}
@@ -39,7 +39,7 @@ const PostCard: React.FC<Props> = ({ post }) => {
               </h3>
             </div>
             <div className='flex mt-2'>
-              {<Avatar name={""} picture={post.author.image} />}
+              {<Avatar name={""} picture={post.author.image} classname="w-[40px] h-[40px]" />}
               <div className='flex flex-col text-white text-[] font-semibold'>
                 {post?.author?.name || "N.A"}
                 <div className='text-[#908E9F] text-[14px] font-normal'>

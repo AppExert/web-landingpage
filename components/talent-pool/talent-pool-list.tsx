@@ -95,7 +95,7 @@ const TalentPoolList = (props: any) => {
           </div>
           <div className='md:w-[480px] py-[48px]'>
             <div
-              className='px-[40px] pb-[40px]'
+              className='px-[40px] pb-[40px] pt-[32px]'
               style={{
                 borderRadius: "12px",
                 border: "1px solid #43424D",

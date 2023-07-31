@@ -72,16 +72,16 @@ const Fieldset: React.FC<Props> = ({
     });
   }, [customErrorMessage]);
   return (
-    <fieldset className="md:mt-[32px] mt-[20px]">
+    <fieldset>
       {label && (
         <label
           htmlFor={name}
           className={
             labelclass
               ? labelclass
-              : "my-2 text-gray-700 block " + customLabelFont
+              : "my-2 text-gray-700 block font-medium" + customLabelFont
                 ? customLabelFont + " pb-2 "
-                : "text-sm"
+                : "text-sm "
           }
         >
           {label}
