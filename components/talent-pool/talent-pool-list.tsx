@@ -150,7 +150,7 @@ const TalentPoolList = (props: any) => {
               )}
             </div>
           </div>
-          <div className='flex flex-col md:flex-row gap-4 text-gray-400  justify-center items-center'>
+          <div className='flex flex-col md:flex-row gap-6 text-gray-400  justify-center items-center'>
             <div className='flex items-start gap-2  '>
               <div className='flex w-[18px] h-[18px] flex-shrink-0'>
                 <Image

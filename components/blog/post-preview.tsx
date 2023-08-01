@@ -35,7 +35,7 @@ const PostPreview: React.FC<Props> = ({ post }) => {
           <div className='flex flex-col items-stretch h-[50%] justify-between p-4'>
             <div className='text-[#0FAC98] mt-2 text-[14px]'>
               <span>{post.estimatedReadingTime}</span> min read
-              <h3 className='text-[22px] font-semibold text-white pt-4'>
+              <h3 className='text-[22px] font-semibold text-white pt-4 cursor-pointer'>
                 {post.title}
               </h3>
             </div>
