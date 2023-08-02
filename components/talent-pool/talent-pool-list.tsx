@@ -137,7 +137,7 @@ const TalentPoolList = (props: any) => {
                   </Form>
                 </Formik>
               ) : (
-                <div className='flex flex-col pt-[40px] gap-4 ustify-center items-center sub-heading text-center'>
+                <div className='flex flex-col gap-4 ustify-center items-center sub-heading text-center'>
                   <Image
                     width={56}
                     height={56}
