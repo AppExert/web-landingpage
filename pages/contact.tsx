@@ -34,7 +34,7 @@ const DETAILS: {
     title: "Call us",
     content: "Mon-Fri from 8am to 5pm",
     image: "/images/contact-us/phone.svg",
-    linkText: "+91-877-837-0215",
+    linkText: "+91 877-837-0215",
     type: "tel",
   },
   {
@@ -143,7 +143,7 @@ const Contact = () => {
                   <h1 className='hero-heading md:text-5xl text-3xl'>
                     We would love to help!
                   </h1>
-                  <p className='section-paragraph text-[16px] text-[#908E9F] py-[10px] pb-[20px]'>
+                  <p className='section-paragraph text-[18px] text-[#908E9F] py-[10px] pb-[20px]'>
                     {"Reach out and we’ll get in touch within 24hrs"}
                   </p>
                 </>

@@ -51,7 +51,7 @@ const PostFooter: React.FC<Props> = ({ post }) => {
         <Button
           type='primary'
           onClick={copyToClipBoard}
-          className='page-btn-copy text-[16px] gap-2 w-max'
+          className={`page-btn-copy text-[16px] gap-2 w-max ${buttonText === "Copied" ? "border-solid border-2 border-[#1B1929] bg-transparent" : ""}`}
         >
           <Image
             width={20}
