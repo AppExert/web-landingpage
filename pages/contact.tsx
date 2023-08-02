@@ -34,7 +34,7 @@ const DETAILS: {
     title: "Call us",
     content: "Mon-Fri from 8am to 5pm",
     image: "/images/contact-us/phone.svg",
-    linkText: "+91-877-837-0215",
+    linkText: "+91 877-837-0215",
     type: "tel",
   },
   {
