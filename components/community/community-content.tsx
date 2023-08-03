@@ -19,19 +19,19 @@ const DEVELOPER_KEYPOINTS: {
         fill='none'
         xmlns='http://www.w3.org/2000/svg'
       >
-        <g filter='url(#filter0_f_3180_110468)'>
+        <g filter='url(#filter0_f_1_204)'>
           <circle cx='225' cy='225' r='75' fill='#0C006F' />
         </g>
-        <g clipPath='url(#clip0_3180_110468)'>
+        <g clipPath='url(#clip0_1_204)'>
           <path
-            d='M225 144.5L244.28 191.106L294.283 184.5L263.56 224.5L294.283 264.5L244.28 257.894L225 304.5L205.72 257.894L155.718 264.5L186.44 224.5L155.719 184.5L205.72 191.106L225 144.5Z'
-            fill='url(#paint0_linear_3180_110468)'
+            d='M296.653 185.44L226.653 145.44C226.15 145.152 225.58 145 225 145C224.42 145 223.85 145.152 223.347 145.44L153.347 185.44C152.837 185.731 152.413 186.153 152.117 186.661C151.822 187.169 151.667 187.746 151.667 188.333V261.667C151.667 262.86 152.307 263.967 153.347 264.56L223.347 304.56C223.86 304.854 224.427 305 225 305C225.574 305 226.14 304.854 226.654 304.56L296.654 264.56C297.164 264.269 297.588 263.848 297.883 263.34C298.178 262.832 298.334 262.255 298.334 261.667V188.333C298.334 187.746 298.178 187.169 297.883 186.661C297.588 186.153 297.164 185.731 296.653 185.44Z'
+            fill='url(#paint0_linear_1_204)'
             fillOpacity='0.7'
           />
         </g>
         <defs>
           <filter
-            id='filter0_f_3180_110468'
+            id='filter0_f_1_204'
             x='0'
             y='0'
             width='450'
@@ -48,26 +48,26 @@ const DEVELOPER_KEYPOINTS: {
             />
             <feGaussianBlur
               stdDeviation='75'
-              result='effect1_foregroundBlur_3180_110468'
+              result='effect1_foregroundBlur_1_204'
             />
           </filter>
           <linearGradient
-            id='paint0_linear_3180_110468'
+            id='paint0_linear_1_204'
             x1='225'
-            y1='214.5'
-            x2='268.663'
-            y2='310.709'
+            y1='215'
+            x2='267.022'
+            y2='313.008'
             gradientUnits='userSpaceOnUse'
           >
             <stop stopColor='#A7B5FF' />
             <stop offset='1' stopColor='#F3ACFF' />
           </linearGradient>
-          <clipPath id='clip0_3180_110468'>
+          <clipPath id='clip0_1_204'>
             <rect
               width='160'
               height='160'
               fill='white'
-              transform='translate(145 144.5)'
+              transform='translate(145 145)'
             />
           </clipPath>
         </defs>
