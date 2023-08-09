@@ -62,7 +62,7 @@ const TalentPoolList = (props: any) => {
   return (
     <>
       <Modal
-        className='w-[1000px]'
+        className='w-[1000px] grid md:h-[80%] content-center'
         visible={isModalOpen}
         onCancel={() => setIsModalOpen(false)}
         footer={false}
@@ -145,7 +145,7 @@ const TalentPoolList = (props: any) => {
                     alt='Check icon'
                   />
 
-                  <p>You’ve updated your profile and details </p>
+                  <p>Congratulations! Secured your spot for exclusive early access</p>
                 </div>
               )}
             </div>
