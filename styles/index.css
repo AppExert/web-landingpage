@@ -119,8 +119,8 @@
   }
 
   .btn-brand {
-    @apply flex items-center justify-center bg-brand-500 text-white px-[10px]  py-[12px]
-    border-none font-medium text-sm leading-6
+    @apply flex items-center justify-center bg-brand-500 text-white px-[10px] md:py-[12px] py-[24px]
+    border-none font-medium md:text-sm text-[16px] leading-6
     rounded hover:bg-brand-600 transition duration-300 cursor-pointer  !important;
   }
 
