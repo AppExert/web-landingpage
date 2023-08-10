@@ -61,7 +61,7 @@ export default function IndexPage() {
       <Container className='md:py-[100px] py-[48px] overflow-hidden'>
         <section>
           <div className='text-center flex flex-col justify-center items-center '>
-            <p className='green-label'>START. SCALE. SUCCEED</p>
+            <p className='green-label'>START.SCALE.SUCCEED</p>
             <h1 className='heading pt-2 text-center md:w-[850px] text-[48px]'>
               Learn Together, Grow Faster
             </h1>

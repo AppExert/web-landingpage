@@ -2725,7 +2725,7 @@ export const devTestimonials = [
     role: "Azure BI Architect",
     content: `I've been with AppExert for a year now. It's a great place to work, it provides a very conducive environment to learn, grow and prosper. The freedom to work in a way that allows me to maximize my efficiency and become great in my role. 
     #remote = work + life. I feel great to work with a young, smart and energetic team, "together we accomplish". It helped me acquire significant skills and contribute to software development. I am glad to be a part of this organization and an awesome team!`,
-    shortContent:"I just simply love tools that make my life easier! I have everything that I need in one place, and that allows our team to be more organized and user-oriented.",
+    shortContent:"\"I just simply love tools that make my life easier! I have everything that I need in one place, and that allows our team to be more organized and user-oriented.\"",
     image: "/images/home/devs/jain.png",
   },
   {
@@ -2740,7 +2740,7 @@ export const devTestimonials = [
     role: ".NET Developer",
     content: `As an Application Developer, I preferred a place that is supportive, encouraging and upbeat. I'm glad I joined this team of exceptionally talented remote developers. 
     I could say AppExert has a great learning environment which is also fun filled that can keep me motivated to learn and grow. The freedom to work from anywhere remotely is a great way to work more efficiently and for work life balance. It's been great to work as an AppExert Developer.`,
-    shortContent:"I really like that I can have all in one place: I can send emails and text messages, I can have live chat, show pop-ups and push notifications on my website and create dynamic page content",
+    shortContent:"\"I really like that I can have all in one place: I can send emails and text messages, I can have live chat, show pop-ups and push notifications on my website and create dynamic page content.\"",
     image: "/images/home/devs/krishveni.png",
   },
   {
@@ -2755,7 +2755,7 @@ export const devTestimonials = [
     role: "Software Developer",
     content: `Working with AppExert has been a fantastic experience, it is an opportunity for me to grow professionally and personally. I have been working here for over 2 years now and everyday is a new experience. 
     AppExert helped me to expand my knowledge, learn something new, and move up the ladder. They helped in training & development with subscriptions for outdoor courses and more to gain additional skills from experienced Tech Leads`,
-    shortContent:"Working with AppExert has been a fantastic experience, it is an opportunity for me to grow professionally and personally. Everyday is a new experience. ",
+    shortContent:"\"Working with AppExert has been a fantastic experience, it is an opportunity for me to grow professionally and personally. Everyday is a new experience.\"",
     image: "/images/home/devs/daslin.png",
   },
   {

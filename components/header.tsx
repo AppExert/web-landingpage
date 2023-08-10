@@ -73,7 +73,7 @@ function Header() {
           "sticky top-0 z-50 backdrop-blur-3xl min-h-[64px] flex py-2 md:py-0 border-b border-[#26252C]"
         )}
       >
-        <Container className=' md:flex  justify-between  py-2 '>
+        <Container className='md:flex md:flex-row flex flex-col py-2'>
           <div
             className={cn(
               { "justify-center md:justify-between": !navMenu },
@@ -151,7 +151,8 @@ function Header() {
               )}
             >
               <>
-                <div className="md:flex  justify-center md:w-full md:gap-x-[40px] ">
+              <div className="md:h-[auto] h-[90vh] md:w-full md:flex-row flex flex-col justify-start">
+                <div className="md:flex justify-center md:w-full md:gap-x-[40px] ">
                   {links.map((link, idx) => {
                     return (
                       <Link key={idx} href={link.href}>
@@ -159,7 +160,7 @@ function Header() {
                           onClick={() => setOpen(!open)}
                           className={
                             router.pathname === link.href
-                              ? "text-white font-semibold md:mx-2 transition duration-700"
+                              ? "md:mt-1 md:pb-0 mt-4 pb-4 sm:p-0 sm:px-2 block text-white font-semibold md:text-[14px] text-[16px] md:mx-2 transition duration-700 border-b-[1px] md:border-transparent border-[#474554]"
                               : "" +
                               cn(
                                 {
@@ -167,7 +168,7 @@ function Header() {
                                     link.button,
                                 },
                                 {
-                                  "pt-2 sm:p-0 sm:px-2 block text-gray-400 hover:text-white border-b-2 border-transparent font-medium ":
+                                  "md:mt-1 md:pb-0 mt-4 pb-4 sm:p-0 sm:px-2 block text-gray-400 md:text-[14px] text-[16px] hover:text-white border-b-[1px] md:border-transparent border-[#474554] font-medium ":
                                     !link.button,
                                 }
                               )
@@ -180,10 +181,10 @@ function Header() {
                     );
                   })}
                 </div>
-                <div className="flex justify-end gap-x-[20px]  mt-4  md:mt-0 pt-4 md:pt-0 border-t-[1px] border-[#26252C]  md:border-0 ">
+                <div className="flex md:flex-row flex-col justify-center gap-x-[20px]  mt-4  md:mt-0 pt-4 md:pt-0 md:border-0 ">
                   <Link key='signin' href={login} className='border-none'>
                     <Button
-                      className="border-none text-[#D4D3DF] text-[14px] font-medium"
+                      className="border-none text-[#D4D3DF] md:text-[14px] text-[16px] font-medium"
                       type="text"
                       loading={loadingButton("Sign in")}
                       onClick={() => {
@@ -199,7 +200,7 @@ function Header() {
                     href={register}
                     className='border-none'
                   >
-                    <Button className="btn-brand "
+                    <Button className="btn-brand page-btn md:mt-0 mt-[16px]"
                       loading={loadingButton("Create account")}
                       onClick={() => {
                         setLoaderVisible(true);
@@ -210,7 +211,7 @@ function Header() {
                     </Button>
                   </Link>
                 </div>
-
+                </div>
               </>
             </nav>
           )}
