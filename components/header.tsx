@@ -55,7 +55,6 @@ function Header() {
     { href: "/community", label: "Community" },
   ];
 
-
   return (
     <ClickAwayListener onClickAway={handleClickAway}>
       <header
@@ -69,7 +68,9 @@ function Header() {
               router.pathname === "/developers/resetPassword" ||
               router.asPath.startsWith("/c?id="),
           },
-          { "bg-[#020013]": router.pathname.includes("companies/start-hiring") },
+          {
+            "bg-[#020013]": router.pathname.includes("companies/start-hiring"),
+          },
           "sticky top-0 z-50 backdrop-blur-3xl min-h-[64px] flex py-2 md:py-0 border-b border-[#26252C]"
         )}
       >
@@ -85,13 +86,15 @@ function Header() {
               <Link href='/'>
                 <a className='flex '>
                   <Image
-                    src={                      
+                    src={
                       router.pathname === "/login" ||
-                            router.pathname === "/register" ||
-                            router.pathname === "/developers/forgotPassword" ||
-                            router.pathname === "/companies/forgotPassword" ||
-                            router.pathname === "/developers/resetPassword" ||
-                            router.asPath.startsWith("/c?id=") ? "/images/black_logo.png" : "/images/AppExert_logo_white.svg"
+                      router.pathname === "/register" ||
+                      router.pathname === "/developers/forgotPassword" ||
+                      router.pathname === "/companies/forgotPassword" ||
+                      router.pathname === "/developers/resetPassword" ||
+                      router.asPath.startsWith("/c?id=")
+                        ? "/images/black_logo.png"
+                        : "/images/AppExert_logo_white.svg"
                     }
                     alt='appexert logo'
                     className=' cursor-pointer'
@@ -151,66 +154,66 @@ function Header() {
               )}
             >
               <>
-              <div className="md:h-[auto] h-[90vh] md:w-full md:flex-row flex flex-col justify-start">
-                <div className="md:flex justify-center md:w-full md:gap-x-[40px] ">
-                  {links.map((link, idx) => {
-                    return (
-                      <Link key={idx} href={link.href}>
-                        <a
-                          onClick={() => setOpen(!open)}
-                          className={
-                            router.pathname === link.href
-                              ? "md:mt-1 md:pb-0 mt-4 pb-4 sm:p-0 sm:px-2 block text-white font-semibold md:text-[14px] text-[16px] md:mx-2 transition duration-700 border-b-[1px] md:border-transparent border-[#474554]"
-                              : "" +
-                              cn(
-                                {
-                                  [`${link.classes}  flex`]:
-                                    link.button,
-                                },
-                                {
-                                  "md:mt-1 md:pb-0 mt-4 pb-4 sm:p-0 sm:px-2 block text-gray-400 md:text-[14px] text-[16px] hover:text-white border-b-[1px] md:border-transparent border-[#474554] font-medium ":
-                                    !link.button,
-                                }
-                              )
-                          }
-                        >
-                          {link.label}
-                          {!link.button && <div className=''></div>}
-                        </a>
-                      </Link>
-                    );
-                  })}
-                </div>
-                <div className="flex md:flex-row flex-col justify-center gap-x-[20px]  mt-4  md:mt-0 pt-4 md:pt-0 md:border-0 ">
-                  <Link key='signin' href={login} className='border-none'>
-                    <Button
-                      className="border-none text-[#D4D3DF] md:text-[14px] text-[16px] font-medium"
-                      type="text"
-                      loading={loadingButton("Sign in")}
-                      onClick={() => {
-                        setLoaderVisible(true);
-                        setOpen(!open);
-                      }}                     
+                <div className='md:h-[auto] h-[90vh] md:w-full md:flex-row flex flex-col justify-start'>
+                  <div className='md:flex justify-center md:w-full md:gap-x-[40px] '>
+                    {links.map((link, idx) => {
+                      return (
+                        <Link key={idx} href={link.href}>
+                          <a
+                            onClick={() => setOpen(!open)}
+                            className={
+                              router.pathname === link.href
+                                ? "md:mt-1 md:pb-0 mt-4 pb-4 sm:p-0 sm:px-2 block text-white font-semibold md:text-[14px] text-[16px] md:mx-2 transition duration-700 border-b-[1px] md:border-transparent border-[#474554]"
+                                : "" +
+                                  cn(
+                                    {
+                                      [`${link.classes}  flex`]: link.button,
+                                    },
+                                    {
+                                      "md:mt-1 md:pb-0 mt-4 pb-4 sm:p-0 sm:px-2 block text-gray-400 md:text-[14px] text-[16px] hover:text-white border-b-[1px] md:border-transparent border-[#474554] font-medium ":
+                                        !link.button,
+                                    }
+                                  )
+                            }
+                          >
+                            {link.label}
+                            {!link.button && <div className=''></div>}
+                          </a>
+                        </Link>
+                      );
+                    })}
+                  </div>
+                  <div className='flex md:flex-row flex-col justify-center gap-x-[20px]  mt-4  md:mt-0 pt-4 md:pt-0 md:border-0 '>
+                    <Link key='signin' href={login} className='border-none'>
+                      <Button
+                        className='border-none text-[#D4D3DF] md:text-[14px] text-[16px] font-medium'
+                        type='text'
+                        loading={loadingButton("Sign in")}
+                        onClick={() => {
+                          setLoaderVisible(true);
+                          setOpen(!open);
+                        }}
+                      >
+                        Sign in
+                      </Button>
+                    </Link>
+                    <Link
+                      key='createAccount'
+                      href={register}
+                      className='border-none'
                     >
-                    Sign in
-                    </Button>
-                  </Link>
-                  <Link
-                    key='createAccount'
-                    href={register}
-                    className='border-none'
-                  >
-                    <Button className="btn-brand page-btn md:mt-0 mt-[16px]"
-                      loading={loadingButton("Create account")}
-                      onClick={() => {
-                        setLoaderVisible(true);
-                        setOpen(!open);
-                      }}
-                    >
-                    Get started
-                    </Button>
-                  </Link>
-                </div>
+                      <Button
+                        className='btn-brand page-btn md:mt-0 mt-[16px]'
+                        loading={loadingButton("Create account")}
+                        onClick={() => {
+                          setLoaderVisible(true);
+                          setOpen(!open);
+                        }}
+                      >
+                        Get started
+                      </Button>
+                    </Link>
+                  </div>
                 </div>
               </>
             </nav>
