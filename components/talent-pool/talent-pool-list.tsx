@@ -98,7 +98,6 @@ const TalentPoolList = (props: any) => {
               className='px-[40px] pb-[40px] pt-[32px]'
               style={{
                 borderRadius: "12px",
-                border: "1px solid #43424D",
                 background:
                   "radial-gradient(188.94% 181.55% at 50.00% 46.35%, rgba(255, 255, 255, 0.07) 0%, rgba(246, 246, 246, 0.00) 100%)",
                 backdropFilter: "blur(12px)",
