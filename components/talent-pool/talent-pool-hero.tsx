@@ -77,7 +77,7 @@ const TalentPoolHero = () => {
             />
 
             <p className='pt-4 text-[#908E9F] text-[14px] z-[45]'>
-                Popular categories:
+                Popular categories
               <span
                 className='talentSearchInput'
                 onClick={() => {
@@ -165,7 +165,7 @@ const TalentPoolHero = () => {
                 </div>
               ) : (
                 !isLoading && (
-                  <div className='flex  flex-col justify-center items-center  py-5'>
+                  <div className='flex  flex-col justify-center items-center py-5 pb-[75px] border-[1px] border-[#252234] rounded-xl'>
                     <svg width="226" height="226" viewBox="0 0 226 226" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <g filter="url(#filter0_f_3127_109330)">
                         <circle cx="113" cy="113" r="37.5" fill="#600000"/>
@@ -183,7 +183,7 @@ const TalentPoolHero = () => {
                     <p className="text-white  text-[22px] font-[500]  ">No results found</p>
                     <p className="text-[#908E9F] py-2 text-[18px] text-center">Try shortening or rephrasing your search </p>
 
-                    <p className=' text-[#908E9F] text-[14px] flex flex-col md:flex-row gap-4'>
+                    <p className=' text-[#e4e4e4] mt-[48px] text-[12px] flex flex-col md:flex-row gap-4'>
                       <span
                         className='px-[12px] py-1 mx-2 font-semibold cursor-pointer rounded-[4px] border-[1px] border-[#252234] hover:border-[#716999]'
                         onClick={() => {

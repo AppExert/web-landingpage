@@ -4,19 +4,20 @@ import Image from "next/image";
 type Props = {
   name: string;
   picture: string;
+  classname: string;
 };
 
 // eslint-disable-next-line react/prop-types
-const Avatar: React.FC<Props> = ({ name, picture }) => {
+const Avatar: React.FC<Props> = ({ name, picture, classname }) => {
   return (
     <div className='flex items-center'>
-      <div className='w-8 h-8 relative mr-4'>
+      <div className={`relative mr-4 ${classname}`}>
         {picture && (
           <Image
             src={
               urlForImage(picture)
-                .height(96)
-                .width(96)
+                .height(40)
+                .width(40)
                 .fit("crop")
                 .url() as string
             }

@@ -79,9 +79,9 @@ const Fieldset: React.FC<Props> = ({
           className={
             labelclass
               ? labelclass
-              : "my-2 text-gray-700 block " + customLabelFont
+              : "my-2 text-gray-700 block font-medium" + customLabelFont
                 ? customLabelFont + " pb-2 "
-                : "text-sm"
+                : "text-sm "
           }
         >
           {label}
@@ -227,14 +227,14 @@ const Fieldset: React.FC<Props> = ({
               className={cn(
                 classProps,
                 "w-full" + customLabelFont &&
-                  "border-solid border-2 border-[#1B1929] text-white  rounded-lg bg-[#09071B] my-2.5 placeholder-placeholder-gray"
+                  "border-solid border-2 border-[#1B1929] h-[48px] text-white  rounded-lg bg-[#09071B] mt-2 placeholder-placeholder-gray"
               )}
             />
           )}
         </>
       )}
 
-      <div className='text-yellow-600 text-xs font-normal'>
+      <div className='text-[#ff5c5c] text-xs font-normal mt-[4px]'>
         {meta.touched && meta.error ? (
           <>
             <ErrorMessage name={name}>

@@ -12,8 +12,8 @@ const HireService = () => {
         </p>
       </div>
 
-      <div className='flex flex-col md:flex-row gap-4 text-gray-400 pt-[48px] md:pt-[80px] justify-center items-center'>
-        <div className="flex items-start gap-2  ">
+      <div className='flex flex-col md:flex-row gap-6 text-gray-400 pt-[48px] md:pt-[80px] justify-center items-center'>
+        <div className="flex items-start gap-2">
           <div className="flex w-[18px] h-[18px] flex-shrink-0">
             <Image
               width={18}
@@ -22,7 +22,7 @@ const HireService = () => {
               alt="Check icon"
             />
           </div>
-          <p className="-mt-1">
+          <p className="-mt-1 max-w-[180px] text-left">
           Access to a collection of diversified developers
           </p>
         </div>
@@ -35,7 +35,7 @@ const HireService = () => {
               alt="Check icon"
             />
           </div>
-          <p className="-mt-1">
+          <p className="-mt-1 max-w-[180px] text-left">
           Convenient & swift hiring process
           </p>
         </div>
@@ -48,7 +48,7 @@ const HireService = () => {
               alt="Check icon"
             />
           </div>
-          <p className="-mt-1">
+          <p className="-mt-1 max-w-[180px] text-left">
           Highly talented developers at a cost-effective budget
           </p>
         </div>

@@ -168,15 +168,15 @@ const FrequentlyAskedQuestion = (props: any) => {
                     expandIconPosition="end"
                     ghost
                     collapsible='header'                    
-                    className="text-[#E4E4E4] bg-[#09071B]"
+                    className="text-[#E4E4E4] hover:text-black bg-[#09071B]"
                     defaultActiveKey={props.expand ? 1 : 0 }
                   >
                     <Panel
                       header={ faq.question}
                       key='1'
-                      className='font-semibold text-white text-[16px] md:text-[20px]'
+                      className='font-semibold hover:text-black text-white text-[16px] md:text-[20px]'
                     >
-                      <p className='-my-3 font-normal text-[16px] cursor-pointer text-[#908E9F]'>
+                      <p className='font-normal text-[16px] cursor-pointer text-[#908E9F]'>
                         {faq.answer}
                       </p>
                     </Panel>
