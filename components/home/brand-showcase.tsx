@@ -1,6 +1,7 @@
 import Container from "@components/container";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import cn from "classnames";
 
 const logos: { name: string; path: string; className?: string }[] = [
   {
@@ -27,7 +28,10 @@ const logos: { name: string; path: string; className?: string }[] = [
     name: "google",
     path: "/images/home/brand-icons/logo_google.svg",
   },
-
+  {
+    name: "autodesk",
+    path: "/images/home/brand-icons/autodesk.svg",
+  },
 
 ];
 const BrandShowcase = () => {
@@ -40,11 +44,11 @@ const BrandShowcase = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1 }}
-          className='grid grid-cols-3 md:grid-cols-6 md:grid-cols-flow  place-item-center md:gap-[48px] gap-[10px] mt-[32px] md:mt-[24px] md:px-[98px] pl-2 '>
+          className='grid grid-cols-3 md:grid-cols-7 md:grid-cols-flow  place-item-center md:gap-[48px] gap-[10px] mt-[32px] md:mt-[24px] md:px-[98px] pl-2 '>
           {logos.map((logo, idx) => (
             <div
               key={idx}
-              className="flex justify-center items-center mt-5 md:mt-0"
+              className={cn(logo.name === "atlassian" ?"hide md:flex ":"flex", " justify-center items-center mt-5 md:mt-0")}
             >
               <Image
                 src={logo.path}
