@@ -1097,7 +1097,7 @@ const Hero = () => {
         <div className='pt-16 md:py-0 md:w-[60%]'>
           <p className='green-label'>BENEFITS</p>
           <h1 className='hero-heading pt-1'>
-            'Get hired to one of our teams and you'll unlock an AppExert+ Benefits;'
+            {"Get hired to one of our teams and you'll unlock an AppExert+Benefits"}
             {/* <br className="hidden md:block"/>
              for  startups and SMBs <br className="md:hidden block"/> 
             <span className="typing-effect">{text} 
