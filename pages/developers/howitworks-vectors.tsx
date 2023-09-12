@@ -95,8 +95,8 @@ function LoadImage({
                         className='absolute md:w-full w-[50%] h-full mx-auto'
                       ></div>
                       <p className=' w-full h-full flex md:flex-col justify-center content-center fill-current text-[14px] md:text-[18px]'>
-                      {refItem.count}{" "}
-                    </p>
+                        {refItem.count}{" "}
+                      </p>
                     </div>
                     
                     <h2 className='text-white pb-4 text-[18px] md:text-[22px] font-medium  md:font-semibold '>
@@ -231,33 +231,33 @@ const HowItWorks = () => {
                     }`}
                   >
                     <div className='flex justify-center mb-[40px] '>
-                  <Image
-                    className='rounded-lg p-2 '
-                    width={302}
-                    height={319}
-                    src={item.imageSrc}
-                    alt='Talent pool'
-                  />
-                </div>
+                      <Image
+                        className='rounded-lg p-2 '
+                        width={302}
+                        height={319}
+                        src={item.imageSrc}
+                        alt='Talent pool'
+                      />
+                    </div>
                 
                 
                     <div className=' h-[300px] '>
                       
                       <div className=' text-white '>
                         <div className='flex flex-col gap-4 text-[#908E9F]'>
-                        <div className='relative content-center flex justify-left'>
-                      <div
-                        style={{
-                          background: "#1B1551",
-                          filter: "blur(18px)",
-                          zIndex: 100,
-                        }}
-                        className='absolute  md:w-full w-[10%] h-full mx-auto'
-                      ></div>
-                      <p className=' w-full h-full flex md:flex-col justify-left content-center fill-current text-[14px] md:text-[18px]'>
-                      {item.count}{" "}
-                    </p>
-                    </div>
+                          <div className='relative content-center flex justify-left'>
+                            <div
+                              style={{
+                                background: "#1B1551",
+                                filter: "blur(18px)",
+                                zIndex: 100,
+                              }}
+                              className='absolute  md:w-full w-[10%] h-full mx-auto'
+                            ></div>
+                            <p className=' w-full h-full flex md:flex-col justify-left content-center fill-current text-[14px] md:text-[18px]'>
+                              {item.count}{" "}
+                            </p>
+                          </div>
                           <h2 className='text-white pb-4 text-[18px] md:text-[22px] font-medium  md:font-semibold '>
                             {item.title}{" "}
                           </h2>
@@ -289,7 +289,7 @@ const HowItWorks = () => {
                       </div>
                       <Button type='primary' className='page-btn'>
                 Join Now
-              </Button>
+                      </Button>
                     </div>
                     
                   </div>

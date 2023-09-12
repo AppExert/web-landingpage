@@ -87,8 +87,8 @@ const testimonials = () => {
                     </div>
                   </div>
                   <Image
-                   width={380} 
-                   height={380}
+                    width={380} 
+                    height={380}
                     src={reason.image} />
                 </div>
               </motion.div>
