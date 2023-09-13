@@ -41,12 +41,6 @@ const ComparePlatforms = () => {
   };
 
   const circleVariant = {
-    // initial: {
-    //   width: "250px",
-    //   height: "250px",
-    //   borderRadius: "50%",
-    //   opacity: 1,
-    // },
     expanded: {
       width: "900px",
       height: "900px",
@@ -96,7 +90,7 @@ const ComparePlatforms = () => {
     <section className="md:py-[100px] py-[48px] " >
       <Container>
         <div className='flex flex-col justify-center items-center pb-[32px] md:pb-[38px]'>
-          <p className='green-label'>MAKING A DIFFERENCE</p>
+          <p className='green-label capitalize'>making a difference</p>
           <h1 className='heading pt-2 md:w-[651px] text-center'>
             Win the talent war, without breaking a sweat!
           </h1>

@@ -47,11 +47,6 @@ const Hero = () => {
           <p className="green-label">START. BUILD. THRIVE</p>
           <h1 className='hero-heading pt-2'>
             Securing global work opportunities for remote developers
-            {/* <br className="hidden md:block"/>
-             for  startups and SMBs <br className="md:hidden block"/> 
-            <span className="typing-effect">{text} 
-              <span className="blink text-brand-300 text-3xl sm:text-5xl font-light">|</span>
-            </span> */}
           </h1>
 
           <p className='section-paragraph text-[#908E9F] py-[10px] pb-[20px]'>

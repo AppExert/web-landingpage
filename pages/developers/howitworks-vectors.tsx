@@ -77,9 +77,6 @@ function LoadImage({
           >
             <div className='bg-[#020013] text-white '>
               <div className='flex flex-col gap-4 text-[#908E9F]'>
-                {/* <h2 className='text-white pb-4 text-[18px] md:text-[22px] font-medium  md:font-semibold '>
-                  {refItem.title}{" "}
-                </h2> */}
                 {refItem.keyPoints.map((keyPoint: any, keyIndex: any) => (
                   <div
                     className='flex flex-col items-start gap-2'
@@ -269,16 +266,6 @@ const HowItWorks = () => {
                                 key={keyIndex}
                                 
                               >
-                                
-                                {/* <div className='w-[18px] h-[18px] md:w-[24px] md:h-[24px] flex-shrink-0 mt-1'>
-                                  <Image
-                                    width={24}
-                                    height={24}
-                                    layout='responsive'
-                                    src='/images/home/tic-icon.svg'
-                                    alt='Check icon'
-                                  />
-                                </div> */}
                                 <p className='text-[14px] md:text-[18px]'>
                                   {keyPoint}{" "}
                                 </p>

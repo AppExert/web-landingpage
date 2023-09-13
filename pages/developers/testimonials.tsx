@@ -1,25 +1,3 @@
-// import Image from "next/image";
-// import { animate, motion, useMotionValue, useTransform, Variants } from "framer-motion";
-// import Container from "@components/container";
-// import { useEffect, useState } from "react";
-// import cn from "classnames";
-
-// const testimonials=() => {
-
-// return(
-//     <>
-//     <motion.div>
-//     className='md:sticky top-12 md:top-[20vh] md:h-[100vh] h-[50vh]'
-//         initial='offscreen'
-//         whileInView='onscreen'
-//         viewport={{ once: false, amount: 0.8, margin: "0% 0px 0% 0px" }}
-//     </motion.div>
-//     </>
-
-// )
-
-// }
-// export default testimonials ;
 
 import Container from "@components/container";
 import { motion } from "framer-motion";

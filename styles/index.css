@@ -233,10 +233,10 @@
 
 @keyframes marquee {
   0% {
-      top: 8em; /* Starting position */
+      top: 8rem; /* Starting position */
   }
   100% {
-      top: -60em; /* Ending position */
+      top: -60rem; /* Ending position */
   }
 }
 
