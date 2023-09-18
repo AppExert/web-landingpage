@@ -87,10 +87,10 @@ const ComparePlatforms = () => {
   ]
 
   return (
-    <section className="md:py-[100px] py-[48px] " >
+    <section className="py-[48px] " >
       <Container>
         <div className='flex flex-col justify-center items-center pb-[32px] md:pb-[38px]'>
-          <p className='green-label capitalize'>making a difference</p>
+          <p className='green-label uppercase'>making a difference</p>
           <h1 className='heading pt-2 md:w-[651px] text-center'>
             Win the talent war, without breaking a sweat!
           </h1>

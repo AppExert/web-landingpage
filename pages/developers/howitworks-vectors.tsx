@@ -99,7 +99,10 @@ function LoadImage({
                     <h2 className='text-white pb-4 text-[18px] md:text-[22px] font-medium  md:font-semibold '>
                       {refItem.title}{" "}
                     </h2>
-                    <p className='text-[14px] md:text-[18px]'>{keyPoint} </p>
+                    <p className='text-[14px] md:text-[18px] pb-[20px]'>{keyPoint} </p>
+                    <Button type='primary' className='page-btn px-[16px] py-[24px]'>
+                Join Now
+              </Button>
                   </div>
                 ))}
               </div>
@@ -192,8 +195,8 @@ const HowItWorks = () => {
     <section className='md:pt-[100px] pt-[72px]'>
       <Container>
         <div className='flex flex-col items-center md:pb-[72px] pb-[40px]'>
-          <p className='green-label'>HOW IT WORKS</p>
-          <h1 className='heading pt-2 md:w-[651px] text-center'>
+          <p className='green-label'>HOW TO JOIN</p>
+          <h1 className='heading pt-2 md:w-[651px] text-center text-[40px]'>
             Get started today in 4 easy steps
           </h1>
         </div>

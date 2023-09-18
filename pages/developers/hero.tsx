@@ -44,12 +44,12 @@ const Hero = () => {
     <section  >
       <Container className='px-8 md:py-[100px] md:flex md:justify-between items-center overflow-x-hidden'>
         <div className='pt-16 md:py-0 md:w-[60%]'>
-          <p className="green-label">START. BUILD. THRIVE</p>
-          <h1 className='hero-heading pt-2'>
+          <p className="green-label text-[14px]">START. BUILD. THRIVE</p>
+          <h1 className='hero-heading pt-2 text-[40px] md:text-[48px]'>
             Securing global work opportunities for remote developers
           </h1>
 
-          <p className='section-paragraph text-[#908E9F] py-[10px] pb-[20px]'>
+          <p className='section-paragraph text-[#908E9F] text-[18px] py-[10px] pb-[20px]'>
             Join our team of talented developers and work full-time for exciting companies worldwide. Experience the happiest remote developer community in the country.
           </p>
 
@@ -57,7 +57,7 @@ const Hero = () => {
             <Link href='/companies/start-hiring?step=1'>
               <Button
                 type='primary'
-                className='page-btn'
+                className='page-btn px-[16px] py-[24px]'
               >
                 Get started for free
               </Button>
@@ -76,7 +76,7 @@ const Hero = () => {
                 />
               </div>
               <p className="-mt-1">
-                Save hours with our pre-screened talent pool
+                Global oppurtunities on tap
               </p>
             </div>
             <div className="flex items-start gap-2 ">
@@ -89,7 +89,7 @@ const Hero = () => {
                 />
               </div>
               <p className="-mt-1">
-                No middleman. Fair pricing with 3x runway boost.
+                Streamlined job matching
               </p>
             </div>
             <div className="flex items-start gap-2 ">
@@ -102,7 +102,7 @@ const Hero = () => {
                 />
               </div>
               <p className="-mt-1">
-                Hire and pay compliantly around the world
+                Backend 100% by our community
               </p>
             </div>
 

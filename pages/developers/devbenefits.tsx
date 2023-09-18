@@ -48,11 +48,11 @@ const Hero = () => {
       <Container className='px-8 md:flex md:text-left text-center items-center overflow-x-hidden'>
         <div className='pt-16 md:py-0 md:w-[60%]'>
           <p className='green-label'>BENEFITS</p>
-          <h1 className='hero-heading pt-1'>
+          <h1 className='hero-heading pt-1 text-[40px]'>
             {"Get hired to one of our teams and you'll unlock an AppExert+Benefits"}
           </h1>
 
-          <p className='section-paragraph text-[#908E9F] py-[10px] pb-[20px] '>
+          <p className='section-paragraph text-[#908E9F] py-[10px] pb-[20px] text-[18px]'>
             Simplify hiring and reduce administartive burdens with our
             innovative EOR model, ensuring compliance and peace of mind and
             enjoy 100% ownership.
@@ -60,7 +60,7 @@ const Hero = () => {
 
           <div className='md:flex gap-4 items-center hidden '>
             <Link href='/companies/start-hiring?step=1'>
-              <Button type='primary' className='page-btn'>
+              <Button type='primary' className='page-btn px-[16px] py-[24px]'>
                 Unlock all 25+ benefits
               </Button>
             </Link>
@@ -93,7 +93,7 @@ const Hero = () => {
                                 {benefits.icon}
                               </p>
                             </div>
-                            <h3 className='font-medium text-[#E4E4E4] text-[18px] mt-[-20px]'>
+                            <h3 className='font-medium text-[#E4E4E4] text-[14px] mt-[-20px] '>
                               {benefits.name}
                             </h3>
                           </div>

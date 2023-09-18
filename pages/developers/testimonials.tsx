@@ -12,9 +12,9 @@ const REASONS: {
 }[] = [
   {
     content:
-      "I really like that I can have all in one place:I can send emails and text messages, I can have live chat, show pop-ups and push notifications on my website. ",
-    name: "Kunsheng Zhao ",
-    designation: "",
+      "I faced a lot of challenges related to payroll, related to communicating with clients. But when I joined Appexert, it was a real game changer for me. There are no specific boundaries that are imposed on me. I can work freely at any specific time, also got more new learning opportunities.",
+    name: "Arindam ",
+    designation: "Lead Software Engineer",
     image: "/images/gif/arindam-testimonial.gif",
   },
 ];
