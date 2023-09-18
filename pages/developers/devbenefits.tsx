@@ -121,7 +121,7 @@ const Hero = () => {
                   <Link href='/companies/start-hiring?step=1'>
                     <Button
                       type='primary'
-                      className='page-btn'
+                      className='page-btn px-[16px] py-[24px]'
                     >
                 Unlock all 25+ benefits
                     </Button>
