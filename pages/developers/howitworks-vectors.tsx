@@ -102,7 +102,7 @@ function LoadImage({
                     <p className='text-[14px] md:text-[18px] pb-[20px]'>{keyPoint} </p>
                     <Button type='primary' className='page-btn px-[16px] py-[24px]'>
                 Join Now
-              </Button>
+                    </Button>
                   </div>
                 ))}
               </div>
