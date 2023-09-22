@@ -45,10 +45,10 @@ const Hero = () => {
 
   return (
     <section>
-      <Container className='px-8 md:flex md:text-left text-center items-center overflow-x-hidden'>
-        <div className='pt-16 md:py-0 md:w-[60%]'>
+      <Container className='px-8 md:flex gap-[76px] md:text-left text-center items-center overflow-x-hidden'>
+        <div className='pt-16 md:py-0 md:w-[60%] '>
           <p className='green-label'>BENEFITS</p>
-          <h1 className='hero-heading pt-1 text-[40px]'>
+          <h1 className='hero-heading pt-1 text-[24px] md:text-[40px]'>
             {"Get hired to one of our teams and you'll unlock an AppExert+Benefits"}
           </h1>
 
@@ -66,12 +66,12 @@ const Hero = () => {
             </Link>
           </div>
 
-          <div className='flex flex-col md:flex-row gap-4 text-gray-400 pt-[48px] md:pt-[80px]'></div>
+          <div className='flex flex-col md:flex-row gap-4 text-gray-400  md:pt-[80px]'></div>
         </div>
         <div className='md:w-[50%] md:flex justify-end  '>
           <div style={{ position: "relative" }}>
             <div className='  z-50 relative '>
-              <div className='relative my-[100px] ' style={{ zIndex: "2" }}>
+              <div className='relative md:my-[100px] ' style={{ zIndex: "2" }}>
                 <div className=' bg-[#020013]  px-[32px] py-[72px] rounded-[8px] '>
                   <div className='relative grid grid-cols-2 lg:grid-cols-3  gap-[10px] h-[540px] overflow-hidden md:gap-6 gap-4 rounded-[8px]'>
                     {icons.map(
@@ -79,7 +79,7 @@ const Hero = () => {
                         index < 15 && (
                           <div
                             key={benefits.name}
-                            className='w-full h-[200px]  rounded-br-lg rounded-bl-lg rounded-tr-lg rounded-tl-lg grid gap-2 text-left marquee md:p-4 p-2 border-solid border-2 border-[#252234]  '
+                            className='w-full h-[200px]  rounded-br-lg rounded-bl-lg rounded-tr-lg rounded-tl-lg grid gap-2 marquee text-left border-solid border-2 border-[#252234]  '
                           >
                             <div className='relative flex justify-left fill-current'>
                               <div
@@ -87,13 +87,13 @@ const Hero = () => {
                                   background: "#1B1551",
                                   filter: "blur(18px)",
                                 }}
-                                className='absolute w-[25%] h-full '
+                                className='absolute w-[50%] h-[50%] top-4 overflow-hiddden '
                               ></div>
-                              <p className=' w-full h-full flex md:flex-col z-50 content-center fill-current text-[14px] md:text-[18px]'>
+                              <p className=' w-full h-full flex md:flex-col z-50 content-center m-4 mt-8 fill-current text-[14px] md:text-[18px]'>
                                 {benefits.icon}
                               </p>
                             </div>
-                            <h3 className='font-medium text-[#E4E4E4] text-[14px] mt-[-20px] '>
+                            <h3 className='font-medium text-[#E4E4E4] text-[14px] mt-[-20px] p-2 '>
                               {benefits.name}
                             </h3>
                           </div>

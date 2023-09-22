@@ -56,13 +56,13 @@ const Developers = () => {
           <div>
             
            
-            <div className='bg-[#020013] z-40 relative'>
+            <div className=' z-40 relative'>
               {/* Content of the div */}
               <div >
                 <Hero/>
                 <BrandShowcase />
                 <ComparePlatforms />
-                < HowItWorks/>
+                <HowItWorks/>
                 <Testimonials/>
                 <WhyChooseAppExert/>
                 <DevBenefits/>

@@ -16,7 +16,7 @@ const Layout: React.FC<Props> = ({ children }) => {
       <Meta />
       <div className="bg-[#020013] "   style={{
         backgroundImage:
-        router.pathname === "/"
+        router.pathname === "/" || router.pathname === "/developers"
           ? "url('/images/home/shape.png')"
           : "",
         backgroundRepeat: "no-repeat",
