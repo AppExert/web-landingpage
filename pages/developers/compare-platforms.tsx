@@ -41,12 +41,6 @@ const ComparePlatforms = () => {
   };
 
   const circleVariant = {
-    // initial: {
-    //   width: "250px",
-    //   height: "250px",
-    //   borderRadius: "50%",
-    //   opacity: 1,
-    // },
     expanded: {
       width: "900px",
       height: "900px",
@@ -93,10 +87,10 @@ const ComparePlatforms = () => {
   ]
 
   return (
-    <section className="md:py-[100px] py-[48px] " >
+    <section className="py-[48px] " >
       <Container>
         <div className='flex flex-col justify-center items-center pb-[32px] md:pb-[38px]'>
-          <p className='green-label'>MAKING A DIFFERENCE</p>
+          <p className='green-label uppercase text-[14px]'>making a difference</p>
           <h1 className='heading pt-2 md:w-[651px] text-center'>
             Win the talent war, without breaking a sweat!
           </h1>
@@ -107,7 +101,7 @@ const ComparePlatforms = () => {
               initial="initial"
               animate='expanded'
               variants={circleVariant}
-              className='absolute flex top-[62%] justify-center  left-1/2 transform -translate-x-1/2 -translate-y-1/2 border-2 border-[#3F277D] rounded-full ' />
+              className='absolute flex top-[62%] justify-center  left-1/2 transform -translate-x-1/2 -translate-y-1/2 border-2 border-[#0FAC98] rounded-full ' />
             <motion.div /></>)}
           <div className='flex justify-center pt-[32px] md:pb-[56px] pb-[32px]'>
             <LayoutGroup>
@@ -215,7 +209,7 @@ const ComparePlatforms = () => {
                         <Image
                           width={60}
                           height={60}
-                          src={"/images/home/blue-pointer.svg"}
+                          src={"/images/home/green-pointer.svg"}
                           alt='Check icon'
                         />
                       </div>
@@ -226,7 +220,7 @@ const ComparePlatforms = () => {
                         <Image
                           width={60}
                           height={60}
-                          src={"/images/home/blue-pointer.svg"}
+                          src={"/images/home/green-pointer.svg"}
                           alt='Check icon'
                         />
                       </div>
@@ -239,7 +233,7 @@ const ComparePlatforms = () => {
                         <Image
                           width={60}
                           height={60}
-                          src={"/images/home/blue-pointer.svg"}
+                          src={"/images/home/green-pointer.svg"}
                           alt='Check icon'
                         />
                       </div>
@@ -254,7 +248,7 @@ const ComparePlatforms = () => {
 
             <motion.div
               whileHover={{
-                image: "/images/home/processor-intermidiate.png",
+                image: "/images/home/Processorintermidiategreen.png",
               }}
               transition={{ duration: 0.3 }}
               whileTap={{ scale: 0.95 }}
@@ -268,7 +262,7 @@ const ComparePlatforms = () => {
               <Image
                 width={300}
                 height={300}
-                src={activeItem === 1 ? "/images/home/processor-after.png" : "/images/home/processor-before.png"}
+                src={activeItem === 1 ? "/images/home/Processoraftergreen.png" : "/images/home/Processorbeforegreen.png"}
                 alt='Check icon'
               />
             </motion.div>
@@ -310,7 +304,7 @@ const ComparePlatforms = () => {
                       </div>
                     </div>
                     <div className='flex md:flex-row flex-row-reverse  items-center md:gap-2 justify-end'>
-                      <p className='text-[#E4E4E4] text-right'>
+                      <p className='text-[#E4E4E4] md:text-right text-left'>
                         Inequitable agency commissions
                       </p>
                       <div className='md:w-[60px] md:h-[60px] w-[50px] h-[50px] flex-shrink-0'>
@@ -339,7 +333,7 @@ const ComparePlatforms = () => {
                         <Image
                           width={60}
                           height={60}
-                          src={"/images/home/blue-pointer.svg"}
+                          src={"/images/home/green-pointer.svg"}
                           alt='Check icon'
                         />
                       </div>
@@ -352,20 +346,20 @@ const ComparePlatforms = () => {
                         <Image
                           width={60}
                           height={60}
-                          src={"/images/home/blue-pointer.svg"}
+                          src={"/images/home/green-pointer.svg"}
                           alt='Check icon'
                         />
                       </div>
                     </div>
                     <div className='flex md:flex-row flex-row-reverse items-center md:gap-2 justify-end'>
-                      <p className='text-[#E4E4E4] text-right'>
+                      <p className='text-[#E4E4E4] md:text-right text-left'>
                         Honest and fair fees, no hidden tricks.
                       </p>
                       <div className='md:w-[60px] md:h-[60px] w-[50px] h-[50px] flex-shrink-0'>
                         <Image
                           width={60}
                           height={60}
-                          src={"/images/home/blue-pointer.svg"}
+                          src={"/images/home/green-pointer.svg"}
                           alt='Check icon'
                         />
                       </div>
