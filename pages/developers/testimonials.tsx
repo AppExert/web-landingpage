@@ -50,16 +50,16 @@ const testimonials = () => {
                         src={"/images/home/ipad/quotation.svg"}
                         alt='quotation'
                       />
-                      <h3 className='text-white mt-[24px] mb-[16px] text-[18px] md:text-[22px]  cursor-pointer'>
+                      <h3 className='text-white mt-[24px] mb-[16px] text-[22px] md:text-[#C3C2CB]  cursor-pointer'>
                         {reason.content}
                       </h3>
                     </div>
 
                     <div>
-                      <p className='text-gray-400 text-[16px] md:text-[18px] cursor-pointer'>
+                      <p className='text-gray-400 text-[#FFFFFF] text-[18px] cursor-pointer'>
                         {reason.name}
                       </p>
-                      <p className='text-gray-400 text-[16px] md:text-[18px] cursor-pointer'>
+                      <p className='text-gray-400 text-[18px] cursor-pointer'>
                         {reason.designation}
                       </p>
                     </div>

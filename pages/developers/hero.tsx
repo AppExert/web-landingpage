@@ -42,7 +42,7 @@ const Hero = () => {
 
   return (
     <section  >
-      <Container className='px-8 md:py-[100px] md:flex md:justify-between items-center overflow-x-hidden'>
+      <Container className='px-8 md:py-[100px] md:flex md:justify-between items-center overflow-x-hidden '>
         <div className='pt-16 md:py-0 md:w-[60%]'>
           <p className="green-label text-[14px]">START. BUILD. THRIVE</p>
           <h1 className='hero-heading pt-2 text-[40px] md:text-[48px]'>
@@ -75,7 +75,7 @@ const Hero = () => {
                   alt="Check icon"
                 />
               </div>
-              <p className="-mt-1">
+              <p className="mt-0">
                 Global oppurtunities on tap
               </p>
             </div>
@@ -88,7 +88,7 @@ const Hero = () => {
                   alt="Check icon"
                 />
               </div>
-              <p className="-mt-1">
+              <p className="mt-0">
                 Streamlined job matching
               </p>
             </div>
@@ -101,7 +101,7 @@ const Hero = () => {
                   alt="Check icon"
                 />
               </div>
-              <p className="-mt-1">
+              <p className="mt-0">
                 Backend 100% by our community
               </p>
             </div>
@@ -118,9 +118,9 @@ const Hero = () => {
             transition={{ duration: 0.8 }}
           >
             <Image
-              width={400}
-              height={400}
-              src={"/images/herodevimg.svg"}
+              width={525}
+              height={410}
+              src={"/images/home/mainimagenew.png"}
               alt='hero developer image'
             />
           </motion.div>

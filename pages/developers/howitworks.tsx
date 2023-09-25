@@ -247,7 +247,7 @@ const HowItWorks = () => {
                   >
                     <div className=' h-[300px] '>
                       <div className=' text-white '>
-                        <div className='flex flex-col gap-4 text-[#908E9F]'>
+                        <div className='flex flex-col gap-4 text-[#C3C2CB]'>
                           <h2 className='text-white pb-4 text-[18px] md:text-[22px] font-medium  md:font-semibold '>
                             {item.title}{" "}
                           </h2>

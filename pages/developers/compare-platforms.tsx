@@ -90,7 +90,7 @@ const ComparePlatforms = () => {
     <section className="py-[48px] " >
       <Container>
         <div className='flex flex-col justify-center items-center pb-[32px] md:pb-[38px]'>
-          <p className='green-label uppercase'>making a difference</p>
+          <p className='green-label uppercase text-[14px]'>making a difference</p>
           <h1 className='heading pt-2 md:w-[651px] text-center'>
             Win the talent war, without breaking a sweat!
           </h1>
@@ -248,7 +248,7 @@ const ComparePlatforms = () => {
 
             <motion.div
               whileHover={{
-                image: "/images/home/processorintermidiatedev.svg",
+                image: "/images/home/Processorintermidiategreen.png",
               }}
               transition={{ duration: 0.3 }}
               whileTap={{ scale: 0.95 }}
@@ -262,7 +262,7 @@ const ComparePlatforms = () => {
               <Image
                 width={300}
                 height={300}
-                src={activeItem === 1 ? "/images/home/processorafterdev.svg" : "/images/home/processorbeforedev.svg"}
+                src={activeItem === 1 ? "/images/home/Processoraftergreen.png" : "/images/home/Processorbeforegreen.png"}
                 alt='Check icon'
               />
             </motion.div>
@@ -304,7 +304,7 @@ const ComparePlatforms = () => {
                       </div>
                     </div>
                     <div className='flex md:flex-row flex-row-reverse  items-center md:gap-2 justify-end'>
-                      <p className='text-[#E4E4E4] text-right'>
+                      <p className='text-[#E4E4E4] md:text-right text-left'>
                         Inequitable agency commissions
                       </p>
                       <div className='md:w-[60px] md:h-[60px] w-[50px] h-[50px] flex-shrink-0'>
@@ -352,7 +352,7 @@ const ComparePlatforms = () => {
                       </div>
                     </div>
                     <div className='flex md:flex-row flex-row-reverse items-center md:gap-2 justify-end'>
-                      <p className='text-[#E4E4E4] text-right'>
+                      <p className='text-[#E4E4E4] md:text-right text-left'>
                         Honest and fair fees, no hidden tricks.
                       </p>
                       <div className='md:w-[60px] md:h-[60px] w-[50px] h-[50px] flex-shrink-0'>

@@ -36,7 +36,7 @@ const logos: { name: string; path: string; className?: string }[] = [
 ];
 const BrandShowcase = () => {
   return (
-    <section className='pb-[56px]'>
+    <section className='md:pb-[100px] pt-[72px] pb-[56px]'>
       <Container className='flex flex-col  items-center text-center py-4'>
         <p className='section-preheading text-gray-400 w-[186px] md:w-max'>Backed by engineering leaders from</p>
         <motion.div
