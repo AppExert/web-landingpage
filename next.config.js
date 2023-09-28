@@ -25,7 +25,12 @@ module.exports = (phase, { defaultConfig }) => {
         ],
         destination: "https://hire.appexert.com/c?id=:id",
         permanent: false,
-      }
+      },
+      {
+        source: "/developerSignup",
+        destination: process.env.NEXT_PUBLIC_DEVELOPER_SIGNUP_URL,
+        permanent: true,
+      },
       ]
     }
   };
