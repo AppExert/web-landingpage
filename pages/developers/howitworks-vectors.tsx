@@ -280,9 +280,11 @@ const HowItWorks = () => {
                           )}
                         </div>
                       </div>
-                      <Button type='primary' className='page-btn'>
-                Join Now
-                      </Button>
+                      <Link href='/developerSignup'>
+                        <Button type='primary' className='page-btn'>
+                          Join Now
+                        </Button>
+                      </Link>
                     </div>
                     
                   </div>
