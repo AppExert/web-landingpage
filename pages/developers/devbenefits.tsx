@@ -9,32 +9,32 @@ import { icons } from "global/constants";
 const BenefitsSection = () => {
   return(
     <>
-  {icons.map(
-    (benefits: any, index) =>
-      index < 15 && (
-        <div
-          key={benefits.name}
-          className='relative flex items-stretch w-full h-[200px] px-5 py-6 overflow-hiddden rounded-br-lg rounded-bl-lg rounded-tr-lg rounded-tl-lg grid gap-2 marquee text-left border-solid border-2 border-[#252234]  '
-        >
+      {icons.map(
+        (benefits: any, index) =>
+          index < 15 && (
             <div
-              style={{
-                background: "#1B1551",
-                filter: "blur(18px)",
-              }}
-              className='absolute w-[35%] h-[25%] top-4'
-            ></div>
-            <p className=' w-full flex md:flex-col z-50 content-center fill-current'>
-              {benefits.icon}
-            </p>
-            <div className="flex items-end">
-          <h3 className='font-medium text-[#E4E4E4] text-[14px] '>
-            {benefits.name}
-          </h3>
-          </div>
-        </div>
-      )
-  )}
-  </>)
+              key={benefits.name}
+              className='relative flex items-stretch w-full h-[200px] px-5 py-6 overflow-hiddden rounded-br-lg rounded-bl-lg rounded-tr-lg rounded-tl-lg grid gap-2 marquee text-left border-solid border-2 border-[#252234]  '
+            >
+              <div
+                style={{
+                  background: "#1B1551",
+                  filter: "blur(18px)",
+                }}
+                className='absolute w-[35%] h-[25%] top-4'
+              ></div>
+              <p className=' w-full flex md:flex-col z-50 content-center fill-current'>
+                {benefits.icon}
+              </p>
+              <div className="flex items-end">
+                <h3 className='font-medium text-[#E4E4E4] text-[14px] '>
+                  {benefits.name}
+                </h3>
+              </div>
+            </div>
+          )
+      )}
+    </>)
 }
 const Hero = () => {
   const [text, setText] = useState("");
@@ -91,27 +91,25 @@ const Hero = () => {
           <div className='flex flex-col md:flex-row gap-4 text-gray-400  md:pt-[80px]'></div>
         </div>
         <div className='md:w-[50%] md:flex justify-end  '>
-          
-              <div className='relative md:my-[100px] ' style={{ zIndex: "2" }}>
-                  <div className='relative grid grid-cols-2 lg:grid-cols-3  gap-[10px] h-[540px] overflow-hidden md:gap-6 gap-4 rounded-[8px]'>
-                    <BenefitsSection/>
-                    <BenefitsSection/>
-                    <div
-                      className='absolute w-full h-[112px]  '
-                      style={{
-                        background:
-                          "linear-gradient(180deg, #020013 0%, rgba(2, 0, 19, 0.00) 100%)",
-                      }}
-                    ></div>
-                     <div
-                      className='absolute bottom-0 w-full h-[112px]  '
-                      style={{
-                        background:
-                          "linear-gradient(0deg, #020013 0%, rgba(2, 0, 19, 0.00) 100%)",
-                      }}
-                    ></div>
-                    
-                  </div>
+    <div className='relative md:my-[100px] ' style={{ zIndex: "2" }}>
+      <div className='relative grid grid-cols-2 lg:grid-cols-3  gap-[10px] h-[540px] overflow-hidden md:gap-6 gap-4 rounded-[8px]'>
+       <BenefitsSection/>
+       <BenefitsSection/>
+      <div
+          className='absolute w-full h-[112px]  '
+           style={{
+            background:
+               "linear-gradient(180deg, #020013 0%, rgba(2, 0, 19, 0.00) 100%)",
+                  }}
+    ></div>
+        <div
+          className='absolute bottom-0 w-full h-[112px]  '
+           style={{
+            background:
+               "linear-gradient(0deg, #020013 0%, rgba(2, 0, 19, 0.00) 100%)",
+                 }}
+              ></div>  
+       </div>
                 </div>
                 <div className='flex gap-4 items-center md:hidden '>
                   <Link href='/companies/start-hiring?step=1'>
