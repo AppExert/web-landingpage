@@ -15,7 +15,7 @@ const REASONS: {
       "I faced a lot of challenges related to payroll, related to communicating with clients. But when I joined Appexert, it was a real game changer for me. There are no specific boundaries that are imposed on me. I can work freely at any specific time, also got more new learning opportunities.",
     name: "Arindam ",
     designation: "Lead Software Engineer",
-    image: "/images/gif/arindam-testimonial.gif",
+    image: "/images/ArindamImage.png",
   },
 ];
 
@@ -26,7 +26,7 @@ const testimonials = () => {
     <section className='md:py-[100px] py-[48px]'>
       <Container>
         <div>
-          <div className='grid md:grid-cols-1 grid-cols-1  '>
+          <div className='flex flex-nowrap overflow-auto'>
             {REASONS.map((reason, index) => (
               <motion.div
                 key={index}
@@ -41,8 +41,8 @@ const testimonials = () => {
                 transition={{ duration: 0.3 }}
                 className='p-[24px] rounded-[8px] md:w-[1000px]  m-auto h-auto w-auto '
               >
-                <div className='grid md:grid-cols-2 gap-4   '>
-                  <div className='flex flex-col justify-between'>
+                <div className='flex md:flex-row flex-col  gap-4 justify-between '>
+                  <div className='flex flex-col w-[100%] md:w-[50%]'>
                     <div>
                       <Image
                         width={40}
@@ -65,8 +65,9 @@ const testimonials = () => {
                     </div>
                   </div>
                   <Image
-                    width={380} 
-                    height={380}
+                    className="m-0"
+                    width={400} 
+                    height={400}
                     src={reason.image} />
                 </div>
               </motion.div>
