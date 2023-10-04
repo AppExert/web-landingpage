@@ -47,7 +47,7 @@ const Hero = () => {
             Join our team of talented developers and work full-time for exciting companies worldwide. Experience the happiest remote developer community in the country.
           </p>
           <div className='flex gap-4 items-center'>
-            <Link href='/register?developers'>
+            <Link href='/developerSignup'>
               <Button
                 type='primary'
                 className='page-btn px-[16px] py-[24px]'

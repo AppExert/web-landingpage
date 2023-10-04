@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import cn from "classnames";
 import { Button } from "antd";
 import Item from "antd/lib/descriptions/Item";
+import Link from "next/link";
 function LoadImage({
   refItem,
   index,
@@ -96,9 +97,11 @@ function LoadImage({
                       {refItem.title}{" "}
                     </h2>
                     <p className='text-[14px] md:text-[18px] pb-[20px]'>{keyPoint} </p>
+                    <Link href='/developerSignup'>
                     <Button type='primary' className='page-btn px-[16px] py-[24px]'>
                 Join Now
                     </Button>
+                    </Link>
                   </div>
                 ))}
               </div>

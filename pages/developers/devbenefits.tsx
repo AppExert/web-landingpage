@@ -82,7 +82,7 @@ const Hero = () => {
             enjoy 100% ownership.
           </p>
           <div className='md:flex gap-4 items-center hidden '>
-            <Link href='/companies/start-hiring?step=1'>
+            <Link href='/developerSignup'>
               <Button type='primary' className='page-btn px-[16px] py-[24px]'>
                 Unlock all 25+ benefits
               </Button>
@@ -112,7 +112,7 @@ const Hero = () => {
             </div>
           </div>
           <div className='flex gap-4 items-center md:hidden '>
-            <Link href='/companies/start-hiring?step=1'>
+            <Link href='/developerSignup'>
               <Button
                 type='primary'
                 className='page-btn px-[16px] py-[24px]'
