@@ -108,18 +108,8 @@ const HowItWorks = () => {
   const features = [
     {
       show: true,
-      title: "Comprehensive Talent Pool",
-      imageSrc: "/images/home/ipad/profile.svg",
-      keyPoints: [
-        "Gain access to a vast talent pool of prescreened developers.",
-        "Evaluate technical, behavioural, and cultural fit with confidence.",
-        "500+ senior developers and growing, spanning 10+ roles and 100+ skills.",
-      ],
-    },
-    {
-      show: false,
-      title: "360° Developer Profiles",
-      imageSrc: "/images/home/ipad/videoresume.svg",
+      title: "Unified Developer profile",
+      imageSrc: "/images/home/ipad/UnifiedDeveloperProfile.png",
       keyPoints: [
         "Comprehensive 360-degree developer profiles.",
         "Get a holistic view of candidates, including skills, experience, projects, and more.",
@@ -128,8 +118,8 @@ const HowItWorks = () => {
     },
     {
       show: false,
-      title: "Generative AI powered pre-screening reports",
-      imageSrc: "/images/home/ipad/jobboard.svg",
+      title: "Video Cover Letter",
+      imageSrc: "/images/home/ipad/VideoCoverLetter.png",
       keyPoints: [
         "Engage candidates with gamified pre-screening reports and interactive rubric scorecards.",
         "Unlock powerful insights and recommendations driven by our cutting-edge GPT-4 Generative AI model.",
@@ -138,8 +128,8 @@ const HowItWorks = () => {
     },
     {
       show: false,
-      title: "Streamlined Interview pipeline",
-      imageSrc: "/images/home/ipad/verified.svg",
+      title: "Job board",
+      imageSrc: "/images/home/ipad/JobBoard.png",
       keyPoints: [
         "Visualise your interview process effortlessly with the intuitive hiring pipeline",
         "Manage all your candidates seamlessly using the Kanban-board",
@@ -148,8 +138,8 @@ const HowItWorks = () => {
     },
     {
       show: false,
-      title: "Powerful Remote Work Tools",
-      imageSrc: "/images/home/ipad/verified.svg",
+      title: "Verified Company Profiles",
+      imageSrc: "/images/home/ipad/VerifiedCompanyProfile.png",
       keyPoints: [
         "Access a suite of 10+ powerful tools to enhance remote work productivity and engagement.",
         "Effortlessly manage timesheets, contracts, invoices, and performance feedback all in one place",

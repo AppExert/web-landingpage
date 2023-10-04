@@ -7,11 +7,11 @@ import Link from "next/link";
 import Container from "@components/container";
 import BrandShowcase from "@components/home/brand-showcase";
 import ComparePlatforms from "./compare-platforms"
-import HowItWorks from "./howitworks";
+import HowItWorks from "./how-it-works";
 import Hero from "./hero";
 import WhyChooseAppExert from "@components/home/why-choose-appexert";
 import DevBenefits from "./devbenefits";
-import HowItWorksVector from "./howitworks-vectors";
+import HowItWorksVector from "./how-it-works-vectors";
 import Testimonials from "./testimonials";
 
 
