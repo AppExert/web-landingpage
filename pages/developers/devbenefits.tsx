@@ -101,7 +101,7 @@ const Hero = () => {
                   background:
                "linear-gradient(180deg, #020013 0%, rgba(2, 0, 19, 0.00) 100%)",
                 }}
-             ></div>
+              ></div>
               <div
                 className='absolute bottom-0 w-full h-[112px]  '
                 style={{
