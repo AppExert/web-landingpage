@@ -91,37 +91,37 @@ const Hero = () => {
           <div className='flex flex-col md:flex-row gap-4 text-gray-400  md:pt-[80px]'></div>
         </div>
         <div className='md:w-[50%] md:flex justify-end  '>
-    <div className='relative md:my-[100px] ' style={{ zIndex: "2" }}>
-      <div className='relative grid grid-cols-2 lg:grid-cols-3  gap-[10px] h-[540px] overflow-hidden md:gap-6 gap-4 rounded-[8px]'>
-       <BenefitsSection/>
-       <BenefitsSection/>
-      <div
-          className='absolute w-full h-[112px]  '
-           style={{
-            background:
+          <div className='relative md:my-[100px] ' style={{ zIndex: "2" }}>
+            <div className='relative grid grid-cols-2 lg:grid-cols-3  gap-[10px] h-[540px] overflow-hidden md:gap-6 gap-4 rounded-[8px]'>
+              <BenefitsSection/>
+              <BenefitsSection/>
+              <div
+                className='absolute w-full h-[112px]  '
+                style={{
+                  background:
                "linear-gradient(180deg, #020013 0%, rgba(2, 0, 19, 0.00) 100%)",
-                  }}
-    ></div>
-        <div
-          className='absolute bottom-0 w-full h-[112px]  '
-           style={{
-            background:
+               }}
+              ></div>
+              <div
+                className='absolute bottom-0 w-full h-[112px]  '
+                style={{
+                  background:
                "linear-gradient(0deg, #020013 0%, rgba(2, 0, 19, 0.00) 100%)",
-                 }}
+               }}
               ></div>  
-       </div>
-                </div>
-                <div className='flex gap-4 items-center md:hidden '>
-                  <Link href='/companies/start-hiring?step=1'>
-                    <Button
-                      type='primary'
-                      className='page-btn px-[16px] py-[24px]'
-                    >
+             </div>
+          </div>
+          <div className='flex gap-4 items-center md:hidden '>
+            <Link href='/companies/start-hiring?step=1'>
+              <Button
+                type='primary'
+                className='page-btn px-[16px] py-[24px]'
+              >
                 Unlock all 25+ benefits
-                    </Button>
-                  </Link>
-                </div>
-              </div>
+              </Button>
+            </Link>
+          </div>
+        </div>
       </Container>
     </section>
   );
