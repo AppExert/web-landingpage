@@ -546,3 +546,23 @@ ol {
     opacity: 0;
   }
 }
+
+.custom-bullet{
+    width: 30px;
+    height: 6px;
+    background-color: #042F29;
+    margin-right: 5px;
+    margin-left: 5px;
+    border-radius: 8px;
+    margin-top:  -10px ;
+}
+
+.custom-active-bullet{
+  width: 48px;
+  height: 6px;
+  background: linear-gradient(to right, #0FAC98 50%, #042F29 50%);
+  margin-right: 5px;
+  margin-left: 5px;
+  border-radius: 8px;
+}
+

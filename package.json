@@ -38,6 +38,7 @@
     "react-dom": "^18.2.0",
     "react-query": "^3.19.0",
     "react-quill": "^2.0.0",
+    "swiper": "^10.3.1",
     "typeface-inter": "^3.18.1",
     "yup": "^0.32.9"
   },
