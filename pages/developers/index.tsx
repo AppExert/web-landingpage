@@ -56,7 +56,7 @@ const Developers = () => {
           <div>
             
            
-            <div className=' z-40 relative'>
+            <div className=' z-40  '>
               {/* Content of the div */}
               <div >
                 <Hero/>
