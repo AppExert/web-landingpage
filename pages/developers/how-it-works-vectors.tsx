@@ -55,11 +55,11 @@ function LoadImage({
         viewport={{ once: false, amount: 0.8, margin: "0% 0px 0% 0px" }}
       >
         <div className=' flex justify-center items-center '>
-          <motion.div className=' bg-[#09071B] ' variants={cardVariants}>
+          <motion.div variants={cardVariants}>
             <Image
-              className='rounded-lg p-2 '
-              width={572}
-              height={646}
+              className='rounded-lg '
+              width={520}
+              height={520}
               src={refItem.imageSrc}
               alt='Talent pool'
             />
@@ -190,13 +190,13 @@ const HowItWorks = () => {
   return (
     <section className='md:pt-[100px] pt-[72px]'>
       <Container>
-        <div className='flex flex-col items-center md:pb-[72px] pb-[40px]'>
+        <div className='flex flex-col items-center md:pb-[100px] pb-[40px]'>
           <p className='green-label'>HOW TO JOIN</p>
           <h1 className='heading pt-2 md:w-[651px] text-center text-[40px]'>
             Get started today in 4 easy steps
           </h1>
         </div>
-        <div className='gap-[100px] md:grid md:grid-cols-2 hidden '>
+        <div className='gap-[100px] md:grid md:grid-cols-2 hidden'>
           {features.map((item, index) => (
             <LoadImage
               refItem={item}

@@ -52,7 +52,7 @@ const Hero = () => {
                 type='primary'
                 className='page-btn px-[16px] py-[24px]'
               >
-                Get started for free
+                Sign up, It's Free 
               </Button>
             </Link>
           </div>
