@@ -1,9 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import Head from "next/head";
-import { Button } from "antd";
-import Image from "next/image";
-import Link from "next/link";
-
-
 import Container from "@components/container";
 import BrandShowcase from "@components/home/brand-showcase";
 import ComparePlatforms from "./compare-platforms"
@@ -13,7 +9,6 @@ import WhyChooseAppExert from "@components/home/why-choose-appexert";
 import DevBenefits from "./devbenefits";
 import HowItWorksVector from "./how-it-works-vectors";
 import Testimonials from "./testimonials";
-
 
 const isHideDeveloperPage = process.env.NEXT_PUBLIC_HIDE_DEVELOPER_PAGE;
 
@@ -32,7 +27,6 @@ const Developers = () => {
           name='keywords'
           content='development jobs remote, work from home jobs, full time remote jobs, remote working employees, appexert'
         />
-
         {/* og tags */}
         <meta
           property='og:title'
@@ -52,23 +46,15 @@ const Developers = () => {
       </Head>
       <Container >
         <section>
-        
-          <div>
-            
-           
-            <div className=' z-40  '>
-              {/* Content of the div */}
-              <div >
-                <Hero/>
-                <BrandShowcase />
-                <ComparePlatforms />
-                <HowItWorks/>
-                <Testimonials/>
-                <WhyChooseAppExert/>
-                <DevBenefits/>
-                <HowItWorksVector/>
-              </div>
-            </div>
+          <div className=' z-40  '>
+            <Hero/>
+            <BrandShowcase />
+            <ComparePlatforms />
+            <HowItWorks/>
+            <Testimonials/>
+            <WhyChooseAppExert/>
+            <DevBenefits/>
+            <HowItWorksVector/>
           </div>
         </section>
       </Container>

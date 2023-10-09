@@ -45,7 +45,7 @@ const WhyChooseAppExert = () => {
   const [hoveredIndex, setHoveredIndex] = useState(-1);
 
   return (
-    <section className="md:py-[100px] py-[48px]">
+    <section className="md:py-[200px] py-[48px]">
       <Container>
         <div>
           <div className="flex flex-col justify-center items-center md:pb-[72px] pb-[40px]">

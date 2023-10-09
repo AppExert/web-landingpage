@@ -1,12 +1,13 @@
 
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
+import Container from "@components/container";
 
 const REASONS: {
   content: string;
@@ -50,62 +51,86 @@ const testimonials = () => {
     setActiveBulletIndex(swiper.realIndex);
   };
 
+  const swiperContainerRef = useRef(null);
+
+  useEffect(() => {
+    const swiperContainer = swiperContainerRef.current;
+    if (swiperContainer) {
+      const updateSectionHeight = () => {
+        const swiperContainerHeight = window.getComputedStyle(swiperContainer).height;
+        const section = document.getElementById("testimonial-section");
+        if (section) {
+          section.style.height = swiperContainerHeight;
+        }
+      };
+  
+      updateSectionHeight();
+      window.addEventListener("resize", updateSectionHeight);
+      return () => {
+        window.removeEventListener("resize", updateSectionHeight);
+      };
+    }
+  }, []);
+  
+
   return (
-    <div className="md:h-[35vh] ">
-      <div className="md:mt-[-25vh] md:absolute inset-x-0 ">
-        <Swiper
-          slidesPerView={"auto"}
-          centeredSlides={true}
-          loop={true}
-          spaceBetween={30}
-          pagination={{
-            clickable: true,
-            bulletActiveClass: "custom-active-bullet",
-            bulletClass: "custom-bullet",                     
-          }}
-          modules={[Pagination]}
-          className="mySwiper md:p-12 py-12"
-          onSlideChange={handleSlideChange}
-        >
-          {REASONS.map((reason, index) => (
-            <SwiperSlide
-              key={index}                
-              className={`p-[24px] rounded-[8px] flex md:flex-row flex-col  gap-4 md:w-[1000px] justify-between bg-[#1B1929]  ${
-                index === activeBulletIndex   ? "opacity-100" : "opacity-[20%]"
-              }`}        >
-              <div className='md:w-[496px] flex flex-col justify-between '>
-                <div>
+    <section id="testimonial-section" className="md:mt-[-140px]" >
+      <Container>
+        <div ref={swiperContainerRef} className="md:absolute inset-x-0 ">
+          <Swiper
+            slidesPerView={"auto"}
+            centeredSlides={true}
+            loop={true}
+            spaceBetween={100}
+            pagination={{
+              clickable: true,
+              bulletActiveClass: "custom-active-bullet",
+              bulletClass: "custom-bullet",                     
+            }}
+            modules={[Pagination]}
+            className="mySwiper md:p-12 py-12"
+            onSlideChange={handleSlideChange}
+          >
+            {REASONS.map((reason, index) => (
+              <SwiperSlide
+                key={index}                
+                className={`p-[24px] rounded-[8px] flex md:flex-row flex-col  gap-4 md:w-[1000px] justify-between bg-[#1B1929]  ${
+                  index === activeBulletIndex   ? "opacity-100" : "opacity-[20%]"
+                }`}        >
+                <div className='md:w-[496px] flex flex-col justify-between '>
+                  <div>
+                    <Image
+                      width={40}
+                      height={40}
+                      src={"/images/home/ipad/quotation.svg"}
+                      alt='quotation'
+                    />
+                    <h3 className='text-white mt-[24px] mb-[16px] text-[22px] md:text-[#C3C2CB]  cursor-pointer'>
+                      {reason.content}
+                    </h3>
+                  </div>
+                  <div>
+                    <p className='text-gray-400 text-[#FFFFFF] text-[18px] cursor-pointer'>
+                      {reason.name}
+                    </p>
+                    <p className='text-gray-400 text-[18px] cursor-pointer'>
+                      {reason.designation}
+                    </p>
+                  </div>
+                </div>
+                <div className="md:w-[400px] ">
                   <Image
-                    width={40}
-                    height={40}
-                    src={"/images/home/ipad/quotation.svg"}
-                    alt='quotation'
-                  />
-                  <h3 className='text-white mt-[24px] mb-[16px] text-[22px] md:text-[#C3C2CB]  cursor-pointer'>
-                    {reason.content}
-                  </h3>
+                    width={400} 
+                    height={400}
+                    src={reason.image} />
                 </div>
-                <div>
-                  <p className='text-gray-400 text-[#FFFFFF] text-[18px] cursor-pointer'>
-                    {reason.name}
-                  </p>
-                  <p className='text-gray-400 text-[18px] cursor-pointer'>
-                    {reason.designation}
-                  </p>
-                </div>
-              </div>
-              <div className="md:w-[400px] ">
-                <Image
-                  width={400} 
-                  height={400}
-                  src={reason.image} />
-              </div>
-            </SwiperSlide>
-          ))}          
-        </Swiper>
-      </div>
+              </SwiperSlide>
+            ))}          
+          </Swiper>
+        </div>
       
-    </div>
+      </Container>
+    </section>
 
 
   );
