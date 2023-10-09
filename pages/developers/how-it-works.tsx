@@ -4,8 +4,6 @@ import { animate, motion, useMotionValue, useTransform, Variants } from "framer-
 import Container from "@components/container";
 import { useEffect, useState } from "react";
 import cn from "classnames";
-
-
 function LoadImage({
   refItem,
   index,
@@ -16,7 +14,6 @@ function LoadImage({
   length: number;
 }) {
   const [activeIndex, setActiveIndex] = useState(0);
-
   const cardVariants: Variants = {
     offscreen: {
       opacity: index === 0  ? 1 : 0,
@@ -33,7 +30,6 @@ function LoadImage({
     },
   };
   
-
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
     const windowHeight = window.innerHeight;
@@ -50,7 +46,6 @@ function LoadImage({
       window.removeEventListener("scroll", handleScroll);
     };
   }, [activeIndex]);
-
   return (
     <>
       <motion.div
@@ -59,12 +54,12 @@ function LoadImage({
         whileInView='onscreen'
         viewport={{ once: false, amount: 0.8, margin: "0% 0px 0% 0px" }}
       >
-        <div className=' flex justify-center items-center '>
-          <motion.div className=' bg-[#09071B] ' variants={cardVariants}>
+        <div className='flex justify-center items-center '>
+          <motion.div className='bg-[#09071B] py-[39px] pr-[56px]' variants={cardVariants}>
             <Image
-              className='rounded-lg p-2 '
-              width={572}
-              height={646}
+              className='rounded-lg'
+              width={516}
+              height={568}
               src={refItem.imageSrc}
               alt='Talent pool'
             />
@@ -74,10 +69,10 @@ function LoadImage({
       <div>
         <div>
           <div 
-            className={cn( "h-[100vh] flex justify-center items-end  px-5 md:px-12")}>
+            className={cn( "h-[100vh] flex justify-center items-end px-5 md:px-12")}>
             <div className='bg-[#020013] text-white '>
               <div className='flex flex-col gap-4 text-[#908E9F]'>
-                <h2 className='text-white pb-4 text-[18px] md:text-[22px] font-medium  md:font-semibold '>
+                <h2 className='text-[#C3C2CB] pb-4 text-[18px] md:text-[22px] font-medium  md:font-semibold '>
                   {refItem.title}{" "}
                 </h2>
                 {refItem.keyPoints.map((keyPoint: any, keyIndex: any) => (
@@ -103,23 +98,12 @@ function LoadImage({
     </>
   );
 }
-
 const HowItWorks = () => {
   const features = [
     {
       show: true,
-      title: "Comprehensive Talent Pool",
-      imageSrc: "/images/home/ipad/profile.svg",
-      keyPoints: [
-        "Gain access to a vast talent pool of prescreened developers.",
-        "Evaluate technical, behavioural, and cultural fit with confidence.",
-        "500+ senior developers and growing, spanning 10+ roles and 100+ skills.",
-      ],
-    },
-    {
-      show: false,
-      title: "360° Developer Profiles",
-      imageSrc: "/images/home/ipad/videoresume.svg",
+      title: "Unified Developer profile",
+      imageSrc: "/images/home/ipad/UnifiedDeveloperProfile.png",
       keyPoints: [
         "Comprehensive 360-degree developer profiles.",
         "Get a holistic view of candidates, including skills, experience, projects, and more.",
@@ -128,8 +112,8 @@ const HowItWorks = () => {
     },
     {
       show: false,
-      title: "Generative AI powered pre-screening reports",
-      imageSrc: "/images/home/ipad/jobboard.svg",
+      title: "Video Cover Letter",
+      imageSrc: "/images/home/ipad/VideoCoverLetter.png",
       keyPoints: [
         "Engage candidates with gamified pre-screening reports and interactive rubric scorecards.",
         "Unlock powerful insights and recommendations driven by our cutting-edge GPT-4 Generative AI model.",
@@ -138,8 +122,8 @@ const HowItWorks = () => {
     },
     {
       show: false,
-      title: "Streamlined Interview pipeline",
-      imageSrc: "/images/home/ipad/verified.svg",
+      title: "Job board",
+      imageSrc: "/images/home/ipad/JobBoard.png",
       keyPoints: [
         "Visualise your interview process effortlessly with the intuitive hiring pipeline",
         "Manage all your candidates seamlessly using the Kanban-board",
@@ -148,8 +132,8 @@ const HowItWorks = () => {
     },
     {
       show: false,
-      title: "Powerful Remote Work Tools",
-      imageSrc: "/images/home/ipad/verified.svg",
+      title: "Verified Company Profiles",
+      imageSrc: "/images/home/ipad/VerifiedCompanyProfile.png",
       keyPoints: [
         "Access a suite of 10+ powerful tools to enhance remote work productivity and engagement.",
         "Effortlessly manage timesheets, contracts, invoices, and performance feedback all in one place",
@@ -157,24 +141,19 @@ const HowItWorks = () => {
       ],
     },
   ];
-
   const [currentIndex, setCurrentIndex] = useState(0);
   const [slides, setSlides] = useState(features);
-
   useEffect(() => {
     showSlide();
   }, [currentIndex]);
-
   const x = useMotionValue(0);
   const opacity = useTransform(x, [100, 0, -100], [0, 1, 0]);
-
   const handleDrag = (
     _: any,
     { offset }: { offset: { x: number; y: number } },
   ) => {
     x.set(offset.x);
   };
-
   const handleDragEnd = (_:any, { offset, velocity }: { offset: { x: number; y: number }; velocity: { x: number; y: number } }) => {
     const swipeThreshold = 100;
     const isSwiped = Math.abs(offset.x) > swipeThreshold;
@@ -193,16 +172,13 @@ const HowItWorks = () => {
     // Animate the scroll position to the new slide
     animate(x, 0, { type: "spring", stiffness: 500, damping: 30 });
   };
-
   const showSlide = () => {
     const updatedSlides = slides.map((slide, index) => ({
       ...slide,
       show: index === currentIndex,
     }));
-
     setSlides(updatedSlides);
   };
-
   return (
     <section className='md:pt-[100px] pt-[72px]'>
       <Container>
@@ -223,9 +199,7 @@ const HowItWorks = () => {
             />
           ))}
         </div>
-
         {/* mobile device slider  */}
-
         <div className='min-w-screen  pb-[40px] flex items-center justify-center md:hidden '>
           <div className='w-full mx-auto '>
             <div className='overflow-hidden relative'>
@@ -307,5 +281,4 @@ const HowItWorks = () => {
     </section>
   );
 };
-
 export default HowItWorks;

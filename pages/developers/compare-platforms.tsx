@@ -2,12 +2,10 @@ import Container from "@components/container";
 import { AnimatePresence, LayoutGroup, motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
-
 const ComparePlatforms = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [isAnimating, setIsAnimating] = useState(false);
   const [isCircleExpanded, setIsCircleExpanded] = useState(false);
-
   const hide = {
     opacity: 0,
     display: "none",
@@ -15,7 +13,6 @@ const ComparePlatforms = () => {
       duration: 2,
     },
   };
-
   const show = {
     opacity: 1,
     display: "block",
@@ -23,23 +20,17 @@ const ComparePlatforms = () => {
       duration: 3,
     },
   };
-
   const handleClick = () => {
-
     setIsCircleExpanded(isVisible);
-
     if (isAnimating) {
       return;
     }
-
     setIsAnimating(true);
-
     setTimeout(() => {
       setIsVisible(!isVisible);
       setIsAnimating(false);
     }, 100);
   };
-
   const circleVariant = {
     expanded: {
       width: "900px",
@@ -52,9 +43,7 @@ const ComparePlatforms = () => {
       },
     },
   };
-
   const [activeItem, setActiveitem] = useState(0);
-
   const items = [
     {
       title: <div className="flex items-center gap-x-[4px] ">
@@ -85,7 +74,6 @@ const ComparePlatforms = () => {
       </div>
     }
   ]
-
   return (
     <section className="py-[48px] " >
       <Container>
@@ -125,20 +113,17 @@ const ComparePlatforms = () => {
                         {isActive && (
                           <motion.div
                             layoutId="SegmentedControlActive"
-                            className={i === 0 ? "border-[#FF5C5C] drop-shadow-[0_32px_50px_rgba(255,92,92,0.08)] absolute inset-0 z-10 border-[0.5px] drop-shadow-[0_32px_50px_rgba(15,172,152,0.08)] bg-[#FFF5F51A] rounded-[24px] shadow-md" : "border-[#5cff92] absolute inset-0 z-10 border-[0.5px] bg-[#FFF5F51A] rounded-[24px] shadow-md"}
+                            className={i === 0 ? "border-[#FF5C5C] drop-shadow-[0_32px_50px_rgba(255,92,92,0.08)] absolute inset-0 z-10 border-[0.5px] drop-shadow-[0_32px_50px_rgba(15,172,152,0.08)] bg-[#FFF5F51A] rounded-[24px] shadow-md" : "border-[#0FAC98] absolute inset-0 z-10 border-[0.5px] bg-[#FFF5F51A] rounded-[24px] shadow-md"}
                           />
                         )}
                         <div className="relative z-20 md:text-[16px] text-[12px] font-medium">{item.title}</div>
                       </button>
-
                     </motion.div>
                   );
                 })}
               </div>
             </LayoutGroup>
-
           </div>
-
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -245,7 +230,6 @@ const ComparePlatforms = () => {
                 )}
               </AnimatePresence>
             </div>
-
             <motion.div
               whileHover={{
                 image: "/images/home/Processorintermidiategreen.png",
@@ -258,7 +242,6 @@ const ComparePlatforms = () => {
               }}
               className="md:w-[300px] md:h-[300px] -my-10 md:my-0 w-[200px] h-[200px] cursor-pointer hidden md:block"
             >
-
               <Image
                 width={300}
                 height={300}
@@ -266,7 +249,6 @@ const ComparePlatforms = () => {
                 alt='Check icon'
               />
             </motion.div>
-
             <div className='md:w-[400px]'>
               <AnimatePresence>
                 {isVisible ? (
@@ -374,5 +356,4 @@ const ComparePlatforms = () => {
     </section>
   );
 };
-
 export default ComparePlatforms;
