@@ -185,8 +185,7 @@ const HowItWorks = () => {
         <div className='flex flex-col items-center md:pb-[72px] pb-[40px]'>
           <p className='green-label'>FEATURES</p>
           <h1 className='heading pt-2 md:w-[651px] text-center'>
-            Say goodbye to all your hiring hassles and only hire the best, in
-            days.
+          Say Goodbye to all your remote job search hassles and freelance uncertainities
           </h1>
         </div>
         <div className='md:grid md:grid-cols-2 hidden '>

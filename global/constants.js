@@ -2,7 +2,7 @@ export const offset = 15;
 export const totalPages = 50;
 export const collectionProfileoffset = 9;
 
-export const icons = [
+export const BENEFITS = [
   {
     name: "Home Office Support",
     icon: (
