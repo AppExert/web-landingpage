@@ -68,7 +68,7 @@ const DevBenefits = () => {
           <div className='flex flex-col md:flex-row gap-4 text-gray-400  md:pt-[80px]'></div>
         </div>
         <div  style={{ zIndex: "2" }}>
-          <div className='  marquee-container grid grid-cols-2 lg:grid-cols-3 w-max gap-[10px] h-[540px] overflow-hidden md:gap-6  rounded-[8px] '>
+          <div className='relative  marquee-container grid grid-cols-2 lg:grid-cols-3 w-max gap-[10px] h-[540px] overflow-hidden md:gap-6  rounded-[8px] '>
             <BenefitsSection />            
             <BenefitsSection />
             <div
