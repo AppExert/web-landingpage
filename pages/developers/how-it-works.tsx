@@ -55,7 +55,7 @@ function LoadImage({
         viewport={{ once: false, amount: 0.8, margin: "0% 0px 0% 0px" }}
       >
         <div className='flex justify-center items-center '>
-          <motion.div className='bg-[#09071B] py-[39px] pr-[56px]' variants={cardVariants}>
+          <motion.div className='bg-[#09071B]' variants={cardVariants}>
             <Image
               className='rounded-lg'
               width={516}
@@ -102,32 +102,32 @@ const HowItWorks = () => {
   const features = [
     {
       show: true,
-      title: "Unified Developer profile",
+      title: "AI Powered Resume",
       imageSrc: "/images/home/ipad/UnifiedDeveloperProfile.png",
       keyPoints: [
-        "Comprehensive 360-degree developer profiles.",
-        "Get a holistic view of candidates, including skills, experience, projects, and more.",
-        "Make informed decisions based on a deeper understanding of each candidate.",
+        "Create your 360' developer profile enriched by AI, in few clicks.",
+        "Include interactive pre-screening reports for potential employers.",
+        "Showcase your skills, experience, assessments and standout instantly.",
       ],
     },
     {
       show: false,
-      title: "Video Cover Letter",
+      title: "Audio-Video Cover Letter",
       imageSrc: "/images/home/ipad/VideoCoverLetter.png",
       keyPoints: [
-        "Engage candidates with gamified pre-screening reports and interactive rubric scorecards.",
-        "Unlock powerful insights and recommendations driven by our cutting-edge GPT-4 Generative AI model.",
-        "Benefit from interview recordings with transcription, live video artefacts, coding challenges, and ratings.",
+        "Personalize video or audio cover letters for impactful communication.",
+        "Seamlessly integrate them into your profile for a unique introduction.",
+        "Enhance your chances by showcasing your communication skills visually.",
       ],
     },
     {
       show: false,
-      title: "Job board",
+      title: "Jobs Board with Interview Pipeline ",
       imageSrc: "/images/home/ipad/JobBoard.png",
       keyPoints: [
-        "Visualise your interview process effortlessly with the intuitive hiring pipeline",
-        "Manage all your candidates seamlessly using the Kanban-board",
-        "Integration with meeting schedulers allows you to book interviews in just a few clicks.",
+        "Discover matching jobs based on your preferences and qualifications. ",
+        "Visualize and manage interviews and job prospects effectively.",
+        "Enjoy an intuitive and user-friendly interface.",
       ],
     },
     {
@@ -135,9 +135,9 @@ const HowItWorks = () => {
       title: "Verified Company Profiles",
       imageSrc: "/images/home/ipad/VerifiedCompanyProfile.png",
       keyPoints: [
-        "Access a suite of 10+ powerful tools to enhance remote work productivity and engagement.",
-        "Effortlessly manage timesheets, contracts, invoices, and performance feedback all in one place",
-        "Gain insights through availability reports and developer happiness scores.",
+        "Dive deep into verified company profiles for in-depth insights.",
+        "Access upfront salary info, tech stack details, and more.",
+        "Make informed decisions about employers in your job search.",
       ],
     },
   ];

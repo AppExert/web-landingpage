@@ -47,21 +47,19 @@ const DevBenefits = () => {
     <section>
       <Container className='md:my-[100px] px-8 md:flex gap-[76px] md:text-left text-center  items-center justify-between'>
         <div className='md:py-0 content-center md:w-[552px] '>
-          <p className='green-label'>BENEFITS</p>
+          <p className='green-label'>PERKS AND BENEFITS</p>
           <h1 className='hero-heading pt-1 text-[24px] md:text-[40px]'>
             {
-              "Get hired to one of our teams and you'll unlock an AppExert+Benefits"
+              "Get hired, and claim your AppExert+ benefits"
             }
           </h1>
           <p className='section-paragraph text-[#908E9F] py-[10px] pb-[20px] text-[18px]'>
-            Simplify hiring and reduce administartive burdens with our
-            innovative EOR model, ensuring compliance and peace of mind and
-            enjoy 100% ownership.
+            Size the opportunity! your job offer comes with exclusive access to AppExert+ valuable perks and rewards.
           </p>
           <div className='md:flex gap-4 items-center hidden '>
             <Link href='/benefits'>
               <Button type='primary' className='page-btn px-[16px] py-[24px]'>
-                Unlock all 25+ benefits
+                Explore all 25+ benefits
               </Button>
             </Link>
           </div>
@@ -79,12 +77,23 @@ const DevBenefits = () => {
               }}
             ></div>
             <div
-              className='absolute bottom-0 w-full h-[112px]  '
+              className='absolute bottom-0 w-full h-[112px] '
               style={{
                 background:
                   "linear-gradient(0deg, #020013 0%, rgba(2, 0, 19, 0.00) 100%)",
               }}
             ></div>
+            
+          </div>
+          <div className='flex gap-4 items-center md:hidden mt-12 '>
+            <Link href='/benefits'>
+              <Button
+                type='primary'
+                className='page-btn px-[16px] py-[24px]'
+              >
+                Explore all 25+ benefits
+              </Button>
+            </Link>
           </div>
         </div>
       </Container>
