@@ -1,13 +1,13 @@
 <svg width="126" height="126" viewBox="0 0 126 126" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g filter="url(#filter0_f_2576_69249)">
+<g filter="url(#filter0_f_9716_16699)">
 <circle cx="63" cy="63" r="21" fill="#1B1551"/>
 </g>
-<path d="M73 58L65.1314 65.8686C64.7354 66.2646 64.5373 66.4627 64.309 66.5368C64.1082 66.6021 63.8918 66.6021 63.691 66.5368C63.4627 66.4627 63.2646 66.2646 62.8686 65.8686L60.1314 63.1314C59.7354 62.7354 59.5373 62.5373 59.309 62.4632C59.1082 62.3979 58.8918 62.3979 58.691 62.4632C58.4627 62.5373 58.2646 62.7354 57.8686 63.1314L53 68M73 58H66M73 58V65" stroke="#D4CEFD" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M70 54V58M68 56H72M70 68V72M68 70H72M61 56L59.53 59.7272C59.3421 60.2037 59.2481 60.4419 59.1043 60.6428C58.9767 60.8208 58.8208 60.9767 58.6428 61.1043C58.4419 61.2481 58.2037 61.3421 57.7272 61.53L54 63L57.7272 64.47C58.2037 64.6579 58.4419 64.7519 58.6428 64.8957C58.8208 65.0233 58.9767 65.1792 59.1043 65.3572C59.2481 65.5581 59.3421 65.7963 59.53 66.2728L61 70L62.47 66.2728C62.6579 65.7963 62.7519 65.5581 62.8957 65.3572C63.0233 65.1792 63.1792 65.0233 63.3572 64.8957C63.5581 64.7519 63.7963 64.6579 64.2728 64.47L68 63L64.2728 61.53C63.7963 61.3421 63.5581 61.2481 63.3572 61.1043C63.1792 60.9767 63.0233 60.8208 62.8957 60.6428C62.7519 60.4419 62.6579 60.2037 62.47 59.7272L61 56Z" stroke="#D4CEFD" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 <defs>
-<filter id="filter0_f_2576_69249" x="0" y="0" width="126" height="126" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_f_9716_16699" x="0" y="0" width="126" height="126" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-<feGaussianBlur stdDeviation="21" result="effect1_foregroundBlur_2576_69249"/>
+<feGaussianBlur stdDeviation="21" result="effect1_foregroundBlur_9716_16699"/>
 </filter>
 </defs>
 </svg>

@@ -268,7 +268,7 @@ const ComparePlatforms = () => {
                     transition={{ duration: 2 }}
                   >
                     <div className='flex md:flex-row flex-row-reverse items-center justify-end md:gap-2 '>
-                      <p className='text-[#E4E4E4] text-right'>
+                      <p className='text-[#E4E4E4] md:text-right text-left'>
                       Making career sacrifices to 
                         <br className="md:block hidden"/>
                       prioritize childcare
@@ -283,7 +283,7 @@ const ComparePlatforms = () => {
                       </div>
                     </div>
                     <div className='flex md:flex-row flex-row-reverse items-center justify-end md:gap-2 md:my-[100px] '>
-                      <p className='text-[#E4E4E4] text-right'>
+                      <p className='text-[#E4E4E4] md:text-right text-left'>
                       Surging costs of living with 
                         <br className="md:block hidden"/>
                       metro relocation
