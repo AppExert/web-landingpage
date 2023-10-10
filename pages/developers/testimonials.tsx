@@ -14,6 +14,7 @@ const REASONS: {
   name: string;
   designation: string;
   image: string;
+  location: string;
 }[] = [
   {
     content:
@@ -21,12 +22,14 @@ const REASONS: {
     name: "Arindam ",
     designation: "Lead Software Engineer",
     image: "/images/ArindamImage.png",
+    location: "West Bengal, India"
   },
   {
     content:"The vision of the high level management and the trust they entrust in the employees is a factor that makes them unique. The freedom we have in terms of work we do can only be seen in a very few companies.",
     name: "Sharon Sara Varghese ",
     designation: "Senior Software QA Engineer",
     image: "/images/sharon.png",
+    location: "Texas, US"
   },
   {
     content:
@@ -34,6 +37,7 @@ const REASONS: {
     name: "Asarudeen   ",
     designation: "Software Developer ",
     image: "/images/asar.png",
+    location: "Tamil Nadu, India"
   },
   {
     content:
@@ -41,6 +45,7 @@ const REASONS: {
     name: "Nidhi Sharma ",
     designation: "Software Developer ",
     image: "/images/nidhi.png",
+    location: "Punjab, India"
   },
 ];
 
@@ -74,7 +79,7 @@ const testimonials = () => {
   
 
   return (
-    <section id="testimonial-section" className="md:mt-[-140px]" >
+    <section id="testimonial-section" >
       <Container>
         <div ref={swiperContainerRef} className="md:absolute inset-x-0 ">
           <Swiper
@@ -115,6 +120,18 @@ const testimonials = () => {
                     </p>
                     <p className='text-gray-400 text-[18px] cursor-pointer'>
                       {reason.designation}
+                    </p>
+                    <p className='flex  w-max mt-[12px] p-[4px] px-[8px] text-[#908E9F] bg-[#715ef914] rounded-[20px] text-[14px] cursor-pointer font-normal'>
+                      <div className="mr-1 mt-[1px]">
+                        <Image
+                          width={14}
+                          height={14}
+                          src={"/images/home/location.svg"}
+                          alt='location'
+                        />
+                      </div>
+                     
+                      {reason.location}
                     </p>
                   </div>
                 </div>
