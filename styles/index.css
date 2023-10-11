@@ -563,3 +563,28 @@ ol {
   border-radius: 8px;
 }
 
+.ant-steps-icon {
+  width: 56px !important;
+  height: 56px !important;
+}
+
+.ant-steps-item-title::after {
+  top: 29px;
+}
+
+.custom-bullet-mobile {
+  display: none;   
+}
+
+@media screen and (max-width: 768px) {
+  .custom-bullet-mobile {
+    display: inline-block; 
+    width: 30px;
+    height: 6px;
+    background-color: #042F29;
+    margin-right: 5px;
+    margin-left: 5px;
+    border-radius: 8px;
+    margin-top:  -20px ;
+  }
+}

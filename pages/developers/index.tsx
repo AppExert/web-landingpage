@@ -9,7 +9,12 @@ import WhyChooseAppExert from "@components/home/why-choose-appexert";
 import DevBenefits from "./devbenefits";
 import HowItWorksVector from "./how-it-works-vectors";
 import Testimonials from "./testimonials";
+import dynamic from "next/dynamic";
 
+
+const DynamicTestimonials = dynamic(() => import("./testimonials"), {
+  ssr: false, 
+});
 const isHideDeveloperPage = process.env.NEXT_PUBLIC_HIDE_DEVELOPER_PAGE;
 
 const Developers = () => {
@@ -51,7 +56,7 @@ const Developers = () => {
             <BrandShowcase />
             <ComparePlatforms />
             <HowItWorks/>
-            <Testimonials/>
+            <DynamicTestimonials />
             <WhyChooseAppExert/>
             <DevBenefits/>
             <HowItWorksVector/>
