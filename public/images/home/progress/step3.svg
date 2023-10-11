@@ -1,0 +1,13 @@
+<svg width="127" height="126" viewBox="0 0 127 126" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_f_9716_16963)">
+<circle cx="63.334" cy="63" r="21" fill="#1B1551"/>
+</g>
+<path d="M67.334 61L69.9108 59.4539C70.7039 58.978 71.1005 58.7401 71.4268 58.7705C71.7113 58.797 71.9709 58.944 72.14 59.1743C72.334 59.4385 72.334 59.901 72.334 60.8259V65.1741C72.334 66.099 72.334 66.5615 72.14 66.8257C71.9709 67.056 71.7113 67.203 71.4268 67.2295C71.1005 67.2599 70.7039 67.022 69.9108 66.5461L67.334 65M57.534 69H64.134C65.2541 69 65.8141 69 66.242 68.782C66.6183 68.5903 66.9243 68.2843 67.116 67.908C67.334 67.4802 67.334 66.9201 67.334 65.8V60.2C67.334 59.0799 67.334 58.5198 67.116 58.092C66.9243 57.7157 66.6183 57.4097 66.242 57.218C65.8141 57 65.2541 57 64.134 57H57.534C56.4139 57 55.8538 57 55.426 57.218C55.0497 57.4097 54.7437 57.7157 54.552 58.092C54.334 58.5198 54.334 59.0799 54.334 60.2V65.8C54.334 66.9201 54.334 67.4802 54.552 67.908C54.7437 68.2843 55.0497 68.5903 55.426 68.782C55.8538 69 56.4139 69 57.534 69Z" stroke="#D4CEFD" stroke-opacity="0.7" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<filter id="filter0_f_9716_16963" x="0.333984" y="0" width="126" height="126" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="21" result="effect1_foregroundBlur_9716_16963"/>
+</filter>
+</defs>
+</svg>
