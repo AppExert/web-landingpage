@@ -545,8 +545,8 @@ ol {
 }
 
 .custom-bullet{
-    width: 30px;
-    height: 6px;
+    width: 8px;
+    height: 8px;
     background-color: #042F29;
     margin-right: 5px;
     margin-left: 5px;
@@ -555,9 +555,9 @@ ol {
 }
 
 .custom-active-bullet{
-  width: 48px;
-  height: 6px;
-  background: linear-gradient(to right, #0FAC98 50%, #042F29 50%);
+  width: 40px;
+  height: 8px;
+  background: #0FAC98;
   margin-right: 5px;
   margin-left: 5px;
   border-radius: 8px;
@@ -570,21 +570,23 @@ ol {
 
 .ant-steps-item-title::after {
   top: 29px;
+  height: 2px; 
 }
 
-.custom-bullet-mobile {
+.ant-steps-item-wait > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title::after {
+  background-color: #2E2C4A;
+}
+
+.ant-steps-item-process > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title::after {
+  background-color: #2E2C4A;
+}
+
+.mobile-only .custom-bullet {
   display: none;   
 }
 
 @media screen and (max-width: 768px) {
-  .custom-bullet-mobile {
+  .mobile-only .custom-bullet {
     display: inline-block; 
-    width: 30px;
-    height: 6px;
-    background-color: #042F29;
-    margin-right: 5px;
-    margin-left: 5px;
-    border-radius: 8px;
-    margin-top:  -20px ;
   }
 }

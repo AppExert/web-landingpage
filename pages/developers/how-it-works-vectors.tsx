@@ -218,7 +218,7 @@ const HowItWorks = () => {
   const items = steps.map((item) => ({ key: item.icon, icon: item.icon }));
 
   return (
-    <section className='md:py-[100px] py-[72px] '>
+    <section className='py-[100px]'>
       <Container>
         <div className='flex flex-col justify-center items-center mb-[40px] md:mb-[0px] '>
           <p className='green-label'>HOW TO JOIN</p>
@@ -226,9 +226,9 @@ const HowItWorks = () => {
             Get started today in 4 easy steps
           </h1>
         </div>
-        <div className='hidden md:flex justify-center md:my-[72px] '>
+        <div className='hidden md:flex justify-center md:mt-[40px] md:mb-[56px] '>
           <Steps
-            className='md:w-[661px] w-max'
+            className='md:w-[500px] w-max'
             current={activeBulletIndex}
             direction='horizontal'
             items={items}
@@ -248,24 +248,24 @@ const HowItWorks = () => {
               pagination={{
                 clickable: true,
                 bulletActiveClass: "custom-active-bullet",
-                bulletClass: "custom-bullet-mobile",
+                bulletClass: "custom-bullet",
               }}
               modules={[Pagination, Autoplay]}
               onSlideChange={handleSlideChange}
-              className='mySwiper md:pb-0 pb-12'
+              className='mySwiper md:pb-0 pb-12 mobile-only'
             >
               {features.map((reason, index) => (
                 <SwiperSlide
                   key={index}
-                  className='md:p-[24px] pb-[20px] rounded-[8px] flex md:flex-row flex-col  
-                  gap-4 md:w-[1000px] justify-between bg-[#09071B] '
+                  className='md:px-[24px] pb-[20px] md:pb-[0px] rounded-[8px] flex md:flex-row flex-col  
+                  gap-4 md:w-[1000px] justify-between bg-[#09071B] border-2 border-[#18171C] '
                 >
-                  <Image width={1000} height={1000} src={reason.imageSrc} />
+                  <Image width={900} height={900} src={reason.imageSrc} />
 
                   <div className='flex flex-col gap-[12px] px-[20px] md:px-[40px] place-self-center'>
                     <p className='green-label'>STEP {reason.count}</p>
-                    <h1 className='heading  text-[22px] '>{reason.title}</h1>
-                    <h3 className='text-[22px] text-[#908E9F]  cursor-pointer'>
+                    <h1 className='heading  text-white text-[22px] '>{reason.title}</h1>
+                    <h3 className='text-[18px] text-[#908E9F]  cursor-pointer'>
                       {reason.keyPoints}
                     </h3>
                   </div>
@@ -274,7 +274,7 @@ const HowItWorks = () => {
             </Swiper>
           </div>
         </div>
-        <div className='flex justify-center mt-[56px]'>
+        <div className='flex justify-center mt-[36px]'>
           <Link
             href={`${process.env.NEXT_PUBLIC_HIRE_APP}/register?developers`}
           >

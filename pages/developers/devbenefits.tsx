@@ -85,7 +85,7 @@ const DevBenefits = () => {
             ></div>
             
           </div>
-          <div className='flex gap-4 items-center md:hidden mt-12 '>
+          <div className='flex gap-4 items-center md:hidden mt-12 w-screen  px-8 '>
             <Link href='/benefits'>
               <Button
                 type='primary'
