@@ -101,9 +101,17 @@ const testimonials = () => {
             {REASONS.map((reason, index) => (
               <SwiperSlide
                 key={index}
-                className={`p-[24px] rounded-[8px] flex md:flex-row flex-col  gap-4 md:w-[1000px] justify-between bg-[#1B1929]  ${
+                className={`p-[24px] rounded-[8px] flex md:flex-row flex-col  gap-4 md:w-[1000px] justify-between  ${
                   index === activeBulletIndex ? "opacity-100" : "opacity-[20%]"
-                }`}
+                }`             
+                }
+                style = {{
+                  borderRadius: "12px",
+                  border: "1px solid #1B1929",
+                  background: "radial-gradient(188.94% 181.55% at 50% 46.35%, rgba(255, 255, 255, 0.07) 0%, rgba(246, 246, 246, 0.00) 100%)",
+                  backdropFilter: "blur(12px)"
+
+                }}
               >
                 <div className='md:w-[496px] flex flex-col justify-between '>
                   <div>
