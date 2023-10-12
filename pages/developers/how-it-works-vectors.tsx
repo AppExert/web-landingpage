@@ -239,7 +239,6 @@ const HowItWorks = () => {
             <Swiper
               slidesPerView={"auto"}
               centeredSlides={true}
-              loop={true}
               spaceBetween={64}
               autoplay={{
                 delay: 2500,
