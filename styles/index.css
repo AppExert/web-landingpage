@@ -590,3 +590,27 @@ ol {
     display: inline-block; 
   }
 }
+
+.progressbar {
+  height: 2px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  border-radius: 60px;
+  background-color: #2E2C4A;
+  box-shadow: 0px 0px 20px #111;
+  overflow: hidden;
+}
+
+.bar {
+  width: 0%;
+  background: #715EF9;
+  background: linear-gradient(
+      180deg,
+      #7a69f8 0%,
+      #7867fa 32%,
+      #715EF9 100%
+  );
+}
+
