@@ -3,13 +3,20 @@ import Image from "next/image";
 import Container from "@components/container";
 import React, { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Steps } from "antd";
+
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import Link from "next/link";
 import { Button } from "antd";
-import { Autoplay, FreeMode, Pagination } from "swiper/modules";
+import {
+  Autoplay,
+  FreeMode,
+  Navigation,
+  Pagination,
+  Virtual,
+} from "swiper/modules";
+import { animate, motion, useScroll, useSpring } from "framer-motion";
 
 const HowItWorks = () => {
   const [activeBulletIndex, setActiveBulletIndex] = useState(0);
@@ -20,11 +27,11 @@ const HowItWorks = () => {
     setActiveBulletIndex(swiper.realIndex);
   };
 
-  const swiperContainerRef = useRef(null);
+  const swiperContainerRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
-    const swiperContainer =
-      swiperContainerRef.current as unknown as HTMLElement;
+    const swiperContainer = swiperContainerRef.current;
+
     if (swiperContainer) {
       const updateSectionHeight = () => {
         const swiperContainerHeight = swiperContainer.clientHeight;
@@ -84,7 +91,7 @@ const HowItWorks = () => {
   const steps = [
     {
       icon: (
-        <div className='flex justify-center '>
+        <div className='flex justify-center bg-[#020013]'>
           <div className='w-[fit-content] h-[fit-content] rounded-full relative overflow-hidden p-3'>
             <div
               className='absolute inset-0  rounded-full'
@@ -93,6 +100,45 @@ const HowItWorks = () => {
                 filter: "blur(21px)",
               }}
             ></div>
+            <svg
+              className='absolute inset-0  rounded-full'
+              style={{
+                background: activeBulletIndex === 0 ? "#362AA2" : "#1B1551",
+                filter: "blur(21px)",
+              }}
+              xmlns='http://www.w3.org/2000/svg'
+              width='126'
+              height='126'
+              viewBox='0 0 126 126'
+              fill='none'
+            >
+              <g filter='url(#filter0_f_9716_16955)'>
+                <circle cx='63' cy='63' r='21' fill='#362AA2' />
+              </g>
+              <defs>
+                <filter
+                  id='filter0_f_9716_16955'
+                  x='0'
+                  y='0'
+                  width='126'
+                  height='126'
+                  filterUnits='userSpaceOnUse'
+                  colorInterpolationFilters='sRGB'
+                >
+                  <feFlood floodOpacity='0' result='BackgroundImageFix' />
+                  <feBlend
+                    mode='normal'
+                    in='SourceGraphic'
+                    in2='BackgroundImageFix'
+                    result='shape'
+                  />
+                  <feGaussianBlur
+                    stdDeviation='21'
+                    result='effect1_foregroundBlur_9716_16955'
+                  />
+                </filter>
+              </defs>
+            </svg>
             <div className='fill-current relative '>
               <svg
                 width='25'
@@ -116,15 +162,47 @@ const HowItWorks = () => {
     },
     {
       icon: (
-        <div className='flex justify-center '>
-          <div className='w-[fit-content] h-[fit-content] rounded-full relative overflow-hidden p-3'>
-            <div
+        <div className='flex justify-center bg-[#020013]'>
+          <div className=' w-[fit-content] h-[fit-content] rounded-full relative overflow-hidden p-3'>
+            <svg
               className='absolute inset-0  rounded-full'
               style={{
                 background: activeBulletIndex === 1 ? "#362AA2" : "#1B1551",
                 filter: "blur(21px)",
               }}
-            ></div>
+              xmlns='http://www.w3.org/2000/svg'
+              width='126'
+              height='126'
+              viewBox='0 0 126 126'
+              fill='none'
+            >
+              <g filter='url(#filter0_f_9716_16955)'>
+                <circle cx='63' cy='63' r='21' fill='#362AA2' />
+              </g>
+              <defs>
+                <filter
+                  id='filter0_f_9716_16955'
+                  x='0'
+                  y='0'
+                  width='126'
+                  height='126'
+                  filterUnits='userSpaceOnUse'
+                  colorInterpolationFilters='sRGB'
+                >
+                  <feFlood floodOpacity='0' result='BackgroundImageFix' />
+                  <feBlend
+                    mode='normal'
+                    in='SourceGraphic'
+                    in2='BackgroundImageFix'
+                    result='shape'
+                  />
+                  <feGaussianBlur
+                    stdDeviation='21'
+                    result='effect1_foregroundBlur_9716_16955'
+                  />
+                </filter>
+              </defs>
+            </svg>
             <div className='fill-current relative '>
               <svg
                 width='25'
@@ -149,15 +227,47 @@ const HowItWorks = () => {
     },
     {
       icon: (
-        <div className='flex justify-center '>
+        <div className='flex justify-center bg-[#020013]'>
           <div className='w-[fit-content] h-[fit-content] rounded-full relative overflow-hidden p-3'>
-            <div
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              width='127'
+              height='126'
               className='absolute inset-0  rounded-full'
               style={{
                 background: activeBulletIndex === 2 ? "#362AA2" : "#1B1551",
                 filter: "blur(21px)",
               }}
-            ></div>
+              viewBox='0 0 127 126'
+              fill='none'
+            >
+              <g filter='url(#filter0_f_9716_16960)'>
+                <circle cx='63.666' cy='63' r='21' fill='#1B1551' />
+              </g>
+              <defs>
+                <filter
+                  id='filter0_f_9716_16960'
+                  x='0.666016'
+                  y='0'
+                  width='126'
+                  height='126'
+                  filterUnits='userSpaceOnUse'
+                  colorInterpolationFilters='sRGB'
+                >
+                  <feFlood floodOpacity='0' result='BackgroundImageFix' />
+                  <feBlend
+                    mode='normal'
+                    in='SourceGraphic'
+                    in2='BackgroundImageFix'
+                    result='shape'
+                  />
+                  <feGaussianBlur
+                    stdDeviation='21'
+                    result='effect1_foregroundBlur_9716_16960'
+                  />
+                </filter>
+              </defs>
+            </svg>
             <div className='fill-current relative '>
               <svg
                 width='25'
@@ -182,15 +292,47 @@ const HowItWorks = () => {
     },
     {
       icon: (
-        <div className='flex justify-center '>
+        <div className='flex justify-center bg-[#020013]'>
           <div className='w-[fit-content] h-[fit-content] rounded-full relative overflow-hidden p-3'>
-            <div
+            <svg
               className='absolute inset-0  rounded-full'
               style={{
                 background: activeBulletIndex === 3 ? "#362AA2" : "#1B1551",
                 filter: "blur(21px)",
               }}
-            ></div>
+              xmlns='http://www.w3.org/2000/svg'
+              width='126'
+              height='126'
+              viewBox='0 0 126 126'
+              fill='none'
+            >
+              <g filter='url(#filter0_f_9716_16955)'>
+                <circle cx='63' cy='63' r='21' fill='#362AA2' />
+              </g>
+              <defs>
+                <filter
+                  id='filter0_f_9716_16955'
+                  x='0'
+                  y='0'
+                  width='126'
+                  height='126'
+                  filterUnits='userSpaceOnUse'
+                  colorInterpolationFilters='sRGB'
+                >
+                  <feFlood floodOpacity='0' result='BackgroundImageFix' />
+                  <feBlend
+                    mode='normal'
+                    in='SourceGraphic'
+                    in2='BackgroundImageFix'
+                    result='shape'
+                  />
+                  <feGaussianBlur
+                    stdDeviation='21'
+                    result='effect1_foregroundBlur_9716_16955'
+                  />
+                </filter>
+              </defs>
+            </svg>
             <div className='fill-current relative '>
               <svg
                 width='24'
@@ -214,42 +356,74 @@ const HowItWorks = () => {
       ),
     },
   ];
+  type Swiper = any;
 
-  const items = steps.map((item) => ({ key: item.icon, icon: item.icon }));
+  const [swiperRef, setSwiperRef] = useState<Swiper | null>(null);
+
+  const slideTo = (index: number) => {
+    swiperRef.slideTo(index, 0);
+    swiperRef.autoplay.start();
+  };
 
   return (
-    <section className='py-[100px]'>
+    <section className='py-[100px] '>
       <Container>
-        <div className='flex flex-col justify-center items-center mb-[40px] md:mb-[0px] '>
+        <div className='flex flex-col justify-center items-center mb-[40px]'>
           <p className='green-label'>HOW TO JOIN</p>
           <h1 className='heading pt-2 md:w-[651px] text-center text-[24px] md:text-[40px] '>
             Get started today in 4 easy steps
           </h1>
         </div>
-        <div className='hidden md:flex justify-center md:mt-[40px] md:mb-[56px] '>
-          <Steps
-            className='md:w-[500px] w-max'
-            current={activeBulletIndex}
-            direction='horizontal'
-            items={items}
-          />
+        <div className='flex justify-center my-[56px] '>
+          {/* Manual progress bar */}
+          <div>
+            <div className='md:w-[450px]  progressbar ml-4'>
+              <motion.div
+                className='bar '
+                animate={{
+                  width: `${
+                    activeBulletIndex === 0
+                      ? 35
+                      : activeBulletIndex === 1
+                        ? 70
+                        : activeBulletIndex === 2
+                          ? 100
+                          : 0
+                  }%`,
+                }}
+                transition={{
+                  duration: 6,
+                }}
+              />
+            </div>
+            <div className='flex md:gap-[100px] gap-8 mt-[-26px]  '>
+              {steps.map((steps, index) => (
+                <div className='' key={index} onClick={() => slideTo(index)}>
+                  {steps.icon}
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
-        <div id='how-to-join-section'>
-          <div ref={swiperContainerRef} className='md:absolute inset-x-0 '>
+        <div id="how-to-join-section" className="md:min-h-[385px]">
+          <div
+            ref={swiperContainerRef as React.LegacyRef<HTMLDivElement>}
+            className='md:absolute inset-x-0 '
+          >
             <Swiper
+              onSwiper={(swiper:any) => {
+                setSwiperRef(swiper);
+              }}
+              allowTouchMove={true}
               slidesPerView={"auto"}
               centeredSlides={true}
               spaceBetween={64}
               autoplay={{
-                delay: 2500,
+                delay: 4000,
                 disableOnInteraction: false,
-              }}
-              pagination={{
-                clickable: true,
-                bulletActiveClass: "custom-active-bullet",
-                bulletClass: "custom-bullet",
-              }}
-              modules={[Pagination, Autoplay]}
+                pauseOnMouseEnter: false,
+              }}              
+              modules={[Pagination, Virtual, Navigation, Autoplay]}
               onSlideChange={handleSlideChange}
               className='mySwiper md:pb-0 pb-12 mobile-only'
             >
@@ -263,7 +437,9 @@ const HowItWorks = () => {
 
                   <div className='flex flex-col gap-[12px] px-[20px] md:px-[40px] place-self-center'>
                     <p className='green-label'>STEP {reason.count}</p>
-                    <h1 className='heading  text-white text-[22px] '>{reason.title}</h1>
+                    <h1 className='heading  text-white text-[22px] '>
+                      {reason.title}
+                    </h1>
                     <h3 className='text-[18px] text-[#908E9F]  cursor-pointer'>
                       {reason.keyPoints}
                     </h3>

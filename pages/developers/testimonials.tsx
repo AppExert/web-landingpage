@@ -47,6 +47,38 @@ const REASONS: {
     image: "/images/nidhi.png",
     location: "Punjab, India",
   },
+  {
+    content:
+      "There are no specific boundaries that are imposed on me. I can work freely at any specific time, and AppExert also gives me new learning opportunities and also teaches other folks as well in my company.",
+    name: "Arindam ",
+    designation: "Lead Software Engineer",
+    image: "/images/ArindamImage.png",
+    location: "West Bengal, India",
+  },
+  {
+    content:
+      "The vision of the high level management and the trust they entrust in the employees is a factor that makes them unique. The freedom we have in terms of work we do can only be seen in a very few companies.",
+    name: "Sharon Sara Varghese ",
+    designation: "Senior Software QA Engineer",
+    image: "/images/sharon.png",
+    location: "Texas, US",
+  },
+  {
+    content:
+      "The experience in AppExert is really a great opportunity for me. Every day is a new learning, and the learning helped me to step up to the next level of my life.",
+    name: "Asarudeen   ",
+    designation: "Software Developer ",
+    image: "/images/asar.png",
+    location: "Tamil Nadu, India",
+  },
+  {
+    content:
+      "We get the new opportunity, they give us time to learn, and then they want us to show some skills that we can do, so it's the best environment to work with.",
+    name: "Nidhi Sharma ",
+    designation: "Software Developer ",
+    image: "/images/nidhi.png",
+    location: "Punjab, India",
+  },
 ];
 
 const testimonials = () => {
@@ -58,11 +90,11 @@ const testimonials = () => {
     setActiveBulletIndex(swiper.realIndex);
   };
 
-  const swiperContainerRef = useRef(null);
+  const swiperContainerRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
-    const swiperContainer =
-      swiperContainerRef.current as unknown as HTMLElement;
+    const swiperContainer = swiperContainerRef.current;
+  
     if (swiperContainer) {
       const updateSectionHeight = () => {
         const swiperContainerHeight = swiperContainer.clientHeight;
@@ -83,19 +115,20 @@ const testimonials = () => {
   return (
     <section id='testimonial-section'>
       <Container>
-        <div ref={swiperContainerRef} className='md:absolute inset-x-0 '>
+        <div ref={swiperContainerRef as React.LegacyRef<HTMLDivElement>} className='md:absolute inset-x-0 '>
           <Swiper
             slidesPerView={"auto"}
             centeredSlides={true}
-            loop={true}
-            spaceBetween={100}
+            loop={true}            
+            grabCursor={true}
+            spaceBetween={70}
             pagination={{
               clickable: true,
               bulletActiveClass: "custom-active-bullet",
               bulletClass: "custom-bullet",
             }}
             modules={[Pagination]}
-            className='mySwiper md:p-12 py-12'
+            className='mySwiper md:p-14 py-12'
             onSlideChange={handleSlideChange}
           >
             {REASONS.map((reason, index) => (
