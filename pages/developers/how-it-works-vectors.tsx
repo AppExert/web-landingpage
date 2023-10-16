@@ -405,7 +405,7 @@ const HowItWorks = () => {
             </div>
           </div>
         </div>
-        <div id='how-to-join-section'>
+        <div id="how-to-join-section" className="md:min-h-[385px]">
           <div
             ref={swiperContainerRef as React.LegacyRef<HTMLDivElement>}
             className='md:absolute inset-x-0 '
