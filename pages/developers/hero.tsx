@@ -43,7 +43,7 @@ const Hero = () => {
           <h1 className='hero-heading pt-2 text-[40px] md:text-[48px]'>
           Global work opportunities for remote developers
           </h1>
-          <p className='section-paragraph text-[#908E9F] text-[18px] py-[10px] pb-[20px]'>
+          <p className='section-paragraph text-[#908E9F] text-[18px] py-[10px] pb-[20px] pr-[20px]'>
           We enable talented developers to work with exciting companies worldwide on a permanent full-time basis. Join our thriving remote developer community today.
           </p>
           <div className='flex gap-4 items-center'>

@@ -1,3 +1,4 @@
+
 import Container from "@components/container";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -9,49 +10,49 @@ const REASONS: {
   image: string;
 }[] = [
   {
-    title: "Hire 5x faster with AI powered interviews",
-    content: "Get ahead of the competition with our AI-powered hiring process, enabling you to identify and onboard top talent in a fraction of the time.",
-    image: "/images/home/reason/reason1_main.svg",
+    title: "streamlined remote hiring",
+    content: "Save time and effort with our curated job listings and verified company profiles, so you can focus on discovering, landing your dream remote job faster.",
+    image: "/images/home/reason/reason1.svg",
   },
   {
-    title: "Discover 100% flexibility with our remote EOR model",
-    content: "Simplify hiring and reduce administrative burdens with our innovative EOR model, ensuring compliance and peace of mind and enjoy 100% ownership.",
-    image: "/images/home/reason/reason2_main.svg",
+    title: "Guidance at your side",
+    content: "Your dedicated developer success advisor is your co-pilot, ensuring you make the right career moves in the complex world of remote work.",
+    image: "/images/home/reason/reason2.svg",
   },
   {
-    title: "Maximize interview-to-hire ratio by at-least 3x",
-    content: "Boost up your Interview-to-Hire ratio at the same time achieve minimal candidate dropouts with our optimised process.",
-    image: "/images/home/reason/reason3_main.svg",
+    title: "Personalised opportunities",
+    content: "Choose from diverse companies spanning North America, each aligning with your preferences, whether it's industry, company type, or even time zone.",
+    image: "/images/home/reason/reason3.svg",
   },
   {
-    title: "No More gambling on freelance platforms",
-    content: "Eliminate the risks associated with hiring freelancers by hiring dedicated qualified professionals in AppExert to ensure reliability and stability.",
-    image: "/images/home/reason/reason4_main.svg",
+    title: "Escape Freelance Chaos",
+    content: "Trade uncertanity for security. Leave freelance unpredictability behind and embrace a stable, long-term, fulfilling remote career path.",
+    image: "/images/home/reason/reason4.svg",
   },
   {
-    title: "Take advantage of our fair price guarantee",
-    content: "Get the best value for your investment. Direct connection with talent, and 100% transparency throughout the hiring processes that ensure your fulfilment.  ",
-    image: "/images/home/reason/reason5_main.svg",
+    title: "Sense of Inclusion ",
+    content: "Say goodbye to the locked up structure of IT service companies where you are only a vendor or contractor. Our fultime EOR model is designed to let your voice be heard.",
+    image: "/images/home/reason/reason5.svg",
   },
   {
-    title: "Lead the remote work best practices like a champ",
-    content: "Stay ahead of the curve and tap into our expertise in remote work, leveraging our industry-leading best practices for seamless collaboration and productivity.",
-    image: "/images/home/reason/reason6_main.svg",
+    title: "Team that lifts you up",
+    content: "Access a suite of 10+ powerful remote work tools, resources, activities to not only survive but thrive in the remote work landscape.",
+    image: "/images/home/reason/reason6.svg",
   },
 
 ];
 
-const WhyChooseAppExert = () => {
+const WhyAppExert = () => {
   const [hoveredIndex, setHoveredIndex] = useState(-1);
 
   return (
-    <section className="md:py-[270px] py-[100px]">
+    <section className="md:pt-[200px] md:pb-[100px] py-[100px]">
       <Container>
         <div>
           <div className="flex flex-col justify-center items-center md:pb-[72px] pb-[40px]">
             <p className="green-label">WHY APPEXERT</p>
             <h1 className="heading pt-2 md:w-[700px] text-center">
-              More reasons to choose us to help you gain unmatched hiring capabilities</h1>
+              More Compelling reasons to choose us to transform your remote dev journey</h1>
           </div>
           <div
             className="grid md:grid-cols-3 grid-cols-1 gap-[48px] ">
@@ -92,4 +93,4 @@ const WhyChooseAppExert = () => {
   );
 };
 
-export default WhyChooseAppExert;
+export default WhyAppExert;

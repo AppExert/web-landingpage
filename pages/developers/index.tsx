@@ -5,7 +5,7 @@ import BrandShowcase from "@components/home/brand-showcase";
 import ComparePlatforms from "./compare-platforms"
 import HowItWorks from "./how-it-works";
 import Hero from "./hero";
-import WhyChooseAppExert from "@components/home/why-choose-appexert";
+import WhyAppExert from "./why-appexert";
 import DevBenefits from "./devbenefits";
 import HowItWorksVector from "./how-it-works-vectors";
 import Testimonials from "./testimonials";
@@ -57,7 +57,7 @@ const Developers = () => {
             <ComparePlatforms />
             <HowItWorks/>
             <DynamicTestimonials />
-            <WhyChooseAppExert/>
+            <WhyAppExert/>
             <DevBenefits/>
             <HowItWorksVector/>
           </div>
