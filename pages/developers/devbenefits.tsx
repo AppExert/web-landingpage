@@ -13,25 +13,13 @@ const BenefitsSection = () => {
       {BENEFITS.map((benefits: any, index) => (
         <div
           key={benefits.name}          
-          className=' marquee relative  px-5 py-6  w-[168px] h-[180px] 
+          className='marquee relative  px-5 py-6  w-[168px] h-[180px] 
               rounded-lg flex flex-col justify-center items-center text-center gap-2
                border-solid border-[1px] border-[#252234]  '
         >
-          <div className='flex justify-center '>
-            <div className='w-[fit-content] h-[fit-content] rounded-full relative overflow-hidden p-3'>
-              <div
-                className='absolute inset-0  rounded-full'
-                style={{
-                  background: "#1B1551",
-                  filter: "blur(16px)",
-                }}
-              ></div>
-              <div className='fill-current relative '>{benefits.icon}</div>
-            </div>
-          </div>
-
-          <div className='flex items-end '>
-            <h3 className='font-medium text-[#E4E4E4] text-[14px] '>
+          <div className='flex justify-center flex-col '>
+            <div className='fill-current mt-[-20px]'>{benefits.icon}</div>
+            <h3 className='font-medium text-[#E4E4E4] text-[14px] mt-[-20px]'>
               {benefits.name}
             </h3>
           </div>
