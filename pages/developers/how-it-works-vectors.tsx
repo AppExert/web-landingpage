@@ -411,7 +411,7 @@ const HowItWorks = () => {
             className='md:absolute inset-x-0 '
           >
             <Swiper
-              onSwiper={(swiper) => {
+              onSwiper={(swiper:any) => {
                 setSwiperRef(swiper);
               }}
               allowTouchMove={true}
