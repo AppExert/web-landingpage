@@ -364,11 +364,11 @@ const HowItWorks = () => {
               slidesPerView={"auto"}
               centeredSlides={true}
               spaceBetween={64}
-              // autoplay={{
-              //   delay: 4000,
-              //   disableOnInteraction: false,
-              //   pauseOnMouseEnter: false,
-              // }}
+              autoplay={{
+                delay: 4000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: false,
+              }}
               modules={[Pagination, Virtual, Navigation, Autoplay]}
               onSlideChange={handleSlideChange}
               className='mySwiper md:pb-0 pb-12 mobile-only'
