@@ -17,20 +17,20 @@ const REASONS: {
 }[] = [
   {
     content:
-      "There are no specific boundaries that are imposed on me. I can work freely at any specific time, and AppExert also gives me new learning opportunities and also teaches other folks as well in my company.",
-    name: "Arindam ",
-    designation: "Lead Software Engineer",
-    image: "/images/ArindamImage.png",
-    location: "West Bengal, India",
-  },
-  {
-    content:
       "The vision of the high level management and the trust they entrust in the employees is a factor that makes them unique. The freedom we have in terms of work we do can only be seen in a very few companies.",
     name: "Sharon Sara Varghese ",
     designation: "Senior Software QA Engineer",
     image: "/images/sharon.png",
     location: "Texas, US",
   },
+  {
+    content:
+      "There are no specific boundaries that are imposed on me. I can work freely at any specific time, and AppExert also gives me new learning opportunities and also teaches other folks as well in my company.",
+    name: "Arindam ",
+    designation: "Lead Software Engineer",
+    image: "/images/arindam.png",
+    location: "West Bengal, India",
+  },  
   {
     content:
       "The experience in AppExert is really a great opportunity for me. Every day is a new learning, and the learning helped me to step up to the next level of my life.",
@@ -46,15 +46,7 @@ const REASONS: {
     designation: "Software Developer ",
     image: "/images/nidhi.png",
     location: "Punjab, India",
-  },
-  {
-    content:
-      "There are no specific boundaries that are imposed on me. I can work freely at any specific time, and AppExert also gives me new learning opportunities and also teaches other folks as well in my company.",
-    name: "Arindam ",
-    designation: "Lead Software Engineer",
-    image: "/images/ArindamImage.png",
-    location: "West Bengal, India",
-  },
+  }, 
   {
     content:
       "The vision of the high level management and the trust they entrust in the employees is a factor that makes them unique. The freedom we have in terms of work we do can only be seen in a very few companies.",
@@ -65,19 +57,11 @@ const REASONS: {
   },
   {
     content:
-      "The experience in AppExert is really a great opportunity for me. Every day is a new learning, and the learning helped me to step up to the next level of my life.",
-    name: "Asarudeen   ",
-    designation: "Software Developer ",
-    image: "/images/asar.png",
-    location: "Tamil Nadu, India",
-  },
-  {
-    content:
-      "We get the new opportunity, they give us time to learn, and then they want us to show some skills that we can do, so it's the best environment to work with.",
-    name: "Nidhi Sharma ",
-    designation: "Software Developer ",
-    image: "/images/nidhi.png",
-    location: "Punjab, India",
+      "There are no specific boundaries that are imposed on me. I can work freely at any specific time, and AppExert also gives me new learning opportunities and also teaches other folks as well in my company.",
+    name: "Arindam ",
+    designation: "Lead Software Engineer",
+    image: "/images/arindam.png",
+    location: "West Bengal, India",
   },
 ];
 

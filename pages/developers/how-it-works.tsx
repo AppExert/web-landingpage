@@ -58,8 +58,8 @@ function LoadImage({
           <motion.div className='bg-[#09071B]' variants={cardVariants}>
             <Image
               className='rounded-lg'
-              width={516}
-              height={568}
+              width={572}
+              height={646}
               src={refItem.imageSrc}
               alt='Talent pool'
             />
