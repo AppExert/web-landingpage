@@ -41,10 +41,10 @@ const Hero = () => {
         <div className='pt-16 md:py-0 md:w-[60%]'>
           <p className="green-label text-[14px]">START. BUILD. THRIVE</p>
           <h1 className='hero-heading pt-2 text-[40px] md:text-[48px]'>
-            Securing global work opportunities for remote developers
+          Global work opportunities for remote developers
           </h1>
-          <p className='section-paragraph text-[#908E9F] text-[18px] py-[10px] pb-[20px]'>
-            Join our team of talented developers and work full-time for exciting companies worldwide. Experience the happiest remote developer community in the country.
+          <p className='section-paragraph text-[#908E9F] text-[18px] py-[10px] pb-[20px] pr-[20px]'>
+          We enable talented developers to work with exciting companies worldwide on a permanent full-time basis. Join our thriving remote developer community today.
           </p>
           <div className='flex gap-4 items-center'>
             <Link href='/developerSignup'>
@@ -52,7 +52,7 @@ const Hero = () => {
                 type='primary'
                 className='page-btn px-[16px] py-[24px]'
               >
-                Sign up, It&apos;s Free 
+                Sign up, it&apos;s free 
               </Button>
             </Link>
           </div>

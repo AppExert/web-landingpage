@@ -80,7 +80,7 @@ const ComparePlatforms = () => {
         <div className='flex flex-col justify-center items-center pb-[32px] md:pb-[38px]'>
           <p className='green-label uppercase text-[14px]'>making a difference</p>
           <h1 className='heading pt-2 md:w-[651px] text-center'>
-            Win the talent war, without breaking a sweat!
+          Find remote opportunities, tailored just for you.
           </h1>
         </div>
         <div className='relative overflow-hidden'>
@@ -150,7 +150,7 @@ const ComparePlatforms = () => {
                           alt='Check icon'
                         />
                       </div>
-                      <p className='text-[#E4E4E4]'>Long hiring cycles</p>
+                      <p className='text-[#E4E4E4]'>Battling with long daily commutes</p>
                     </div>
                     <div className='flex items-center md:gap-2 md:my-[100px] '>
                       <div className='md:w-[60px] md:h-[60px] w-[50px] h-[50px] flex-shrink-0'>
@@ -162,7 +162,9 @@ const ComparePlatforms = () => {
                         />
                       </div>
                       <span className='text-[#E4E4E4]'>
-                        Shortage of qualified developers
+                      Being away from loved ones
+                        <br className="md:block hidden"/>
+                       for work
                       </span>
                     </div>
                     <div className='flex items-center md:gap-2'>
@@ -175,9 +177,9 @@ const ComparePlatforms = () => {
                         />
                       </div>
                       <p className='text-[#E4E4E4]'>
-                        Tired of freelance {" "}
+                      Full-time 100% remote work {" "}
                         <br className="md:block hidden"/>
-                         platforms
+                        are hard finds
                       </p>
                     </div>
                   </motion.div>
@@ -198,7 +200,9 @@ const ComparePlatforms = () => {
                           alt='Check icon'
                         />
                       </div>
-                      <p className='text-[#E4E4E4]'>Hire in days not weeks.</p>
+                      <p className='text-[#E4E4E4]'>No more long daily 
+                        <br className="md:block hidden"/>
+                      commutes.</p>
                     </div>
                     <div className='flex items-center md:gap-2 md:my-[100px] '>
                       <div className='md:w-[60px] md:h-[60px] w-[50px] h-[50px] flex-shrink-0'>
@@ -210,7 +214,9 @@ const ComparePlatforms = () => {
                         />
                       </div>
                       <span className='text-[#E4E4E4]'>
-                      Access qualified developers in few clicks
+                      Stay closer to elderly parents 
+                        <br className="md:block hidden"/>
+                      and family
                       </span>
                     </div>
                     <div className='flex items-center md:gap-2'>
@@ -223,7 +229,9 @@ const ComparePlatforms = () => {
                         />
                       </div>
                       <p className='text-[#E4E4E4]'>
-                      Engage as one team, with full ownership
+                      Cultivate high-paying, remote 
+                        <br className="md:block hidden"/>
+                      fulltime careers
                       </p>
                     </div>
                   </motion.div>
@@ -260,8 +268,10 @@ const ComparePlatforms = () => {
                     transition={{ duration: 2 }}
                   >
                     <div className='flex md:flex-row flex-row-reverse items-center justify-end md:gap-2 '>
-                      <p className='text-[#E4E4E4] text-right'>
-                        Increased candidate drop-out
+                      <p className='text-[#E4E4E4] md:text-right text-left'>
+                      Making career sacrifices to 
+                        <br className="md:block hidden"/>
+                      prioritize childcare
                       </p>
                       <div className='md:w-[60px] md:h-[60px] w-[50px] h-[50px] flex-shrink-0'>
                         <Image
@@ -273,8 +283,10 @@ const ComparePlatforms = () => {
                       </div>
                     </div>
                     <div className='flex md:flex-row flex-row-reverse items-center justify-end md:gap-2 md:my-[100px] '>
-                      <p className='text-[#E4E4E4] text-right'>
-                        High employee attrition rate
+                      <p className='text-[#E4E4E4] md:text-right text-left'>
+                      Surging costs of living with 
+                        <br className="md:block hidden"/>
+                      metro relocation
                       </p>
                       <div className='md:w-[60px] md:h-[60px] w-[50px] h-[50px] flex-shrink-0'>
                         <Image
@@ -287,7 +299,9 @@ const ComparePlatforms = () => {
                     </div>
                     <div className='flex md:flex-row flex-row-reverse  items-center md:gap-2 justify-end'>
                       <p className='text-[#E4E4E4] md:text-right text-left'>
-                        Inequitable agency commissions
+                      Tired of burnouts as
+                        <br className="md:block hidden"/>
+                       freelancers
                       </p>
                       <div className='md:w-[60px] md:h-[60px] w-[50px] h-[50px] flex-shrink-0'>
                         <Image
@@ -309,7 +323,9 @@ const ComparePlatforms = () => {
                   >
                     <div className='flex md:flex-row flex-row-reverse items-center justify-end md:gap-2'>
                       <p className='text-[#E4E4E4] text-right'>
-                        High interview-to-hire ratio
+                      Balance career and family 
+                        <br className="md:block hidden"/>
+                      effortlessly
                       </p>
                       <div className='md:w-[60px] md:h-[60px] w-[50px] h-[50px] flex-shrink-0'>
                         <Image
@@ -322,7 +338,9 @@ const ComparePlatforms = () => {
                     </div>
                     <div className='flex md:flex-row flex-row-reverse items-center justify-end md:gap-2 md:my-[100px] '>
                       <p className='text-[#E4E4E4] text-right'>
-                        Sustain a stable workforce.
+                      Slash living expenses
+                        <br className="md:block hidden"/>
+                       by half
                       </p>
                       <div className='md:w-[60px] md:h-[60px] w-[50px] h-[50px] flex-shrink-0'>
                         <Image
@@ -335,7 +353,7 @@ const ComparePlatforms = () => {
                     </div>
                     <div className='flex md:flex-row flex-row-reverse items-center md:gap-2 justify-end'>
                       <p className='text-[#E4E4E4] md:text-right text-left'>
-                        Honest and fair fees, no hidden tricks.
+                      Thrive in a supportive developer community
                       </p>
                       <div className='md:w-[60px] md:h-[60px] w-[50px] h-[50px] flex-shrink-0'>
                         <Image

@@ -224,11 +224,8 @@
   }
 }
 
-.marquee {
-  top: 6em;
-  position: relative;
-  box-sizing: border-box;
-  animation: marquee 15s linear infinite;
+.marquee { 
+  animation: marquee 12s linear infinite;
 }
 
 @keyframes marquee {
@@ -548,8 +545,8 @@ ol {
 }
 
 .custom-bullet{
-    width: 30px;
-    height: 6px;
+    width: 8px;
+    height: 8px;
     background-color: #042F29;
     margin-right: 5px;
     margin-left: 5px;
@@ -558,11 +555,62 @@ ol {
 }
 
 .custom-active-bullet{
-  width: 48px;
-  height: 6px;
-  background: linear-gradient(to right, #0FAC98 50%, #042F29 50%);
+  width: 40px;
+  height: 8px;
+  background: #0FAC98;
   margin-right: 5px;
   margin-left: 5px;
   border-radius: 8px;
+}
+
+.ant-steps-icon {
+  width: 56px !important;
+  height: 56px !important;
+}
+
+.ant-steps-item-title::after {
+  top: 29px;
+  height: 2px; 
+}
+
+.ant-steps-item-wait > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title::after {
+  background-color: #2E2C4A;
+}
+
+.ant-steps-item-process > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title::after {
+  background-color: #2E2C4A;
+}
+
+.mobile-only .custom-bullet {
+  display: none;   
+}
+
+@media screen and (max-width: 768px) {
+  .mobile-only .custom-bullet {
+    display: inline-block; 
+  }
+}
+
+.progressbar {
+  height: 2px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  border-radius: 60px;
+  background-color: #2E2C4A;
+  box-shadow: 0px 0px 20px #111;
+  overflow: hidden;
+}
+
+.bar {
+  width: 0%;
+  background: #715EF9;
+  background: linear-gradient(
+      180deg,
+      #7a69f8 0%,
+      #7867fa 32%,
+      #715EF9 100%
+  );
 }
 
