@@ -123,7 +123,7 @@ const HowItWorks = () => {
     {
       show: false,
       title: "Jobs Board with Interview Pipeline ",
-      imageSrc: "/images/home/ipad/JobBoard.png",
+      imageSrc: "/images/home/ipad/VerifiedCompanyProfile.png",
       keyPoints: [
         "Discover matching jobs based on your preferences and qualifications. ",
         "Visualize and manage interviews and job prospects effectively.",
@@ -133,7 +133,7 @@ const HowItWorks = () => {
     {
       show: false,
       title: "Verified Company Profiles",
-      imageSrc: "/images/home/ipad/VerifiedCompanyProfile.png",
+      imageSrc: "/images/home/ipad/JobBoard.png",
       keyPoints: [
         "Dive deep into verified company profiles for in-depth insights.",
         "Access upfront salary info, tech stack details, and more.",
